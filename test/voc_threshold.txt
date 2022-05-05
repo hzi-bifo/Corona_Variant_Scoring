@@ -1,0 +1,4 @@
+
+2022-05-02 16:59:44.075218
+Variant of Concern Antigenic Score Threshold: 
+2.669517881020317

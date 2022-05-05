@@ -1,0 +1,27 @@
+# Ignoring the Jupyter Notebook files:
+*.ipynb
+
+# Ignoring the junk files:
+delete/
+
+# Ignoring the debug files:
+**debug
+
+# Ignoring the antigenic scores per sequences files (as they are too large):
+**_all.csv
+
+# Ignoring the redundant base methodology file:
+variant_scoring_spike_only/
+variant_scoring_without_weights/spike_protein_only/
+
+# Ignoring the subsample files
+**subsample
+
+# Ignoring the per aa site comparison directory:
+variant_scoring_aa_site_comparison
+
+# Ignoring boxplot visualization (for now):
+software/voc_box_plot_visualization.py
+
+#Ignoring the large metadata file:
+test/metadata.tsv
