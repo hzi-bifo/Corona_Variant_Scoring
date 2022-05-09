@@ -73,13 +73,6 @@ else
 fi
 cd $OUTDIR
 
-echo $OUTDIR
-echo $INDIR
-echo $AntigenicScoring
-echo $SOFTWAREPATH
-echo $FREQUENCY
-echo $MONTHS
-
 #----------
 # Analysis
 #----------
@@ -88,7 +81,7 @@ echo $MONTHS
 if [ ! -d $OUTDIR'output/' ]; then mkdir $OUTDIR'output/'; fi
 
 # Running Variant Scoring Analysis and Visualization
-#python $SOFTWAREPATH"variant_scoring.py" $INDIR  $AntigenicScoring"reference/tp_sites.csv" $OUTDIR $AntigenicScoring"reference/antigenic_weights.csv" $AntigenicScoring"reference/known_variants_of_concern.csv"
+python $SOFTWAREPATH"variant_scoring.py" $INDIR  $AntigenicScoring"reference/tp_sites.csv" $OUTDIR $AntigenicScoring"reference/antigenic_weights.csv" $AntigenicScoring"reference/known_variants_of_concern.csv"
 Rscript $SOFTWAREPATH"frequency_heatmap.R" $FREQUENCY $OUTDIR"output/antigenic_scores_ranked_with_WHO.csv" $MONTHS "0.1"
-
+python $SOFTWAREPATH"global_scoring_map.py" $OUTDIR"output/antigenic_scores_map_visualization.csv" $OUTDIR"output"
 #echo "COMPLETE"
