@@ -1,5 +1,8 @@
 #!/usr/bin/env Rscript
 
+#library(devtools)
+#install_version("d3heatmap", version = "0.6.1.2")
+
 library(d3heatmap)
 library(htmlwidgets)
 library(countrycode)
@@ -10,19 +13,10 @@ input <- read.csv(args[2], sep = "\t")
 months_file <- args[3]
 cutoff <- as.numeric(args[4])
 
-#folder <- "~/projects/Corona_Variant_Scoring/test_04.05.2022/SDPlots_covlineages/"
-#input <- read.csv("~/software/Corona_Variant_Scoring/test/output/antigenic_scores_ranked_with_WHO.csv", sep = "\t")
-#months_file <- "~/software/Corona_Variant_Scoring/reference/months.txt"
-#cutoff <- 0.1
-
-#sign_lineages_df <- input[input[['antigenic_score']] >= 2.67, ]
-#sign_lineages <- sign_lineages_df[['Pango.lineage']]
-#cat(sign_lineages)
-
 get_heatmap <- function(folder, countries, current_month, output_name, rename, cutoff, lineages){ #Can add heatmap here
   
   # get significant lineages from all countries
-  sign_lineages_df <- input[input[['antigenic_score']] >= 2.67, ]
+  sign_lineages_df <- lineages[lineages[['antigenic_score']] >= 2.67, ] # 2.67
   sign_lineages <- sign_lineages_df[['Pango.lineage']]
   # remove duplicates
   sign_lineages <- sort(unique(sign_lineages))
@@ -72,5 +66,5 @@ states <- dir(path = folder, pattern = "^DE_") # only German states
 months <- as.vector(t(read.table(months_file, stringsAsFactors = FALSE)))
 current_month <- months[length(months)-1] # look at frequencies of the previous month to get representative values
 
-get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", FALSE, cutoff, input)
+get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", TRUE, cutoff, input)
 get_heatmap(folder, states, current_month, "antigenic_scoring_summary_states", FALSE, cutoff, input)
