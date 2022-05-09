@@ -146,12 +146,26 @@ df['antigenic_score'] = df.groupby('Pango lineage')['Weight'].transform('mean')
 df_final = df[["Accession ID","Collection date", "Location", "Pango lineage", "AA Substitutions", "Weight", "antigenic_score"]]
 
 print("Saving dataframe...")
-df_final.to_csv(output + "antigenic_scores_all.csv", sep = '\t', index = False, header = True)
-# Merging lineages per location and saving as a separate file
-# df_filtered = df[['Location', 'Pango lineage', 'mutation_score']]
-# df_filtered = df_filtered.drop_duplicates()
-# df_filtered.to_csv(output + "mutation_scores.csv", sep = '\t', index = False, header = True)
-print("Antigenic Scores COMPLETE")
+#df_final.to_csv(output + "antigenic_scores_all.csv", sep = '\t', index = False, header = True)
+# Saving csv for global map visualization
+df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score']]
+df_vis["Continent"] = df_vis["Location"].apply(lambda x: x.split("/")[0])
+df_vis["Country"] = df_vis["Location"].apply(lambda x: x.split("/")[1])
+country = []
+continent = []
+for item in df_vis["Country"]:
+    x = item.lstrip()
+    y = x.rstrip()
+    country.append(y)
+for item in df_vis["Continent"]:
+    x = item.lstrip()
+    y = x.rstrip()
+    continent.append(y)
+df_vis['Country'] = country
+df_vis['Continent'] = continent
+df_vis.drop(["Location"], axis = 1, inplace = True)
+df_vis = df_vis.drop_duplicates()
+df_vis.to_csv(output + "antigenic_scores_map_visualization.csv", sep = '\t', index = False, header = True)
 
 # Ranking pango lineages based on average mutation score across all the sequences
 df_ranked = df_final[["Pango lineage", "antigenic_score"]]
@@ -165,59 +179,3 @@ df_merged_ranked = df_ranked.merge(voc_df, how = "left", on = "Pango lineage")
 df_merged_ranked['WHO_label'] = df_merged_ranked['WHO_label'].fillna("Non Variant of Concern")
 df_merged_ranked.to_csv(output + "antigenic_scores_ranked_with_WHO.csv", sep = '\t', index = False, header = True)
 print("Ranked Antigenic Scores COMPLETE")
-
-
-# ### Visualization
-
-# # BASED ON MUTATION SCORE THRESHOLD
-# # Using the averaged mutation score per country for each lineage
-# df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score']]
-# df_vis["Continent"] = df_vis["Location"].apply(lambda x: x.split("/")[0])
-# df_vis["Country"] = df_vis["Location"].apply(lambda x: x.split("/")[1])
-# country = []
-# continent = []
-# for item in df_vis["Country"]:
-#     x = item.lstrip()
-#     y = x.rstrip()
-#     country.append(y)
-# for item in df_vis["Continent"]:
-#     x = item.lstrip()
-#     y = x.rstrip()
-#     continent.append(y)
-# df_vis['Country'] = country
-# df_vis['Continent'] = continent
-# df_vis['averaged_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['mutation_score'].transform('mean')
-# # Dropping redundant columns and duplicates
-# # df_vis = df_vis['Pango lineage', 'Country', ' averaged_mutation_score']
-# df_vis.drop(["Location"], axis = 1, inplace = True)
-# df_vis = df_vis.drop_duplicates()
-#
-# # Keeping variants that have an average mutation score greater than the assigned VOC threshold
-# df_vis_threshold = df_vis[df_vis["averaged_antigenic_score"] > 1.025]
-# df_vis_threshold['averaged_antigenic_score_per_country'] = df_vis_threshold.groupby('Country')['averaged_mutation_score'].transform('mean')
-# df_vis_threshold_averaged = df_vis_threshold[['Continent','Country', 'averaged_antigenic_score_per_country']]
-# df_vis_threshold_averaged = df_vis_threshold_averaged.drop_duplicates()
-# df_vis_threshold_averaged
-#
-# # European only df for focused visualization:
-# df_vis_threshold_averaged_eu = df_vis_threshold_averaged[df_vis_threshold_averaged['Continent'] == "Europe"]
-# df_vis_threshold_averaged_eu
-#
-# # Creating global and european map of averaged antigenic scores
-# labels_dict = dict(zip(df_vis_threshold_averaged.Country, df_vis_threshold_averaged.averaged_mutation_score_per_country))
-# fig = px.choropleth(df_vis_threshold_averaged, locations = "Country",
-#                            locationmode = "country names",
-#                            color = "averaged_mutation_score_per_country",
-#                            color_continuous_scale = 'spectral_r',
-#                            labels = labels_dict,
-#                            title = 'Mutation Scores per Country')
-# fig.write_html(output + 'mutation_score_map.html')
-# fig_eu = px.choropleth(df_vis_threshold_averaged_eu, locations = "Country",
-#                            locationmode = "country names",
-#                            color = "averaged_mutation_score_per_country",
-#                            color_continuous_scale = 'spectral_r',
-#                            labels = labels_dict,
-#                            title = 'Mutation Scores per Country',
-#                            scope = 'europe')
-# fig_eu.write_html(output + 'mutation_score_map_europe.html')
-
