@@ -54,7 +54,7 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
     colnames(data) <- country_names
   }
   data <- data[order(rowSums(data), decreasing = TRUE),]
-  heatmap <- d3heatmap(data, Rowv = NULL, Colv = NULL, colors = "Blues", xaxis_font_size = "12pt", yaxis_font_size = "12pt", xaxis_height = 120)
+  heatmap <- d3heatmap(data, Rowv = NULL, Colv = NULL, colors = "Reds", xaxis_font_size = "12pt", yaxis_font_size = "12pt", xaxis_height = 120)
   saveWidget(heatmap, paste(folder, "/", output_name, "_heatmap.html", sep = ""), selfcontained = TRUE)
 }
 
