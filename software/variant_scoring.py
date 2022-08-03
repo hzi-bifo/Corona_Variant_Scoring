@@ -5,16 +5,24 @@ import sys
 import pandas as pd
 import numpy as np
 import re
-import plotly.express as px
+#import plotly.express as px
 from itertools import chain
 from time import process_time
 
+print(sys.argv[0])
+print(sys.argv[1])
+print(sys.argv[2])
+print(sys.argv[3])
+print(sys.argv[4])
+print(sys.argv[5])
+exit
+
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions']
-metadata = pd.read_csv(sys.argv[0], sep = '\t', usecols = columns)
-tpSites = pd.read_csv(sys.arg[1], sep = ',')
-output = sys.arg[2]
-weights = pd.read_csv(sys.arg[3], sep = '\t')
-voc_df = pd.read_csv(sys.arg[4], sep = '\t')
+metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
+tpSites = pd.read_csv(sys.argv[2], sep = ',')
+output = sys.argv[3]
+weights = pd.read_csv(sys.argv[4], sep = '\t')
+voc_df = pd.read_csv(sys.argv[5], sep = '\t')
 
 def conversion_position(x):
 # Function to convert aa list in the metadata file to their position and original / changed aa
@@ -86,21 +94,29 @@ def mutation_scores(input_df, tpSites_list): # , output_df
     print("Changed Amino Acids")
     changed_AAs = input_df['AA Substitutions'].apply(conversion_changedAA)
     input_df["Changed_aa"] = changed_AAs
+#    print(input_df)
 
     # Expanding list of original and changed amino acids 
+#    cols = ['Substitution_Positions','Original_aa','Changed_aa']
+#    metadata_expanded = input_df.explode(cols)
+#    # Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
+#    metadata_filtered = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
+#    metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
+
     try:
-        cols = ['Substitution_Positions','Original_aa','Changed_aa']
-        metadata_expanded = input_df.explode(cols)
-        # Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
+#        cols = ['Substitution_Positions','Original_aa','Changed_aa']
+#        metadata_expanded = input_df.explode(list('Substitution_PositionsOriginal_aaChanged_aa'))
+        metadata_expanded = input_df.apply(pd.Series.explode)
+	# Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
         metadata_filtered = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
         metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
 
     except: 
-#         input_df.drop()
+#	print("Unable to merge weights, changing to NAN...")
         metadata_filtered_weights = input_df
         metadata_filtered_weights['Substitution_Positions'] = np.NAN
         metadata_filtered_weights['Weight'] = np.NAN
-        
+	        
     print(pd.DataFrame.head(metadata_filtered_weights))
     return(metadata_filtered_weights)
 
@@ -123,6 +139,8 @@ for chunk in df_chunks:
     t = t+1
     print(t)
     mutation_df = mutation_scores(chunk, tpSites_list) 
+# Testing with the next line since pandas explode had to be downgraded for pandas 1.2, this will reduce df size
+    mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight':'sum'})
     metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
     print("Output DataFrame Shape: ")
     print(metadata_filtered_weights.shape)
@@ -133,8 +151,10 @@ print("FINAL METADATA_FILTERED_WEIGHTS DF: ")
 pd.DataFrame.head(metadata_filtered_weights)
 
 # Summing Weights by accession ID
-metadata_filtered_combinedWeights = metadata_filtered_weights.groupby(metadata_filtered_weights['Accession ID']).aggregate({'Weight':'sum'})
-df = pd.merge(metadata, metadata_filtered_combinedWeights, how = 'left', left_on = 'Accession ID', right_index = True)
+#metadata_filtered_combinedWeights = metadata_filtered_weights.groupby(metadata_filtered_weights['Accession ID']).aggregate({'Weight':'sum'})
+#df = pd.merge(metadata, metadata_filtered_combinedWeights, how = 'left', left_on = 'Accession ID', right_index = True)
+metadata_filtered_combinedWeights = pd.DataFrame(metadata_filtered_weights)
+df = pd.merge(metadata, metadata_filtered_weights, how = 'left', left_on = 'Accession ID', right_index = True)
 df['Weight'].fillna(0, inplace = True)
 
 print("Creating final dataframe...")
@@ -178,4 +198,129 @@ df_ranked = df_ranked[["Pango lineage", "antigenic_score", "rank"]]
 df_merged_ranked = df_ranked.merge(voc_df, how = "left", on = "Pango lineage")
 df_merged_ranked['WHO_label'] = df_merged_ranked['WHO_label'].fillna("Non Variant of Concern")
 df_merged_ranked.to_csv(output + "antigenic_scores_ranked_with_WHO.csv", sep = '\t', index = False, header = True)
+<<<<<<< Updated upstream
 print("Ranked Antigenic Scores COMPLETE")
+=======
+print("Ranked Antigenic Scores COMPLETE")
+
+
+### Visualization
+
+# Creating Dataframe for global map visualization
+df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score', 'Collection date']]
+df_vis["Continent"] = df_vis["Location"].apply(lambda x: x.split("/")[0])
+df_vis["Country"] = df_vis["Location"].apply(lambda x: x.split("/")[1])
+country = []
+continent = []
+for item in df_vis["Country"]:
+    x = item.lstrip()
+    y = x.rstrip()
+    country.append(y)
+for item in df_vis["Continent"]:
+    x = item.lstrip()
+    y = x.rstrip()
+    continent.append(y)
+df_vis['Country'] = country
+df_vis['Continent'] = continent
+df_vis.drop(["Location"], axis = 1, inplace = True)
+
+# Adding a year and month column to filter data by most current month
+df_vis['year'] = df_vis["Collection date"].apply(lambda x: x.split("-")[0])
+df_vis['collection_date_list'] = df_vis["Collection date"].apply(lambda x: x.split("-"))
+keep_list = []
+for item in df_vis["collection_date_list"]:
+    if len(item) <= 1:
+        keep_list.append("N")
+    else:
+        keep_list.append("Y")
+df_vis['keep'] = keep_list
+df_vis = df_vis[df_vis.keep != "N"]
+df_vis['month'] = df_vis["Collection date"].apply(lambda x: x.split("-")[1])
+
+# Selecting the most recent month for analysis:
+max_year = df_vis['year'].max()
+df_vis = df_vis[df_vis.year == max_year] 
+max_month = df_vis['month'].max()
+df_vis = df_vis[df_vis.month == max_month]
+month_file = open(output + "month_vis.txt", "w")
+month_file.writelines(str(max_month) + "-" + str(max_year))
+month_file.close
+
+# Calculating the frequency for each lineage per country:
+df_vis = df_vis[df_vis['Pango lineage'] != 'None']
+n_lineages = pd.Series(df_vis.groupby(['Country', 'Pango lineage'])['Pango lineage'].count(), name = "n_lineages")
+n_lineages_df = n_lineages.to_frame().reset_index()
+n_lineages_df.ffill(axis = 0, inplace = True)
+df_vis = df_vis.merge(n_lineages_df, how = 'left', on = ['Country','Pango lineage'])
+total_lineages = pd.Series(df_vis.groupby('Country')['Country'].count(), name = 'total_lineages')
+df_vis = df_vis.merge(total_lineages.to_frame(), how = 'left', on = 'Country')
+df_vis['frequency'] = df_vis['n_lineages'].div(df_vis['total_lineages'])
+
+# Calculating average antigenic score for each lineage in the selected month:
+df_vis['average_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['antigenic_score'].transform('mean')
+# Filtering duplicates:
+df_vis.drop(['antigenic_score', 'Collection date', 'collection_date_list', 'n_lineages', 'total_lineages'], axis = 1, inplace = True)
+df_vis_threshold_averaged = df_vis.drop_duplicates()
+
+# Calculating antigenic score per country:
+df_vis_threshold_averaged['score'] = df_vis_threshold_averaged['average_antigenic_score']*df_vis_threshold_averaged['frequency']
+df_vis_threshold_averaged['country_score'] = df_vis_threshold_averaged.groupby('Country')['score'].transform('sum')
+df = df_vis_threshold_averaged.drop(['Pango lineage', 'year', 'keep', 'month', 'frequency', 'average_antigenic_score', 'score'], axis = 1,)
+df.drop_duplicates(inplace = True)
+
+# Saving visualization dataframe:
+df.to_csv(output + "antigenic_scores_map_visualization.csv", sep = '\t', index = False, header = True)
+
+# # BASED ON MUTATION SCORE THRESHOLD
+# # Using the averaged mutation score per country for each lineage
+# df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score']]
+# df_vis["Continent"] = df_vis["Location"].apply(lambda x: x.split("/")[0])
+# df_vis["Country"] = df_vis["Location"].apply(lambda x: x.split("/")[1])
+# country = []
+# continent = []
+# for item in df_vis["Country"]:
+#     x = item.lstrip()
+#     y = x.rstrip()
+#     country.append(y)
+# for item in df_vis["Continent"]:
+#     x = item.lstrip()
+#     y = x.rstrip()
+#     continent.append(y)
+# df_vis['Country'] = country
+# df_vis['Continent'] = continent
+# df_vis['averaged_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['mutation_score'].transform('mean')
+# # Dropping redundant columns and duplicates
+# # df_vis = df_vis['Pango lineage', 'Country', ' averaged_mutation_score']
+# df_vis.drop(["Location"], axis = 1, inplace = True)
+# df_vis = df_vis.drop_duplicates()
+#
+# # Keeping variants that have an average mutation score greater than the assigned VOC threshold
+# df_vis_threshold = df_vis[df_vis["averaged_antigenic_score"] > 1.025]
+# df_vis_threshold['averaged_antigenic_score_per_country'] = df_vis_threshold.groupby('Country')['averaged_mutation_score'].transform('mean')
+# df_vis_threshold_averaged = df_vis_threshold[['Continent','Country', 'averaged_antigenic_score_per_country']]
+# df_vis_threshold_averaged = df_vis_threshold_averaged.drop_duplicates()
+# df_vis_threshold_averaged
+#
+# # European only df for focused visualization:
+# df_vis_threshold_averaged_eu = df_vis_threshold_averaged[df_vis_threshold_averaged['Continent'] == "Europe"]
+# df_vis_threshold_averaged_eu
+#
+# # Creating global and european map of averaged antigenic scores
+# labels_dict = dict(zip(df_vis_threshold_averaged.Country, df_vis_threshold_averaged.averaged_mutation_score_per_country))
+# fig = px.choropleth(df_vis_threshold_averaged, locations = "Country",
+#                            locationmode = "country names",
+#                            color = "averaged_mutation_score_per_country",
+#                            color_continuous_scale = 'spectral_r',
+#                            labels = labels_dict,
+#                            title = 'Mutation Scores per Country')
+# fig.write_html(output + 'mutation_score_map.html')
+# fig_eu = px.choropleth(df_vis_threshold_averaged_eu, locations = "Country",
+#                            locationmode = "country names",
+#                            color = "averaged_mutation_score_per_country",
+#                            color_continuous_scale = 'spectral_r',
+#                            labels = labels_dict,
+#                            title = 'Mutation Scores per Country',
+#                            scope = 'europe')
+# fig_eu.write_html(output + 'mutation_score_map_europe.html')
+
+>>>>>>> Stashed changes
