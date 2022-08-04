@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #----------
 # Set Working Directory and Input
@@ -58,8 +58,7 @@ else
 			shift
 			;;
 		-m | --m)
-			MONTHS=$2
-			if [ -d "$2" ]; then
+			if [ -f "$2" ]; then
 				MONTHS=$2
 			else
 				echo "Please provide a path to the months data, see -h for additional information"
