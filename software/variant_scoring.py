@@ -15,7 +15,6 @@ print(sys.argv[2])
 print(sys.argv[3])
 print(sys.argv[4])
 print(sys.argv[5])
-exit
 
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions']
 metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
@@ -198,9 +197,6 @@ df_ranked = df_ranked[["Pango lineage", "antigenic_score", "rank"]]
 df_merged_ranked = df_ranked.merge(voc_df, how = "left", on = "Pango lineage")
 df_merged_ranked['WHO_label'] = df_merged_ranked['WHO_label'].fillna("Non Variant of Concern")
 df_merged_ranked.to_csv(output + "antigenic_scores_ranked_with_WHO.csv", sep = '\t', index = False, header = True)
-<<<<<<< Updated upstream
-print("Ranked Antigenic Scores COMPLETE")
-=======
 print("Ranked Antigenic Scores COMPLETE")
 
 
@@ -239,9 +235,27 @@ df_vis['month'] = df_vis["Collection date"].apply(lambda x: x.split("-")[1])
 
 # Selecting the most recent month for analysis:
 max_year = df_vis['year'].max()
-df_vis = df_vis[df_vis.year == max_year] 
-max_month = df_vis['month'].max()
-df_vis = df_vis[df_vis.month == max_month]
+temp = df_vis[df_vis.year == max_year]
+
+if int(temp['month'].max()) == 1:
+    max_month = "12"
+    max_year = int(df_vis['year'].max()) - 1
+    max_year = str(max_year)
+    df_vis = df_vis[df_vis.year == max_year]
+    df_vis = df_vis[df_vis.month == max_month]
+else:
+    max_year = df_vis['year'].max()
+    df_vis = df_vis[df_vis.year == max_year]
+    max_month = int(df_vis['month'].max()) - 1
+    if max_month < 10:
+	max_month = "0"+str(max_month)
+    else:
+        max_month = str(max_month)
+    df_vis = df_vis[df_vis.month == max_month]    
+
+#df_vis = df_vis[df_vis.year == max_year] 
+#df_vis = df_vis[df_vis.month == max_month]
+
 month_file = open(output + "month_vis.txt", "w")
 month_file.writelines(str(max_month) + "-" + str(max_year))
 month_file.close
@@ -322,5 +336,3 @@ df.to_csv(output + "antigenic_scores_map_visualization.csv", sep = '\t', index =
 #                            title = 'Mutation Scores per Country',
 #                            scope = 'europe')
 # fig_eu.write_html(output + 'mutation_score_map_europe.html')
-
->>>>>>> Stashed changes
