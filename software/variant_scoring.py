@@ -248,7 +248,7 @@ else:
     df_vis = df_vis[df_vis.year == max_year]
     max_month = int(df_vis['month'].max()) - 1
     if max_month < 10:
-	max_month = "0"+str(max_month)
+        max_month = "0"+str(max_month)
     else:
         max_month = str(max_month)
     df_vis = df_vis[df_vis.month == max_month]    
