@@ -7,7 +7,7 @@ import plotly.express as px
 
 df = pd.read_csv(sys.argv[1], sep = "\t")
 output = sys.argv[2]
-month_file = sys.argv[3]
+month_file = open(sys.argv[3])
 
 # Reading in current month
 month_file.seek(0)
