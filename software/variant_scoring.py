@@ -5,7 +5,6 @@ import sys
 import pandas as pd
 import numpy as np
 import re
-#import plotly.express as px
 from itertools import chain
 from time import process_time
 
@@ -165,26 +164,7 @@ df['antigenic_score'] = df.groupby('Pango lineage')['Weight'].transform('mean')
 df_final = df[["Accession ID","Collection date", "Location", "Pango lineage", "AA Substitutions", "Weight", "antigenic_score"]]
 
 print("Saving dataframe...")
-#df_final.to_csv(output + "antigenic_scores_all.csv", sep = '\t', index = False, header = True)
-# Saving csv for global map visualization
-df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score']]
-df_vis["Continent"] = df_vis["Location"].apply(lambda x: x.split("/")[0])
-df_vis["Country"] = df_vis["Location"].apply(lambda x: x.split("/")[1])
-country = []
-continent = []
-for item in df_vis["Country"]:
-    x = item.lstrip()
-    y = x.rstrip()
-    country.append(y)
-for item in df_vis["Continent"]:
-    x = item.lstrip()
-    y = x.rstrip()
-    continent.append(y)
-df_vis['Country'] = country
-df_vis['Continent'] = continent
-df_vis.drop(["Location"], axis = 1, inplace = True)
-df_vis = df_vis.drop_duplicates()
-df_vis.to_csv(output + "antigenic_scores_map_visualization.csv", sep = '\t', index = False, header = True)
+df_final.to_csv(output + "antigenic_scores_all.csv", sep = '\t', index = False, header = True)
 
 # Ranking pango lineages based on average mutation score across all the sequences
 df_ranked = df_final[["Pango lineage", "antigenic_score"]]
@@ -271,15 +251,15 @@ df_vis = df_vis.merge(total_lineages.to_frame(), how = 'left', on = 'Country')
 df_vis['frequency'] = df_vis['n_lineages'].div(df_vis['total_lineages'])
 
 # Calculating average antigenic score for each lineage in the selected month:
-df_vis['average_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['antigenic_score'].transform('mean')
+#df_vis['average_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['antigenic_score'].transform('mean')
 # Filtering duplicates:
-df_vis.drop(['antigenic_score', 'Collection date', 'collection_date_list', 'n_lineages', 'total_lineages'], axis = 1, inplace = True)
+df_vis.drop(['Collection date', 'collection_date_list', 'n_lineages', 'total_lineages'], axis = 1, inplace = True)
 df_vis_threshold_averaged = df_vis.drop_duplicates()
 
 # Calculating antigenic score per country:
-df_vis_threshold_averaged['score'] = df_vis_threshold_averaged['average_antigenic_score']*df_vis_threshold_averaged['frequency']
+df_vis_threshold_averaged['score'] = df_vis_threshold_averaged['antigenic_score']*df_vis_threshold_averaged['frequency']
 df_vis_threshold_averaged['country_score'] = df_vis_threshold_averaged.groupby('Country')['score'].transform('sum')
-df = df_vis_threshold_averaged.drop(['Pango lineage', 'year', 'keep', 'month', 'frequency', 'average_antigenic_score', 'score'], axis = 1,)
+df = df_vis_threshold_averaged.drop(['Pango lineage', 'year', 'keep', 'month', 'frequency', 'antigenic_score', 'score'], axis = 1,)
 df.drop_duplicates(inplace = True)
 
 # Saving visualization dataframe:
