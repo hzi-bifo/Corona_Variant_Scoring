@@ -24,13 +24,18 @@ fig = px.choropleth(df, locations = "Country",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-                           title = 'Antigenic Scores per Country for %s' %month)
-fig.write_html(output + 'antigenic_score_map.html')
+			   range_color = [0, 7],
+                           title = '<b>Antigenic Scores per Country for %s</b>' %month)
+fig['layout']['title']['font'] = dict(size = 20)
+fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1)) #orientation = "h"
+fig.write_html(output + month + 'antigenic_score_map.html')
 fig_eu = px.choropleth(df_eu, locations = "Country",
                            locationmode = "country names",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-                           title = 'Antigenic Scores per Country for %s' %month,
+                           title = '<b>Antigenic Scores per Country for %s</b>' %month,
                            scope = 'europe')
-fig_eu.write_html(output + 'antigenic_score_map_europe.html')
+fig['layout']['title']['font'] = dict(size = 20)
+fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1))
+fig_eu.write_html(output + month + 'antigenic_score_map_europe.html')
