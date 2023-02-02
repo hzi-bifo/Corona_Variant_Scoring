@@ -39,14 +39,14 @@ else
 			fi
 			shift
 			;;
-#		-i | --i)
-#			if [ -d "$2" ]; then
-#				INDIR=$2
-#			else
-#				echo "Please provide a valid input directory, see -h for additional information"
-#			fi
-#			shift
-#			;;
+		-i | --i)
+			if [ -d "$2" ]; then
+				INDIR=$2
+			else
+				echo "Please provide a valid input directory, see -h for additional information"
+			fi
+			shift
+			;;
 		-v | --v)
 			if [ -d "$2" ]; then
 				AntigenicScoring=$2
