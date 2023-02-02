@@ -15,7 +15,7 @@ tpSites = pd.read_csv(sys.argv[2], sep = ',')
 output = sys.argv[3]
 weights = pd.read_csv(sys.argv[4], sep = '\t')
 voc_df = pd.read_csv(sys.argv[5], sep = ',')
-seqsUI = pd.read_csv(sys.argv[6], sep = ',')
+seqsUI = pd.read_csv(sys.argv[6], sep = '\t')
 
 # print(sys.argv[0])
 # print(sys.argv[1])
@@ -141,13 +141,13 @@ print("Done")
 # Calculating Antigenic Scores by chunking Metadata
 print("Calculating Mutation Scores....")
 print("Getting most recent month")
-if len(sys.argv) == 8:  # Add 1 back once you change the metadata file back to parse args (9)
+if len(sys.argv) == 9:  # Add 1 back once you change the metadata file back to parse args (9)
     print("Using user input month and year settings")
     # Using a predetermined month and year for the analysis that the user inputs
     max_month = str(sys.argv[6])  # add one back
     max_year = str(sys.argv[7])  # add one back
 
-elif len(sys.argv) == 6:  # Add 1 back once you change the metadata file back to parse args (6)
+elif len(sys.argv) == 7:  # Add 1 back once you change the metadata file back to parse args (6)
     # Calculating the most recent whole month and year based on today's date
     today = datetime.date.today()
     firstOfMonth = today.replace(day=1)
