@@ -26,21 +26,15 @@ if [ "$#" == 0 ]; then
 	echo
 	exit
 else
-	#while [ "$#" -gt 0 ]; do
 	while getopts 'o:i:v:f:m:u:hqw' opt; do
 		case "$opt" in
 			h) usage; exit ;;
-	#case $1 in
-			#h) 
-			#usage; exit
-			#;;	
 			o)
 				if [ -d "$OPTARG" ]; then
 					OUTDIR=$OPTARG
 				else
 					echo "Please provide a valid output directory, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			i)
 				if [ -d "$OPTARG" ]; then
@@ -48,7 +42,6 @@ else
 				else
 					echo "Please provide a valid input directory, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			v)
 				if [ -d "$OPTARG" ]; then
@@ -57,7 +50,6 @@ else
 				else
 					echo "Please provide a path to the Corona Variant Scoring directory, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			f)
 				if [ -d "$OPTARG" ]; then
@@ -65,7 +57,6 @@ else
 				else
 					echo "Please provide a path to the frequency data, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			m)
 				if [ -f "$OPTARG" ]; then
@@ -73,7 +64,6 @@ else
 				else
 					echo "Please provide a path to the months data, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			u)
 				if [ -f "$OPTARG" ]; then
@@ -81,15 +71,12 @@ else
 				else
 					echo "Please provide a path to the sequences under review file, see -h for additional information"; exit
 				fi
-			#shift
 				;;
 			q) # Month input required for the variant_scoring.py script should, used for selecting specific months for analysis (ie months comparison)
 				MONTH=$OPTARG
-			#shift
 				;;
 			w) # Year input require for the variant_scoring.py script
 				YEAR=$OPTARG
-			#shift
 				;;
 			*)
 				echo "$1 $2 is not an appropriate argument, please see the usage instructions: "; usage; exit
@@ -99,14 +86,6 @@ else
 fi
 cd $OUTDIR
 
-echo $OUTDIR
-echo $INDIR
-echo $SOFTWAREPATH
-echo $FREQUENCY
-echo $MONTHS
-echo $MONTH
-echo $YEAR
-
 #----------
 # Analysis
 #----------
@@ -114,11 +93,11 @@ echo $YEAR
 # Creating an ouput directory if one has not been created already
 if [ ! -d $OUTDIR'output/' ]; then mkdir $OUTDIR'output/'; fi
 
-#eval "$(conda shell.bash hook)"
-#conda activate sarscoverage
+eval "$(conda shell.bash hook)"
+conda activate sarscoverage
 
 # Running Variant Scoring Analysis and Visualization
-python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" # month (including 0 before value if < 10 (ex. 07 for july) # year
+python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
 #python $SOFTWAREPATH"variant_scoring.py" $AntigenicScoring"reference/tp_sites.csv" $OUTDIR"output/" $AntigenicScoring"reference/antigenic_weights.csv" $AntigenicScoring"reference/known_variants_of_concern.csv" $SEQUI $MONTH $YEAR
 Rscript "$SOFTWAREPATH""frequency_heatmap.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/" 
 python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt"
