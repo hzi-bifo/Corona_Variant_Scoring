@@ -24,7 +24,7 @@ fig = px.choropleth(df, locations = "Country",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-			   range_color = [0, 7],
+			   range_color = [0, 10],
                            title = '<b>Antigenic Scores per Country for %s</b>' %month)
 fig['layout']['title']['font'] = dict(size = 20)
 fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1)) #orientation = "h"
