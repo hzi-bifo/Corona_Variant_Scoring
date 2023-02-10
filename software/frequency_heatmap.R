@@ -27,7 +27,7 @@ print(output)
 get_heatmap <- function(folder, countries, current_month, output_name, rename, cutoff, lineages, output){
   
   # get significant lineages from all countries
-  sign_lineages_df <- lineages[lineages[['antigenic_score']] >= 2.67, ]
+  sign_lineages_df <- lineages[lineages[['antigenic_score']] >= 3.85, ]
   sign_lineages <- sign_lineages_df[['Pango.lineage']]
   # remove duplicates
   sign_lineages <- sort(unique(sign_lineages))
