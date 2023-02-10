@@ -9,6 +9,15 @@ from itertools import chain
 from time import process_time
 import datetime
 
+print(sys.argv[0])
+print(sys.argv[1])
+print(sys.argv[2])
+print(sys.argv[3])
+print(sys.argv[4])
+print(sys.argv[5])
+print(sys.argv[6])
+print(len(sys.argv))
+
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions']
 metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
 tpSites = pd.read_csv(sys.argv[2], sep = ',')
@@ -16,16 +25,6 @@ output = sys.argv[3]
 weights = pd.read_csv(sys.argv[4], sep = '\t')
 voc_df = pd.read_csv(sys.argv[5], sep = ',')
 seqsUI = pd.read_csv(sys.argv[6], sep = '\t')
-
-# print(sys.argv[0])
-# print(sys.argv[1])
-# print(sys.argv[2])
-# print(sys.argv[3])
-# print(sys.argv[4])
-# print(sys.argv[5])
-# print(sys.argv[6])
-# print(sys.argv[7])
-# print(len(sys.argv))
 
 def conversion_position(x):
     # Function to convert aa list in the metadata file to their position and original / changed aa
@@ -196,7 +195,7 @@ for chunk in df_chunks:
     chunk = chunk[chunk["Collection date"].str.contains("-")]
     chunk['year'] = chunk["Collection date"].apply(lambda x: x.split("-")[0])
     chunk['month'] = chunk["Collection date"].apply(lambda x: x.split("-")[1])
-    print("Filtering by date")
+    #print("Filtering by date")
     # print(len(chunk))
     dftemp = chunk[chunk.year == max_year]
     dftemp = dftemp[dftemp.month == max_month]
