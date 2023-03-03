@@ -94,16 +94,13 @@ def mutation_scores(input_df, tpSites_list):  # , output_df
         input_df["Original_aa"] = original_AAs
         changed_AAs = input_df['AA Substitutions'].apply(conversion_changedAA)
         input_df["Changed_aa"] = changed_AAs
-        print("substitutions")
-        print(substitutions)
-        print(len(substitutions))
-        print("original AAs")
-        print(original_AAs)
-        print(len(original_AAs))
-        print("Changed AAs")
-        print(changed_AAs)
-        print(len(changed_AAs))
+        if len(substitutions) != len(original_AAs):
+            print("Conversion of amino acid list was incorrect and the lengths of the substitution positions defers from the amino acids!")
+            print("Substitution Positions: ", len(substitutions))
+            print("Number of amino acids: ", len(original_AAs))
+            exit()
     except:
+        print("Unable to parse the AA Substitutions column of the metadata file, please investigate.")
         exit()
 
     try:
@@ -111,24 +108,32 @@ def mutation_scores(input_df, tpSites_list):  # , output_df
         #        metadata_expanded = input_df.explode(list('Substitution_PositionsOriginal_aaChanged_aa'))
         print("Expanding Substitution Positions")
         print("input df")
-        print(input_df)
-        #metadata_expanded = input_df.apply(pd.Series.explode)
+        print(pd.DataFrame.head(input_df))
         metadata_expanded = input_df.explode(['Substitution_Positions','Original_aa','Changed_aa'])
-        print(metadata_expanded)
+        print(pd.DateFrame.head(metadata_expanded))
         # Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
         print("Filtering based on tp list")
         metadata_filtered = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
-        print(metadata_filtered)
+        print(pd.DateFrame.head(metadata_filtered))
         print("Merging with the weights file")
         metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
-        print(metadata_filtered_weights)
+        print(pd.DateFrame.head(metadata_filtered_weights))
         print("mutation score weight complete")
     except:
-        # metadata_filtered_weights = input_df
-        # metadata_filtered_weights['Substitution_Positions'] = np.NAN
-        # metadata_filtered_weights['Weight'] = np.NAN
-        # print("Unable to merge weights, changing to NAN...")
-        exit()
+        print("Unable to expand Substitution_Positions, chunking instead...")
+        metadata_filtered = pd.DataFrame()
+        n = 100
+        t = 0
+        df_chunks = np.array_split(input_df, n)  # (metadata, n)
+        for chunk in df_chunks:
+            t = t + 1
+            metadata_expanded = chunk.explode(['Substitution_Positions','Original_aa','Changed_aa'])
+            metadata_filtered_chunk = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
+            metadata_filtered = pd.concat([metadata_filtered, metadata_filtered_chunk])
+        metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
+        print(pd.DateFrame.head(metadata_filtered_weights))
+        print("mutation score weight complete")
+        #exit()
 
     return (metadata_filtered_weights)
 
