@@ -93,8 +93,8 @@ cd "$OUTDIR"
 # Creating an ouput directory if one has not been created already
 if [ ! -d "$OUTDIR"'output/' ]; then mkdir "$OUTDIR"'output/'; fi
 
-#eval "$(conda shell.bash hook)"
-#conda activate sarscoverage
+eval "$(conda shell.bash hook)"
+conda activate sarscoverage
 
 # Running Variant Scoring Analysis and Visualization
 python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
