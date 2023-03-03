@@ -26,75 +26,75 @@ if [ "$#" == 0 ]; then
 	echo
 	exit
 else
-	while getopts 'o:i:v:f:m:u:hqw' opt; do
-		case "$opt" in
+	while getopts 'o:i:v:f:m:u:hqw' OPTION; do
+		case "${OPTION}" in
 			h) usage; exit ;;
 			o)
-				if [ -d "$OPTARG" ]; then
-					OUTDIR=$OPTARG
+				if [ -d "${OPTARG}" ]; then
+					OUTDIR=${OPTARG}
 				else
 					echo "Please provide a valid output directory, see -h for additional information"; exit
 				fi
 				;;
 			i)
-				if [ -d "$OPTARG" ]; then
-					INDIR=$OPTARG
+				if [ -d "${OPTARG}" ]; then
+					INDIR=${OPTARG}
 				else
 					echo "Please provide a valid input directory, see -h for additional information"; exit
 				fi
 				;;
 			v)
-				if [ -d "$OPTARG" ]; then
-					AntigenicScoring=$OPTARG
+				if [ -d "${OPTARG}" ]; then
+					AntigenicScoring=${OPTARG}
 					SOFTWAREPATH=$AntigenicScoring"software/"
 				else
 					echo "Please provide a path to the Corona Variant Scoring directory, see -h for additional information"; exit
 				fi
 				;;
 			f)
-				if [ -d "$OPTARG" ]; then
-					FREQUENCY=$OPTARG
+				if [ -d "${OPTARG}" ]; then
+					FREQUENCY=${OPTARG}
 				else
 					echo "Please provide a path to the frequency data, see -h for additional information"; exit
 				fi
 				;;
 			m)
-				if [ -f "$OPTARG" ]; then
-					MONTHS=$OPTARG
+				if [ -f "${OPTARG}" ]; then
+					MONTHS=${OPTARG}
 				else
 					echo "Please provide a path to the months data, see -h for additional information"; exit
 				fi
 				;;
 			u)
-				if [ -f "$OPTARG" ]; then
-					SEQUI=$OPTARG
+				if [ -f "${OPTARG}" ]; then
+					SEQUI=${OPTARG}
 				else
 					echo "Please provide a path to the sequences under review file, see -h for additional information"; exit
 				fi
 				;;
 			q) # Month input required for the variant_scoring.py script should, used for selecting specific months for analysis (ie months comparison)
-				MONTH=$OPTARG
+				MONTH=${OPTARG}
 				;;
 			w) # Year input require for the variant_scoring.py script
-				YEAR=$OPTARG
+				YEAR=${OPTARG}
 				;;
-			*)
+			?)
 				echo "$1 $2 is not an appropriate argument, please see the usage instructions: "; usage; exit
 		esac
 	#shift
 	done
 fi
-cd $OUTDIR
+cd "$OUTDIR"
 
 #----------
 # Analysis
 #----------
 
 # Creating an ouput directory if one has not been created already
-if [ ! -d $OUTDIR'output/' ]; then mkdir $OUTDIR'output/'; fi
+if [ ! -d "$OUTDIR"'output/' ]; then mkdir "$OUTDIR"'output/'; fi
 
-eval "$(conda shell.bash hook)"
-conda activate sarscoverage
+#eval "$(conda shell.bash hook)"
+#conda activate sarscoverage
 
 # Running Variant Scoring Analysis and Visualization
 python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
