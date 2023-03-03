@@ -129,6 +129,7 @@ def mutation_scores(input_df, tpSites_list):  # , output_df
         # metadata_filtered_weights['Weight'] = np.NAN
         # print("Unable to merge weights, changing to NAN...")
         exit()
+
     return (metadata_filtered_weights)
 
 # Creating list of true positive antigenic sites which will be used to define antigenic weights
@@ -154,13 +155,13 @@ elif len(sys.argv) == 7:  # Add 1 back once you change the metadata file back to
     max_month = str(lastMonth.month)
     # Calculating the year, needs to change if the previous month was December
     if max_month == "12":
-        print("Changing year to previous year")
+        #print("Changing year to previous year")
         lastYear = firstOfMonth - datetime.timedelta(days=366)
         max_year = str(lastYear)
     else:
         max_year = str(today.year)
     if len(max_month) < 2:
-        print("Adding 0 to the front of the month for correct formatting")
+        #print("Adding 0 to the front of the month for correct formatting")
         max_month = "0" + str(max_month)
 
     print("Previous Month and Year:")
@@ -207,10 +208,10 @@ for chunk in df_chunks:
         continue
     else:
         monthly_metadata = pd.concat([dftemp, monthly_metadata])
-        print("Chunk complete")
+        #print("Chunk complete")
 
-print("Filtration Complete")
-print(pd.DataFrame.head(monthly_metadata))
+print("Monthly Filtration Complete")
+#print(pd.DataFrame.head(monthly_metadata))
 
 print("Writing Months Text File")
 month_file = open(output + "month_vis.txt", "w")
@@ -220,7 +221,7 @@ month_file.close()
 print("Running Analysis - Calculating Antigenic Scores for Pango Lineages")
 metadata_filtered_weights = pd.DataFrame()
 # metadata_filtered_combinedWeights = pd.DataFrame()
-n = 100  # 1500
+n = 1500
 t = 0
 df_chunks = np.array_split(monthly_metadata, n)  # (metadata, n)
 tstart = process_time()
@@ -233,15 +234,15 @@ for chunk in df_chunks:
         print("Empty df after filtering")
         continue
     else:
-        print("Calculating Weights")
+        # Calculating Weights
         mutation_df = mutation_scores(chunk, tpSites_list)
-        print("mutation df")
-        print(mutation_df)
+        #print("mutation df")
+        #print(mutation_df)
         #   Testing with the next line since pandas explode had to be downgraded for pandas 1.2, this will reduce df size
-        print("agreggating by accession id")
+        # Agreggating by accession id
         mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight': 'sum'})
-        print(len(mutation_df))
-        print(mutation_df)
+        #print(len(mutation_df))
+        #print(mutation_df)
         metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
 
     print("Output DataFrame Shape: ")
@@ -249,8 +250,8 @@ for chunk in df_chunks:
     print("Chunk complete")
 tstop = process_time()
 print("Process Time: ", tstop - tstart)
-print("FINAL METADATA_FILTERED_WEIGHTS DF: ")
-print(metadata_filtered_weights)
+#print("FINAL METADATA_FILTERED_WEIGHTS DF: ")
+#print(metadata_filtered_weights)
 
 # Summing Weights by accession ID
 # metadata_filtered_combinedWeights = pd.DataFrame(metadata_filtered_weights)
@@ -258,13 +259,10 @@ print(metadata_filtered_weights)
 print("Merging Dataframes")
 df = pd.merge(monthly_metadata, metadata_filtered_weights, how='left', left_on='Accession ID', right_index=True)
 df['Weight'].fillna(0, inplace=True)
-print(pd.DataFrame.head(df))
-print(len(df))
+#print(pd.DataFrame.head(df))
+#print(len(df))
 
 print("Creating final dataframe...")
-# Calculating final mutation score by taking the mean of the lineages that occur per location
-# df['mutation_score'] = df.groupby(['Location','Pango lineage'])['Weight'].transform('mean')
-
 # Calculating final antigenic score by averaging the scores across the lineages
 df['antigenic_score'] = df.groupby('Pango lineage')['Weight'].transform('mean')
 df_final = df[["Accession ID", "Collection date", "Location", "Pango lineage", "AA Substitutions", "Weight", "antigenic_score"]]
