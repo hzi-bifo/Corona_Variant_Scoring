@@ -7,7 +7,10 @@ import numpy as np
 import re
 from itertools import chain
 from time import process_time
+from datetime import date
+#from datetime import datetime
 import datetime
+start_time = datetime.datetime.now()
 
 print(sys.argv[0])
 print(sys.argv[1])
@@ -16,7 +19,7 @@ print(sys.argv[3])
 print(sys.argv[4])
 print(sys.argv[5])
 print(sys.argv[6])
-print(len(sys.argv))
+print(len(sys.argv), "\n")
 
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions']
 metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
@@ -80,6 +83,27 @@ def conversion_changedAA(x):
             changed_aaList.append(q)
     return (changed_aaList)
 
+def seqsUI_filtration(seqsUI, max_month, max_year):
+    # Function to return a list of sequences under review for removal prior to analysis
+    print("Identifying Sequences Under Review")
+    seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
+    seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
+    seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
+    seqsUI_filtered = seqsUI[seqsUI.year == max_year]
+    seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
+    seqsUI_list = seqsUI_filtered["Accession ID"].to_list()
+    return (seqsUI_list)
+
+def month_filtration(metadata, seqsUI_list, max_month, max_year):
+    # Function to filter metadata file by most recent month by chunking dataframe
+    metadata = metadata[metadata["Collection date"].str.contains("-")]
+    metadata['year'] = metadata["Collection date"].apply(lambda x: x.split("-")[0])
+    metadata['month'] = metadata["Collection date"].apply(lambda x: x.split("-")[1])
+    dftemp = metadata[metadata.year == max_year]
+    dftemp = dftemp[dftemp.month == max_month]
+    dftemp = dftemp[dftemp['Accession ID'].isin(seqsUI_list) == False]
+    return (dftemp)
+
 def mutation_scores(input_df, tpSites_list):  # , output_df
     # Function to add mutation scores to the metadata file based on amino acid changes
     input_df = input_df.dropna(subset=['AA Substitutions'])
@@ -104,36 +128,28 @@ def mutation_scores(input_df, tpSites_list):  # , output_df
         exit()
 
     try:
-        #        cols = ['Substitution_Positions','Original_aa','Changed_aa']
-        #        metadata_expanded = input_df.explode(list('Substitution_PositionsOriginal_aaChanged_aa'))
         print("Expanding Substitution Positions")
-        print("input df")
-        print(pd.DataFrame.head(input_df))
         metadata_expanded = input_df.explode(['Substitution_Positions','Original_aa','Changed_aa'])
         print(pd.DateFrame.head(metadata_expanded))
         # Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
         print("Filtering based on tp list")
         metadata_filtered = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
-        print(pd.DateFrame.head(metadata_filtered))
         print("Merging with the weights file")
         metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
-        print(pd.DateFrame.head(metadata_filtered_weights))
         print("mutation score weight complete")
     except:
         print("Unable to expand Substitution_Positions, chunking instead...")
         metadata_filtered = pd.DataFrame()
         n = 100
         t = 0
-        df_chunks = np.array_split(input_df, n)  # (metadata, n)
+        df_chunks = np.array_split(input_df, n) 
         for chunk in df_chunks:
             t = t + 1
             metadata_expanded = chunk.explode(['Substitution_Positions','Original_aa','Changed_aa'])
             metadata_filtered_chunk = metadata_expanded[metadata_expanded['Substitution_Positions'].isin(tpSites_list)]
             metadata_filtered = pd.concat([metadata_filtered, metadata_filtered_chunk])
         metadata_filtered_weights = pd.merge(metadata_filtered, weights, how='left', on=['Original_aa', 'Changed_aa'])
-        print(pd.DateFrame.head(metadata_filtered_weights))
         print("mutation score weight complete")
-        #exit()
 
     return (metadata_filtered_weights)
 
@@ -141,92 +157,89 @@ def mutation_scores(input_df, tpSites_list):  # , output_df
 print("Creating list of known antigenic sites...")
 tpSites_list = tpSites['tp_sites'].values.tolist()
 tpSites_list = [str(item) for item in tpSites_list]
-print("Done")
+print("Done\n")
 
 # Calculating Antigenic Scores by chunking Metadata
 print("Calculating Mutation Scores....")
 print("Getting most recent month")
-if len(sys.argv) == 9:  # Add 1 back once you change the metadata file back to parse args (9)
+if len(sys.argv) == 9:  
     print("Using user input month and year settings")
     # Using a predetermined month and year for the analysis that the user inputs
     max_month = str(sys.argv[6])  # add one back
     max_year = str(sys.argv[7])  # add one back
 
-elif len(sys.argv) == 7:  # Add 1 back once you change the metadata file back to parse args (6)
+elif len(sys.argv) == 7: 
     # Calculating the most recent whole month and year based on today's date
-    today = datetime.date.today()
+    today = date.today()
     firstOfMonth = today.replace(day=1)
     lastMonth = firstOfMonth - datetime.timedelta(days=1)
     max_month = str(lastMonth.month)
     # Calculating the year, needs to change if the previous month was December
     if max_month == "12":
-        #print("Changing year to previous year")
         lastYear = firstOfMonth - datetime.timedelta(days=366)
-        max_year = str(lastYear)
+        max_year = str(lastYear) 
     else:
         max_year = str(today.year)
     if len(max_month) < 2:
-        #print("Adding 0 to the front of the month for correct formatting")
         max_month = "0" + str(max_month)
 
     print("Previous Month and Year:")
     print(max_year)
-    print(max_month)
+    print(max_month, "\n")
 
 else:
     print("Wrong number of arguments, please use -h for more information")
     sys.exit(1)
-
-# Removing sequences under review (these are accession IDs that are under review as per GISAID)
-print("Identifying Sequences Under Review")
-seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
-seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
-seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
-seqsUI_filtered = seqsUI[seqsUI.year == max_year]
-seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
-seqsUI_list = seqsUI_filtered["Accession ID"].to_list()
-# metadata_final = monthly_metadata[monthly_metadata['Accession ID'].isin(seqsUI_list) == False]
+    
+max_year = str(max_year) #New line
+max_month = str(max_month) # New line
 
 print("Filtering Metadata by most recent month")
-# Running filter on chunks of the metadata to reduce computation time and requirements
-n = 1500
-t = 0
-df_chunks = np.array_split(metadata, n)  # (metadata, n)
-tstart = process_time()
+n = len(metadata) // 50  # 1500
+print("n: ", n)
+
 monthly_metadata = pd.DataFrame()
+seqsUI_list = seqsUI_filtration(seqsUI, max_month, max_year)
+df_chunks = np.array_split(metadata, n)
 for chunk in df_chunks:
-    # print(chunk.shape[0])
-    t = t + 1
+    dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
+    monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
+print("Monthly Metadata 1st Attempt: ")
+print("Length of monthly_metadata: ", len(monthly_metadata))
+print("Column names: ", monthly_metadata.columns.values)
+print(monthly_metadata.head())
 
-    chunk = chunk[chunk["Collection date"].str.contains("-")]
-    chunk['year'] = chunk["Collection date"].apply(lambda x: x.split("-")[0])
-    chunk['month'] = chunk["Collection date"].apply(lambda x: x.split("-")[1])
-    #print("Filtering by date")
-    # print(len(chunk))
-    dftemp = chunk[chunk.year == max_year]
-    dftemp = dftemp[dftemp.month == max_month]
-    # print(len(dftemp))
-    dftemp = dftemp[dftemp['Accession ID'].isin(seqsUI_list) == False]
-
-    if len(dftemp) == 0:
-        # print("Empty df after filtering")
-        continue
+if len(monthly_metadata) == 0:
+    print("No isolate data for: ", max_month, "-", max_year)
+    max_month = int(max_month) - 1
+    if max_month == 0:
+        max_month = "12"
     else:
-        monthly_metadata = pd.concat([dftemp, monthly_metadata])
-        #print("Chunk complete")
+        max_month = str(max_month)
+        if len(max_month) < 2:
+            max_month = "0" + str(max_month)
+    print("Now using data from: ", max_month, "-", max_year)
 
-print("Monthly Filtration Complete")
-#print(pd.DataFrame.head(monthly_metadata))
+    monthly_metadata = pd.DataFrame()
+    seqsUI_list = seqsUI_filtration(seqsUI, max_month, max_year)
+    for chunk in df_chunks:
+        dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
+        monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
+if len(monthly_metadata) == 0:
+    print("ERROR - despite using data from two months ago, the monthly_metadata file is still empty, please check!")
+    exit()
+print("Monthly Filtration Complete\n")
 
 print("Writing Months Text File")
 month_file = open(output + "month_vis.txt", "w")
 month_file.writelines(str(max_month) + "-" + str(max_year))
 month_file.close()
 
-print("Running Analysis - Calculating Antigenic Scores for Pango Lineages")
+print("\nRunning Analysis - Calculating Antigenic Scores for Pango Lineages")
 metadata_filtered_weights = pd.DataFrame()
-# metadata_filtered_combinedWeights = pd.DataFrame()
-n = 1500
+print("Length of Monthly Metadata File to be chunked: ", len(monthly_metadata))
+n = len(monthly_metadata) // 50 # 1500
+print("Number of chunks for analysis: ", n, "\n")
 t = 0
 df_chunks = np.array_split(monthly_metadata, n)  # (metadata, n)
 tstart = process_time()
@@ -241,31 +254,20 @@ for chunk in df_chunks:
     else:
         # Calculating Weights
         mutation_df = mutation_scores(chunk, tpSites_list)
-        #print("mutation df")
-        #print(mutation_df)
-        #   Testing with the next line since pandas explode had to be downgraded for pandas 1.2, this will reduce df size
         # Agreggating by accession id
         mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight': 'sum'})
-        #print(len(mutation_df))
-        #print(mutation_df)
         metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
 
     print("Output DataFrame Shape: ")
     print(metadata_filtered_weights.shape)
     print("Chunk complete")
 tstop = process_time()
-print("Process Time: ", tstop - tstart)
-#print("FINAL METADATA_FILTERED_WEIGHTS DF: ")
-#print(metadata_filtered_weights)
+print("\nProcess Time: ", tstop - tstart)
 
 # Summing Weights by accession ID
-# metadata_filtered_combinedWeights = pd.DataFrame(metadata_filtered_weights)
-# df = pd.merge(metadata, metadata_filtered_weights, how = 'left', left_on = 'Accession ID', right_index = True)
 print("Merging Dataframes")
 df = pd.merge(monthly_metadata, metadata_filtered_weights, how='left', left_on='Accession ID', right_index=True)
 df['Weight'].fillna(0, inplace=True)
-#print(pd.DataFrame.head(df))
-#print(len(df))
 
 print("Creating final dataframe...")
 # Calculating final antigenic score by averaging the scores across the lineages
@@ -288,7 +290,7 @@ df_merged_ranked['WHO_label'] = df_merged_ranked['WHO_label'].fillna("Non Varian
 df_merged_ranked.to_csv(output + "antigenic_scores_ranked_with_WHO.csv", sep='\t', index=False, header=True)
 print("Ranked Antigenic Scores COMPLETE")
 
-### Creation of Dataframe for Visualizations
+### Creation of Dataframes for Visualizations
 
 # Creating Dataframe for global map visualization
 df_vis = df_final[['Location', 'Pango lineage', 'antigenic_score', 'Collection date']]
@@ -319,8 +321,6 @@ df_vis = df_vis.merge(total_lineages.to_frame(), how='left', on='Country')
 df_vis['frequency'] = df_vis['n_lineages'].div(df_vis['total_lineages'])
 
 # Calculating average antigenic score for each lineage in the selected month:
-# df_vis['average_antigenic_score'] = df_vis.groupby(['Country', 'Pango lineage'])['antigenic_score'].transform('mean')
-# Filtering duplicates:
 df_vis.drop(['Collection date', 'n_lineages', 'total_lineages'], axis=1, inplace=True)  # 'collection_date_list'
 df_vis_threshold_averaged = df_vis.drop_duplicates()
 
@@ -328,9 +328,11 @@ df_vis_threshold_averaged = df_vis.drop_duplicates()
 df_vis_threshold_averaged['score'] = df_vis_threshold_averaged['antigenic_score'] * df_vis_threshold_averaged[
     'frequency']
 df_vis_threshold_averaged['country_score'] = df_vis_threshold_averaged.groupby('Country')['score'].transform('sum')
-# df = df_vis_threshold_averaged.drop(['Pango lineage', 'year', 'keep', 'month', 'frequency', 'antigenic_score', 'score'], axis = 1,)
 df = df_vis_threshold_averaged.drop(['Pango lineage', 'frequency', 'antigenic_score', 'score'], axis=1, )
 df.drop_duplicates(inplace=True)
 
 # Saving visualization dataframe:
 df.to_csv(output + "antigenic_scores_map_visualization.csv", sep='\t', index=False, header=True)
+
+end_time = datetime.datetime.now()
+print('Duration: {}'.format(end_time - start_time))
