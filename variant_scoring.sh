@@ -102,5 +102,5 @@ python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicSco
 #python $SOFTWAREPATH"variant_scoring.py" $AntigenicScoring"reference/tp_sites.csv" $OUTDIR"output/" $AntigenicScoring"reference/antigenic_weights.csv" $AntigenicScoring"reference/known_variants_of_concern.csv" $SEQUI $MONTH $YEAR > "$OUTDIR""STDOUT.txt"
 Rscript "$SOFTWAREPATH""frequency_heatmap.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/"
 python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt"
-python "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
+python "$SOFTWAREPATH""pVOI_interactive_table.py" "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
 echo "COMPLETE"
