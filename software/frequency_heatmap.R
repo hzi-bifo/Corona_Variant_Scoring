@@ -7,7 +7,6 @@
 library(d3heatmap)
 library(htmlwidgets)
 library(countrycode)
-library(DT)
 
 args = commandArgs(trailingOnly=TRUE)
 folder <- args[1]
@@ -18,7 +17,6 @@ output <- args[5]
 
 print("Folder")
 print(folder)
-#print(input)
 print("Months_file")
 print(months_file)
 print("Cutoff")
@@ -101,19 +99,3 @@ current_month <- months[length(months)-1] # look at frequencies of the previous 
 get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", TRUE, cutoff, input, output)
 #get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", FALSE, cutoff, input)
 get_heatmap(folder, states, current_month, "antigenic_scoring_summary_states", FALSE, cutoff, input, output)
-
-# saving dataframe with identified pVOIs and their antigenic scores
-#data <- read.csv(paste(output, "/antigenic_scoring_summary_statistics.csv", sep = ""), row.names = 1, sep = ",")
-#data <- data[rowSums(data) >= cutoff,,drop=FALSE]
-#data <- data[1:20,]
-#pvois <- row.names(data)
-
-#sign_lineages_df <- input[input[['antigenic_score']] >= 3.85, ]
-#sign_lineages_df[!duplicated(sign_lineages_df), ]
-
-#pvoi_df <- sign_lineages_df[sign_lineages_df$Pango.lineage %in% pvois, ]
-#pvoi_df_final <- pvoi_df[c("Pango.lineage", "antigenic_score")]
-#print(pvoi_df_final)
-
-#pvoi_df_final %>% datatable() # , options = list(pageLength = 1), rownames = FALSE)
-#saveWidget(pvoi_table, paste(output, "/ntigenic_scoring_pVOItable.html", sep = ""), selfcontained = TRUE)
