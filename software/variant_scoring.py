@@ -117,7 +117,6 @@ elif len(sys.argv) == 7:
     max_year = str(year)
     if len(max_month) < 2:
         max_month = "0" + str(max_month)
-
     print("Previous Month and Year:")
     print(max_year)
     print(max_month, "\n")
@@ -142,7 +141,8 @@ seqsUI_list = seqsUI_filtration(seqsUI, max_month, max_year)
 df_chunks = np.array_split(metadata, n)
 for chunk in df_chunks:
     t = t + 1
-    dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
+    dfMonth_chunk = chunk.loc[chunk['Collection date'].str.contains(max_year+'-'+max_month)]
+    #dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
     monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
 print("Monthly Metadata 1st Attempt: ")
 print("Length of monthly_metadata: ", len(monthly_metadata))
@@ -151,6 +151,16 @@ print(monthly_metadata.head())
 # Fail safe to go back one month if metadata file empty for current month
 if len(monthly_metadata) == 0:
     print("No isolate data for: ", max_month, "-", max_year)
+    # Making file to remove months from month file, used later for frequency heatmap
+    currentMonth = str(today.month)
+    if len(currentMonth) < 2:
+        currentMonth = "0" + str(currentMonth)
+    currentYear = str(today.year)
+    month_remove_file = open(output + "month_remove.txt", "w")
+    month_remove_file.writelines(str(currentYear) + "-" + str(currentMonth))
+    month_remove_file.writelines("\n" + str(max_year) + "-" + str(max_month))
+    month_remove_file.close()
+
     twoMonths_ago = (today - relativedelta(months = 2)).month
     twoMonths_year = (today - relativedelta(months = 2)).year
     max_month = str(twoMonths_ago)
@@ -162,12 +172,17 @@ if len(monthly_metadata) == 0:
     monthly_metadata = pd.DataFrame()
     seqsUI_list = seqsUI_filtration(seqsUI, max_month, max_year)
     for chunk in df_chunks:
-        dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
+        dfMonth_chunk = chunk.loc[chunk['Collection date'].str.contains(max_year + '-' + max_month)]
+        #dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
         monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
 
 # Going back two months if data still empty
 if len(monthly_metadata) == 0:
     print("No isolate data for: ", max_month, "-", max_year)
+    month_remove_file = open(output + "month_remove.txt", "a")
+    month_remove_file.writelines("\n" + str(max_year) + "-" + str(max_month))
+    month_remove_file.close()
+
     threeMonths_ago = (today - relativedelta(months = 3)).month
     threeMonths_year = (today - relativedelta(months = 3)).year
     max_month = str(threeMonths_ago)
@@ -179,7 +194,8 @@ if len(monthly_metadata) == 0:
     monthly_metadata = pd.DataFrame()
     seqsUI_list = seqsUI_filtration(seqsUI, max_month, max_year)
     for chunk in df_chunks:
-        dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
+        dfMonth_chunk = chunk.loc[chunk['Collection date'].str.contains(max_year + '-' + max_month)]
+        #dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
         monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
 
 # Throwing error if data from two months ago is still empty
