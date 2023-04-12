@@ -28,10 +28,10 @@ fig = px.choropleth(df, locations = "Country",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
 			               range_color = [0, 10],
-                           title = '<b>Regional Antigenic Scores for %s</b>' %month)
+                           title = '<b>Country Antigenic Scores for %s</b>' %month)
 fig['layout']['title']['font'] = dict(size = 20)
-fig.update_layout(coloraxis_colorbar = dict(title = "Regional Antigenic Score", dtick = 1),
-                  font = dict(size = 16)) #orientation = "h"
+fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1),
+                  font = dict(size = 14))
 fig.write_html(output + 'antigenic_score_map.html')
 ## European Map (unscaled)
 fig_eu = px.choropleth(df_eu, locations = "Country",
@@ -39,10 +39,11 @@ fig_eu = px.choropleth(df_eu, locations = "Country",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-                           title = '<b>Regional Antigenic Scores for %s</b>' %month,
+                           title = '<b>Country Antigenic Scores for %s</b>' %month,
                            scope = 'europe')
 fig['layout']['title']['font'] = dict(size = 20)
-fig.update_layout(coloraxis_colorbar = dict(title = "Regional Antigenic Score", dtick = 1))
+fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1),
+                  font = dict(size = 14))
 fig_eu.write_html(output + 'antigenic_score_map_europe.html')
 
 # Creating global map with slider through time frame
