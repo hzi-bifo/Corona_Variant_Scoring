@@ -25,7 +25,10 @@ print(len(sys.argv), "\n")
 
 print("Reading in the metadata file: ")
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions', 'Host']
-metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
+metadata = pd.DataFrame()
+chunked_df = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, iterator = True, chunksize = 2000)
+metadata = pd.concat(chunked_df, ignore_index = True)
+#metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
 tpSites = pd.read_csv(sys.argv[2], sep = ',')
 output = sys.argv[3]
 weights = pd.read_csv(sys.argv[4], sep = '\t')
