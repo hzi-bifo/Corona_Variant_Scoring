@@ -25,15 +25,25 @@ print(len(sys.argv), "\n")
 
 print("Reading in the metadata file: ")
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions', 'Host']
-metadata = pd.DataFrame()
-chunked_df = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, iterator = True, chunksize = 2000)
-metadata = pd.concat(chunked_df, ignore_index = True)
+try:
+    metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, dtype={"Host": "category", "Location": "category", "Pango lineage": "category"})
+except:
+    print("Chunking metadata file")
+    chunked_df = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, dtype = {"Host": "category", "Location": "category", "Pango lineage": "category"}, iterator = True, chunksize = 100)
+    metadata = pd.concat(chunked_df, ignore_index = True)
+    #metadata = pd.DataFrame()
+    #for chunk in pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, chunksize = 10):
+    #    metadata = pd.concat([metadata, chunk], axis = 0)
 #metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns)
 tpSites = pd.read_csv(sys.argv[2], sep = ',')
 output = sys.argv[3]
 weights = pd.read_csv(sys.argv[4], sep = '\t')
 voc_df = pd.read_csv(sys.argv[5], sep = ',')
-seqsUI = pd.read_csv(sys.argv[6], sep = '\t')
+try:
+    seqsUI = pd.read_csv(sys.argv[6], sep = '\t')
+except pd.errors.EmptyDataError:
+    print("Sequences under review file was empty, skipping.")
+    seqsUI = pd.DataFrame(columns = ['Accession ID','Collection date','Submission date','Location'])
 
 metadata_time = datetime.datetime.now()
 print('import data Duration: {}'.format(metadata_time - start_time))
@@ -54,12 +64,16 @@ def aa_substitution_filter(x, *tp_list):
 def seqsUI_filtration(seqsUI, max_month, max_year):
     # Function to return a list of sequences under review for removal prior to analysis
     print("Identifying Sequences Under Review")
-    seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
-    seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
-    seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
-    seqsUI_filtered = seqsUI[seqsUI.year == max_year]
-    seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
-    seqsUI_list = seqsUI_filtered["Accession ID"].to_list()
+    if len(seqsUI) == 0:
+        print("Returning empty sequences under reivew list as df is empty.")
+        seqsUI_list = []
+    else:
+        seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
+        seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
+        seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
+        seqsUI_filtered = seqsUI[seqsUI.year == max_year]
+        seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
+        seqsUI_list = seqsUI_filtered["Accession ID"].to_list()
     return (seqsUI_list)
 
 def month_filtration(metadata, seqsUI_list, max_month, max_year):
@@ -145,6 +159,7 @@ df_chunks = np.array_split(metadata, n)
 for chunk in df_chunks:
     t = t + 1
     dfMonth_chunk = chunk.loc[chunk['Collection date'].str.contains(max_year+'-'+max_month)]
+    dfMonth_chunk = dfMonth_chunk[dfMonth_chunk['Accession ID'].isin(seqsUI_list) == False]
     #dfMonth_chunk = month_filtration(chunk, seqsUI_list, max_month, max_year)
     monthly_metadata = pd.concat([monthly_metadata, dfMonth_chunk], axis = 0)
 print("Monthly Metadata 1st Attempt: ")
@@ -217,6 +232,9 @@ month_file.close()
 month_file_time = datetime.datetime.now()
 print('month file Duration: {}'.format(month_file_time - month_filter_time))
 
+# Changing dtype of columns for analysis
+monthly_metadata['Pango lineage'] = monthly_metadata['Pango lineage'].astype(str)
+monthly_metadata['Location'] = monthly_metadata['Location'].astype(str)
 # Filtering by "Human" host data only
 monthly_metadata = monthly_metadata.loc[monthly_metadata['Host'] == 'Human']
 
