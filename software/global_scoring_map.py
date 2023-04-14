@@ -9,7 +9,7 @@ import plotly.express as px
 df = pd.read_csv(sys.argv[1], sep = "\t")
 output = sys.argv[2]
 month_file = open(sys.argv[3])
-#df_cumulative = pd.read_csv(sys.argv[4], sep = "\t")
+#reference_dir = sys.argv[4]
 
 # Reading in current month
 month_file.seek(0)
@@ -30,40 +30,41 @@ fig = px.choropleth(df, locations = "Country",
 			               range_color = [0, 10],
                            title = '<b>Country Antigenic Scores for %s</b>' %month)
 fig['layout']['title']['font'] = dict(size = 20)
-fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1),
+fig.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 1, len = 0.75),
                   font = dict(size = 14))
 fig.write_html(output + 'antigenic_score_map.html')
 ## European Map (unscaled)
 fig_eu = px.choropleth(df_eu, locations = "Country",
+                           width = 850,
                            locationmode = "country names",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
                            title = '<b>Country Antigenic Scores for %s</b>' %month,
                            scope = 'europe')
-fig['layout']['title']['font'] = dict(size = 20)
-fig.update_layout(coloraxis_colorbar = dict(title = "Country Antigenic Score", dtick = 1),
-                  font = dict(size = 14))
+fig_eu['layout']['title']['font'] = dict(size = 20)
+fig_eu.update_layout(geo = dict(showframe = False),coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 0.20, len = 0.75), 
+        font = dict(size = 14))
 fig_eu.write_html(output + 'antigenic_score_map_europe.html')
 
 # Creating global map with slider through time frame
 ## Checking to see if antigenic_scores_map_visualization_cumulative.csv exists, and if not creating one
 #df['date'] = month
-#if os.path.exists(output + "antigenic_scores_map_visualization_cumulative.csv") == False:
-#    df.to_csv(output + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
+#if os.path.exists(reference_dir + "antigenic_scores_map_visualization_cumulative.csv") == False:
+#    df.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
 #else:
-#    df_cumulative = pd.read_csv(output + "antigenic_scores_map_visualization_cumulative.csv", sep = '\t')
+#    df_cumulative = pd.read_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep = '\t')
 #
 #if (df_cumulative['date'].eq(month)).any() == False:
 #    df_cumulative = pd.concat([df_cumulative, df])
-#    df_cumulative.to_csv(output + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
+#    df_cumulative.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
 #else:
 #    pass
 
 #labels_dict = dict(zip(df_cumulative.Country, df_cumulative.country_score))
 #fig = px.choropleth(df_cumulative, locations = "Country",
 #                           locationmode = "country names",
-#                           scope = "world",
+#                           scope = "orld",
 #                           animation_frame= "date",
 #                           color = "country_score",
 #                           color_continuous_scale = 'spectral_r',
