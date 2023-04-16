@@ -104,7 +104,7 @@ python "$SOFTWAREPATH""variant_scoring.py" "$INDIR""metadata.tsv" "$AntigenicSco
 if [ -f "$OUTDIR"'output/month_remove.txt' ]; then grep -Fvxf "$OUTDIR"'output/month_remove.txt' "$MONTHS" > "$OUTDIR"'output/month_corrected.txt'; MONTHS="$OUTDIR"'output/month_corrected.txt'; fi
 Rscript "$SOFTWAREPATH""frequency_heatmap.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/"
 # Global Map of Antigenic Scores
-python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt"
+python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt" "$AntigenicScoring""reference/" 
 # Selected pVOI table
 python "$SOFTWAREPATH""pVOI_interactive_table.py" "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
 echo "COMPLETE"
