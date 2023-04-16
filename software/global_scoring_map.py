@@ -9,7 +9,7 @@ import plotly.express as px
 df = pd.read_csv(sys.argv[1], sep = "\t")
 output = sys.argv[2]
 month_file = open(sys.argv[3])
-#reference_dir = sys.argv[4]
+reference_dir = sys.argv[4]
 
 # Reading in current month
 month_file.seek(0)
@@ -49,29 +49,30 @@ fig_eu.write_html(output + 'antigenic_score_map_europe.html')
 
 # Creating global map with slider through time frame
 ## Checking to see if antigenic_scores_map_visualization_cumulative.csv exists, and if not creating one
-#df['date'] = month
-#if os.path.exists(reference_dir + "antigenic_scores_map_visualization_cumulative.csv") == False:
-#    df.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
-#else:
-#    df_cumulative = pd.read_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep = '\t')
-#
-#if (df_cumulative['date'].eq(month)).any() == False:
-#    df_cumulative = pd.concat([df_cumulative, df])
-#    df_cumulative.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep='\t', index=False, header=True)
-#else:
-#    pass
+df['date'] = month
+if os.path.exists(reference_dir + "antigenic_scores_map_visualization_cumulative.csv") == False:
+    df.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep=',', index=False, header=True)
+    df_cumulative = df
+else:
+    df_cumulative = pd.read_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep = ',')
 
-#labels_dict = dict(zip(df_cumulative.Country, df_cumulative.country_score))
-#fig = px.choropleth(df_cumulative, locations = "Country",
-#                           locationmode = "country names",
-#                           scope = "orld",
-#                           animation_frame= "date",
-#                           color = "country_score",
-#                           color_continuous_scale = 'spectral_r',
-#                           labels = labels_dict,
-#			               range_color = [0, 10],
-#                           title = '<b>Regional Antigenic Scores from 01-2020 to %s</b>' %month)
-#fig['layout']['title']['font'] = dict(size = 20)
-#fig.update_layout(coloraxis_colorbar = dict(title = "Regional Antigenic Score", dtick = 1),
-#                  font = dict(size = 16)) #orientation = "h"
-#fig.write_html(output + 'antigenic_score_map_cumulative.html')
+if not (df_cumulative['date'].eq(month)).any():
+    df_cumulative = pd.concat([df_cumulative, df])
+    df_cumulative.to_csv(reference_dir + "antigenic_scores_map_visualization_cumulative.csv", sep=',', index=False, header=True)
+else:
+    pass
+
+labels_dict = dict(zip(df_cumulative.Country, df_cumulative.country_score))
+fig = px.choropleth(df_cumulative, locations = "Country",
+                           locationmode = "country names",
+                           scope = "world",
+                           animation_frame= "date",
+                           color = "country_score",
+                           color_continuous_scale = 'spectral_r',
+                           labels = labels_dict,
+			               range_color = [0, 10],
+                           title = '<b>Country Antigenic Scores from 01-2020 to %s</b>' %month)
+fig['layout']['title']['font'] = dict(size = 20)
+fig.update_layout(coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 1, len = 0.75),
+                  font = dict(size = 12)) #orientation = "h"
+fig.write_html(output + 'antigenic_score_map_cumulative.html')
