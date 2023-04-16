@@ -25,12 +25,9 @@ print(len(sys.argv), "\n")
 
 print("Reading in the metadata file: ")
 columns = ['Location', 'Collection date', 'Accession ID', 'Pango lineage', 'AA Substitutions', 'Host']
-try:
-    metadata = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, dtype={"Host": "category", "Location": "category", "Pango lineage": "category"})
-except:
-    print("Chunking metadata file")
-    chunked_df = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, dtype = {"Host": "category", "Location": "category", "Pango lineage": "category"}, iterator = True, chunksize = 100)
-    metadata = pd.concat(chunked_df, ignore_index = True)
+print("Chunking metadata file")
+chunked_df = pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, dtype = {"Host": "category", "Location": "category", "Pango lineage": "category"}, iterator = True, chunksize = 1000)
+metadata = pd.concat(chunked_df, ignore_index = True)
     #metadata = pd.DataFrame()
     #for chunk in pd.read_csv(sys.argv[1], sep = '\t', usecols = columns, chunksize = 10):
     #    metadata = pd.concat([metadata, chunk], axis = 0)
@@ -49,7 +46,7 @@ metadata_time = datetime.datetime.now()
 print('import data Duration: {}'.format(metadata_time - start_time))
 
 def aa_substitution_filter(x, *tp_list):
-    # Funtion to filter out the mutations occuring on the spike protein at known antigenic sites and return separate lists of the positions and mutations
+    # Function to filter out the mutations occuring on the spike protein at known antigenic sites and return separate lists of the positions and mutations
     remove = ['180','181','182','183','184','185','186','187','188','189','118','218','318','418','518','618','718','818','918','1018','1118','1218']
     subslist = x.split(',')
     mutations_list = [i.split("_")[1]for i in subslist if '_' in i and 'Spike' in i] 
@@ -116,7 +113,7 @@ print("Done\n")
 tplist_time = datetime.datetime.now()
 print('tp site list Duration: {}'.format(tplist_time - metadata_time))
 
-# Filtering by most recenet month by chunking the Metadata file to reduce computational load
+# Filtering by most recent month by chunking the Metadata file to reduce computational load
 print("Calculating Mutation Scores....")
 print("Getting most recent month")
 if len(sys.argv) == 9:  
