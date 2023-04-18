@@ -57,7 +57,10 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   
   # further filtering using the cutoff for plotting
   data <- data[rowSums(data) >= cutoff,,drop=FALSE]
-  # keeping only the top 20 lineages for visualization
+  # keeping only the top 20 lineages with highest frequency for visualization
+  #data <- sort(rowSums(data), decreasing = TRUE)
+  freq_order <- order(rowSums(data), decreasing = TRUE)
+  data <- data[freq_order, ]
   data <- data[1:20,]
   
   # saving dataframe with identified pVOIs and their antigenic scores for later visualization
