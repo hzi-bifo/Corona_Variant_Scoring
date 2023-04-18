@@ -238,8 +238,8 @@ monthly_metadata['Location'] = monthly_metadata['Location'].astype(str)
 monthly_metadata = monthly_metadata.loc[monthly_metadata['Host'] == 'Human']
 
 print("\nRunning Analysis - Calculating Antigenic Scores for Pango Lineages")
-#metadata_filtered_weights = pd.DataFrame()
-metadata_filtered_weights_list = []
+metadata_filtered_weights = pd.DataFrame()
+#metadata_filtered_weights_list = []
 print("Length of Monthly Metadata File to be chunked: ", len(monthly_metadata))
 n = len(monthly_metadata) // 10 # 1500
 print("Number of chunks for analysis: ", n, "\n")
@@ -255,14 +255,14 @@ for chunk in df_chunks:
     # Agreggating by accession id
     print("Aggregating by Accession ID")
     mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight': 'sum'})
-    metadata_filtered_weights_list.append(mutation_df)
-    #metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
+    #metadata_filtered_weights_list.append(mutation_df)
+    metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
 
     print("Output DataFrame Shape: ")
     #print(metadata_filtered_weights.shape)
     print(mutation_df.shape)
     print("Chunk complete")
-metadata_filtered_weights = pd.concat(metadata_filtered_weights_list)
+#metadata_filtered_weights = pd.concat(metadata_filtered_weights_list)
 tstop = process_time()
 print("\nProcess Time: ", tstop - tstart)
 
