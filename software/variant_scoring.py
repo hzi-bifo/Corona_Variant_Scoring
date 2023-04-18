@@ -65,11 +65,12 @@ def seqsUI_filtration(seqsUI, max_month, max_year):
         print("Returning empty sequences under reivew list as df is empty.")
         seqsUI_list = []
     else:
-        seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
-        seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
-        seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
-        seqsUI_filtered = seqsUI[seqsUI.year == max_year]
-        seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
+        #seqsUI = seqsUI[seqsUI["Collection date"].str.contains("-")]
+        #seqsUI['year'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[0])
+        #seqsUI['month'] = seqsUI["Collection date"].apply(lambda x: x.split("-")[1])
+        #seqsUI_filtered = seqsUI[seqsUI.year == max_year]
+        #seqsUI_filtered = seqsUI_filtered[seqsUI_filtered.month == max_month]
+        seqsUI_filtered = seqsUI.loc[seqsUI['Collection date'].str.contains(max_year+'-'+max_month)]
         seqsUI_list = seqsUI_filtered["Accession ID"].to_list()
     return (seqsUI_list)
 
@@ -238,7 +239,7 @@ monthly_metadata = monthly_metadata.loc[monthly_metadata['Host'] == 'Human']
 print("\nRunning Analysis - Calculating Antigenic Scores for Pango Lineages")
 metadata_filtered_weights = pd.DataFrame()
 print("Length of Monthly Metadata File to be chunked: ", len(monthly_metadata))
-n = len(monthly_metadata) // 50 # 1500
+n = len(monthly_metadata) // 10 # 1500
 print("Number of chunks for analysis: ", n, "\n")
 t = 0
 df_chunks = np.array_split(monthly_metadata, n)  # (metadata, n)
@@ -247,8 +248,10 @@ for chunk in df_chunks:
     t = t + 1
     print(t)
     # Calculating Weights
+    print("Calculating Weights")
     mutation_df = mutation_scores(chunk, tpSites_list, weights)
     # Agreggating by accession id
+    print("Aggregating by Accession ID")
     mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight': 'sum'})
     metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
 
