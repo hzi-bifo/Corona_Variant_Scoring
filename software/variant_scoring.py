@@ -97,7 +97,8 @@ def mutation_scores(input_df, tpSites_list, weights):
 
     print("Expanding Substitution Positions")
     # metadata_expanded = aa_positions_unnest(input_df, ['Original_aa','Changed_aa'])
-    metadata_expanded = input_df.explode(['Substitution_Positions', 'Original_aa', 'Changed_aa'])
+    #metadata_expanded = input_df.explode(['Substitution_Positions', 'Original_aa', 'Changed_aa'])
+    metadata_expanded = input_df.set_index(['Accession ID','Collection date','Location','Host','Pango lineage','AA Substitutions']).apply(pd.Series.explode).reset_index()
     # Calculating the antigenic weight scores dependent on the amino acid changes (from a reference file)
     print("Merging with the weights file")
     metadata_filtered_weights = pd.merge(metadata_expanded, weights, how='left', on=['Original_aa', 'Changed_aa'])
@@ -237,7 +238,8 @@ monthly_metadata['Location'] = monthly_metadata['Location'].astype(str)
 monthly_metadata = monthly_metadata.loc[monthly_metadata['Host'] == 'Human']
 
 print("\nRunning Analysis - Calculating Antigenic Scores for Pango Lineages")
-metadata_filtered_weights = pd.DataFrame()
+#metadata_filtered_weights = pd.DataFrame()
+metadata_filtered_weights_list = []
 print("Length of Monthly Metadata File to be chunked: ", len(monthly_metadata))
 n = len(monthly_metadata) // 10 # 1500
 print("Number of chunks for analysis: ", n, "\n")
@@ -253,11 +255,14 @@ for chunk in df_chunks:
     # Agreggating by accession id
     print("Aggregating by Accession ID")
     mutation_df = mutation_df.groupby(mutation_df['Accession ID']).aggregate({'Weight': 'sum'})
-    metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
+    metadata_filtered_weights_list.append(mutation_df)
+    #metadata_filtered_weights = pd.concat([mutation_df, metadata_filtered_weights])
 
     print("Output DataFrame Shape: ")
-    print(metadata_filtered_weights.shape)
+    #print(metadata_filtered_weights.shape)
+    print(mutation_df.shape)
     print("Chunk complete")
+metadata_filtered_weights = pd.concat(metadata_filtered_weights_list)
 tstop = process_time()
 print("\nProcess Time: ", tstop - tstart)
 
