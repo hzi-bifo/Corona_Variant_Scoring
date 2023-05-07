@@ -14,6 +14,7 @@ input <- read.csv(args[2], sep = "\t")
 months_file <- args[3]
 cutoff <- as.numeric(args[4])
 output <- args[5]
+variantDf <- read.csv(args[6], sep = "\t", colClasses = c("NULL","NULL","NULL", NA, NA, "NULL", "NULL"))
 
 print("Folder")
 print(folder)
@@ -24,7 +25,7 @@ print(cutoff)
 print("Output")
 print(output)
 
-get_heatmap <- function(folder, countries, current_month, output_name, rename, cutoff, lineages, output){
+get_heatmap <- function(folder, countries, current_month, output_name, rename, cutoff, lineages, output, variantDf){
   
   # get significant lineages from all countries
   sign_lineages_df <- lineages[lineages[['antigenic_score']] >= 3.85, ]
@@ -58,36 +59,31 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   # further filtering using the cutoff for plotting
   data <- data[rowSums(data) >= cutoff,,drop=FALSE]
   # keeping only the top 20 lineages with highest frequency for visualization
-  #data <- sort(rowSums(data), decreasing = TRUE)
   freq_order <- order(rowSums(data), decreasing = TRUE)
   data <- data[freq_order, ]
-  data <- data[1:20,]
+  data_subset <- data[1:20,]
+  # dropping countries with low frequency, to reduce heatmap noise
+  data_subset <- subset(data_subset, select = (colSums(data_subset) > 0))
+
+  # saving dataframe with identified antigenically altering lineages and their antigenic scores for later visualization
+  top_variants <- row.names(data_subset)
+  input[ , c('rank', 'WHO_label')] <- list(NULL)
+  input$frequent <- sapply(input$Pango.lineage, function(x) x %in% top_variants)
+  # creating list of lineages and mutations (taking the first mutation list occurrence for each lineage)
+  mutations <- variantDf[match(unique(variantDf$Pango.lineage), variantDf$Pango.lineage),]
+  finalDF <- merge(x = input, y = mutations, by = "Pango.lineage", all.x = TRUE)
+  finalDF$antigenic_score <- round(finalDF$antigenic_score, 2)
   
-  # saving dataframe with identified pVOIs and their antigenic scores for later visualization
-  pvois <- row.names(data)
-  pvoi_df <- sign_lineages_df[sign_lineages_df$Pango.lineage %in% pvois, ]
-  # adding frequency data 
-  freq_df <- data
-  global_freq <- rowSums(freq_df)
-  freq_df <- cbind(freq_df, global_freq)
-  freq_df_subset = subset(freq_df, select = c(global_freq))
-  Pango.lineage <- row.names(freq_df_subset)
-  freq_df_subset <- cbind(freq_df_subset, Pango.lineage)
-  # binding to significant lineages df
-  pvoi_df_final <- pvoi_df[c("Pango.lineage", "antigenic_score")]
-  pvoi_final <- merge(pvoi_df_final, freq_df_subset, by=c("Pango.lineage"))
-  #ordering by antigenic score
-  pvoi_final <- pvoi_final[order(pvoi_final$antigenic_score, decreasing = TRUE),]  
-  write.csv(pvoi_final, paste(output, "/", output_name, "_pVOI_table.csv", sep = ""), quote = FALSE, row.names = FALSE)
+  write.table(finalDF, paste(output, "/", output_name, "_lineages_table.csv", sep = ""),  sep = "\t", quote = FALSE, row.names = FALSE)
 
   # plot heatmap and save as html
   if (rename == TRUE){
-    country_names <- countrycode(colnames(data), origin = 'iso2c', destination = 'country.name')
+    country_names <- countrycode(colnames(data_subset), origin = 'iso2c', destination = 'country.name')
     country_names[country_names == "Hong Kong SAR China"] <- "Hong Kong" # rename Hong Kong to make it shorter
-    colnames(data) <- country_names
+    colnames(data_subset) <- country_names
   }
   #data <- data[order(rowSums(data), decreasing = TRUE),]
-  heatmap <- d3heatmap(data, Rowv = NULL, Colv = NULL, colors = "Reds", xaxis_font_size = "12pt", yaxis_font_size = "12pt", xaxis_height = 120)
+  heatmap <- d3heatmap(data_subset, Rowv = NULL, Colv = NULL, colors = "Reds", xaxis_font_size = "12pt", yaxis_font_size = "12pt", xaxis_height = 120)
   saveWidget(heatmap, paste(output, "/", output_name, "_heatmap.html", sep = ""), selfcontained = TRUE)
 }
 
@@ -99,6 +95,6 @@ states <- dir(path = folder, pattern = "^DE_") # only German states
 months <- as.vector(t(read.table(months_file, stringsAsFactors = FALSE)))
 current_month <- months[length(months)-1] # look at frequencies of the previous month to get representative values
 
-get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", TRUE, cutoff, input, output)
+get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", TRUE, cutoff, input, output, variantDf)
 #get_heatmap(folder, countries, current_month, "antigenic_scoring_summary", FALSE, cutoff, input)
-get_heatmap(folder, states, current_month, "antigenic_scoring_summary_states", FALSE, cutoff, input, output)
+get_heatmap(folder, states, current_month, "antigenic_scoring_summary_states", FALSE, cutoff, input, output, variantDf)
