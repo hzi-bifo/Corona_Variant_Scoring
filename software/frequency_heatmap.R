@@ -7,6 +7,7 @@
 library(d3heatmap)
 library(htmlwidgets)
 library(countrycode)
+library(jsonlite)
 
 args = commandArgs(trailingOnly=TRUE)
 folder <- args[1]
@@ -64,17 +65,30 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   data_subset <- data[1:20,]
   # dropping countries with low frequency, to reduce heatmap noise
   data_subset <- subset(data_subset, select = (colSums(data_subset) > 0))
-
+  
   # saving dataframe with identified antigenically altering lineages and their antigenic scores for later visualization
   top_variants <- row.names(data_subset)
   input[ , c('rank', 'WHO_label')] <- list(NULL)
-  input$frequent <- sapply(input$Pango.lineage, function(x) x %in% top_variants)
+  # Calculating global frequency of lineages
+  variantFreq <- as.data.frame(table(variantDf$Pango.lineage))
+  variantFreq$frequent <- variantFreq$Freq / nrow(variantDf)
+  variantFreq[ , c('Freq')] <- list(NULL)
+  colnames(variantFreq)[which(names(variantFreq) == "Var1")] <- "Pango.lineage"
+  #input$frequent <- sapply(input$Pango.lineage, function(x) x %in% top_variants)
   # creating list of lineages and mutations (taking the first mutation list occurrence for each lineage)
   mutations <- variantDf[match(unique(variantDf$Pango.lineage), variantDf$Pango.lineage),]
-  finalDF <- merge(x = input, y = mutations, by = "Pango.lineage", all.x = TRUE)
+  tempDF <- merge(x = input, y = mutations, by = "Pango.lineage", all.x = TRUE)
+  finalDF <- merge(x = tempDF, y = variantFreq, by = "Pango.lineage", all.x = TRUE)
   finalDF$antigenic_score <- round(finalDF$antigenic_score, 2)
-  
-  write.table(finalDF, paste(output, "/", output_name, "_lineages_table.csv", sep = ""),  sep = "\t", quote = FALSE, row.names = FALSE)
+  finalDF <- unique(finalDF)
+  # Formatting dataframe for JSON file
+  colnames(finalDF)[which(names(finalDF) == "Pango.lineage")] <- "lineage"
+  colnames(finalDF)[which(names(finalDF) == "AA.Substitutions")] <- "substitutions"
+  # Adding spaces to string list of substitutions
+  finalDF$substitutions <- gsub(",([A-Za-z])", ", \\1", finalDF$substitutions)
+  # Saving as a json file
+  jsondata <- toJSON(finalDF, pretty = TRUE)
+  write(jsondata, file=paste(output, "/", output_name, "_lineages_table.JSON", sep = ""))
 
   # plot heatmap and save as html
   if (rename == TRUE){
