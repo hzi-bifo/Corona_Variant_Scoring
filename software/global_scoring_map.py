@@ -27,11 +27,12 @@ fig = px.choropleth(df, locations = "Country",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-			               range_color = [0, 10],
-                           title = '<b>Country Antigenic Scores for %s</b>' %month)
-fig['layout']['title']['font'] = dict(size = 20)
-fig.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 1, len = 0.75),
-                  font = dict(size = 14))
+			               range_color = [0, 10]) #,
+#                           title = '<b>Country Antigenic Scores for %s</b>' %month)
+#fig['layout']['title']['font'] = dict(size = 20)
+fig.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 1, len = 0.75), font = dict(size = 14))
+fig.add_annotation(x = 0, y = 0.97, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
+fig.update_annotations(font = dict(size = 20))
 fig.write_html(output + 'antigenic_score_map.html')
 ## European Map (unscaled)
 fig_eu = px.choropleth(df_eu, locations = "Country",
@@ -40,11 +41,11 @@ fig_eu = px.choropleth(df_eu, locations = "Country",
                            color = "country_score",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
-                           title = '<b>Country Antigenic Scores for %s</b>' %month,
                            scope = 'europe')
-fig_eu['layout']['title']['font'] = dict(size = 20)
-fig_eu.update_layout(geo = dict(showframe = False),coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 0.20, len = 0.75), 
+fig_eu.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 0.20, len = 0.75), 
         font = dict(size = 14))
+fig_eu.add_annotation(x = 0, y = 0.87, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
+fig_eu.update_annotations(font = dict(size = 20))
 fig_eu.write_html(output + 'antigenic_score_map_europe.html')
 
 # Creating global map with slider through time frame
