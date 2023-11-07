@@ -31,7 +31,7 @@ fig = px.choropleth(df, locations = "Country",
 #                           title = '<b>Country Antigenic Scores for %s</b>' %month)
 #fig['layout']['title']['font'] = dict(size = 20)
 fig.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 1, len = 0.75), font = dict(size = 14))
-fig.add_annotation(x = 0, y = 0.97, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
+fig.add_annotation(x = 0, y = 1.05, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
 fig.update_annotations(font = dict(size = 20))
 fig.write_html(output + 'antigenic_score_map.html')
 ## European Map (unscaled)
