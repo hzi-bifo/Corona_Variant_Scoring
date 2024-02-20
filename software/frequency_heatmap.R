@@ -79,8 +79,10 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   		data_subset <- data
   	}
   	# dropping countries with low frequency, to reduce heatmap noise
-  	data_subset <- subset(data_subset, select = (colSums(data_subset) > 0))
-  
+	print("Data subset before dropping countries with low frequency:")
+	print(data_subset)
+	if (rename == TRUE){
+		data_subset <- subset(data_subset, select = (colSums(data_subset) > 0))}
   	# saving dataframe with identified antigenically altering lineages and their antigenic scores for later visualization
   	top_variants <- row.names(data_subset)
   	input[ , c('rank', 'WHO_label')] <- list(NULL)
@@ -106,7 +108,9 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   	write(jsondata, file=paste(output, "/", output_name, "_lineages_table.json", sep = ""))
 
   	# plot heatmap and save as html
-  	if (rename == TRUE){
+  	print("data_subset: ")
+	print(data_subset)
+	if (rename == TRUE){
     		country_names <- countrycode(colnames(data_subset), origin = 'iso2c', destination = 'country.name')
     		country_names[country_names == "Hong Kong SAR China"] <- "Hong Kong" # rename Hong Kong to make it shorter
     		colnames(data_subset) <- country_names
