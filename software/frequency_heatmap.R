@@ -105,7 +105,7 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   finalDF$substitutions <- gsub(",([A-Za-z])", ", \\1", finalDF$substitutions)
   # Saving as a json file
   jsondata <- toJSON(finalDF, pretty = TRUE)
-  write(jsondata, file=paste(output, "/", output_name, "_lineages_table.JSON", sep = ""))
+  write(jsondata, file=paste(output, "/", output_name, "_lineages_table.json", sep = ""))
 
   # plot heatmap and save as html
   if (rename == TRUE){
