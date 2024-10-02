@@ -1,9 +1,5 @@
 #!/bin/bash
 
-OUTPUT=/net/viral_genomics/corona/katrina/Corona_Variant_Scoring/08_2022_results/month_comparison/
-SOFTWAREPATH=/net/viral_genomics/corona/katrina/Corona_Variant_Scoring/software/
-FREQUENCY=
-
 cd $SOFTWAREPATH
 
 # Creating a global map visual for all input files in the month_comparison directory (which are the output of the time_comparison.py)
