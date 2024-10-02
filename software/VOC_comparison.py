@@ -9,13 +9,9 @@ import seaborn as sns
 from datetime import datetime
 
 columns = ['Pango lineage', 'antigenic_score', 'WHO_label']
-# voc_mutationScore_df = pd.read_csv(sys.argv[0], sep = '\t', usecols = columns)
+voc_mutationScore_df = pd.read_csv(sys.argv[0], sep = '\t', usecols = columns)
 # voc_df = pd.read_csv(sys.argv[1], sep = '\t')
-# output = sys.argv[2]
-
-voc_mutationScore_df = pd.read_csv('/home/knorwood/software/Corona_Variant_Scoring/test/output/variant_scoring_without_weights/antigenic_scores_ranked_without_weights_with_WHO.csv', sep = '\t', usecols = columns)
-# voc_df = pd.read_csv('/home/knorwood/software/Corona_Variant_Scoring/reference/known_variants_of_concern.csv', sep = '\t')
-output = '/home/knorwood/software/Corona_Variant_Scoring/test/output/variant_scoring_without_weights/'
+output = sys.argv[2]
 
 # Getting mutation score for the VOCs
 # lineages_df = df[["Pango lineage", "antigenic_score"]]
