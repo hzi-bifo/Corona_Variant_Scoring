@@ -1,0 +1,2189 @@
+[
+  {
+    "lineage": "BA.2.41",
+    "antigenic_score": 15.32,
+    "frequency": 0.0036,
+    "zscore": 0.8474,
+    "significant": "no",
+    "substitutions": "(Spike_F68K, Spike_F157S, Spike_N481K, Spike_L24S, Spike_S371F, Spike_H245N, Spike_N211I, Spike_V127F, Spike_K444T, Spike_E554K, Spike_N450D, Spike_I332V, Spike_S50L, Spike_S373P, Spike_F486P, Spike_K417N, Spike_L455S, Spike_R346T, Spike_N969K, Spike_D796Y, Spike_R158G, Spike_R403K, Spike_D405N, Spike_R408S, Spike_D614G, Spike_N501Y, Spike_D123G, Spike_T19I, Spike_V213G, Spike_P681R, Spike_L216F, Spike_N440K)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "BA.2.47",
+    "antigenic_score": 15.03,
+    "frequency": 0.0046,
+    "zscore": 0.5089,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_V127F, Spike_K444T, Spike_P681R, Spike_K417N, Spike_D614G, Spike_N501Y, Spike_N764K, Spike_K147E, Spike_S373P, Spike_K2L, Spike_E554K, Spike_G339H, Spike_T19I, Spike_D405N, Spike_V445H, Spike_N211I, Spike_A50V, Spike_N969K, Spike_L455S, Spike_Q498R, Spike_R346T, Spike_P99S, Spike_S477N, Spike_S50L, Spike_H655Y, Spike_S939F, Spike_K356T, Spike_Q954H, Spike_S371F, Spike_N679K, Spike_A264D, Spike_D123G, Spike_N481K, Spike_L216F, Spike_I332V, Spike_V213G, Spike_F68K, Spike_G142D, Spike_Y505H)",
+    "frequent": 0.0046
+  },
+  {
+    "lineage": "BA.2.49",
+    "antigenic_score": 13.9,
+    "frequency": 0.004,
+    "zscore": -0.8177,
+    "significant": "no",
+    "substitutions": "(Spike_K417N, Spike_Q498R, Spike_N481K, Spike_D405N, Spike_V445H, Spike_L24S, Spike_D123G, Spike_R403K, Spike_A50V, Spike_R158G, Spike_L216F, Spike_Y505H, Spike_K356T, Spike_G446S)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.2.5",
+    "antigenic_score": 14.74,
+    "frequency": 0.0038,
+    "zscore": 0.1658,
+    "significant": "no",
+    "substitutions": "(Spike_K417N, Spike_Y505H, Spike_G142D, Spike_N450D, Spike_A50V, Spike_T478K, Spike_S50L, Spike_N679K, Spike_R346T, Spike_R408S, Spike_D405N, Spike_E554K, Spike_K356T, Spike_N969K, Spike_N211I, Spike_K444T, Spike_V445H, Spike_N460K, Spike_N501Y, Spike_K2L, Spike_L455S, Spike_S373P, Spike_S371F, Spike_R403K, Spike_H655Y, Spike_S477N, Spike_H245N)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BA.2.50",
+    "antigenic_score": 15.18,
+    "frequency": 0.0041,
+    "zscore": 0.6848,
+    "significant": "no",
+    "substitutions": "(Spike_D123G, Spike_F68K, Spike_N697K, Spike_F486P, Spike_S373P, Spike_S371F, Spike_K444T, Spike_K2L, Spike_A50V, Spike_H245N, Spike_G339H, Spike_K147E, Spike_P681R, Spike_T478K, Spike_I332V, Spike_D405N, Spike_Y505H, Spike_A264D, Spike_N501Y, Spike_T19I, Spike_E484K, Spike_S50L, Spike_E554K, Spike_D796Y, Spike_K417N, Spike_S939F, Spike_L455S, Spike_S477N, Spike_N969K)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BA.2.56",
+    "antigenic_score": 15.18,
+    "frequency": 0.0045,
+    "zscore": 0.6861,
+    "significant": "no",
+    "substitutions": "(Spike_K444T, Spike_F68K, Spike_G446S, Spike_L24S, Spike_D614G, Spike_N211I)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BA.2.67",
+    "antigenic_score": 14.55,
+    "frequency": 0.0051,
+    "zscore": -0.0543,
+    "significant": "no",
+    "substitutions": "(Spike_T19I, Spike_L24S, Spike_S50L, Spike_N440K, Spike_R403K, Spike_E484K, Spike_A264D, Spike_N764K, Spike_P99S, Spike_K2L, Spike_K444T, Spike_G142D, Spike_S375F, Spike_N697K, Spike_K417N, Spike_Q498R, Spike_R346T, Spike_F68K, Spike_D123G, Spike_F486P, Spike_N211I, Spike_N450D, Spike_S373P, Spike_Q954H, Spike_D614G, Spike_R158G, Spike_S477N, Spike_H245N, Spike_N969K, Spike_F157S, Spike_A50V, Spike_L216F, Spike_D405N, Spike_P681R, Spike_E554K, Spike_L452W, Spike_T376A, Spike_S371F, Spike_N460K, Spike_V445H, Spike_K356T, Spike_Y505H, Spike_I332V, Spike_G446S, Spike_D796Y, Spike_V213G, Spike_N501Y)",
+    "frequent": 0.0051
+  },
+  {
+    "lineage": "BA.2.75.2",
+    "antigenic_score": 15.23,
+    "frequency": 0.0034,
+    "zscore": 0.7397,
+    "significant": "no",
+    "substitutions": "(Spike_N697K, Spike_R408S, Spike_F157S, Spike_A50V, Spike_A264D, Spike_K417N, Spike_Y505H, Spike_N460K, Spike_D614G, Spike_E484K, Spike_N679K, Spike_K444T, Spike_N764K, Spike_I332V, Spike_L452W, Spike_D405N, Spike_R346T, Spike_E554K, Spike_H245N, Spike_G446S, Spike_L455S, Spike_N501Y, Spike_P681R, Spike_Q498R, Spike_F486P, Spike_H655Y, Spike_D123G, Spike_L24S, Spike_D796Y, Spike_R403K, Spike_S939F, Spike_N211I)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BA.2.8",
+    "antigenic_score": 15.36,
+    "frequency": 0.0037,
+    "zscore": 0.8949,
+    "significant": "no",
+    "substitutions": "(Spike_N450D, Spike_R158G, Spike_T19I, Spike_L24S, Spike_R346T, Spike_S477N, Spike_S371F, Spike_N440K, Spike_G142D, Spike_N697K, Spike_V127F, Spike_K2L, Spike_Q954H, Spike_R408S, Spike_N481K, Spike_K147E)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.2.86.1",
+    "antigenic_score": 13.3,
+    "frequency": 0.004,
+    "zscore": -1.5206,
+    "significant": "no",
+    "substitutions": "(Spike_K2L, Spike_N460K, Spike_Y505H, Spike_F68K, Spike_K356T, Spike_R158G, Spike_D405N, Spike_N211I, Spike_T376A, Spike_S375F, Spike_E554K, Spike_H655Y, Spike_N440K, Spike_S50L, Spike_K417N, Spike_N501Y, Spike_R403K, Spike_P99S, Spike_A50V, Spike_D123G, Spike_R346T, Spike_I332V, Spike_L452W, Spike_R408S, Spike_V213G, Spike_N679K, Spike_V127F, Spike_A264D, Spike_D614G, Spike_Q954H, Spike_N969K, Spike_T478K, Spike_E484K, Spike_G142D, Spike_Q498R, Spike_G446S, Spike_K147E, Spike_N481K, Spike_G339H, Spike_S373P, Spike_L216F, Spike_P681R, Spike_K444T, Spike_N764K, Spike_H245N, Spike_D796Y, Spike_S939F, Spike_S477N, Spike_F157S)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.2.9",
+    "antigenic_score": 15.11,
+    "frequency": 0.0033,
+    "zscore": 0.5946,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_N450D, Spike_K444T, Spike_A264D, Spike_N969K, Spike_E554K, Spike_H655Y, Spike_A50V, Spike_D614G, Spike_D796Y, Spike_T19I, Spike_I332V, Spike_P681R, Spike_G446S, Spike_F157S, Spike_Y505H, Spike_F486P, Spike_F68K, Spike_D123G, Spike_V127F, Spike_S371F, Spike_S477N, Spike_S50L, Spike_P99S, Spike_Q498R)",
+    "frequent": 0.0033
+  },
+  {
+    "lineage": "BA.2.9.1",
+    "antigenic_score": 14.05,
+    "frequency": 0.004,
+    "zscore": -0.6362,
+    "significant": "no",
+    "substitutions": "(Spike_N501Y, Spike_S50L, Spike_S371F, Spike_N450D, Spike_K444T, Spike_L455S, Spike_V127F, Spike_Y505H, Spike_S373P, Spike_D796Y, Spike_K356T, Spike_G446S)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.4",
+    "antigenic_score": 14.97,
+    "frequency": 0.0038,
+    "zscore": 0.4336,
+    "significant": "no",
+    "substitutions": "(Spike_K444T, Spike_Q954H, Spike_V213G, Spike_N211I, Spike_L24S, Spike_D796Y, Spike_L216F, Spike_G339H, Spike_K2L, Spike_R408S, Spike_R158G, Spike_P681R, Spike_T19I, Spike_F486P, Spike_D123G, Spike_N764K, Spike_S939F, Spike_E484K, Spike_A50V, Spike_D614G, Spike_S477N, Spike_F68K, Spike_N501Y, Spike_Q498R, Spike_D405N, Spike_I332V, Spike_K356T, Spike_V127F, Spike_G142D, Spike_E554K, Spike_N481K, Spike_N450D, Spike_N969K, Spike_T376A, Spike_L452W, Spike_H655Y, Spike_N440K)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BA.4.1",
+    "antigenic_score": 14.94,
+    "frequency": 0.0034,
+    "zscore": 0.4011,
+    "significant": "no",
+    "substitutions": "(Spike_G339H, Spike_G142D, Spike_D405N, Spike_D796Y, Spike_L452W, Spike_K444T, Spike_R346T)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BA.4.4",
+    "antigenic_score": 15.2,
+    "frequency": 0.0037,
+    "zscore": 0.708,
+    "significant": "no",
+    "substitutions": "(Spike_Y505H, Spike_S373P, Spike_R403K, Spike_N501Y, Spike_L24S, Spike_G446S, Spike_L216F, Spike_P681R, Spike_N481K, Spike_N211I, Spike_D123G, Spike_Q954H, Spike_S375F, Spike_N969K, Spike_F68K, Spike_G339H, Spike_S50L, Spike_L452W, Spike_V445H, Spike_I332V, Spike_R346T, Spike_D614G, Spike_E554K, Spike_A264D, Spike_D796Y, Spike_T19I, Spike_E484K, Spike_N450D, Spike_V127F, Spike_K417N, Spike_T376A, Spike_S939F, Spike_R408S, Spike_N697K, Spike_S371F, Spike_T478K, Spike_V213G, Spike_F157S, Spike_N460K, Spike_K2L, Spike_K444T, Spike_S477N, Spike_P99S, Spike_L455S, Spike_N440K, Spike_Q498R, Spike_K147E, Spike_H655Y)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.4.6",
+    "antigenic_score": 13.16,
+    "frequency": 0.0037,
+    "zscore": -1.6755,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_L455S, Spike_R346T, Spike_K444T, Spike_N481K, Spike_K147E, Spike_N697K, Spike_S375F, Spike_N969K, Spike_F157S, Spike_T19I, Spike_S373P, Spike_N460K, Spike_L452W, Spike_G142D, Spike_D405N, Spike_R403K, Spike_K2L, Spike_Q498R, Spike_S477N, Spike_L24S, Spike_N450D, Spike_G339H, Spike_A264D, Spike_V213G, Spike_H245N, Spike_R408S, Spike_R158G, Spike_H655Y, Spike_D614G, Spike_E554K, Spike_I332V, Spike_T478K, Spike_P681R, Spike_L216F, Spike_Q954H, Spike_N764K, Spike_D796Y, Spike_N211I, Spike_Y505H, Spike_S371F)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.4.6.1",
+    "antigenic_score": 14.64,
+    "frequency": 0.0037,
+    "zscore": 0.0468,
+    "significant": "no",
+    "substitutions": "(Spike_D123G, Spike_S373P, Spike_G339H, Spike_I332V, Spike_S477N, Spike_F68K, Spike_T478K, Spike_R403K, Spike_N450D, Spike_N481K, Spike_D405N, Spike_T376A, Spike_K147E, Spike_D796Y, Spike_V127F, Spike_F157S, Spike_N764K, Spike_E484K, Spike_N697K, Spike_E554K, Spike_K444T, Spike_A50V, Spike_H245N, Spike_N440K, Spike_N679K, Spike_T19I, Spike_Y505H, Spike_L24S, Spike_A264D, Spike_Q954H, Spike_S371F, Spike_K2L, Spike_K417N, Spike_D614G, Spike_V445H, Spike_N211I, Spike_P681R, Spike_S939F, Spike_R408S, Spike_F486P, Spike_S50L, Spike_K356T, Spike_H655Y, Spike_N460K, Spike_G446S, Spike_L455S)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.4.7",
+    "antigenic_score": 15,
+    "frequency": 0.0043,
+    "zscore": 0.4694,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_Q498R, Spike_L24S, Spike_H655Y, Spike_S477N, Spike_A264D, Spike_T376A, Spike_V445H, Spike_R403K, Spike_N501Y, Spike_K417N, Spike_I332V, Spike_R158G, Spike_S939F, Spike_N697K, Spike_S375F, Spike_N764K, Spike_N679K, Spike_R346T, Spike_K2L, Spike_S371F, Spike_Y505H, Spike_N450D, Spike_R408S, Spike_E484K, Spike_K147E, Spike_H245N, Spike_D796Y, Spike_A50V, Spike_K444T, Spike_G142D, Spike_N460K, Spike_N440K, Spike_F157S, Spike_D614G, Spike_K356T, Spike_L455S, Spike_L216F, Spike_F68K, Spike_V127F, Spike_D405N, Spike_V213G)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "BA.5",
+    "antigenic_score": 15.19,
+    "frequency": 0.005,
+    "zscore": 0.6961,
+    "significant": "no",
+    "substitutions": "(Spike_A264D, Spike_H655Y, Spike_K417N, Spike_K356T, Spike_T478K, Spike_R403K, Spike_N481K, Spike_G142D, Spike_R346T, Spike_S375F, Spike_F157S, Spike_L452W, Spike_S939F, Spike_T19I, Spike_V127F, Spike_N697K, Spike_D796Y, Spike_R408S, Spike_N211I, Spike_Q498R, Spike_A50V, Spike_E484K, Spike_G446S, Spike_S477N, Spike_L24S, Spike_P681R, Spike_N501Y, Spike_N969K, Spike_F68K, Spike_K444T, Spike_D123G, Spike_I332V, Spike_L216F, Spike_V445H, Spike_D614G, Spike_V213G, Spike_N460K, Spike_L455S, Spike_K2L)",
+    "frequent": 0.005
+  },
+  {
+    "lineage": "BA.5.1",
+    "antigenic_score": 14.15,
+    "frequency": 0.0037,
+    "zscore": -0.5241,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_R408S, Spike_E554K, Spike_Y505H)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.5.1.10",
+    "antigenic_score": 14.57,
+    "frequency": 0.0043,
+    "zscore": -0.0356,
+    "significant": "no",
+    "substitutions": "(Spike_Q954H, Spike_K417N, Spike_D405N, Spike_A264D, Spike_N460K, Spike_N211I, Spike_S477N, Spike_S939F, Spike_K356T, Spike_V445H, Spike_G446S, Spike_N969K, Spike_N697K, Spike_N481K, Spike_P681R, Spike_D123G, Spike_N440K, Spike_V213G, Spike_R403K, Spike_D796Y, Spike_L452W, Spike_R158G, Spike_N450D, Spike_A50V, Spike_N764K, Spike_N679K, Spike_K147E, Spike_I332V, Spike_P99S, Spike_F157S, Spike_F68K, Spike_T478K, Spike_G142D, Spike_T19I, Spike_E484K, Spike_T376A, Spike_K2L, Spike_V127F, Spike_R346T, Spike_L216F, Spike_R408S, Spike_E554K, Spike_Q498R, Spike_H655Y, Spike_N501Y, Spike_L455S, Spike_L24S)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "BA.5.1.15",
+    "antigenic_score": 14.91,
+    "frequency": 0.0037,
+    "zscore": 0.3644,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_H245N)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.5.1.2",
+    "antigenic_score": 13.88,
+    "frequency": 0.0037,
+    "zscore": -0.8377,
+    "significant": "no",
+    "substitutions": "(Spike_G142D, Spike_F157S, Spike_R403K, Spike_P99S, Spike_K2L, Spike_S477N, Spike_Y505H, Spike_V213G, Spike_Q498R, Spike_L455S, Spike_R346T, Spike_D123G, Spike_S50L, Spike_T478K, Spike_A50V, Spike_K356T, Spike_D614G, Spike_H245N, Spike_L216F, Spike_K147E, Spike_N211I, Spike_G339H, Spike_S373P, Spike_S375F, Spike_T19I, Spike_L452W, Spike_F68K, Spike_N450D, Spike_D405N, Spike_K417N, Spike_N697K, Spike_V445H, Spike_N764K, Spike_N481K, Spike_E484K, Spike_T376A, Spike_R408S, Spike_R158G, Spike_P681R, Spike_L24S, Spike_H655Y, Spike_N501Y, Spike_G446S, Spike_N460K)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.5.1.22",
+    "antigenic_score": 13.93,
+    "frequency": 0.004,
+    "zscore": -0.775,
+    "significant": "no",
+    "substitutions": "(Spike_S477N, Spike_N969K, Spike_T19I, Spike_V127F, Spike_A50V, Spike_H245N, Spike_S50L, Spike_E554K, Spike_D796Y, Spike_T376A, Spike_S939F, Spike_S373P, Spike_K356T, Spike_H655Y, Spike_N679K, Spike_N697K, Spike_F68K, Spike_R346T, Spike_N450D, Spike_R158G, Spike_K417N, Spike_V445H, Spike_P99S, Spike_I332V, Spike_G142D, Spike_N501Y, Spike_L216F, Spike_D123G, Spike_E484K, Spike_N460K, Spike_L455S, Spike_Q954H, Spike_Y505H, Spike_L24S, Spike_L452W, Spike_G339H, Spike_N211I, Spike_S375F, Spike_Q498R, Spike_R408S, Spike_F157S, Spike_S371F, Spike_F486P, Spike_K444T, Spike_A264D, Spike_N440K, Spike_D614G)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.5.1.23",
+    "antigenic_score": 14.3,
+    "frequency": 0.0035,
+    "zscore": -0.3473,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_A50V, Spike_L216F, Spike_T376A, Spike_D796Y, Spike_S50L, Spike_R403K, Spike_G142D, Spike_S373P, Spike_E484K, Spike_V445H, Spike_T478K, Spike_H245N, Spike_S477N, Spike_K417N, Spike_Y505H, Spike_N481K, Spike_R158G, Spike_F157S, Spike_K147E, Spike_R346T, Spike_F486P, Spike_N697K, Spike_N679K, Spike_L24S, Spike_L452W, Spike_N460K)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "BA.5.1.24",
+    "antigenic_score": 15.04,
+    "frequency": 0.0037,
+    "zscore": 0.5123,
+    "significant": "no",
+    "substitutions": "(Spike_F486P, Spike_N211I, Spike_R158G, Spike_S477N, Spike_T19I, Spike_K356T, Spike_N481K, Spike_G446S, Spike_G142D, Spike_A264D, Spike_E554K, Spike_S371F, Spike_L452W, Spike_N460K, Spike_D123G, Spike_Q954H, Spike_S50L, Spike_N450D, Spike_A50V, Spike_N697K, Spike_F157S, Spike_K417N, Spike_D796Y, Spike_D405N, Spike_R346T, Spike_V213G, Spike_P99S, Spike_K2L, Spike_N764K, Spike_T376A, Spike_L216F, Spike_S939F, Spike_N501Y)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.5.1.3",
+    "antigenic_score": 15.95,
+    "frequency": 0.0041,
+    "zscore": 1.575,
+    "significant": "yes",
+    "substitutions": "(Spike_T376A, Spike_L216F, Spike_N501Y, Spike_E554K, Spike_D796Y, Spike_N460K, Spike_R158G, Spike_G339H, Spike_Q954H, Spike_Y505H, Spike_S373P, Spike_N450D, Spike_K356T, Spike_A264D, Spike_P681R, Spike_N211I, Spike_H245N, Spike_P99S, Spike_V445H, Spike_G446S, Spike_R408S, Spike_D614G, Spike_N969K, Spike_T478K, Spike_F68K, Spike_L452W, Spike_S939F, Spike_V127F, Spike_D123G, Spike_K417N, Spike_R403K, Spike_K2L, Spike_F486P, Spike_S477N, Spike_N481K, Spike_G142D, Spike_R346T, Spike_D405N, Spike_E484K, Spike_S375F, Spike_V213G)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BA.5.1.30",
+    "antigenic_score": 12.53,
+    "frequency": 0.0036,
+    "zscore": -2.4093,
+    "significant": "no",
+    "substitutions": "(Spike_S477N, Spike_N211I, Spike_E554K, Spike_N764K, Spike_S939F, Spike_G339H, Spike_G446S, Spike_S371F, Spike_R403K, Spike_F157S, Spike_T478K, Spike_V127F, Spike_D405N, Spike_R408S, Spike_Y505H, Spike_H655Y, Spike_N697K, Spike_D796Y, Spike_A50V, Spike_H245N, Spike_S50L)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "BA.5.1.35",
+    "antigenic_score": 14.9,
+    "frequency": 0.0037,
+    "zscore": 0.359,
+    "significant": "no",
+    "substitutions": "(Spike_G142D, Spike_T478K)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BA.5.1.5",
+    "antigenic_score": 16.06,
+    "frequency": 0.004,
+    "zscore": 1.7064,
+    "significant": "yes",
+    "substitutions": "(Spike_Q498R, Spike_R408S, Spike_N440K, Spike_R158G, Spike_K356T, Spike_F486P, Spike_G446S, Spike_A50V, Spike_N501Y, Spike_V213G, Spike_N460K, Spike_D405N, Spike_S373P, Spike_E554K, Spike_K417N, Spike_H245N, Spike_A264D, Spike_V127F, Spike_S50L, Spike_R403K, Spike_K147E, Spike_S939F, Spike_F68K, Spike_N969K, Spike_N764K, Spike_S477N, Spike_L455S, Spike_L24S, Spike_I332V, Spike_N481K, Spike_P99S, Spike_D614G, Spike_S375F, Spike_T19I, Spike_K2L, Spike_R346T, Spike_N211I, Spike_T376A, Spike_H655Y, Spike_E484K, Spike_N450D, Spike_L216F, Spike_D123G, Spike_V445H, Spike_N697K, Spike_Y505H, Spike_G339H, Spike_L452W, Spike_K444T, Spike_S371F, Spike_N679K, Spike_G142D, Spike_Q954H, Spike_D796Y, Spike_F157S, Spike_T478K, Spike_P681R)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.5.2",
+    "antigenic_score": 13.67,
+    "frequency": 0.0034,
+    "zscore": -1.0829,
+    "significant": "no",
+    "substitutions": "(Spike_N697K, Spike_K417N, Spike_V213G, Spike_P99S, Spike_H245N, Spike_S375F, Spike_S50L, Spike_V127F, Spike_N501Y, Spike_R408S, Spike_N460K, Spike_A50V, Spike_S939F, Spike_L452W, Spike_V445H, Spike_G339H, Spike_A264D, Spike_D614G, Spike_P681R, Spike_F68K, Spike_L216F, Spike_E484K, Spike_Q498R, Spike_L455S, Spike_K2L, Spike_T19I, Spike_D796Y, Spike_F486P, Spike_L24S, Spike_R346T, Spike_N764K, Spike_Y505H, Spike_T478K, Spike_K356T, Spike_S477N)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BA.5.2.1",
+    "antigenic_score": 15.71,
+    "frequency": 0.0038,
+    "zscore": 1.2976,
+    "significant": "yes",
+    "substitutions": "(Spike_K356T, Spike_N481K, Spike_L455S, Spike_N440K, Spike_G446S, Spike_R403K, Spike_R408S, Spike_F68K, Spike_F486P, Spike_D796Y, Spike_G339H, Spike_A50V, Spike_V445H, Spike_L216F, Spike_K147E, Spike_K417N, Spike_L452W, Spike_P99S, Spike_E554K, Spike_Q498R, Spike_S373P, Spike_K444T, Spike_H245N, Spike_N764K, Spike_Q954H, Spike_S375F, Spike_I332V, Spike_D614G, Spike_V213G, Spike_D405N, Spike_R158G, Spike_D123G, Spike_T19I, Spike_N697K, Spike_T478K, Spike_N450D, Spike_L24S, Spike_H655Y, Spike_T376A, Spike_N501Y, Spike_S939F, Spike_F157S, Spike_K2L, Spike_G142D)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BA.5.2.13",
+    "antigenic_score": 12.29,
+    "frequency": 0.0033,
+    "zscore": -2.6888,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_G142D, Spike_E484K, Spike_L452W, Spike_S375F, Spike_D796Y, Spike_D614G, Spike_V213G, Spike_Q498R, Spike_A264D, Spike_T478K, Spike_L24S, Spike_N450D, Spike_R158G, Spike_G339H, Spike_Y505H, Spike_H245N, Spike_N501Y, Spike_A50V, Spike_T19I, Spike_K2L, Spike_V445H, Spike_R346T, Spike_P681R, Spike_S373P, Spike_H655Y, Spike_L216F, Spike_S50L, Spike_T376A, Spike_S939F, Spike_N211I, Spike_P99S, Spike_L455S, Spike_E554K, Spike_N440K, Spike_F68K, Spike_N697K, Spike_S371F, Spike_S477N, Spike_N481K, Spike_Q954H, Spike_K417N, Spike_D123G, Spike_N679K, Spike_I332V, Spike_R408S, Spike_K147E)",
+    "frequent": 0.0033
+  },
+  {
+    "lineage": "BA.5.2.19",
+    "antigenic_score": 14.65,
+    "frequency": 0.0047,
+    "zscore": 0.0616,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_R408S, Spike_R158G, Spike_G446S, Spike_K444T, Spike_T478K, Spike_I332V, Spike_F68K, Spike_D796Y, Spike_R346T, Spike_P99S, Spike_H245N, Spike_S50L, Spike_T19I, Spike_K356T, Spike_D405N, Spike_S477N, Spike_L24S, Spike_V213G, Spike_Q498R, Spike_N460K, Spike_T376A, Spike_A50V, Spike_N697K, Spike_P681R, Spike_N450D, Spike_L216F, Spike_V127F, Spike_S371F, Spike_E484K, Spike_L452W, Spike_R403K, Spike_N764K, Spike_N679K, Spike_S373P, Spike_N440K, Spike_N211I, Spike_E554K, Spike_V445H, Spike_Q954H, Spike_N481K, Spike_D614G, Spike_D123G, Spike_G142D, Spike_G339H, Spike_F486P, Spike_A264D)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "BA.5.2.2",
+    "antigenic_score": 14.38,
+    "frequency": 0.004,
+    "zscore": -0.2507,
+    "significant": "no",
+    "substitutions": "(Spike_E484K, Spike_S50L, Spike_T19I, Spike_K356T, Spike_P99S, Spike_V127F, Spike_R346T, Spike_V445H, Spike_K147E, Spike_D405N, Spike_P681R, Spike_L24S, Spike_L216F, Spike_K2L, Spike_S939F, Spike_N460K, Spike_N450D, Spike_N679K, Spike_N697K, Spike_N501Y, Spike_E554K, Spike_N211I, Spike_N764K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.5.2.20",
+    "antigenic_score": 15.24,
+    "frequency": 0.0044,
+    "zscore": 0.747,
+    "significant": "no",
+    "substitutions": "(Spike_E554K, Spike_S375F, Spike_R158G, Spike_A50V, Spike_N211I, Spike_G446S, Spike_E484K, Spike_N481K, Spike_N450D, Spike_P681R, Spike_H245N, Spike_Q954H, Spike_N679K, Spike_R346T, Spike_N460K, Spike_I332V, Spike_S373P, Spike_N764K, Spike_D614G, Spike_K356T, Spike_N697K, Spike_L452W, Spike_Q498R, Spike_S939F, Spike_D405N, Spike_L455S, Spike_S50L, Spike_S477N, Spike_K444T, Spike_R408S, Spike_F68K, Spike_D123G, Spike_A264D, Spike_T19I, Spike_S371F, Spike_G339H, Spike_N501Y, Spike_Y505H, Spike_V213G, Spike_K417N, Spike_R403K, Spike_G142D, Spike_L24S, Spike_H655Y, Spike_T478K, Spike_T376A, Spike_K2L, Spike_V445H, Spike_V127F, Spike_F486P, Spike_K147E, Spike_L216F, Spike_N440K, Spike_D796Y, Spike_F157S, Spike_P99S, Spike_N969K)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "BA.5.2.21",
+    "antigenic_score": 12.18,
+    "frequency": 0.004,
+    "zscore": -2.8277,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_E554K, Spike_N460K, Spike_Y505H, Spike_E484K, Spike_N440K, Spike_N211I)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BA.5.2.25",
+    "antigenic_score": 14.33,
+    "frequency": 0.0035,
+    "zscore": -0.3067,
+    "significant": "no",
+    "substitutions": "(Spike_S371F, Spike_Q954H, Spike_Y505H, Spike_P681R, Spike_F68K, Spike_N440K, Spike_N450D, Spike_S50L, Spike_G142D, Spike_F157S, Spike_N481K, Spike_V213G, Spike_H655Y, Spike_R403K, Spike_V445H, Spike_T478K, Spike_K356T, Spike_L24S, Spike_F486P, Spike_K444T, Spike_G446S, Spike_H245N, Spike_S373P, Spike_R408S)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "BA.5.2.3",
+    "antigenic_score": 14.56,
+    "frequency": 0.0045,
+    "zscore": -0.042,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_F157S, Spike_G339H, Spike_L452W, Spike_K417N, Spike_D405N, Spike_A264D)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BA.5.2.30",
+    "antigenic_score": 14.55,
+    "frequency": 0.0042,
+    "zscore": -0.0508,
+    "significant": "no",
+    "substitutions": "(Spike_S375F, Spike_F486P, Spike_K147E)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BA.5.2.34",
+    "antigenic_score": 15.9,
+    "frequency": 0.0043,
+    "zscore": 1.5235,
+    "significant": "yes",
+    "substitutions": "(Spike_Y505H, Spike_D614G, Spike_R403K, Spike_K356T, Spike_D796Y, Spike_G142D, Spike_F157S, Spike_T19I, Spike_G339H, Spike_P681R, Spike_K417N, Spike_R346T, Spike_K444T, Spike_L455S, Spike_R408S, Spike_I332V, Spike_V445H, Spike_E554K, Spike_A50V, Spike_S939F, Spike_V213G, Spike_A264D, Spike_N679K)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "BA.5.2.35",
+    "antigenic_score": 12.3,
+    "frequency": 0.0039,
+    "zscore": -2.6797,
+    "significant": "no",
+    "substitutions": "(Spike_I332V, Spike_N440K, Spike_K147E, Spike_K417N, Spike_T376A, Spike_S373P, Spike_V127F, Spike_F157S, Spike_D614G, Spike_N697K, Spike_T19I, Spike_E554K, Spike_H245N, Spike_D123G, Spike_K356T, Spike_L452W, Spike_A264D, Spike_R408S, Spike_N969K, Spike_F486P, Spike_L216F, Spike_P681R, Spike_P99S, Spike_R158G, Spike_A50V, Spike_S50L)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "BA.5.2.36",
+    "antigenic_score": 15.2,
+    "frequency": 0.0049,
+    "zscore": 0.7023,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_V445H, Spike_S371F, Spike_L452W, Spike_H245N, Spike_Q954H, Spike_E554K, Spike_R346T, Spike_N679K, Spike_N450D, Spike_F157S, Spike_N697K, Spike_N969K, Spike_K444T, Spike_L455S, Spike_S939F, Spike_K2L, Spike_N440K, Spike_S50L, Spike_K147E, Spike_D796Y, Spike_N501Y, Spike_T376A, Spike_G339H, Spike_A50V, Spike_I332V, Spike_P681R, Spike_K356T, Spike_T478K, Spike_L24S, Spike_K417N, Spike_D614G, Spike_G142D, Spike_N460K, Spike_R408S, Spike_L216F, Spike_V213G, Spike_T19I, Spike_D123G, Spike_D405N, Spike_E484K, Spike_N481K, Spike_S477N, Spike_G446S, Spike_F486P)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "BA.5.2.6",
+    "antigenic_score": 13.99,
+    "frequency": 0.0036,
+    "zscore": -0.704,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_A264D, Spike_N969K, Spike_V213G, Spike_Q498R, Spike_F68K, Spike_D796Y, Spike_N211I, Spike_K147E, Spike_P681R, Spike_N460K, Spike_G339H, Spike_K444T, Spike_N440K)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "BA.5.2.7",
+    "antigenic_score": 15.72,
+    "frequency": 0.0048,
+    "zscore": 1.316,
+    "significant": "yes",
+    "substitutions": "(Spike_G142D, Spike_R403K, Spike_F68K, Spike_P99S, Spike_H655Y, Spike_S371F, Spike_F157S, Spike_R346T, Spike_S939F, Spike_N969K, Spike_K417N, Spike_N764K, Spike_D405N, Spike_T376A, Spike_G446S, Spike_A264D, Spike_N697K, Spike_A50V, Spike_L452W, Spike_H245N, Spike_T19I, Spike_D614G, Spike_N679K, Spike_S477N, Spike_L455S, Spike_K147E, Spike_N460K, Spike_S373P, Spike_F486P, Spike_E484K, Spike_D796Y, Spike_S50L, Spike_P681R, Spike_G339H, Spike_V127F, Spike_L216F, Spike_T478K, Spike_N440K, Spike_L24S, Spike_R158G, Spike_E554K, Spike_K444T, Spike_S375F, Spike_N481K, Spike_R408S, Spike_Q498R, Spike_V213G, Spike_N501Y, Spike_N450D, Spike_D123G, Spike_N211I, Spike_Y505H, Spike_K2L, Spike_I332V, Spike_V445H, Spike_Q954H)",
+    "frequent": 0.0048
+  },
+  {
+    "lineage": "BA.5.2.9",
+    "antigenic_score": 12.44,
+    "frequency": 0.0041,
+    "zscore": -2.5151,
+    "significant": "no",
+    "substitutions": "(Spike_N697K, Spike_V213G, Spike_V445H, Spike_K356T, Spike_N764K, Spike_F486P, Spike_A50V, Spike_D123G, Spike_S371F, Spike_S375F, Spike_K2L, Spike_F68K, Spike_R158G, Spike_T478K)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BA.5.3.2",
+    "antigenic_score": 15.78,
+    "frequency": 0.0045,
+    "zscore": 1.386,
+    "significant": "yes",
+    "substitutions": "(Spike_V127F, Spike_E554K, Spike_Q954H, Spike_N969K, Spike_F486P, Spike_I332V, Spike_T376A, Spike_R346T, Spike_S373P, Spike_V213G, Spike_R403K, Spike_F157S, Spike_G339H, Spike_R158G, Spike_T478K, Spike_T19I, Spike_Y505H, Spike_N440K, Spike_P681R, Spike_N450D, Spike_Q498R, Spike_V445H, Spike_S477N, Spike_H655Y, Spike_N679K, Spike_K356T, Spike_D614G, Spike_K2L, Spike_K417N, Spike_L216F, Spike_L455S, Spike_L452W, Spike_S939F, Spike_D405N, Spike_N211I, Spike_A264D, Spike_F68K, Spike_N460K, Spike_A50V)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BA.5.3.3",
+    "antigenic_score": 13.52,
+    "frequency": 0.0039,
+    "zscore": -1.2592,
+    "significant": "no",
+    "substitutions": "(Spike_N764K, Spike_S375F, Spike_K417N, Spike_D405N, Spike_G446S, Spike_L216F, Spike_F157S, Spike_E484K)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "BA.5.5",
+    "antigenic_score": 14.4,
+    "frequency": 0.0035,
+    "zscore": -0.2295,
+    "significant": "no",
+    "substitutions": "(Spike_N481K, Spike_S477N, Spike_G142D, Spike_Q954H, Spike_H655Y, Spike_F486P)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "BA.5.6",
+    "antigenic_score": 15.68,
+    "frequency": 0.0041,
+    "zscore": 1.2671,
+    "significant": "yes",
+    "substitutions": "(Spike_K356T, Spike_T19I, Spike_Q498R, Spike_N501Y, Spike_A264D, Spike_N460K, Spike_G339H, Spike_G142D, Spike_K147E, Spike_S939F, Spike_F486P, Spike_N764K, Spike_V445H, Spike_P681R, Spike_R346T, Spike_N969K, Spike_D123G, Spike_D405N, Spike_K444T, Spike_K2L, Spike_H655Y, Spike_R408S, Spike_D796Y, Spike_K417N, Spike_R158G, Spike_F68K, Spike_H245N, Spike_L452W, Spike_N440K, Spike_D614G, Spike_S477N, Spike_N679K, Spike_S50L, Spike_R403K, Spike_F157S, Spike_P99S, Spike_V213G, Spike_N481K, Spike_L24S, Spike_S371F, Spike_L455S, Spike_T478K, Spike_N697K, Spike_S375F, Spike_N211I, Spike_T376A, Spike_N450D, Spike_G446S, Spike_L216F, Spike_A50V, Spike_I332V)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BA.5.8",
+    "antigenic_score": 14.82,
+    "frequency": 0.0041,
+    "zscore": 0.2594,
+    "significant": "no",
+    "substitutions": "(Spike_A264D, Spike_I332V, Spike_N501Y, Spike_Y505H, Spike_R346T, Spike_G446S, Spike_A50V, Spike_F486P, Spike_S371F, Spike_S375F, Spike_P99S, Spike_N450D, Spike_T478K, Spike_N440K, Spike_G142D, Spike_P681R, Spike_G339H, Spike_F157S, Spike_D405N, Spike_E484K, Spike_N211I, Spike_N481K, Spike_S477N, Spike_R158G, Spike_V127F, Spike_H245N, Spike_V445H, Spike_L216F, Spike_E554K, Spike_H655Y, Spike_F68K, Spike_T19I, Spike_K417N, Spike_L452W, Spike_L24S, Spike_K147E, Spike_D614G, Spike_K444T, Spike_N679K, Spike_N697K, Spike_S50L, Spike_Q498R, Spike_V213G, Spike_L455S, Spike_N460K, Spike_N969K, Spike_T376A)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BA.5.9",
+    "antigenic_score": 14.97,
+    "frequency": 0.0041,
+    "zscore": 0.4403,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_E554K, Spike_E484K, Spike_R408S, Spike_S50L, Spike_K147E, Spike_S371F, Spike_L455S, Spike_R158G, Spike_R346T, Spike_D614G, Spike_Y505H, Spike_V445H, Spike_N501Y, Spike_N460K, Spike_S375F, Spike_K356T, Spike_S373P, Spike_Q498R, Spike_Q954H, Spike_P99S, Spike_N969K, Spike_K417N, Spike_N697K, Spike_V213G, Spike_G446S, Spike_R403K, Spike_V127F, Spike_D405N, Spike_I332V, Spike_N481K, Spike_H245N, Spike_A264D, Spike_L452W, Spike_N764K, Spike_H655Y, Spike_T376A, Spike_N440K, Spike_G142D, Spike_N211I, Spike_S939F, Spike_K2L, Spike_G339H, Spike_P681R, Spike_F68K, Spike_D796Y)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BD.1",
+    "antigenic_score": 14.44,
+    "frequency": 0.0043,
+    "zscore": -0.1871,
+    "significant": "no",
+    "substitutions": "(Spike_N481K, Spike_K2L, Spike_P681R, Spike_S371F, Spike_I332V, Spike_F157S, Spike_N450D, Spike_Q498R, Spike_D123G, Spike_P99S, Spike_K147E, Spike_V213G, Spike_N969K, Spike_Q954H, Spike_F68K, Spike_N460K, Spike_N679K, Spike_E484K, Spike_R346T, Spike_N440K, Spike_S375F, Spike_T19I, Spike_K444T, Spike_N211I)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "BE.1",
+    "antigenic_score": 15.19,
+    "frequency": 0.0044,
+    "zscore": 0.6865,
+    "significant": "no",
+    "substitutions": "(Spike_K417N, Spike_H655Y, Spike_N764K, Spike_F486P, Spike_D796Y, Spike_V127F, Spike_P681R, Spike_R408S, Spike_S939F, Spike_F157S, Spike_K356T, Spike_Q498R, Spike_G446S, Spike_E484K, Spike_N450D, Spike_K147E, Spike_P99S, Spike_K2L, Spike_L452W, Spike_N460K, Spike_S371F, Spike_T376A, Spike_Y505H, Spike_A50V, Spike_V213G, Spike_N679K, Spike_S50L, Spike_N697K, Spike_T19I, Spike_S373P, Spike_L216F, Spike_N440K, Spike_K444T, Spike_E554K, Spike_R403K, Spike_N211I, Spike_L24S, Spike_R346T, Spike_L455S, Spike_A264D, Spike_F68K, Spike_T478K, Spike_Q954H)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "BE.1.1",
+    "antigenic_score": 15.58,
+    "frequency": 0.0038,
+    "zscore": 1.1459,
+    "significant": "yes",
+    "substitutions": "(Spike_N969K, Spike_L455S, Spike_Q954H, Spike_F486P, Spike_R346T, Spike_A50V, Spike_R158G, Spike_F157S, Spike_G339H, Spike_S373P, Spike_N450D, Spike_N481K, Spike_K417N, Spike_G142D, Spike_Y505H, Spike_K356T, Spike_N440K, Spike_P681R, Spike_E554K, Spike_S375F, Spike_Q498R, Spike_N460K, Spike_V127F, Spike_R403K, Spike_S50L, Spike_L24S, Spike_K147E, Spike_S939F, Spike_T376A, Spike_E484K, Spike_D123G, Spike_P99S, Spike_D614G, Spike_V445H, Spike_I332V, Spike_H655Y, Spike_T19I, Spike_S371F, Spike_F68K, Spike_V213G, Spike_R408S, Spike_N764K, Spike_S477N, Spike_L216F)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BE.1.1.2",
+    "antigenic_score": 15.68,
+    "frequency": 0.004,
+    "zscore": 1.265,
+    "significant": "yes",
+    "substitutions": "(Spike_N764K, Spike_K417N, Spike_R158G, Spike_I332V, Spike_L24S, Spike_K356T, Spike_S477N, Spike_F157S, Spike_K147E, Spike_N969K, Spike_F68K, Spike_A264D, Spike_V213G, Spike_N697K, Spike_Q498R, Spike_N481K, Spike_L452W, Spike_T478K, Spike_K2L, Spike_S373P, Spike_G339H, Spike_S375F, Spike_G142D, Spike_R403K, Spike_G446S, Spike_Q954H, Spike_L216F, Spike_D796Y, Spike_S371F, Spike_T376A, Spike_V127F, Spike_N460K, Spike_V445H, Spike_N501Y, Spike_P681R, Spike_F486P, Spike_Y505H, Spike_S50L, Spike_N211I, Spike_R346T, Spike_A50V, Spike_T19I, Spike_H245N, Spike_L455S, Spike_P99S, Spike_K444T, Spike_N450D, Spike_H655Y, Spike_N440K, Spike_D614G, Spike_D405N, Spike_D123G)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BE.1.4",
+    "antigenic_score": 14.76,
+    "frequency": 0.0041,
+    "zscore": 0.187,
+    "significant": "no",
+    "substitutions": "(Spike_N460K, Spike_N501Y, Spike_N440K, Spike_R158G, Spike_D123G, Spike_R346T, Spike_S939F, Spike_T376A, Spike_F157S, Spike_K356T, Spike_K147E, Spike_F486P, Spike_E554K, Spike_I332V, Spike_S477N, Spike_V127F, Spike_N679K, Spike_G339H, Spike_Y505H, Spike_P681R, Spike_S373P, Spike_H245N, Spike_R408S)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BE.12",
+    "antigenic_score": 14,
+    "frequency": 0.0035,
+    "zscore": -0.6989,
+    "significant": "no",
+    "substitutions": "(Spike_T478K, Spike_V213G, Spike_D405N, Spike_T376A, Spike_N679K, Spike_H245N, Spike_S477N, Spike_S50L, Spike_G339H, Spike_N501Y, Spike_A264D, Spike_N450D, Spike_D614G, Spike_L455S, Spike_N697K, Spike_L24S, Spike_D796Y, Spike_L452W, Spike_K417N, Spike_L216F, Spike_T19I, Spike_G446S, Spike_R346T, Spike_S373P, Spike_I332V, Spike_H655Y, Spike_V127F, Spike_P681R, Spike_Q498R, Spike_N211I, Spike_K444T, Spike_V445H, Spike_E484K, Spike_K2L, Spike_F68K, Spike_E554K, Spike_N460K, Spike_R158G, Spike_S371F, Spike_K147E, Spike_N440K, Spike_R403K, Spike_Y505H, Spike_N969K)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "BE.5",
+    "antigenic_score": 15.32,
+    "frequency": 0.0043,
+    "zscore": 0.8425,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_T19I, Spike_F68K, Spike_N450D, Spike_V213G, Spike_D405N, Spike_N481K, Spike_N440K, Spike_S477N, Spike_R158G, Spike_Q954H, Spike_D796Y, Spike_V445H, Spike_F486P, Spike_L24S, Spike_T376A, Spike_K356T, Spike_N969K, Spike_L216F, Spike_N211I, Spike_D123G, Spike_H245N, Spike_Y505H, Spike_R346T, Spike_T478K, Spike_K147E, Spike_S373P)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "BF.1",
+    "antigenic_score": 16.28,
+    "frequency": 0.0042,
+    "zscore": 1.969,
+    "significant": "yes",
+    "substitutions": "(Spike_A264D, Spike_R408S, Spike_N501Y, Spike_N679K, Spike_S477N, Spike_R403K, Spike_L24S, Spike_G339H, Spike_F157S, Spike_S371F, Spike_V445H, Spike_K2L, Spike_N697K, Spike_G142D, Spike_L216F, Spike_T376A, Spike_P681R, Spike_N764K, Spike_L452W, Spike_Y505H, Spike_E554K, Spike_K147E, Spike_G446S, Spike_I332V, Spike_N460K, Spike_F68K, Spike_L455S, Spike_S939F, Spike_R346T, Spike_K444T, Spike_V127F, Spike_D405N, Spike_D796Y)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BF.11",
+    "antigenic_score": 15.56,
+    "frequency": 0.0037,
+    "zscore": 1.1282,
+    "significant": "yes",
+    "substitutions": "(Spike_K356T, Spike_N679K, Spike_K417N, Spike_P99S, Spike_H655Y, Spike_N697K, Spike_V445H, Spike_L24S, Spike_A50V, Spike_K147E, Spike_L452W, Spike_Y505H, Spike_T478K, Spike_S50L, Spike_F486P)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BF.11.2",
+    "antigenic_score": 15.58,
+    "frequency": 0.0038,
+    "zscore": 1.1439,
+    "significant": "yes",
+    "substitutions": "(Spike_K2L, Spike_Q498R, Spike_V213G, Spike_R158G, Spike_V445H, Spike_D405N, Spike_L216F, Spike_N440K, Spike_T478K, Spike_I332V, Spike_S939F, Spike_K356T, Spike_Y505H, Spike_N501Y, Spike_L24S, Spike_D796Y, Spike_N460K, Spike_S477N, Spike_A50V, Spike_P99S, Spike_N969K, Spike_N211I, Spike_S373P, Spike_Q954H, Spike_V127F, Spike_N679K, Spike_K417N, Spike_G446S)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BF.11.5",
+    "antigenic_score": 14.58,
+    "frequency": 0.004,
+    "zscore": -0.0191,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_I332V, Spike_T376A, Spike_G339H, Spike_T19I, Spike_D405N, Spike_S371F, Spike_H245N, Spike_L24S, Spike_N969K, Spike_H655Y, Spike_F157S, Spike_F68K, Spike_A50V, Spike_P99S, Spike_D614G, Spike_V127F, Spike_N697K, Spike_N211I, Spike_R158G, Spike_S50L, Spike_P681R, Spike_F486P, Spike_N450D, Spike_K147E, Spike_N679K, Spike_G142D, Spike_Y505H, Spike_T478K, Spike_S373P, Spike_S477N)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BF.26",
+    "antigenic_score": 15.12,
+    "frequency": 0.0042,
+    "zscore": 0.6059,
+    "significant": "no",
+    "substitutions": "(Spike_S373P, Spike_D405N, Spike_P99S, Spike_Q954H, Spike_E554K, Spike_P681R, Spike_F157S, Spike_F68K, Spike_H655Y, Spike_N460K, Spike_N481K, Spike_H245N, Spike_K2L)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BF.28",
+    "antigenic_score": 14.81,
+    "frequency": 0.004,
+    "zscore": 0.246,
+    "significant": "no",
+    "substitutions": "(Spike_Q954H, Spike_K147E, Spike_D614G, Spike_E484K, Spike_N211I, Spike_N460K, Spike_G446S, Spike_S375F, Spike_S373P, Spike_P99S, Spike_R403K, Spike_T376A, Spike_Q498R, Spike_S371F, Spike_L24S, Spike_G339H, Spike_N450D, Spike_D796Y, Spike_H245N, Spike_F157S, Spike_I332V, Spike_K356T, Spike_S477N, Spike_A50V, Spike_E554K, Spike_L455S, Spike_L452W)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BF.4",
+    "antigenic_score": 14.74,
+    "frequency": 0.0049,
+    "zscore": 0.168,
+    "significant": "no",
+    "substitutions": "(Spike_R346T, Spike_H245N, Spike_L216F, Spike_K417N, Spike_S50L, Spike_F68K, Spike_K356T, Spike_T478K, Spike_N481K, Spike_N764K, Spike_Q498R, Spike_K147E, Spike_T376A, Spike_S373P, Spike_N450D)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "BF.5",
+    "antigenic_score": 14.94,
+    "frequency": 0.0035,
+    "zscore": 0.403,
+    "significant": "no",
+    "substitutions": "(Spike_N969K, Spike_S375F, Spike_K417N, Spike_P681R, Spike_H655Y, Spike_K147E, Spike_R158G, Spike_L24S, Spike_V127F, Spike_G446S, Spike_N450D, Spike_S50L, Spike_N679K, Spike_N697K, Spike_N501Y, Spike_V213G, Spike_D796Y, Spike_R408S, Spike_N460K, Spike_K2L, Spike_T19I, Spike_E484K, Spike_S477N, Spike_L455S, Spike_R403K, Spike_Q498R)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "BF.6",
+    "antigenic_score": 13.27,
+    "frequency": 0.0041,
+    "zscore": -1.5527,
+    "significant": "no",
+    "substitutions": "(Spike_V445H, Spike_N450D, Spike_K147E, Spike_A264D, Spike_S50L, Spike_I332V, Spike_L216F, Spike_K417N)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BF.7",
+    "antigenic_score": 15.86,
+    "frequency": 0.0038,
+    "zscore": 1.4735,
+    "significant": "yes",
+    "substitutions": "(Spike_V127F, Spike_N450D, Spike_N697K, Spike_S477N, Spike_K147E, Spike_K2L, Spike_D614G, Spike_N501Y, Spike_R158G, Spike_D123G, Spike_N764K, Spike_L455S, Spike_V445H, Spike_K444T, Spike_N460K, Spike_Q954H, Spike_Y505H, Spike_D796Y, Spike_N211I, Spike_G142D, Spike_T478K, Spike_S373P, Spike_V213G, Spike_R346T, Spike_R408S, Spike_F68K, Spike_L216F, Spike_A264D, Spike_N679K, Spike_L452W, Spike_H655Y, Spike_A50V, Spike_F157S, Spike_S939F, Spike_S371F, Spike_P99S, Spike_I332V, Spike_N440K, Spike_N969K, Spike_S50L, Spike_G446S, Spike_D405N, Spike_N481K, Spike_G339H, Spike_Q498R, Spike_T19I, Spike_R403K, Spike_H245N, Spike_E554K, Spike_F486P)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BF.7.21",
+    "antigenic_score": 14.84,
+    "frequency": 0.0044,
+    "zscore": 0.2799,
+    "significant": "no",
+    "substitutions": "(Spike_N460K, Spike_S939F, Spike_D614G, Spike_K2L, Spike_T376A, Spike_S50L, Spike_N211I, Spike_V445H, Spike_S373P, Spike_N440K, Spike_A50V, Spike_L216F, Spike_P681R, Spike_Q498R, Spike_F486P, Spike_S477N, Spike_Y505H, Spike_N679K, Spike_G446S, Spike_K444T, Spike_R346T, Spike_D405N, Spike_L452W, Spike_V213G, Spike_N481K, Spike_A264D, Spike_L24S, Spike_N764K, Spike_E554K, Spike_F68K, Spike_R158G, Spike_N450D, Spike_R403K, Spike_P99S, Spike_S371F, Spike_H655Y, Spike_H245N, Spike_R408S, Spike_T478K, Spike_S375F, Spike_K356T, Spike_I332V, Spike_D796Y, Spike_G339H, Spike_T19I)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "BF.7.23",
+    "antigenic_score": 14.2,
+    "frequency": 0.004,
+    "zscore": -0.4672,
+    "significant": "no",
+    "substitutions": "(Spike_S371F, Spike_E554K, Spike_N481K, Spike_N211I, Spike_D405N, Spike_N450D, Spike_R158G, Spike_S375F, Spike_V213G, Spike_F486P, Spike_S939F, Spike_N969K, Spike_N460K, Spike_L455S, Spike_Y505H, Spike_K444T, Spike_N679K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BF.7.4",
+    "antigenic_score": 14.59,
+    "frequency": 0.0047,
+    "zscore": -0.0027,
+    "significant": "no",
+    "substitutions": "(Spike_D614G, Spike_N679K, Spike_A264D, Spike_S939F, Spike_S477N, Spike_N450D, Spike_F157S, Spike_A50V, Spike_N969K, Spike_V213G, Spike_E554K, Spike_K444T, Spike_K2L, Spike_K147E, Spike_N460K, Spike_Y505H, Spike_G142D, Spike_S50L, Spike_R408S, Spike_S375F, Spike_D796Y, Spike_F486P, Spike_L455S, Spike_L24S)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "BF.7.7",
+    "antigenic_score": 14.55,
+    "frequency": 0.0037,
+    "zscore": -0.0562,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_N460K, Spike_F157S, Spike_H655Y, Spike_T478K, Spike_T376A, Spike_G142D, Spike_N969K, Spike_D614G, Spike_S375F, Spike_V213G, Spike_Q498R, Spike_K2L, Spike_P99S, Spike_Q954H, Spike_A264D, Spike_S477N, Spike_L216F, Spike_N440K)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BN.1",
+    "antigenic_score": 15.8,
+    "frequency": 0.0032,
+    "zscore": 1.3988,
+    "significant": "yes",
+    "substitutions": "(Spike_N481K, Spike_K356T, Spike_N969K, Spike_L455S, Spike_R346T, Spike_A50V, Spike_N697K, Spike_K417N, Spike_V127F, Spike_Q954H, Spike_D123G, Spike_N764K, Spike_D796Y, Spike_S939F, Spike_V213G, Spike_S373P, Spike_N460K, Spike_L216F, Spike_D405N, Spike_E484K, Spike_E554K, Spike_N679K, Spike_K2L)",
+    "frequent": 0.0032
+  },
+  {
+    "lineage": "BN.1.3.1",
+    "antigenic_score": 13.99,
+    "frequency": 0.0044,
+    "zscore": -0.7064,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_T478K, Spike_Q954H, Spike_G446S, Spike_D614G, Spike_Q498R, Spike_P99S, Spike_V445H, Spike_A50V, Spike_K147E, Spike_N460K, Spike_S375F, Spike_K356T, Spike_V213G, Spike_Y505H, Spike_F157S, Spike_G339H, Spike_N764K, Spike_N440K, Spike_N211I, Spike_E554K, Spike_S939F, Spike_N969K, Spike_L455S, Spike_R346T, Spike_N481K, Spike_V127F, Spike_K2L, Spike_K417N, Spike_N697K, Spike_D796Y, Spike_D405N, Spike_G142D)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "BN.1.4",
+    "antigenic_score": 15.37,
+    "frequency": 0.0042,
+    "zscore": 0.902,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_K444T, Spike_S939F, Spike_T478K, Spike_G339H, Spike_V213G, Spike_D123G, Spike_N697K, Spike_E484K, Spike_F486P, Spike_G142D, Spike_T19I, Spike_N969K, Spike_A50V, Spike_R346T, Spike_L455S, Spike_V445H, Spike_D796Y, Spike_E554K, Spike_Y505H, Spike_Q954H, Spike_L24S, Spike_F157S, Spike_S50L, Spike_F68K, Spike_S477N, Spike_H655Y, Spike_N450D, Spike_R403K, Spike_I332V, Spike_K147E, Spike_N211I, Spike_L216F, Spike_V127F)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BN.1.5",
+    "antigenic_score": 14.14,
+    "frequency": 0.0046,
+    "zscore": -0.5341,
+    "significant": "no",
+    "substitutions": "(Spike_S373P, Spike_A50V, Spike_I332V, Spike_R403K, Spike_H655Y, Spike_L24S, Spike_E484K, Spike_E554K, Spike_N697K, Spike_D796Y, Spike_K147E, Spike_N764K, Spike_N460K, Spike_R158G, Spike_K356T)",
+    "frequent": 0.0046
+  },
+  {
+    "lineage": "BN.1.7",
+    "antigenic_score": 14.54,
+    "frequency": 0.0045,
+    "zscore": -0.0723,
+    "significant": "no",
+    "substitutions": "(Spike_N697K, Spike_R403K, Spike_N450D, Spike_N460K, Spike_R346T, Spike_N440K, Spike_L216F, Spike_N481K, Spike_R408S, Spike_A50V, Spike_K2L, Spike_N211I, Spike_F486P, Spike_N764K, Spike_L24S, Spike_Y505H, Spike_I332V, Spike_T478K, Spike_D796Y, Spike_N679K, Spike_L455S, Spike_K356T, Spike_V213G, Spike_S477N, Spike_E484K, Spike_K147E, Spike_K417N, Spike_S50L, Spike_V127F, Spike_G446S, Spike_Q954H, Spike_H245N, Spike_N501Y, Spike_N969K, Spike_A264D, Spike_E554K, Spike_D614G, Spike_T19I, Spike_K444T, Spike_Q498R, Spike_S375F, Spike_R158G, Spike_G339H, Spike_G142D, Spike_S939F, Spike_S371F, Spike_V445H, Spike_T376A, Spike_H655Y, Spike_S373P, Spike_F157S, Spike_P99S, Spike_D405N)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BQ.1",
+    "antigenic_score": 15.32,
+    "frequency": 0.0042,
+    "zscore": 0.8426,
+    "significant": "no",
+    "substitutions": "(Spike_K2L, Spike_T478K, Spike_R403K, Spike_S375F, Spike_S373P, Spike_L452W, Spike_N501Y, Spike_N697K, Spike_P99S, Spike_R408S, Spike_D405N, Spike_P681R, Spike_F68K, Spike_A264D, Spike_S477N, Spike_D123G, Spike_T376A, Spike_D614G, Spike_G142D, Spike_Q498R, Spike_Q954H, Spike_N481K, Spike_E554K, Spike_V445H)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BQ.1.1",
+    "antigenic_score": 15.19,
+    "frequency": 0.004,
+    "zscore": 0.6973,
+    "significant": "no",
+    "substitutions": "(Spike_E554K, Spike_F486P, Spike_K2L, Spike_T478K, Spike_S50L, Spike_N211I, Spike_G446S, Spike_R403K, Spike_N679K, Spike_Y505H, Spike_S373P, Spike_N460K, Spike_N697K, Spike_S375F, Spike_D614G, Spike_K356T, Spike_K444T, Spike_D405N, Spike_V445H, Spike_A264D, Spike_G142D, Spike_R408S, Spike_F157S, Spike_S477N, Spike_T376A, Spike_H655Y, Spike_Q954H, Spike_T19I, Spike_Q498R, Spike_R158G, Spike_N450D, Spike_P99S, Spike_N764K, Spike_L24S, Spike_L216F, Spike_D123G, Spike_N481K, Spike_R346T)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.1.1",
+    "antigenic_score": 14.41,
+    "frequency": 0.0034,
+    "zscore": -0.2238,
+    "significant": "no",
+    "substitutions": "(Spike_L455S, Spike_K2L, Spike_F486P, Spike_R158G, Spike_D405N, Spike_L24S, Spike_G142D, Spike_T19I, Spike_N460K, Spike_F68K, Spike_N450D, Spike_T478K, Spike_Q954H, Spike_S939F, Spike_H655Y, Spike_D614G, Spike_V213G, Spike_S50L, Spike_P99S, Spike_S373P, Spike_F157S, Spike_Y505H, Spike_D123G, Spike_N679K, Spike_V127F, Spike_K444T, Spike_K417N, Spike_T376A, Spike_N697K, Spike_A50V, Spike_G446S, Spike_N440K, Spike_Q498R, Spike_S375F, Spike_E484K, Spike_N501Y, Spike_R403K, Spike_S371F, Spike_R408S, Spike_H245N, Spike_A264D, Spike_N211I, Spike_K356T, Spike_N969K, Spike_K147E)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BQ.1.1.19",
+    "antigenic_score": 14.9,
+    "frequency": 0.0047,
+    "zscore": 0.3529,
+    "significant": "no",
+    "substitutions": "(Spike_L455S, Spike_D123G, Spike_S371F, Spike_K444T, Spike_S50L, Spike_L24S, Spike_D796Y, Spike_G446S, Spike_S375F, Spike_N697K, Spike_F157S, Spike_N481K, Spike_A264D, Spike_Y505H, Spike_T376A, Spike_N501Y, Spike_I332V, Spike_L452W, Spike_K147E)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "BQ.1.1.2",
+    "antigenic_score": 13.69,
+    "frequency": 0.0044,
+    "zscore": -1.061,
+    "significant": "no",
+    "substitutions": "(Spike_P681R, Spike_R408S, Spike_K147E, Spike_D796Y, Spike_E484K, Spike_F486P, Spike_S50L, Spike_A264D, Spike_N764K, Spike_F68K, Spike_N969K, Spike_S373P, Spike_H655Y, Spike_K2L, Spike_R346T, Spike_Q954H, Spike_Q498R, Spike_N697K, Spike_P99S, Spike_G339H, Spike_S375F, Spike_N211I, Spike_K417N, Spike_G446S, Spike_L452W, Spike_Y505H, Spike_T19I, Spike_L24S, Spike_S371F, Spike_N440K, Spike_T376A, Spike_K444T, Spike_N501Y, Spike_V127F, Spike_A50V, Spike_D123G, Spike_R158G, Spike_N460K, Spike_D614G, Spike_K356T, Spike_E554K, Spike_N481K, Spike_F157S)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "BQ.1.1.22",
+    "antigenic_score": 14.6,
+    "frequency": 0.0042,
+    "zscore": 0.0006,
+    "significant": "no",
+    "substitutions": "(Spike_N440K, Spike_N697K, Spike_L24S, Spike_A264D, Spike_K356T, Spike_S371F, Spike_G142D, Spike_S50L, Spike_H245N, Spike_T478K, Spike_E484K, Spike_D405N, Spike_Q954H, Spike_G339H, Spike_L455S, Spike_V213G, Spike_V127F, Spike_N501Y, Spike_F68K, Spike_P99S, Spike_N764K, Spike_S375F)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BQ.1.1.24",
+    "antigenic_score": 13.84,
+    "frequency": 0.0045,
+    "zscore": -0.8876,
+    "significant": "no",
+    "substitutions": "(Spike_T376A, Spike_A50V, Spike_K2L, Spike_G446S, Spike_D796Y, Spike_H655Y, Spike_T478K, Spike_Q498R, Spike_P99S, Spike_K356T, Spike_N211I, Spike_S375F, Spike_G142D, Spike_T19I, Spike_N764K, Spike_F68K, Spike_A264D, Spike_R408S, Spike_Y505H, Spike_N481K, Spike_L216F, Spike_D614G, Spike_S477N, Spike_K417N, Spike_G339H, Spike_P681R, Spike_F157S, Spike_N697K, Spike_S50L, Spike_H245N, Spike_S373P, Spike_S371F, Spike_L24S, Spike_N460K, Spike_V127F, Spike_E484K, Spike_N450D, Spike_K147E, Spike_N679K, Spike_V213G, Spike_L452W, Spike_V445H, Spike_N440K, Spike_R346T, Spike_R403K, Spike_F486P, Spike_N969K, Spike_K444T, Spike_R158G, Spike_I332V, Spike_Q954H, Spike_N501Y, Spike_E554K)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BQ.1.1.3",
+    "antigenic_score": 16.24,
+    "frequency": 0.004,
+    "zscore": 1.9202,
+    "significant": "yes",
+    "substitutions": "(Spike_R403K, Spike_N450D, Spike_N481K, Spike_K444T, Spike_K147E, Spike_G142D, Spike_G446S, Spike_T376A, Spike_P99S, Spike_E484K, Spike_A264D, Spike_L24S, Spike_N969K, Spike_E554K, Spike_S477N, Spike_L452W, Spike_D796Y, Spike_S371F, Spike_T478K, Spike_P681R, Spike_N697K, Spike_A50V, Spike_V127F, Spike_F157S, Spike_S939F, Spike_V213G, Spike_L216F, Spike_T19I, Spike_Y505H, Spike_K2L, Spike_D123G)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.1.31",
+    "antigenic_score": 14.39,
+    "frequency": 0.004,
+    "zscore": -0.2461,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_N679K, Spike_K356T, Spike_P681R, Spike_P99S, Spike_L455S, Spike_R346T, Spike_K147E, Spike_V127F, Spike_D123G, Spike_N697K, Spike_S50L, Spike_F157S, Spike_E554K, Spike_S939F, Spike_S373P, Spike_L24S, Spike_N969K, Spike_I332V, Spike_A264D, Spike_T478K, Spike_N211I, Spike_K417N, Spike_F68K, Spike_Q954H, Spike_T376A, Spike_G339H, Spike_V213G, Spike_G142D, Spike_A50V, Spike_V445H, Spike_H245N, Spike_S375F, Spike_T19I, Spike_R403K, Spike_S477N, Spike_N460K, Spike_R158G, Spike_F486P, Spike_S371F, Spike_D796Y, Spike_L452W, Spike_K444T, Spike_N764K, Spike_N481K, Spike_Y505H, Spike_R408S, Spike_H655Y, Spike_D405N, Spike_N440K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.1.32",
+    "antigenic_score": 13.72,
+    "frequency": 0.0042,
+    "zscore": -1.0232,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_R346T, Spike_K444T, Spike_N440K, Spike_T478K, Spike_A264D, Spike_N501Y, Spike_T19I, Spike_N679K, Spike_N211I, Spike_L216F, Spike_K147E, Spike_E554K, Spike_F157S, Spike_V213G, Spike_K2L, Spike_F486P, Spike_R158G, Spike_D405N, Spike_L24S, Spike_F68K, Spike_G446S, Spike_S477N, Spike_N481K, Spike_N969K, Spike_D614G, Spike_S375F, Spike_S50L, Spike_Y505H, Spike_H655Y, Spike_P99S, Spike_N450D, Spike_E484K, Spike_S939F, Spike_R408S, Spike_R403K, Spike_G142D, Spike_H245N, Spike_N764K, Spike_I332V, Spike_A50V, Spike_P681R, Spike_G339H, Spike_D796Y, Spike_L455S, Spike_K417N, Spike_T376A, Spike_V445H, Spike_V127F, Spike_L452W)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BQ.1.1.34",
+    "antigenic_score": 15,
+    "frequency": 0.0034,
+    "zscore": 0.4728,
+    "significant": "no",
+    "substitutions": "(Spike_F486P, Spike_Q954H)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BQ.1.1.36",
+    "antigenic_score": 14.46,
+    "frequency": 0.0039,
+    "zscore": -0.1633,
+    "significant": "no",
+    "substitutions": "(Spike_V213G, Spike_D614G, Spike_H655Y, Spike_K2L, Spike_F486P, Spike_T19I, Spike_K417N, Spike_F68K, Spike_R346T, Spike_P99S, Spike_P681R, Spike_R158G, Spike_T478K, Spike_D123G, Spike_Q954H, Spike_D405N, Spike_K356T, Spike_K444T, Spike_N440K, Spike_N481K, Spike_S477N, Spike_V127F, Spike_E554K, Spike_T376A, Spike_N450D, Spike_V445H, Spike_G339H, Spike_G446S, Spike_D796Y, Spike_N697K, Spike_Q498R, Spike_S50L, Spike_H245N, Spike_G142D, Spike_A264D, Spike_E484K, Spike_S375F, Spike_A50V, Spike_N211I, Spike_K147E, Spike_S371F, Spike_S939F, Spike_F157S, Spike_Y505H)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "BQ.1.1.4",
+    "antigenic_score": 12.43,
+    "frequency": 0.0041,
+    "zscore": -2.5312,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_N460K, Spike_G142D, Spike_N679K, Spike_S939F, Spike_K2L, Spike_R403K, Spike_H655Y, Spike_V127F, Spike_P681R, Spike_T478K, Spike_N211I, Spike_T19I, Spike_K444T, Spike_S477N)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BQ.1.1.41",
+    "antigenic_score": 12.71,
+    "frequency": 0.0042,
+    "zscore": -2.2014,
+    "significant": "no",
+    "substitutions": "(Spike_I332V, Spike_S50L, Spike_T19I, Spike_Y505H, Spike_Q954H, Spike_S371F, Spike_K444T, Spike_R346T, Spike_L452W, Spike_K147E, Spike_D614G, Spike_V213G, Spike_H245N, Spike_T478K, Spike_S939F, Spike_H655Y, Spike_G446S, Spike_T376A, Spike_S375F, Spike_S477N, Spike_Q498R, Spike_K417N, Spike_A264D, Spike_A50V, Spike_G142D, Spike_F68K, Spike_G339H, Spike_N679K, Spike_V445H, Spike_N211I, Spike_N501Y, Spike_D405N)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BQ.1.1.42",
+    "antigenic_score": 15.03,
+    "frequency": 0.0049,
+    "zscore": 0.5001,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_N679K, Spike_L452W, Spike_Q498R, Spike_R408S, Spike_S373P, Spike_S939F, Spike_G142D, Spike_N764K, Spike_V127F, Spike_K444T, Spike_F68K, Spike_I332V)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "BQ.1.1.5",
+    "antigenic_score": 15.61,
+    "frequency": 0.0034,
+    "zscore": 1.1774,
+    "significant": "yes",
+    "substitutions": "(Spike_S50L, Spike_R408S, Spike_F486P, Spike_L452W, Spike_E484K, Spike_N679K, Spike_N460K, Spike_F157S, Spike_L216F, Spike_N440K, Spike_S371F, Spike_K444T, Spike_Q498R, Spike_F68K, Spike_D405N, Spike_D796Y, Spike_L455S, Spike_R403K, Spike_G339H, Spike_H655Y, Spike_V213G, Spike_A264D, Spike_H245N, Spike_Q954H, Spike_P99S, Spike_R158G, Spike_S373P, Spike_N969K, Spike_N481K, Spike_V127F, Spike_R346T, Spike_K356T, Spike_L24S, Spike_D123G, Spike_S939F, Spike_T19I, Spike_S375F)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BQ.1.1.56",
+    "antigenic_score": 13.54,
+    "frequency": 0.0039,
+    "zscore": -1.2396,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_H655Y, Spike_T19I, Spike_D614G, Spike_N440K, Spike_R346T, Spike_F157S, Spike_K2L, Spike_G446S, Spike_N481K, Spike_Y505H, Spike_P99S, Spike_S50L, Spike_Q954H, Spike_G339H, Spike_E554K, Spike_L216F, Spike_K444T, Spike_H245N, Spike_N969K, Spike_K147E, Spike_F486P, Spike_S371F, Spike_K417N, Spike_G142D, Spike_R408S, Spike_D796Y, Spike_T376A, Spike_N450D, Spike_R158G, Spike_V127F, Spike_E484K, Spike_K356T, Spike_N679K, Spike_S373P, Spike_S939F, Spike_D405N, Spike_R403K, Spike_S477N)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "BQ.1.1.6",
+    "antigenic_score": 15.23,
+    "frequency": 0.0041,
+    "zscore": 0.741,
+    "significant": "no",
+    "substitutions": "(Spike_T376A, Spike_D405N, Spike_P99S, Spike_A264D, Spike_F486P, Spike_I332V, Spike_P681R, Spike_Y505H, Spike_N679K, Spike_N481K, Spike_L452W, Spike_A50V, Spike_Q498R, Spike_R346T, Spike_S50L, Spike_S939F, Spike_H245N, Spike_N460K, Spike_L216F, Spike_V445H, Spike_D614G, Spike_G446S, Spike_N211I, Spike_R408S, Spike_G142D, Spike_N969K, Spike_N440K, Spike_F68K, Spike_S373P, Spike_S371F, Spike_V213G, Spike_K356T, Spike_H655Y, Spike_E484K, Spike_D123G, Spike_N764K, Spike_E554K, Spike_S477N, Spike_N501Y, Spike_D796Y, Spike_G339H, Spike_N697K, Spike_L455S, Spike_T478K, Spike_K417N, Spike_K2L, Spike_F157S, Spike_S375F, Spike_R403K, Spike_Q954H, Spike_K444T, Spike_K147E, Spike_L24S, Spike_N450D, Spike_V127F)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "BQ.1.1.66",
+    "antigenic_score": 15.18,
+    "frequency": 0.0037,
+    "zscore": 0.6842,
+    "significant": "no",
+    "substitutions": "(Spike_F68K, Spike_A50V, Spike_S477N)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BQ.1.1.7",
+    "antigenic_score": 14.8,
+    "frequency": 0.0045,
+    "zscore": 0.2419,
+    "significant": "no",
+    "substitutions": "(Spike_E554K, Spike_F157S, Spike_D796Y, Spike_A264D, Spike_D614G, Spike_E484K, Spike_H655Y, Spike_N969K, Spike_I332V, Spike_V445H, Spike_S371F, Spike_G446S, Spike_G142D, Spike_F68K, Spike_R158G, Spike_P681R, Spike_V213G, Spike_Q498R, Spike_A50V)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BQ.1.1.72",
+    "antigenic_score": 14.27,
+    "frequency": 0.0047,
+    "zscore": -0.3841,
+    "significant": "no",
+    "substitutions": "(Spike_T19I, Spike_H655Y, Spike_G142D, Spike_N450D, Spike_S477N, Spike_R346T, Spike_R408S, Spike_R158G)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "BQ.1.1.8",
+    "antigenic_score": 13.77,
+    "frequency": 0.004,
+    "zscore": -0.9657,
+    "significant": "no",
+    "substitutions": "(Spike_K444T, Spike_R403K, Spike_R158G, Spike_G339H, Spike_T19I, Spike_V445H, Spike_N460K, Spike_N764K, Spike_F486P, Spike_V127F, Spike_S371F, Spike_V213G, Spike_N501Y, Spike_R408S, Spike_S375F, Spike_P99S, Spike_N969K, Spike_E554K, Spike_N450D, Spike_K417N, Spike_L452W, Spike_E484K, Spike_Q498R, Spike_D123G, Spike_L216F, Spike_N481K, Spike_N211I, Spike_Y505H, Spike_K147E, Spike_S373P, Spike_N440K, Spike_G142D)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.10",
+    "antigenic_score": 14.5,
+    "frequency": 0.0037,
+    "zscore": -0.11,
+    "significant": "no",
+    "substitutions": "(Spike_N679K, Spike_L455S, Spike_N764K, Spike_S371F, Spike_R158G, Spike_R403K, Spike_E554K, Spike_S477N, Spike_K417N, Spike_V213G, Spike_S939F, Spike_A264D, Spike_N481K, Spike_V445H, Spike_F486P, Spike_D614G, Spike_T478K, Spike_R346T, Spike_H655Y, Spike_L216F, Spike_N697K, Spike_L452W, Spike_N440K, Spike_K444T, Spike_F157S, Spike_L24S, Spike_K2L, Spike_A50V, Spike_E484K, Spike_N501Y, Spike_I332V, Spike_T376A, Spike_V127F, Spike_D123G, Spike_S375F, Spike_R408S, Spike_N969K, Spike_K147E, Spike_T19I, Spike_N460K, Spike_G142D, Spike_S373P, Spike_G446S, Spike_S50L)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BQ.1.11",
+    "antigenic_score": 15.17,
+    "frequency": 0.0038,
+    "zscore": 0.6666,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_K147E, Spike_S477N, Spike_F157S, Spike_V213G, Spike_K417N, Spike_N679K, Spike_F68K, Spike_L216F, Spike_H245N, Spike_S375F, Spike_L24S, Spike_Q498R, Spike_S373P, Spike_D405N, Spike_N481K, Spike_K356T, Spike_L452W, Spike_S371F, Spike_N211I, Spike_K444T, Spike_N764K, Spike_T376A, Spike_D123G, Spike_V127F)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BQ.1.2",
+    "antigenic_score": 14.76,
+    "frequency": 0.0045,
+    "zscore": 0.1929,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_N697K, Spike_T376A, Spike_N450D, Spike_R346T, Spike_K147E, Spike_V445H, Spike_N440K, Spike_A50V, Spike_I332V, Spike_N764K, Spike_N969K, Spike_S477N, Spike_K444T)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "BQ.1.23",
+    "antigenic_score": 14.27,
+    "frequency": 0.004,
+    "zscore": -0.3823,
+    "significant": "no",
+    "substitutions": "(Spike_F157S, Spike_D614G, Spike_L24S, Spike_S371F, Spike_S373P, Spike_Q498R, Spike_I332V)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.25",
+    "antigenic_score": 15.24,
+    "frequency": 0.0042,
+    "zscore": 0.7458,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_R158G, Spike_S373P, Spike_A50V, Spike_N481K, Spike_T19I, Spike_N501Y, Spike_N969K, Spike_T376A, Spike_I332V, Spike_P681R, Spike_P99S, Spike_L24S, Spike_G446S, Spike_F486P, Spike_N764K, Spike_A264D, Spike_N440K, Spike_Y505H, Spike_L452W, Spike_Q498R, Spike_R403K, Spike_E484K, Spike_S939F, Spike_S375F, Spike_F157S, Spike_N211I, Spike_S477N, Spike_G142D, Spike_H245N, Spike_L455S, Spike_G339H, Spike_N460K, Spike_V127F, Spike_N450D, Spike_E554K, Spike_Q954H)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "BQ.1.3.1",
+    "antigenic_score": 15.77,
+    "frequency": 0.0037,
+    "zscore": 1.3747,
+    "significant": "yes",
+    "substitutions": "(Spike_D796Y, Spike_R158G, Spike_K356T, Spike_N697K, Spike_S50L, Spike_F157S, Spike_R408S, Spike_S371F, Spike_P99S, Spike_T376A, Spike_N211I, Spike_S477N, Spike_P681R, Spike_S939F, Spike_E554K, Spike_A50V, Spike_H655Y, Spike_G142D, Spike_Y505H, Spike_V213G, Spike_K2L, Spike_E484K, Spike_N764K, Spike_F68K, Spike_D405N, Spike_G339H, Spike_S375F, Spike_N440K, Spike_D614G, Spike_K417N, Spike_H245N, Spike_N450D, Spike_T478K)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "BQ.1.7",
+    "antigenic_score": 14.78,
+    "frequency": 0.0034,
+    "zscore": 0.2119,
+    "significant": "no",
+    "substitutions": "(Spike_T478K, Spike_N481K, Spike_Q498R, Spike_Y505H, Spike_E484K, Spike_R408S, Spike_L216F, Spike_R158G, Spike_G142D, Spike_T19I, Spike_E554K, Spike_K2L, Spike_R346T, Spike_A264D, Spike_N764K, Spike_V445H, Spike_P681R, Spike_S50L, Spike_D614G, Spike_D123G, Spike_A50V, Spike_S373P, Spike_V127F, Spike_D796Y, Spike_S371F, Spike_L455S, Spike_K417N)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "BQ.1.8",
+    "antigenic_score": 13.9,
+    "frequency": 0.004,
+    "zscore": -0.8103,
+    "significant": "no",
+    "substitutions": "(Spike_K2L, Spike_N440K, Spike_K147E, Spike_G339H, Spike_N679K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "BQ.1.8.2",
+    "antigenic_score": 14.92,
+    "frequency": 0.0038,
+    "zscore": 0.3754,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_L455S, Spike_N481K, Spike_E554K, Spike_N697K, Spike_A50V, Spike_D123G, Spike_R346T, Spike_S375F, Spike_F157S, Spike_T19I, Spike_D405N, Spike_Q954H, Spike_N440K, Spike_Y505H, Spike_L24S, Spike_H245N, Spike_V445H, Spike_S371F, Spike_Q498R, Spike_V127F, Spike_K356T, Spike_S477N, Spike_P99S, Spike_F486P, Spike_I332V, Spike_R403K, Spike_N450D, Spike_G446S, Spike_S373P, Spike_G339H, Spike_N764K, Spike_N211I, Spike_D796Y, Spike_E484K, Spike_L216F, Spike_T376A, Spike_S939F, Spike_N679K, Spike_G142D, Spike_N460K, Spike_S50L, Spike_N969K, Spike_D614G, Spike_V213G, Spike_F68K)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "BR.2.1",
+    "antigenic_score": 14.77,
+    "frequency": 0.0049,
+    "zscore": 0.1973,
+    "significant": "no",
+    "substitutions": "(Spike_H245N, Spike_S50L, Spike_N481K, Spike_L24S, Spike_T376A, Spike_R158G, Spike_N969K, Spike_Q954H, Spike_S939F, Spike_N679K, Spike_S375F, Spike_N697K, Spike_K2L, Spike_L452W, Spike_N501Y, Spike_P99S, Spike_N211I, Spike_P681R, Spike_N764K, Spike_A264D, Spike_H655Y, Spike_T19I, Spike_D123G, Spike_F68K, Spike_R403K, Spike_I332V, Spike_T478K, Spike_Q498R, Spike_K356T, Spike_V445H, Spike_R346T, Spike_K444T, Spike_E554K, Spike_N450D, Spike_Y505H, Spike_G142D, Spike_D405N, Spike_L216F, Spike_N440K, Spike_R408S, Spike_L455S, Spike_V127F, Spike_S373P, Spike_E484K, Spike_G339H, Spike_K417N, Spike_S477N)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "BU.1",
+    "antigenic_score": 13.4,
+    "frequency": 0.0039,
+    "zscore": -1.3952,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_R158G, Spike_R346T, Spike_S371F, Spike_G142D, Spike_L216F, Spike_A50V, Spike_N501Y, Spike_K147E, Spike_Q498R, Spike_P681R, Spike_Y505H, Spike_P99S, Spike_H655Y, Spike_V213G, Spike_Q954H, Spike_N969K)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "C.16",
+    "antigenic_score": 15.78,
+    "frequency": 0.0035,
+    "zscore": 1.3826,
+    "significant": "yes",
+    "substitutions": "(Spike_V127F, Spike_K147E, Spike_S50L, Spike_D123G, Spike_N440K, Spike_S477N, Spike_I332V, Spike_G142D, Spike_N679K, Spike_N460K, Spike_K2L, Spike_R346T, Spike_R408S, Spike_V445H, Spike_D405N, Spike_D796Y, Spike_N697K, Spike_L216F, Spike_T19I, Spike_R403K, Spike_N450D)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "C.30",
+    "antigenic_score": 13.78,
+    "frequency": 0.0037,
+    "zscore": -0.9592,
+    "significant": "no",
+    "substitutions": "(Spike_N501Y, Spike_D123G, Spike_F157S, Spike_N969K, Spike_L216F, Spike_S371F, Spike_V213G, Spike_R346T, Spike_S50L, Spike_N679K, Spike_N450D, Spike_Q498R, Spike_K356T, Spike_N764K, Spike_V127F, Spike_T478K, Spike_K2L, Spike_F68K, Spike_F486P, Spike_R408S, Spike_H245N, Spike_E554K, Spike_T19I, Spike_N697K, Spike_R158G, Spike_Y505H, Spike_A264D, Spike_N211I, Spike_L452W, Spike_S477N, Spike_N440K, Spike_S375F, Spike_G142D, Spike_D796Y, Spike_S373P, Spike_L24S, Spike_G339H, Spike_P681R, Spike_K417N, Spike_S939F, Spike_A50V, Spike_Q954H, Spike_H655Y, Spike_I332V, Spike_R403K, Spike_D614G, Spike_D405N, Spike_P99S, Spike_V445H, Spike_L455S, Spike_N460K, Spike_N481K, Spike_T376A, Spike_G446S, Spike_K147E)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "C.36",
+    "antigenic_score": 14.08,
+    "frequency": 0.0041,
+    "zscore": -0.6047,
+    "significant": "no",
+    "substitutions": "(Spike_S939F, Spike_N697K, Spike_N211I, Spike_R158G, Spike_A50V, Spike_N450D, Spike_L455S, Spike_A264D, Spike_G446S, Spike_N679K, Spike_F486P, Spike_K356T, Spike_L216F, Spike_K417N, Spike_S477N, Spike_D405N, Spike_E554K, Spike_D796Y, Spike_I332V, Spike_G339H, Spike_H245N, Spike_R403K, Spike_N764K, Spike_N969K, Spike_K2L, Spike_H655Y, Spike_D614G, Spike_T19I, Spike_L24S, Spike_F68K, Spike_L452W, Spike_K147E, Spike_R408S, Spike_T376A, Spike_F157S, Spike_P681R, Spike_V127F, Spike_S375F, Spike_D123G, Spike_T478K, Spike_S373P)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "C.36.3",
+    "antigenic_score": 14.66,
+    "frequency": 0.0042,
+    "zscore": 0.0761,
+    "significant": "no",
+    "substitutions": "(Spike_A264D, Spike_K147E, Spike_R158G, Spike_N211I, Spike_R408S, Spike_Y505H, Spike_D796Y, Spike_S371F, Spike_L455S, Spike_V213G, Spike_A50V, Spike_V445H, Spike_L24S, Spike_N969K, Spike_N697K, Spike_S477N, Spike_T376A, Spike_T478K, Spike_K417N, Spike_E484K, Spike_N450D, Spike_K356T, Spike_H245N, Spike_R346T, Spike_Q498R, Spike_G339H, Spike_N440K, Spike_F68K, Spike_D123G, Spike_D614G, Spike_G446S, Spike_L452W, Spike_Q954H, Spike_D405N, Spike_S373P, Spike_K2L, Spike_F157S, Spike_S375F, Spike_V127F, Spike_N481K, Spike_E554K, Spike_I332V, Spike_G142D, Spike_T19I, Spike_R403K, Spike_F486P, Spike_H655Y, Spike_N501Y, Spike_K444T, Spike_N460K, Spike_P99S, Spike_L216F, Spike_S939F, Spike_N764K, Spike_P681R, Spike_S50L)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "CH.1.1",
+    "antigenic_score": 14.22,
+    "frequency": 0.0043,
+    "zscore": -0.4392,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_N764K, Spike_E554K, Spike_H655Y, Spike_N679K, Spike_A50V, Spike_N460K, Spike_S477N, Spike_L452W, Spike_A264D, Spike_N211I, Spike_V213G, Spike_N697K, Spike_R346T, Spike_H245N, Spike_T19I, Spike_K2L, Spike_Q954H, Spike_S50L)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "CH.1.1.1",
+    "antigenic_score": 14.74,
+    "frequency": 0.0037,
+    "zscore": 0.1718,
+    "significant": "no",
+    "substitutions": "(Spike_S373P, Spike_N697K, Spike_H245N, Spike_G142D, Spike_N440K, Spike_Y505H, Spike_H655Y, Spike_N450D, Spike_I332V, Spike_T376A, Spike_N764K, Spike_L452W, Spike_N481K, Spike_R158G, Spike_N460K, Spike_A264D, Spike_F486P, Spike_A50V, Spike_L455S, Spike_L216F, Spike_P681R, Spike_N969K, Spike_N679K, Spike_S375F, Spike_G446S, Spike_Q954H, Spike_F68K, Spike_K147E, Spike_Q498R, Spike_D123G, Spike_V127F, Spike_D796Y, Spike_S50L, Spike_S477N, Spike_R403K, Spike_P99S, Spike_K356T, Spike_S939F, Spike_E484K, Spike_T478K, Spike_D405N, Spike_G339H, Spike_K444T, Spike_K2L, Spike_V213G, Spike_S371F, Spike_D614G, Spike_R346T, Spike_N501Y, Spike_K417N, Spike_F157S, Spike_E554K, Spike_L24S, Spike_V445H)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "CH.1.1.10",
+    "antigenic_score": 14.08,
+    "frequency": 0.0043,
+    "zscore": -0.5988,
+    "significant": "no",
+    "substitutions": "(Spike_N450D, Spike_P681R, Spike_S373P, Spike_N460K, Spike_T478K, Spike_V127F, Spike_N697K, Spike_V213G, Spike_F486P, Spike_T19I, Spike_R403K)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "CH.1.1.14",
+    "antigenic_score": 13.91,
+    "frequency": 0.0038,
+    "zscore": -0.7974,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_D614G, Spike_N450D, Spike_Q954H, Spike_R403K, Spike_K147E, Spike_L455S, Spike_R346T, Spike_L216F, Spike_A264D, Spike_S373P, Spike_K2L, Spike_S371F, Spike_T376A, Spike_V127F)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "CH.1.1.19",
+    "antigenic_score": 14.34,
+    "frequency": 0.0037,
+    "zscore": -0.305,
+    "significant": "no",
+    "substitutions": "(Spike_N501Y, Spike_D614G, Spike_G142D, Spike_D796Y, Spike_H245N, Spike_L216F, Spike_D123G, Spike_R158G, Spike_G339H, Spike_T478K, Spike_P99S, Spike_Q954H, Spike_H655Y, Spike_T376A, Spike_T19I)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "CH.1.1.2",
+    "antigenic_score": 15.43,
+    "frequency": 0.0038,
+    "zscore": 0.9671,
+    "significant": "no",
+    "substitutions": "(Spike_D614G, Spike_T376A, Spike_H245N, Spike_E484K, Spike_D123G, Spike_V127F, Spike_N501Y, Spike_N969K, Spike_R403K, Spike_S373P, Spike_F486P, Spike_P681R, Spike_K417N, Spike_G339H, Spike_N481K, Spike_N440K, Spike_D796Y, Spike_L455S, Spike_N679K, Spike_G446S, Spike_S371F, Spike_K444T, Spike_V213G, Spike_F68K, Spike_S939F, Spike_S50L, Spike_L24S, Spike_R408S, Spike_S477N, Spike_F157S, Spike_R158G, Spike_T478K, Spike_V445H)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "CH.1.1.21",
+    "antigenic_score": 13.4,
+    "frequency": 0.0044,
+    "zscore": -1.4012,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_S477N, Spike_K444T, Spike_E484K, Spike_K2L, Spike_N460K, Spike_P99S, Spike_V445H, Spike_L452W, Spike_Y505H, Spike_K417N, Spike_D405N, Spike_T376A, Spike_N440K, Spike_R408S, Spike_Q954H, Spike_L455S, Spike_H655Y, Spike_T478K, Spike_N697K, Spike_P681R, Spike_F486P, Spike_N679K, Spike_F68K, Spike_T19I, Spike_A264D, Spike_R346T, Spike_L216F, Spike_G339H, Spike_N450D, Spike_V213G, Spike_S371F, Spike_S50L, Spike_N211I, Spike_N764K, Spike_H245N, Spike_S375F, Spike_V127F, Spike_E554K, Spike_N501Y, Spike_D123G, Spike_L24S, Spike_K147E, Spike_N969K, Spike_D614G, Spike_S373P, Spike_Q498R)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "CH.1.1.28",
+    "antigenic_score": 14.51,
+    "frequency": 0.0037,
+    "zscore": -0.0998,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_A50V, Spike_V445H, Spike_F486P, Spike_P681R, Spike_G339H, Spike_L216F, Spike_N440K, Spike_E484K, Spike_S373P, Spike_T19I, Spike_N460K, Spike_N211I, Spike_A264D, Spike_T478K, Spike_T376A, Spike_K147E, Spike_S477N, Spike_N481K, Spike_K2L, Spike_Q498R, Spike_N969K, Spike_N697K, Spike_V213G, Spike_H655Y, Spike_S371F, Spike_K444T, Spike_N450D, Spike_H245N, Spike_F157S, Spike_R158G, Spike_I332V, Spike_N501Y, Spike_N764K, Spike_D614G, Spike_E554K, Spike_S939F)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "CH.1.1.6",
+    "antigenic_score": 13.94,
+    "frequency": 0.0037,
+    "zscore": -0.7722,
+    "significant": "no",
+    "substitutions": "(Spike_N501Y, Spike_D614G, Spike_N460K, Spike_F157S, Spike_N481K, Spike_D123G, Spike_V213G, Spike_P99S, Spike_E554K, Spike_F486P, Spike_N969K, Spike_N697K, Spike_N211I, Spike_E484K, Spike_R346T, Spike_T478K, Spike_G339H, Spike_N440K, Spike_F68K, Spike_N450D, Spike_T376A, Spike_R158G, Spike_L24S, Spike_S477N, Spike_D405N, Spike_N679K, Spike_K444T, Spike_A50V, Spike_G142D, Spike_Y505H, Spike_V445H, Spike_L216F, Spike_H245N, Spike_D796Y, Spike_P681R, Spike_K2L, Spike_A264D, Spike_K356T, Spike_S373P, Spike_K417N, Spike_V127F, Spike_R408S, Spike_S50L, Spike_L452W, Spike_Q954H, Spike_S375F)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "CH.1.1.8",
+    "antigenic_score": 14.84,
+    "frequency": 0.0036,
+    "zscore": 0.2837,
+    "significant": "no",
+    "substitutions": "(Spike_T376A, Spike_N460K, Spike_F68K, Spike_N679K, Spike_S371F, Spike_T478K, Spike_S375F, Spike_S939F, Spike_D796Y, Spike_E554K, Spike_H655Y, Spike_E484K, Spike_N211I, Spike_F157S, Spike_N450D, Spike_N501Y, Spike_S373P, Spike_P681R, Spike_V213G, Spike_G446S, Spike_R346T, Spike_D614G, Spike_G142D, Spike_N481K, Spike_L452W, Spike_N440K, Spike_T19I, Spike_K356T, Spike_L216F, Spike_A50V, Spike_R158G, Spike_N697K, Spike_S50L, Spike_H245N, Spike_K147E, Spike_K2L, Spike_R403K, Spike_K444T, Spike_S477N, Spike_F486P, Spike_P99S, Spike_Q498R, Spike_N969K, Spike_V445H, Spike_N764K, Spike_Y505H, Spike_L455S, Spike_K417N, Spike_R408S, Spike_I332V, Spike_G339H, Spike_A264D, Spike_D123G)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "CH.1.1.9",
+    "antigenic_score": 14.88,
+    "frequency": 0.0045,
+    "zscore": 0.3307,
+    "significant": "no",
+    "substitutions": "(Spike_K2L, Spike_S371F, Spike_N501Y, Spike_Q498R, Spike_R403K, Spike_N450D, Spike_K356T, Spike_V127F, Spike_F68K, Spike_T478K, Spike_N481K, Spike_E484K, Spike_D614G, Spike_P99S, Spike_S939F, Spike_D796Y, Spike_N211I, Spike_R346T, Spike_K444T, Spike_S373P, Spike_N460K, Spike_H655Y, Spike_R158G, Spike_L455S)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "CK.1",
+    "antigenic_score": 14.06,
+    "frequency": 0.0043,
+    "zscore": -0.6254,
+    "significant": "no",
+    "substitutions": "(Spike_V213G, Spike_F157S, Spike_P99S, Spike_N460K, Spike_V127F, Spike_R158G, Spike_S371F, Spike_S50L, Spike_D796Y, Spike_R403K, Spike_T376A, Spike_Y505H, Spike_S375F, Spike_G339H, Spike_N679K, Spike_S939F, Spike_T478K, Spike_K356T, Spike_D405N, Spike_V445H, Spike_K444T, Spike_N764K, Spike_K2L, Spike_A264D, Spike_L452W, Spike_N481K, Spike_G446S, Spike_Q498R, Spike_H655Y)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "CP.1",
+    "antigenic_score": 14.4,
+    "frequency": 0.0044,
+    "zscore": -0.236,
+    "significant": "no",
+    "substitutions": "(Spike_R346T, Spike_D405N, Spike_V445H, Spike_S375F)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "CQ.1.1",
+    "antigenic_score": 15.61,
+    "frequency": 0.0046,
+    "zscore": 1.1859,
+    "significant": "yes",
+    "substitutions": "(Spike_R408S, Spike_N969K, Spike_R158G, Spike_S50L, Spike_T19I, Spike_K2L, Spike_L216F, Spike_K147E)",
+    "frequent": 0.0046
+  },
+  {
+    "lineage": "CR.2",
+    "antigenic_score": 14.87,
+    "frequency": 0.0041,
+    "zscore": 0.3211,
+    "significant": "no",
+    "substitutions": "(Spike_V213G, Spike_P681R, Spike_R158G, Spike_R346T, Spike_I332V, Spike_L24S, Spike_T376A, Spike_R408S, Spike_S50L, Spike_T19I, Spike_L452W, Spike_G446S, Spike_K444T, Spike_E484K, Spike_V445H, Spike_E554K, Spike_H655Y, Spike_K2L, Spike_F157S, Spike_K147E, Spike_L455S, Spike_V127F, Spike_N764K, Spike_Y505H, Spike_D614G, Spike_D123G, Spike_S477N, Spike_K417N, Spike_N481K, Spike_Q954H, Spike_S371F, Spike_G142D, Spike_P99S, Spike_D796Y, Spike_A264D, Spike_S373P, Spike_A50V, Spike_G339H, Spike_N697K, Spike_H245N, Spike_N211I, Spike_S939F, Spike_S375F, Spike_D405N, Spike_N450D, Spike_N460K, Spike_Q498R, Spike_N969K, Spike_K356T, Spike_F68K, Spike_N440K, Spike_N679K, Spike_R403K, Spike_N501Y)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "DN.1.1",
+    "antigenic_score": 14.09,
+    "frequency": 0.0043,
+    "zscore": -0.5932,
+    "significant": "no",
+    "substitutions": "(Spike_A50V, Spike_H655Y, Spike_L216F, Spike_T376A, Spike_N440K, Spike_P681R, Spike_R158G, Spike_E484K, Spike_F157S, Spike_T19I, Spike_E554K, Spike_V213G, Spike_V127F, Spike_N764K, Spike_G142D, Spike_N697K, Spike_A264D, Spike_S373P, Spike_K444T, Spike_S477N, Spike_Y505H, Spike_V445H, Spike_G446S, Spike_T478K, Spike_L452W, Spike_S50L, Spike_R403K, Spike_I332V, Spike_S371F, Spike_P99S, Spike_F486P, Spike_K356T, Spike_N211I, Spike_R408S)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "DT.1",
+    "antigenic_score": 14.35,
+    "frequency": 0.0041,
+    "zscore": -0.2894,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_L216F, Spike_D796Y, Spike_S375F, Spike_R403K, Spike_D614G, Spike_N211I, Spike_I332V, Spike_P99S, Spike_S371F, Spike_V213G, Spike_H245N, Spike_S939F, Spike_G446S, Spike_N764K, Spike_T19I, Spike_G339H, Spike_R158G, Spike_V127F, Spike_T376A, Spike_N501Y, Spike_N460K, Spike_A264D, Spike_L24S, Spike_K444T, Spike_K147E, Spike_Q954H, Spike_R346T, Spike_T478K, Spike_E484K, Spike_K417N, Spike_P681R, Spike_H655Y, Spike_V445H, Spike_N969K, Spike_L452W, Spike_F68K, Spike_N697K, Spike_E554K)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "DV.1",
+    "antigenic_score": 15.55,
+    "frequency": 0.0048,
+    "zscore": 1.1071,
+    "significant": "yes",
+    "substitutions": "(Spike_V213G, Spike_A264D, Spike_N211I, Spike_K147E, Spike_N679K, Spike_A50V, Spike_N460K, Spike_D123G, Spike_K444T, Spike_R403K, Spike_S371F, Spike_N481K, Spike_E484K, Spike_Y505H, Spike_E554K, Spike_Q954H)",
+    "frequent": 0.0048
+  },
+  {
+    "lineage": "DV.1.1",
+    "antigenic_score": 14.32,
+    "frequency": 0.0037,
+    "zscore": -0.329,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_R346T, Spike_Y505H, Spike_E554K, Spike_T478K, Spike_K444T, Spike_D614G, Spike_V213G, Spike_A50V, Spike_P99S, Spike_I332V, Spike_D405N, Spike_K2L, Spike_K356T, Spike_K147E, Spike_N481K, Spike_L455S, Spike_S50L, Spike_H245N, Spike_V127F, Spike_G339H, Spike_N679K, Spike_F486P, Spike_N211I, Spike_P681R, Spike_S375F, Spike_G446S, Spike_L24S, Spike_L452W, Spike_N450D, Spike_N697K, Spike_F157S, Spike_N764K)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "DV.2",
+    "antigenic_score": 13.27,
+    "frequency": 0.0035,
+    "zscore": -1.5486,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_Q498R, Spike_D614G, Spike_T19I, Spike_S371F, Spike_L455S, Spike_F68K, Spike_N211I, Spike_H655Y, Spike_I332V, Spike_E484K, Spike_N440K, Spike_G142D, Spike_K356T, Spike_L452W, Spike_D796Y, Spike_V127F, Spike_S50L, Spike_T376A)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "DV.3",
+    "antigenic_score": 14.98,
+    "frequency": 0.0038,
+    "zscore": 0.4486,
+    "significant": "no",
+    "substitutions": "(Spike_N764K, Spike_Y505H, Spike_K2L, Spike_N460K, Spike_R346T, Spike_N450D, Spike_A50V, Spike_R158G, Spike_P681R, Spike_H655Y, Spike_T19I, Spike_D405N, Spike_K356T, Spike_V213G, Spike_N679K, Spike_A264D, Spike_H245N, Spike_N501Y, Spike_P99S, Spike_N481K, Spike_K444T, Spike_V445H, Spike_E554K, Spike_K147E, Spike_G142D)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "DV.6",
+    "antigenic_score": 13.63,
+    "frequency": 0.0036,
+    "zscore": -1.1319,
+    "significant": "no",
+    "substitutions": "(Spike_Q954H, Spike_N679K, Spike_P99S, Spike_Y505H, Spike_K444T, Spike_K417N, Spike_R408S, Spike_D123G, Spike_S50L, Spike_A50V, Spike_V127F, Spike_D405N, Spike_S371F, Spike_S375F, Spike_G446S, Spike_R346T, Spike_D796Y, Spike_F486P, Spike_S939F, Spike_D614G, Spike_N481K, Spike_V213G, Spike_N211I, Spike_L216F, Spike_N969K, Spike_S373P, Spike_G142D, Spike_T478K, Spike_N460K, Spike_N764K, Spike_T19I, Spike_N440K, Spike_R403K, Spike_F157S, Spike_L24S, Spike_A264D, Spike_H245N, Spike_I332V, Spike_N501Y, Spike_L455S, Spike_P681R, Spike_E484K, Spike_S477N, Spike_K147E, Spike_N697K, Spike_V445H, Spike_H655Y)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "DV.7.1",
+    "antigenic_score": 14.99,
+    "frequency": 0.0037,
+    "zscore": 0.4598,
+    "significant": "no",
+    "substitutions": "(Spike_T478K, Spike_T376A, Spike_F68K, Spike_N211I, Spike_L24S, Spike_N764K, Spike_V445H, Spike_I332V, Spike_S477N, Spike_L216F, Spike_L452W, Spike_S371F, Spike_S939F, Spike_G446S, Spike_F157S, Spike_N969K, Spike_E554K, Spike_K417N, Spike_V213G, Spike_K2L, Spike_N440K, Spike_F486P, Spike_R158G, Spike_N460K, Spike_D796Y)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "EA.1",
+    "antigenic_score": 14.91,
+    "frequency": 0.0048,
+    "zscore": 0.3691,
+    "significant": "no",
+    "substitutions": "(Spike_L216F, Spike_R346T, Spike_D123G, Spike_S477N, Spike_N501Y, Spike_D796Y, Spike_L455S, Spike_E554K, Spike_G446S, Spike_N481K, Spike_N450D, Spike_K2L, Spike_P681R, Spike_N679K, Spike_S939F, Spike_G142D, Spike_H655Y, Spike_V127F, Spike_Q954H, Spike_R403K, Spike_N969K, Spike_R408S, Spike_V213G, Spike_H245N, Spike_T478K, Spike_P99S, Spike_K147E, Spike_G339H, Spike_V445H, Spike_Y505H, Spike_N440K, Spike_L24S, Spike_N460K, Spike_I332V, Spike_R158G, Spike_N764K, Spike_K356T, Spike_N697K, Spike_T376A, Spike_K444T, Spike_N211I, Spike_S375F, Spike_T19I, Spike_D614G)",
+    "frequent": 0.0048
+  },
+  {
+    "lineage": "EC.1.1",
+    "antigenic_score": 13.58,
+    "frequency": 0.0039,
+    "zscore": -1.1908,
+    "significant": "no",
+    "substitutions": "(Spike_K417N, Spike_D123G, Spike_E554K, Spike_D796Y, Spike_L455S, Spike_Q954H, Spike_V213G, Spike_N501Y, Spike_K147E, Spike_H245N, Spike_L452W, Spike_S50L, Spike_T478K, Spike_D405N, Spike_V127F, Spike_V445H, Spike_N450D, Spike_R158G, Spike_T19I, Spike_K2L, Spike_P99S, Spike_L216F, Spike_F157S, Spike_G142D, Spike_A50V, Spike_R408S, Spike_Q498R, Spike_K356T, Spike_N440K, Spike_A264D, Spike_E484K, Spike_D614G, Spike_N460K, Spike_L24S, Spike_F68K, Spike_P681R, Spike_G339H, Spike_S477N, Spike_N481K, Spike_T376A, Spike_S373P, Spike_N211I, Spike_R346T, Spike_F486P, Spike_N764K, Spike_Y505H, Spike_S371F, Spike_G446S, Spike_S939F, Spike_N679K, Spike_K444T, Spike_N697K, Spike_I332V, Spike_N969K, Spike_R403K, Spike_H655Y, Spike_S375F)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "EF.1",
+    "antigenic_score": 15.35,
+    "frequency": 0.0047,
+    "zscore": 0.8763,
+    "significant": "no",
+    "substitutions": "(Spike_F486P, Spike_S477N, Spike_V213G, Spike_N697K)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "EF.2",
+    "antigenic_score": 15.16,
+    "frequency": 0.0041,
+    "zscore": 0.6629,
+    "significant": "no",
+    "substitutions": "(Spike_L455S, Spike_I332V, Spike_F157S, Spike_V213G, Spike_A50V, Spike_K356T, Spike_K2L, Spike_G142D, Spike_N501Y, Spike_F68K, Spike_R346T, Spike_G446S, Spike_S50L, Spike_D796Y, Spike_R158G, Spike_V445H, Spike_R403K, Spike_T376A, Spike_S477N, Spike_E484K, Spike_S373P, Spike_N679K, Spike_N450D, Spike_K417N, Spike_S371F, Spike_Q498R)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "EG.1",
+    "antigenic_score": 15.08,
+    "frequency": 0.0045,
+    "zscore": 0.5649,
+    "significant": "no",
+    "substitutions": "(Spike_N764K, Spike_G142D, Spike_D123G, Spike_H655Y, Spike_L24S, Spike_K417N, Spike_D614G, Spike_R408S, Spike_T19I, Spike_N969K, Spike_A264D, Spike_H245N, Spike_K444T, Spike_R346T, Spike_N440K, Spike_D796Y, Spike_T478K, Spike_G446S, Spike_R403K, Spike_N450D, Spike_F157S, Spike_T376A, Spike_G339H, Spike_S939F, Spike_E554K, Spike_Y505H, Spike_Q498R, Spike_V213G, Spike_N501Y, Spike_L452W)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "EG.5.1",
+    "antigenic_score": 13.78,
+    "frequency": 0.004,
+    "zscore": -0.9518,
+    "significant": "no",
+    "substitutions": "(Spike_N679K, Spike_H245N, Spike_F68K, Spike_N481K, Spike_R403K, Spike_S373P, Spike_H655Y, Spike_D614G, Spike_Q954H, Spike_R158G, Spike_F486P, Spike_T19I, Spike_L455S, Spike_P681R, Spike_R346T, Spike_N764K, Spike_V127F, Spike_K417N, Spike_N969K, Spike_K356T, Spike_E554K, Spike_I332V, Spike_D405N, Spike_K147E, Spike_S939F, Spike_L216F, Spike_N501Y, Spike_S371F, Spike_N450D, Spike_G142D, Spike_N697K, Spike_S375F, Spike_V213G, Spike_G446S, Spike_P99S, Spike_G339H, Spike_Y505H, Spike_E484K, Spike_K444T, Spike_L452W, Spike_T478K, Spike_R408S, Spike_F157S, Spike_L24S)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "EG.5.1.1",
+    "antigenic_score": 16.83,
+    "frequency": 0.0037,
+    "zscore": 2.6024,
+    "significant": "yes",
+    "substitutions": "(Spike_F157S)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "EG.5.1.4",
+    "antigenic_score": 15.07,
+    "frequency": 0.0042,
+    "zscore": 0.5492,
+    "significant": "no",
+    "substitutions": "(Spike_T478K, Spike_H245N, Spike_E484K, Spike_P681R, Spike_N764K, Spike_V213G, Spike_N679K, Spike_N501Y, Spike_V445H, Spike_K417N, Spike_K356T, Spike_S373P, Spike_E554K, Spike_F68K, Spike_Y505H, Spike_H655Y, Spike_G446S)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "EG.5.1.6",
+    "antigenic_score": 15.14,
+    "frequency": 0.0023,
+    "zscore": 0.6286,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_L452W, Spike_F68K, Spike_F157S, Spike_A50V, Spike_N679K, Spike_E484K, Spike_K147E, Spike_V445H, Spike_R408S, Spike_S371F, Spike_D123G, Spike_G339H, Spike_N450D, Spike_S939F, Spike_G446S, Spike_D405N, Spike_H655Y, Spike_P99S, Spike_T19I, Spike_N440K, Spike_N211I, Spike_L216F, Spike_K2L, Spike_T376A, Spike_S373P)",
+    "frequent": 0.0023
+  },
+  {
+    "lineage": "EG.9.1",
+    "antigenic_score": 14.82,
+    "frequency": 0.0043,
+    "zscore": 0.255,
+    "significant": "no",
+    "substitutions": "(Spike_F486P, Spike_E484K, Spike_G446S, Spike_S50L, Spike_S373P, Spike_D796Y, Spike_R346T, Spike_V127F, Spike_Q954H, Spike_K147E, Spike_N697K, Spike_S477N, Spike_T19I, Spike_I332V, Spike_T478K, Spike_A50V, Spike_L455S, Spike_N481K, Spike_F157S, Spike_D405N, Spike_G339H, Spike_N211I, Spike_L216F, Spike_H245N, Spike_R408S, Spike_V213G, Spike_E554K, Spike_K417N, Spike_G142D, Spike_T376A, Spike_S939F, Spike_N501Y, Spike_N764K, Spike_H655Y, Spike_S375F, Spike_L24S, Spike_R403K, Spike_N679K, Spike_S371F, Spike_D123G, Spike_A264D, Spike_Y505H, Spike_Q498R, Spike_L452W, Spike_P99S, Spike_P681R, Spike_R158G, Spike_D614G, Spike_F68K, Spike_V445H, Spike_N460K, Spike_K356T)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "FJ.1",
+    "antigenic_score": 14.45,
+    "frequency": 0.0041,
+    "zscore": -0.1688,
+    "significant": "no",
+    "substitutions": "(Spike_H245N, Spike_K356T, Spike_E554K, Spike_L452W, Spike_T19I, Spike_L216F, Spike_R408S, Spike_Y505H, Spike_N764K, Spike_Q954H, Spike_D123G, Spike_N697K, Spike_V445H, Spike_E484K, Spike_A264D, Spike_R346T, Spike_F486P, Spike_I332V, Spike_N679K, Spike_L24S, Spike_F157S, Spike_N501Y, Spike_P681R, Spike_H655Y, Spike_N481K, Spike_K2L, Spike_T376A, Spike_F68K, Spike_K444T, Spike_K147E, Spike_S477N, Spike_Q498R, Spike_P99S, Spike_S371F, Spike_V127F, Spike_A50V, Spike_D405N, Spike_R403K, Spike_N440K, Spike_S50L, Spike_S373P, Spike_D614G, Spike_N460K)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "FL.1.5.1",
+    "antigenic_score": 15.02,
+    "frequency": 0.005,
+    "zscore": 0.4915,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_I332V, Spike_N481K, Spike_V213G, Spike_K444T, Spike_D614G, Spike_P99S, Spike_N764K, Spike_N969K, Spike_Y505H, Spike_S375F, Spike_T478K, Spike_K2L, Spike_D123G, Spike_R403K, Spike_E554K, Spike_L455S, Spike_G339H, Spike_A264D, Spike_F486P, Spike_H245N, Spike_S371F, Spike_S939F, Spike_D405N, Spike_G142D, Spike_S477N, Spike_R408S, Spike_G446S, Spike_K147E, Spike_F157S, Spike_N501Y, Spike_T19I, Spike_N211I)",
+    "frequent": 0.005
+  },
+  {
+    "lineage": "FL.1.5.2",
+    "antigenic_score": 14.58,
+    "frequency": 0.0039,
+    "zscore": -0.0222,
+    "significant": "no",
+    "substitutions": "(Spike_N440K, Spike_F486P, Spike_Y505H, Spike_A264D, Spike_K2L, Spike_L24S, Spike_H655Y, Spike_T19I, Spike_L452W, Spike_N969K, Spike_G446S, Spike_N211I, Spike_V213G, Spike_N764K, Spike_Q954H, Spike_L455S, Spike_R346T, Spike_T478K, Spike_N697K)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "FL.14",
+    "antigenic_score": 13.82,
+    "frequency": 0.0038,
+    "zscore": -0.9056,
+    "significant": "no",
+    "substitutions": "(Spike_R403K, Spike_V127F, Spike_K417N, Spike_Q954H, Spike_F68K, Spike_D614G, Spike_K444T, Spike_L452W, Spike_G339H, Spike_S375F, Spike_L216F, Spike_P681R, Spike_F486P, Spike_L455S, Spike_G446S, Spike_D405N, Spike_E484K, Spike_R346T, Spike_G142D, Spike_V445H, Spike_V213G, Spike_L24S, Spike_S939F, Spike_S373P, Spike_D123G, Spike_S50L, Spike_S477N, Spike_N764K)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "FL.15.1.1",
+    "antigenic_score": 15.31,
+    "frequency": 0.004,
+    "zscore": 0.8321,
+    "significant": "no",
+    "substitutions": "(Spike_V445H, Spike_N460K, Spike_N440K, Spike_G446S, Spike_R408S, Spike_T478K, Spike_E484K, Spike_H245N, Spike_Y505H, Spike_N501Y, Spike_R403K, Spike_T376A, Spike_K417N, Spike_N679K, Spike_N969K, Spike_N450D, Spike_I332V, Spike_E554K, Spike_K444T, Spike_D123G, Spike_S477N, Spike_P681R, Spike_V213G, Spike_F68K, Spike_D796Y, Spike_D614G, Spike_Q954H, Spike_R346T, Spike_S373P, Spike_Q498R, Spike_N764K, Spike_S50L, Spike_L24S, Spike_F157S, Spike_N211I, Spike_H655Y, Spike_T19I, Spike_F486P, Spike_L452W, Spike_K147E, Spike_G339H, Spike_S375F, Spike_N481K, Spike_S371F, Spike_K2L, Spike_D405N, Spike_R158G, Spike_K356T, Spike_S939F, Spike_A264D, Spike_V127F, Spike_N697K, Spike_A50V, Spike_L216F, Spike_L455S, Spike_G142D, Spike_P99S)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "FL.19.1",
+    "antigenic_score": 14.63,
+    "frequency": 0.0049,
+    "zscore": 0.0357,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_F157S, Spike_S373P, Spike_P681R, Spike_L216F, Spike_Q954H, Spike_D614G, Spike_S477N, Spike_T478K, Spike_V127F, Spike_N764K, Spike_D796Y, Spike_N440K, Spike_S939F, Spike_H245N, Spike_K444T, Spike_G142D, Spike_K147E, Spike_L455S, Spike_K356T, Spike_F486P, Spike_R403K, Spike_N697K, Spike_E484K, Spike_D123G, Spike_E554K, Spike_R408S, Spike_A264D, Spike_R346T, Spike_S375F)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "FL.2.2.1",
+    "antigenic_score": 13.64,
+    "frequency": 0.0033,
+    "zscore": -1.1175,
+    "significant": "no",
+    "substitutions": "(Spike_D796Y, Spike_E554K, Spike_N501Y, Spike_L455S, Spike_N440K, Spike_N764K, Spike_P99S, Spike_D405N, Spike_R158G, Spike_R346T, Spike_T19I, Spike_H245N, Spike_D614G, Spike_G339H)",
+    "frequent": 0.0033
+  },
+  {
+    "lineage": "FL.24",
+    "antigenic_score": 14.14,
+    "frequency": 0.0037,
+    "zscore": -0.5371,
+    "significant": "no",
+    "substitutions": "(Spike_N764K, Spike_H655Y, Spike_A50V, Spike_N501Y, Spike_K2L, Spike_Q498R, Spike_P681R, Spike_A264D, Spike_P99S, Spike_R158G, Spike_K147E, Spike_N460K, Spike_F157S, Spike_N697K, Spike_S375F, Spike_N440K, Spike_T478K, Spike_G142D, Spike_K417N, Spike_D123G, Spike_Q954H, Spike_F486P, Spike_S477N, Spike_R346T, Spike_N679K, Spike_S50L, Spike_T19I, Spike_T376A, Spike_R403K, Spike_V127F, Spike_N450D, Spike_L452W, Spike_L455S, Spike_S939F, Spike_Y505H, Spike_K444T)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "FL.3",
+    "antigenic_score": 15.99,
+    "frequency": 0.0032,
+    "zscore": 1.6233,
+    "significant": "yes",
+    "substitutions": "(Spike_Q954H, Spike_Q498R, Spike_S373P, Spike_E484K, Spike_T376A, Spike_F68K, Spike_V127F, Spike_P99S, Spike_N697K, Spike_A264D, Spike_N440K, Spike_N679K, Spike_N450D, Spike_R346T, Spike_Y505H, Spike_E554K, Spike_T478K, Spike_N460K, Spike_K444T, Spike_A50V, Spike_V213G, Spike_H655Y, Spike_D796Y, Spike_N481K, Spike_S477N, Spike_L452W, Spike_K417N, Spike_R408S, Spike_T19I, Spike_S939F, Spike_I332V, Spike_S375F, Spike_L24S, Spike_K2L, Spike_D405N, Spike_L455S, Spike_F157S, Spike_R158G, Spike_N764K, Spike_P681R, Spike_D123G, Spike_K147E, Spike_S50L, Spike_G446S)",
+    "frequent": 0.0032
+  },
+  {
+    "lineage": "FL.3.1",
+    "antigenic_score": 14.83,
+    "frequency": 0.0044,
+    "zscore": 0.2749,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_N460K, Spike_G142D, Spike_H245N, Spike_D405N, Spike_L216F, Spike_V127F, Spike_H655Y, Spike_K444T, Spike_N969K, Spike_D796Y, Spike_N679K, Spike_T478K, Spike_K356T, Spike_P99S, Spike_R408S, Spike_I332V, Spike_N440K, Spike_F68K, Spike_R158G, Spike_S477N, Spike_N501Y)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "FL.3.2",
+    "antigenic_score": 12.86,
+    "frequency": 0.0043,
+    "zscore": -2.0249,
+    "significant": "no",
+    "substitutions": "(Spike_N481K, Spike_I332V, Spike_N501Y, Spike_D796Y, Spike_V445H, Spike_H655Y, Spike_R408S, Spike_G446S)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "FL.4",
+    "antigenic_score": 15.4,
+    "frequency": 0.0042,
+    "zscore": 0.9326,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_K356T, Spike_A264D, Spike_V213G, Spike_F157S, Spike_N764K, Spike_G339H, Spike_K147E, Spike_N481K, Spike_R158G, Spike_Q498R, Spike_N440K, Spike_N450D, Spike_F68K, Spike_Y505H, Spike_N697K, Spike_D123G, Spike_T478K, Spike_E554K, Spike_N501Y, Spike_S373P, Spike_V445H, Spike_T19I, Spike_T376A, Spike_N679K, Spike_H655Y, Spike_P681R, Spike_S939F, Spike_G142D, Spike_N211I, Spike_L216F, Spike_G446S, Spike_L452W)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "FL.9",
+    "antigenic_score": 14.79,
+    "frequency": 0.004,
+    "zscore": 0.2241,
+    "significant": "no",
+    "substitutions": "(Spike_S477N, Spike_Q954H, Spike_L455S, Spike_P99S, Spike_R346T, Spike_R158G, Spike_S371F, Spike_N764K, Spike_V213G, Spike_N501Y, Spike_R403K, Spike_P681R, Spike_H245N, Spike_F157S, Spike_D123G, Spike_N450D, Spike_T478K, Spike_K356T, Spike_G446S, Spike_R408S, Spike_E554K, Spike_N679K, Spike_G142D, Spike_A50V, Spike_L24S, Spike_N969K, Spike_D405N, Spike_F486P, Spike_L452W, Spike_K417N, Spike_N460K, Spike_H655Y, Spike_V127F, Spike_Q498R, Spike_N481K, Spike_D614G, Spike_I332V, Spike_F68K, Spike_N211I, Spike_S939F, Spike_T376A, Spike_L216F, Spike_N697K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "FR.1",
+    "antigenic_score": 13.62,
+    "frequency": 0.0041,
+    "zscore": -1.1358,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_R408S, Spike_P99S, Spike_N481K, Spike_N501Y, Spike_V445H, Spike_A50V, Spike_D123G, Spike_I332V, Spike_K356T, Spike_S375F, Spike_L455S, Spike_D405N, Spike_P681R, Spike_G446S, Spike_T478K, Spike_V213G, Spike_H245N, Spike_N764K, Spike_Q954H, Spike_R403K, Spike_F68K, Spike_G339H, Spike_K2L, Spike_H655Y, Spike_K417N, Spike_A264D, Spike_S477N, Spike_T19I, Spike_K147E)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "FY.1.2",
+    "antigenic_score": 15.28,
+    "frequency": 0.004,
+    "zscore": 0.8022,
+    "significant": "no",
+    "substitutions": "(Spike_N460K, Spike_K147E, Spike_H245N, Spike_S939F)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "FY.4.1.2",
+    "antigenic_score": 14.85,
+    "frequency": 0.0042,
+    "zscore": 0.3007,
+    "significant": "no",
+    "substitutions": "(Spike_N450D, Spike_D614G, Spike_Y505H, Spike_T376A, Spike_Q954H, Spike_N697K, Spike_N440K, Spike_S373P, Spike_E484K, Spike_F157S, Spike_R408S, Spike_N969K, Spike_D123G, Spike_V445H, Spike_F68K, Spike_D405N, Spike_N460K, Spike_L24S, Spike_V213G, Spike_L455S, Spike_S939F, Spike_E554K, Spike_K444T, Spike_N679K, Spike_N501Y, Spike_L216F, Spike_Q498R, Spike_P99S, Spike_S477N, Spike_R403K)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "GE.1",
+    "antigenic_score": 14.56,
+    "frequency": 0.0039,
+    "zscore": -0.0486,
+    "significant": "no",
+    "substitutions": "(Spike_N211I, Spike_V213G, Spike_A50V, Spike_F68K, Spike_K147E, Spike_F486P, Spike_K417N, Spike_Q954H, Spike_N679K, Spike_N501Y, Spike_N440K, Spike_L452W, Spike_E554K, Spike_K444T, Spike_V445H, Spike_L455S, Spike_S939F, Spike_T376A, Spike_G339H, Spike_N460K, Spike_N764K, Spike_N481K, Spike_N450D, Spike_A264D, Spike_S371F, Spike_E484K, Spike_D405N, Spike_N697K, Spike_N969K, Spike_Q498R, Spike_T478K, Spike_H245N, Spike_Y505H, Spike_F157S, Spike_S373P, Spike_T19I, Spike_K2L, Spike_K356T, Spike_L216F, Spike_G142D, Spike_R158G, Spike_L24S, Spike_R346T, Spike_I332V, Spike_S375F, Spike_D796Y, Spike_P99S, Spike_P681R, Spike_S477N, Spike_D614G, Spike_G446S, Spike_R403K)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "GE.1.2",
+    "antigenic_score": 15.22,
+    "frequency": 0.0037,
+    "zscore": 0.7253,
+    "significant": "no",
+    "substitutions": "(Spike_L455S, Spike_H245N, Spike_R403K, Spike_E554K, Spike_F486P, Spike_F68K, Spike_Q954H, Spike_K417N, Spike_T376A, Spike_F157S, Spike_V213G, Spike_L452W, Spike_G446S, Spike_S373P, Spike_N697K, Spike_S939F, Spike_S371F, Spike_N501Y, Spike_Y505H, Spike_T478K, Spike_D614G, Spike_P99S, Spike_R408S, Spike_A50V, Spike_R346T, Spike_I332V, Spike_N481K, Spike_N764K, Spike_P681R, Spike_N969K, Spike_S477N, Spike_K2L, Spike_T19I, Spike_S375F, Spike_L216F, Spike_N460K, Spike_N211I, Spike_K444T, Spike_N440K, Spike_H655Y, Spike_V445H, Spike_D123G, Spike_N450D, Spike_G142D, Spike_R158G, Spike_K356T, Spike_V127F, Spike_D796Y, Spike_G339H, Spike_K147E, Spike_N679K, Spike_E484K, Spike_D405N, Spike_S50L, Spike_Q498R)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "GJ.5",
+    "antigenic_score": 15.84,
+    "frequency": 0.0042,
+    "zscore": 1.4511,
+    "significant": "yes",
+    "substitutions": "(Spike_K444T, Spike_R403K, Spike_D123G, Spike_D614G, Spike_Q498R, Spike_E554K, Spike_N501Y, Spike_K356T, Spike_L452W, Spike_Y505H, Spike_F157S, Spike_S373P, Spike_V127F, Spike_G339H, Spike_V445H, Spike_F68K, Spike_P99S, Spike_K2L, Spike_N969K, Spike_F486P, Spike_K417N, Spike_N481K, Spike_K147E, Spike_Q954H, Spike_D796Y, Spike_L24S, Spike_S939F, Spike_N460K, Spike_H245N, Spike_T376A, Spike_G446S, Spike_A50V, Spike_L455S, Spike_S50L, Spike_T478K, Spike_S375F, Spike_L216F, Spike_S371F, Spike_V213G, Spike_N450D, Spike_S477N, Spike_N440K, Spike_H655Y, Spike_D405N, Spike_R158G, Spike_N697K, Spike_T19I, Spike_G142D, Spike_N764K, Spike_A264D, Spike_E484K, Spike_N679K, Spike_R346T, Spike_N211I, Spike_I332V, Spike_R408S, Spike_P681R)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "GJ.5.1",
+    "antigenic_score": 14.92,
+    "frequency": 0.0039,
+    "zscore": 0.3766,
+    "significant": "no",
+    "substitutions": "(Spike_K444T, Spike_V127F, Spike_F486P, Spike_L452W, Spike_V213G, Spike_T19I, Spike_Q954H, Spike_H655Y, Spike_N460K, Spike_D123G, Spike_K356T, Spike_E484K, Spike_A50V, Spike_S373P, Spike_S50L, Spike_N211I, Spike_A264D, Spike_V445H, Spike_N450D, Spike_F68K, Spike_Q498R, Spike_R158G, Spike_N697K, Spike_N440K, Spike_P99S, Spike_K2L, Spike_S371F, Spike_F157S, Spike_R403K, Spike_T376A, Spike_R408S, Spike_K147E, Spike_S477N, Spike_N481K, Spike_S375F, Spike_E554K, Spike_N764K, Spike_S939F, Spike_D796Y, Spike_P681R, Spike_L216F, Spike_N969K, Spike_N679K, Spike_K417N, Spike_R346T, Spike_Y505H)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "GP.2",
+    "antigenic_score": 13.25,
+    "frequency": 0.0033,
+    "zscore": -1.5712,
+    "significant": "no",
+    "substitutions": "(Spike_G142D, Spike_K2L, Spike_D796Y, Spike_S50L, Spike_S477N, Spike_P681R, Spike_H245N, Spike_P99S, Spike_N969K, Spike_L455S, Spike_Y505H, Spike_R408S)",
+    "frequent": 0.0033
+  },
+  {
+    "lineage": "GS.4",
+    "antigenic_score": 13.23,
+    "frequency": 0.004,
+    "zscore": -1.5973,
+    "significant": "no",
+    "substitutions": "(Spike_N969K, Spike_A50V, Spike_A264D, Spike_F68K, Spike_K417N, Spike_R158G, Spike_V445H, Spike_K2L, Spike_L24S, Spike_Y505H, Spike_K356T, Spike_P99S, Spike_S375F, Spike_D796Y, Spike_K444T, Spike_S477N, Spike_N450D, Spike_S939F, Spike_S50L, Spike_G339H, Spike_I332V, Spike_R346T, Spike_V213G)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "GS.4.1",
+    "antigenic_score": 15.98,
+    "frequency": 0.0039,
+    "zscore": 1.6124,
+    "significant": "yes",
+    "substitutions": "(Spike_L452W, Spike_K417N, Spike_K444T, Spike_D405N, Spike_L24S, Spike_R158G, Spike_R346T)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "GW.3",
+    "antigenic_score": 13.26,
+    "frequency": 0.0047,
+    "zscore": -1.5565,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_L455S, Spike_K2L, Spike_G339H, Spike_N679K, Spike_S477N, Spike_K417N, Spike_L24S)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "GW.5",
+    "antigenic_score": 15.62,
+    "frequency": 0.0045,
+    "zscore": 1.1906,
+    "significant": "yes",
+    "substitutions": "(Spike_D123G, Spike_L452W, Spike_S50L, Spike_V127F, Spike_Q954H, Spike_S375F, Spike_K147E, Spike_N501Y, Spike_S373P, Spike_N440K, Spike_R408S, Spike_T376A, Spike_T19I, Spike_F157S, Spike_N460K, Spike_R403K, Spike_V445H, Spike_K444T, Spike_K356T, Spike_R158G, Spike_D614G, Spike_P681R, Spike_K417N, Spike_T478K, Spike_E554K, Spike_R346T, Spike_Y505H, Spike_N969K, Spike_N481K, Spike_L455S, Spike_G446S, Spike_A264D, Spike_N211I, Spike_G142D)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "HF.1",
+    "antigenic_score": 15.16,
+    "frequency": 0.0045,
+    "zscore": 0.6621,
+    "significant": "no",
+    "substitutions": "(Spike_P681R, Spike_D796Y, Spike_R158G, Spike_G339H, Spike_N764K, Spike_R403K, Spike_V445H, Spike_D123G, Spike_V213G, Spike_E554K, Spike_G446S, Spike_N501Y, Spike_F486P, Spike_N460K, Spike_N679K, Spike_I332V, Spike_N481K, Spike_K356T, Spike_Q498R, Spike_H245N, Spike_A264D, Spike_Q954H, Spike_L216F, Spike_A50V, Spike_K444T, Spike_G142D, Spike_D614G, Spike_H655Y, Spike_K417N, Spike_V127F, Spike_S373P, Spike_L455S, Spike_N697K, Spike_Y505H, Spike_T478K, Spike_N440K, Spike_P99S, Spike_E484K, Spike_R408S, Spike_F157S, Spike_S371F, Spike_S477N, Spike_N969K, Spike_F68K, Spike_S375F, Spike_L24S, Spike_N211I, Spike_L452W, Spike_T376A, Spike_S939F, Spike_K147E, Spike_D405N, Spike_K2L, Spike_T19I, Spike_S50L, Spike_R346T, Spike_N450D)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "HK.3",
+    "antigenic_score": 15.29,
+    "frequency": 0.0042,
+    "zscore": 0.8073,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_P681R, Spike_F157S, Spike_K444T, Spike_S375F, Spike_A264D, Spike_S939F, Spike_I332V, Spike_D123G, Spike_D796Y, Spike_N679K, Spike_N481K, Spike_K417N, Spike_D614G, Spike_N501Y, Spike_N697K, Spike_E554K, Spike_L455S, Spike_N460K, Spike_E484K, Spike_R403K, Spike_L24S, Spike_K147E, Spike_N764K, Spike_T19I, Spike_N969K, Spike_L452W, Spike_K2L, Spike_Q954H, Spike_T376A, Spike_N450D, Spike_R158G, Spike_S373P, Spike_S477N, Spike_Q498R, Spike_V127F, Spike_R408S, Spike_H245N, Spike_P99S, Spike_R346T, Spike_D405N, Spike_T478K)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "HK.6",
+    "antigenic_score": 14.73,
+    "frequency": 0.004,
+    "zscore": 0.1554,
+    "significant": "no",
+    "substitutions": "(Spike_S477N, Spike_T19I, Spike_Q498R, Spike_D123G, Spike_L216F, Spike_K444T, Spike_N679K, Spike_G446S, Spike_N440K, Spike_K2L, Spike_P99S, Spike_K356T, Spike_H655Y, Spike_S373P, Spike_N460K, Spike_S50L, Spike_N211I, Spike_G142D, Spike_Q954H, Spike_R403K, Spike_T376A, Spike_F157S, Spike_S371F, Spike_K147E, Spike_N969K, Spike_E554K, Spike_D796Y, Spike_L452W, Spike_A50V, Spike_V445H, Spike_G339H, Spike_N450D, Spike_S375F, Spike_T478K, Spike_L24S, Spike_K417N, Spike_N697K, Spike_R408S, Spike_E484K, Spike_F68K, Spike_N764K, Spike_V213G, Spike_I332V, Spike_R158G, Spike_R346T, Spike_L455S, Spike_V127F, Spike_N481K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "JD.1.1",
+    "antigenic_score": 13.79,
+    "frequency": 0.0045,
+    "zscore": -0.9468,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_V213G, Spike_Y505H, Spike_F486P, Spike_N969K)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "JD.1.1.1",
+    "antigenic_score": 14.19,
+    "frequency": 0.004,
+    "zscore": -0.4701,
+    "significant": "no",
+    "substitutions": "(Spike_R346T, Spike_L455S, Spike_S477N, Spike_F486P, Spike_K356T, Spike_G446S, Spike_G142D, Spike_I332V, Spike_Y505H, Spike_F157S, Spike_D123G, Spike_N440K, Spike_H245N, Spike_K417N, Spike_T376A, Spike_S371F)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "JN.1.11.1",
+    "antigenic_score": 14.48,
+    "frequency": 0.0087,
+    "zscore": -0.132,
+    "significant": "no",
+    "substitutions": "(Spike_G142D, Spike_N679K, Spike_L452W, Spike_Q498R, Spike_R158G, Spike_S477N, Spike_K356T, Spike_N697K, Spike_E554K, Spike_V213G, Spike_S371F, Spike_S375F, Spike_Y505H, Spike_H655Y, Spike_A264D, Spike_R408S, Spike_N969K, Spike_K444T, Spike_N211I, Spike_K417N, Spike_R346T, Spike_S373P, Spike_F68K, Spike_T376A, Spike_L24S, Spike_D123G, Spike_S939F, Spike_D614G, Spike_Q954H, Spike_L216F)",
+    "frequent": 0.0087
+  },
+  {
+    "lineage": "JN.1.18",
+    "antigenic_score": 14.83,
+    "frequency": 0.0052,
+    "zscore": 0.2763,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_P99S, Spike_L216F, Spike_D123G, Spike_N440K, Spike_Y505H, Spike_I332V, Spike_V127F, Spike_S375F, Spike_S939F, Spike_A50V, Spike_V213G, Spike_F68K, Spike_T478K, Spike_N969K, Spike_N481K, Spike_N211I, Spike_L24S, Spike_N460K, Spike_T19I, Spike_K417N, Spike_E484K, Spike_D405N, Spike_R346T, Spike_D614G, Spike_L455S, Spike_F486P, Spike_N697K, Spike_S477N, Spike_K147E, Spike_D796Y, Spike_H245N, Spike_E554K, Spike_R403K, Spike_H655Y, Spike_N679K, Spike_N501Y, Spike_F157S)",
+    "frequent": 0.0052
+  },
+  {
+    "lineage": "JN.1.53",
+    "antigenic_score": 12.24,
+    "frequency": 0.0042,
+    "zscore": -2.7575,
+    "significant": "no",
+    "substitutions": "(Spike_D405N)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "JN.1.7",
+    "antigenic_score": 14.34,
+    "frequency": 0.0042,
+    "zscore": -0.2976,
+    "significant": "no",
+    "substitutions": "(Spike_A50V, Spike_T376A, Spike_N679K, Spike_F157S, Spike_G142D, Spike_V445H, Spike_A264D, Spike_Y505H, Spike_I332V, Spike_F68K, Spike_N211I, Spike_L24S, Spike_G339H, Spike_R408S, Spike_K417N, Spike_V213G, Spike_G446S, Spike_N764K)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "JN.1.9",
+    "antigenic_score": 14.13,
+    "frequency": 0.0047,
+    "zscore": -0.5489,
+    "significant": "no",
+    "substitutions": "(Spike_Q954H, Spike_L24S, Spike_V127F, Spike_D796Y)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "JN.11",
+    "antigenic_score": 15.81,
+    "frequency": 0.0043,
+    "zscore": 1.418,
+    "significant": "yes",
+    "substitutions": "(Spike_E484K, Spike_K417N, Spike_F157S, Spike_D796Y, Spike_P681R, Spike_N450D, Spike_L216F, Spike_G142D, Spike_Q498R, Spike_H655Y, Spike_K444T, Spike_P99S, Spike_V127F, Spike_T19I, Spike_N969K, Spike_V213G, Spike_N697K, Spike_R158G, Spike_A264D, Spike_S371F, Spike_L452W, Spike_D405N, Spike_F68K, Spike_I332V, Spike_A50V, Spike_Y505H, Spike_L455S, Spike_S477N, Spike_N481K, Spike_D123G, Spike_N501Y, Spike_N764K, Spike_S939F, Spike_H245N, Spike_G446S, Spike_Q954H, Spike_K147E, Spike_S373P, Spike_R346T, Spike_S50L, Spike_E554K, Spike_N211I, Spike_K356T, Spike_L24S, Spike_N460K, Spike_N440K, Spike_K2L, Spike_N679K, Spike_R408S, Spike_R403K, Spike_T478K, Spike_T376A, Spike_F486P, Spike_S375F)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "JN.2",
+    "antigenic_score": 14.89,
+    "frequency": 0.004,
+    "zscore": 0.3387,
+    "significant": "no",
+    "substitutions": "(Spike_I332V, Spike_T376A, Spike_L455S, Spike_L216F, Spike_N501Y)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "JN.3",
+    "antigenic_score": 14.77,
+    "frequency": 0.0038,
+    "zscore": 0.2073,
+    "significant": "no",
+    "substitutions": "(Spike_L455S, Spike_S939F, Spike_E554K, Spike_N501Y, Spike_L452W, Spike_S371F, Spike_H655Y, Spike_K2L, Spike_D796Y, Spike_I332V, Spike_Q498R, Spike_V127F, Spike_S373P, Spike_G142D, Spike_R346T, Spike_S477N, Spike_L216F, Spike_K417N, Spike_S50L, Spike_R158G, Spike_R403K, Spike_N969K, Spike_D123G, Spike_S375F, Spike_K356T, Spike_N697K, Spike_A264D, Spike_N460K, Spike_G339H, Spike_T19I, Spike_H245N, Spike_D405N, Spike_Q954H, Spike_F68K, Spike_F157S, Spike_G446S, Spike_L24S, Spike_T478K, Spike_K444T)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "JN.6",
+    "antigenic_score": 14.98,
+    "frequency": 0.0042,
+    "zscore": 0.4448,
+    "significant": "no",
+    "substitutions": "(Spike_S939F, Spike_E484K, Spike_S477N, Spike_I332V)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "KP.1",
+    "antigenic_score": 14.59,
+    "frequency": 0.0041,
+    "zscore": -0.01,
+    "significant": "no",
+    "substitutions": "(Spike_T376A, Spike_I332V, Spike_P681R, Spike_N969K, Spike_R346T, Spike_N764K, Spike_A50V, Spike_S477N, Spike_D405N, Spike_L455S, Spike_H655Y, Spike_F68K, Spike_N679K, Spike_N501Y, Spike_V127F, Spike_F157S, Spike_L216F, Spike_L452W, Spike_N440K, Spike_A264D, Spike_K2L, Spike_V213G, Spike_S939F, Spike_G339H, Spike_K417N, Spike_D123G, Spike_K444T, Spike_D614G, Spike_Q498R, Spike_E484K, Spike_H245N, Spike_N211I, Spike_N481K, Spike_V445H, Spike_E554K)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "KP.2.1",
+    "antigenic_score": 14.81,
+    "frequency": 0.0042,
+    "zscore": 0.2432,
+    "significant": "no",
+    "substitutions": "(Spike_F68K, Spike_K356T, Spike_A264D, Spike_L216F, Spike_H245N, Spike_K2L, Spike_N211I, Spike_S50L, Spike_D405N, Spike_P99S, Spike_D123G, Spike_K147E, Spike_T376A, Spike_D796Y, Spike_R408S, Spike_L452W, Spike_S939F, Spike_N969K, Spike_R403K, Spike_N764K, Spike_V213G, Spike_G142D, Spike_N501Y, Spike_E484K, Spike_E554K, Spike_N697K, Spike_L24S, Spike_I332V, Spike_K417N, Spike_A50V, Spike_G339H, Spike_P681R, Spike_K444T, Spike_N450D, Spike_H655Y, Spike_N460K, Spike_S371F)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "KP.2.10",
+    "antigenic_score": 15.49,
+    "frequency": 0.0046,
+    "zscore": 1.0371,
+    "significant": "yes",
+    "substitutions": "(Spike_F68K, Spike_N697K, Spike_L24S, Spike_D405N, Spike_D614G, Spike_Q954H, Spike_N440K, Spike_N450D, Spike_Y505H, Spike_S371F, Spike_K2L, Spike_V213G, Spike_N764K, Spike_N969K, Spike_N501Y, Spike_K147E, Spike_G446S, Spike_T478K, Spike_T19I, Spike_N679K, Spike_N460K, Spike_S375F, Spike_A50V, Spike_N211I, Spike_N481K, Spike_D796Y, Spike_S373P, Spike_E484K, Spike_R346T, Spike_F157S, Spike_R403K, Spike_P99S, Spike_D123G, Spike_I332V, Spike_S50L, Spike_L455S, Spike_L216F, Spike_G339H, Spike_R408S, Spike_K417N, Spike_T376A, Spike_S477N, Spike_E554K, Spike_V445H, Spike_H655Y)",
+    "frequent": 0.0046
+  },
+  {
+    "lineage": "KP.2.3",
+    "antigenic_score": 15.94,
+    "frequency": 0.003,
+    "zscore": 1.5739,
+    "significant": "yes",
+    "substitutions": "(Spike_G339H, Spike_F157S)",
+    "frequent": 0.003
+  },
+  {
+    "lineage": "KP.2.6",
+    "antigenic_score": 14.52,
+    "frequency": 0.0039,
+    "zscore": -0.0894,
+    "significant": "no",
+    "substitutions": "(Spike_F486P, Spike_D405N, Spike_V213G, Spike_N211I, Spike_N460K, Spike_K444T, Spike_D614G, Spike_Y505H, Spike_T19I, Spike_S375F, Spike_N501Y, Spike_L452W, Spike_N440K, Spike_I332V, Spike_N481K, Spike_N969K, Spike_K417N, Spike_E484K, Spike_L216F, Spike_K356T, Spike_S373P, Spike_T376A, Spike_R403K, Spike_Q954H, Spike_L455S, Spike_D123G, Spike_N764K, Spike_G142D, Spike_N697K, Spike_L24S, Spike_T478K, Spike_Q498R, Spike_P681R, Spike_N450D, Spike_F68K, Spike_A50V, Spike_D796Y, Spike_V445H, Spike_A264D, Spike_G446S, Spike_S50L, Spike_K2L, Spike_R346T, Spike_N679K, Spike_R408S, Spike_P99S, Spike_G339H)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "KP.3.1.1",
+    "antigenic_score": 14.18,
+    "frequency": 0.005,
+    "zscore": -0.4877,
+    "significant": "no",
+    "substitutions": "(Spike_D123G, Spike_K147E, Spike_V213G, Spike_V445H, Spike_S373P, Spike_H655Y, Spike_N460K, Spike_K417N, Spike_F486P, Spike_N481K, Spike_A50V, Spike_P681R, Spike_N764K, Spike_N450D, Spike_R158G, Spike_Y505H, Spike_D405N, Spike_S371F, Spike_R346T, Spike_K444T, Spike_L452W, Spike_R403K, Spike_G446S, Spike_N697K, Spike_D614G, Spike_F157S, Spike_T19I, Spike_L24S, Spike_N501Y, Spike_E484K, Spike_V127F, Spike_A264D, Spike_F68K, Spike_P99S, Spike_Q498R, Spike_G339H, Spike_H245N, Spike_N969K, Spike_S939F, Spike_S375F, Spike_L455S, Spike_T376A, Spike_S477N, Spike_N211I, Spike_G142D, Spike_D796Y, Spike_L216F, Spike_T478K, Spike_E554K, Spike_S50L, Spike_K2L)",
+    "frequent": 0.005
+  },
+  {
+    "lineage": "KP.3.1.6",
+    "antigenic_score": 14.43,
+    "frequency": 0.0043,
+    "zscore": -0.1951,
+    "significant": "no",
+    "substitutions": "(Spike_Q498R, Spike_R158G, Spike_G142D, Spike_A264D, Spike_V127F, Spike_F486P, Spike_K356T, Spike_K417N, Spike_N450D, Spike_S477N, Spike_L455S, Spike_K2L, Spike_V213G, Spike_N764K, Spike_R403K, Spike_N460K, Spike_H245N, Spike_V445H, Spike_N969K, Spike_N481K, Spike_T478K, Spike_K147E, Spike_H655Y, Spike_T19I, Spike_K444T)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "KS.1",
+    "antigenic_score": 13.92,
+    "frequency": 0.0075,
+    "zscore": -0.7884,
+    "significant": "no",
+    "substitutions": "(Spike_D123G, Spike_V213G, Spike_G446S, Spike_D405N, Spike_P99S, Spike_F486P, Spike_L216F, Spike_R158G, Spike_T19I, Spike_Q954H, Spike_P681R, Spike_E484K, Spike_S373P, Spike_L452W, Spike_N764K, Spike_N481K, Spike_A50V, Spike_E554K, Spike_N450D, Spike_K147E, Spike_Q498R, Spike_R408S, Spike_R403K, Spike_N440K, Spike_F68K, Spike_H245N, Spike_F157S, Spike_S375F, Spike_A264D, Spike_N697K, Spike_R346T, Spike_L24S, Spike_V445H, Spike_N460K, Spike_L455S, Spike_N679K, Spike_K444T, Spike_G142D, Spike_H655Y, Spike_S50L, Spike_S477N, Spike_N501Y, Spike_V127F, Spike_K356T, Spike_D796Y)",
+    "frequent": 0.0075
+  },
+  {
+    "lineage": "LB.1.3",
+    "antigenic_score": 13.65,
+    "frequency": 0.0038,
+    "zscore": -1.1118,
+    "significant": "no",
+    "substitutions": "(Spike_D405N, Spike_L216F, Spike_N764K, Spike_N481K, Spike_S477N, Spike_G339H, Spike_I332V, Spike_R346T, Spike_T19I, Spike_Q498R, Spike_N501Y, Spike_R408S, Spike_A50V, Spike_L452W, Spike_A264D, Spike_F157S, Spike_D614G, Spike_N969K, Spike_K2L, Spike_L455S, Spike_F68K, Spike_R158G, Spike_S939F, Spike_H245N, Spike_H655Y, Spike_V127F, Spike_V445H, Spike_V213G)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "LB.1.4.1",
+    "antigenic_score": 15.26,
+    "frequency": 0.004,
+    "zscore": 0.7696,
+    "significant": "no",
+    "substitutions": "(Spike_A50V, Spike_P99S, Spike_S371F, Spike_R346T, Spike_H655Y, Spike_N481K, Spike_N440K, Spike_N764K, Spike_L216F, Spike_F486P, Spike_Q498R, Spike_V213G, Spike_L24S, Spike_G339H, Spike_H245N, Spike_R158G, Spike_I332V, Spike_G446S, Spike_R408S, Spike_S375F)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "MB.1",
+    "antigenic_score": 14.74,
+    "frequency": 0.0054,
+    "zscore": 0.1693,
+    "significant": "no",
+    "substitutions": "(Spike_N697K, Spike_N481K, Spike_L24S, Spike_K444T, Spike_S375F, Spike_I332V, Spike_G339H, Spike_L216F, Spike_N450D, Spike_S50L)",
+    "frequent": 0.0054
+  },
+  {
+    "lineage": "MC.1",
+    "antigenic_score": 12.04,
+    "frequency": 0.0042,
+    "zscore": -2.9867,
+    "significant": "no",
+    "substitutions": "(Spike_G142D, Spike_H655Y, Spike_S477N, Spike_A264D, Spike_D123G, Spike_R403K, Spike_D405N, Spike_N501Y, Spike_N460K, Spike_F157S, Spike_S375F, Spike_S50L, Spike_N697K, Spike_I332V, Spike_Q954H, Spike_P99S, Spike_N764K, Spike_A50V, Spike_G339H, Spike_L455S, Spike_Q498R, Spike_R346T, Spike_T19I, Spike_F486P, Spike_F68K, Spike_L452W, Spike_K444T, Spike_R408S, Spike_T478K, Spike_L216F, Spike_S373P, Spike_E484K, Spike_V445H, Spike_P681R, Spike_K147E, Spike_N969K, Spike_S939F, Spike_S371F, Spike_R158G, Spike_Y505H, Spike_D796Y, Spike_N211I, Spike_T376A, Spike_K356T, Spike_V213G, Spike_V127F, Spike_K417N)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "P.2",
+    "antigenic_score": 14.88,
+    "frequency": 0.0036,
+    "zscore": 0.3342,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_R403K, Spike_E484K, Spike_S939F, Spike_Q498R, Spike_T19I, Spike_P681R, Spike_S375F, Spike_K147E, Spike_N460K, Spike_F486P, Spike_T376A, Spike_V213G, Spike_D614G, Spike_N501Y)",
+    "frequent": 0.0036
+  },
+  {
+    "lineage": "V.1",
+    "antigenic_score": 15.3,
+    "frequency": 0.0044,
+    "zscore": 0.8163,
+    "significant": "no",
+    "substitutions": "(Spike_D796Y, Spike_L452W, Spike_K444T, Spike_F157S, Spike_F68K, Spike_N697K, Spike_S50L, Spike_T478K, Spike_Q954H, Spike_A264D, Spike_S371F, Spike_V445H, Spike_S477N, Spike_T19I, Spike_A50V, Spike_Y505H, Spike_N679K, Spike_N764K, Spike_R346T, Spike_F486P, Spike_K147E, Spike_N440K, Spike_N481K, Spike_H655Y, Spike_N211I, Spike_S939F, Spike_L24S, Spike_K2L, Spike_I332V, Spike_N460K, Spike_N450D, Spike_D614G, Spike_R403K, Spike_S375F, Spike_R158G, Spike_V127F, Spike_R408S)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "W.3",
+    "antigenic_score": 14.57,
+    "frequency": 0.004,
+    "zscore": -0.0297,
+    "significant": "no",
+    "substitutions": "(Spike_G446S, Spike_R403K, Spike_S373P, Spike_A264D, Spike_S375F, Spike_L24S, Spike_D614G, Spike_R346T, Spike_R408S, Spike_G339H, Spike_L455S, Spike_N969K, Spike_R158G, Spike_V213G, Spike_K147E, Spike_S50L, Spike_K2L, Spike_Y505H, Spike_H655Y, Spike_N501Y, Spike_L216F, Spike_D796Y, Spike_Q498R, Spike_A50V, Spike_N697K, Spike_L452W, Spike_N211I, Spike_T478K, Spike_E554K, Spike_S939F, Spike_Q954H, Spike_P681R, Spike_N450D, Spike_H245N, Spike_S371F)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "XAJ",
+    "antigenic_score": 15.3,
+    "frequency": 0.0046,
+    "zscore": 0.8254,
+    "significant": "no",
+    "substitutions": "(Spike_N450D, Spike_S371F, Spike_N440K)",
+    "frequent": 0.0046
+  },
+  {
+    "lineage": "XBB.1",
+    "antigenic_score": 13.45,
+    "frequency": 0.0049,
+    "zscore": -1.3369,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_R403K, Spike_V445H, Spike_K444T, Spike_V127F, Spike_F486P, Spike_G339H, Spike_N460K, Spike_S375F, Spike_L452W, Spike_L216F, Spike_L455S, Spike_R158G, Spike_L24S, Spike_G142D, Spike_R408S, Spike_D614G, Spike_G446S, Spike_Q954H, Spike_T478K, Spike_E484K, Spike_N450D, Spike_H245N, Spike_S373P, Spike_K356T, Spike_H655Y, Spike_D405N, Spike_N679K, Spike_F157S, Spike_T19I, Spike_T376A, Spike_N764K, Spike_E554K, Spike_Q498R, Spike_I332V, Spike_D796Y, Spike_N481K, Spike_N969K, Spike_K417N, Spike_Y505H, Spike_A264D, Spike_A50V, Spike_V213G)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "XBB.1.16",
+    "antigenic_score": 14.82,
+    "frequency": 0.0045,
+    "zscore": 0.26,
+    "significant": "no",
+    "substitutions": "(Spike_Y505H, Spike_N969K, Spike_L452W, Spike_N679K, Spike_N460K, Spike_H655Y, Spike_T376A, Spike_N211I, Spike_D614G, Spike_F68K, Spike_S375F, Spike_G339H, Spike_V213G, Spike_N501Y, Spike_K417N, Spike_R403K, Spike_A50V, Spike_S373P, Spike_V127F, Spike_N481K, Spike_R158G, Spike_F486P, Spike_Q954H, Spike_K444T, Spike_A264D, Spike_H245N)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "XBB.1.16.1",
+    "antigenic_score": 16.16,
+    "frequency": 0.0049,
+    "zscore": 1.8276,
+    "significant": "yes",
+    "substitutions": "(Spike_A264D, Spike_E484K, Spike_F486P, Spike_P681R, Spike_K417N, Spike_K444T, Spike_N969K, Spike_F157S, Spike_N450D, Spike_G142D, Spike_D123G, Spike_N501Y, Spike_S939F, Spike_N211I, Spike_K2L, Spike_D405N, Spike_S50L, Spike_N679K, Spike_G339H, Spike_L216F, Spike_K356T, Spike_D614G, Spike_T376A, Spike_V213G, Spike_G446S, Spike_S373P, Spike_T19I, Spike_N697K, Spike_L452W, Spike_R403K, Spike_H655Y, Spike_L455S, Spike_S375F, Spike_H245N, Spike_N481K, Spike_R346T, Spike_L24S, Spike_S371F, Spike_P99S, Spike_K147E, Spike_A50V, Spike_N440K, Spike_Q498R, Spike_I332V, Spike_R158G, Spike_D796Y, Spike_T478K, Spike_R408S, Spike_S477N, Spike_F68K, Spike_E554K)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "XBB.1.16.11",
+    "antigenic_score": 14.65,
+    "frequency": 0.0047,
+    "zscore": 0.067,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_Q954H, Spike_F486P, Spike_G142D, Spike_A264D, Spike_K417N)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "XBB.1.16.15",
+    "antigenic_score": 14.19,
+    "frequency": 0.0045,
+    "zscore": -0.4721,
+    "significant": "no",
+    "substitutions": "(Spike_R408S, Spike_S477N, Spike_K417N, Spike_P99S, Spike_Q954H, Spike_H655Y, Spike_G142D, Spike_S371F, Spike_S373P, Spike_N211I, Spike_T478K, Spike_D405N, Spike_K356T, Spike_V127F, Spike_V445H, Spike_D614G, Spike_D796Y, Spike_N764K, Spike_E554K, Spike_I332V, Spike_N697K, Spike_T19I, Spike_V213G, Spike_G339H, Spike_A50V, Spike_D123G, Spike_H245N, Spike_S939F, Spike_K444T, Spike_P681R, Spike_K147E, Spike_N481K, Spike_R346T, Spike_L24S, Spike_N501Y, Spike_N679K, Spike_T376A, Spike_L455S, Spike_Y505H)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "XBB.1.16.21",
+    "antigenic_score": 13.14,
+    "frequency": 0.0035,
+    "zscore": -1.6961,
+    "significant": "no",
+    "substitutions": "(Spike_S477N, Spike_Q498R)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "XBB.1.16.6",
+    "antigenic_score": 13.41,
+    "frequency": 0.0031,
+    "zscore": -1.3915,
+    "significant": "no",
+    "substitutions": "(Spike_N211I, Spike_K2L, Spike_K417N, Spike_N440K, Spike_G142D, Spike_V445H, Spike_L216F, Spike_Q498R, Spike_H245N, Spike_K444T, Spike_T19I, Spike_N450D, Spike_S477N, Spike_N501Y, Spike_K147E, Spike_G446S, Spike_F157S, Spike_N679K, Spike_F486P, Spike_S371F, Spike_S373P, Spike_R408S, Spike_L455S, Spike_S375F, Spike_L24S, Spike_A264D)",
+    "frequent": 0.0031
+  },
+  {
+    "lineage": "XBB.1.17.1",
+    "antigenic_score": 13.93,
+    "frequency": 0.0043,
+    "zscore": -0.7817,
+    "significant": "no",
+    "substitutions": "(Spike_V445H, Spike_F157S, Spike_E554K, Spike_A50V, Spike_K147E, Spike_S50L, Spike_N440K, Spike_E484K, Spike_N679K, Spike_S939F, Spike_L452W, Spike_R158G, Spike_G339H, Spike_F486P, Spike_R403K, Spike_S371F, Spike_V213G, Spike_V127F, Spike_D405N, Spike_S373P, Spike_N460K, Spike_P681R, Spike_A264D, Spike_R408S, Spike_F68K, Spike_H245N, Spike_S477N, Spike_G446S, Spike_L455S, Spike_Q954H, Spike_N969K)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "XBB.1.41.1",
+    "antigenic_score": 15.52,
+    "frequency": 0.0038,
+    "zscore": 1.0801,
+    "significant": "yes",
+    "substitutions": "(Spike_N481K, Spike_E484K, Spike_V445H, Spike_N450D, Spike_I332V)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "XBB.1.5",
+    "antigenic_score": 14.1,
+    "frequency": 0.0051,
+    "zscore": -0.5768,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_A50V, Spike_A264D, Spike_S939F, Spike_V445H, Spike_N460K, Spike_E484K, Spike_R346T, Spike_R408S, Spike_N969K, Spike_V127F, Spike_K444T, Spike_N211I, Spike_H655Y, Spike_P681R, Spike_G142D, Spike_T376A, Spike_I332V, Spike_D123G, Spike_L216F, Spike_F157S, Spike_P99S, Spike_K417N, Spike_Q954H, Spike_D796Y, Spike_S371F, Spike_N450D, Spike_N501Y, Spike_T19I, Spike_D405N, Spike_D614G, Spike_L452W, Spike_S477N, Spike_N440K, Spike_H245N, Spike_Y505H, Spike_K2L, Spike_N697K, Spike_G446S, Spike_G339H, Spike_S50L, Spike_S373P, Spike_V213G, Spike_R158G, Spike_F486P, Spike_F68K)",
+    "frequent": 0.0051
+  },
+  {
+    "lineage": "XBB.1.5.11",
+    "antigenic_score": 15.6,
+    "frequency": 0.0038,
+    "zscore": 1.1759,
+    "significant": "yes",
+    "substitutions": "(Spike_G446S, Spike_K147E, Spike_L216F, Spike_H655Y, Spike_D123G, Spike_S939F, Spike_H245N, Spike_K417N, Spike_N450D, Spike_K2L, Spike_S375F, Spike_G339H, Spike_N697K, Spike_V127F, Spike_S373P, Spike_V213G, Spike_N460K, Spike_N211I, Spike_A264D, Spike_R403K, Spike_S477N, Spike_T376A, Spike_P681R, Spike_S371F)",
+    "frequent": 0.0038
+  },
+  {
+    "lineage": "XBB.1.5.13",
+    "antigenic_score": 13.86,
+    "frequency": 0.0041,
+    "zscore": -0.862,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_N697K, Spike_N211I, Spike_H245N, Spike_T478K, Spike_F157S, Spike_F68K, Spike_R346T, Spike_Q498R, Spike_G446S, Spike_N679K, Spike_L452W, Spike_N501Y, Spike_N460K, Spike_N450D, Spike_L24S, Spike_V445H, Spike_D405N, Spike_T19I, Spike_H655Y, Spike_N969K, Spike_R403K, Spike_T376A, Spike_I332V, Spike_F486P, Spike_S477N, Spike_E484K, Spike_E554K, Spike_K444T, Spike_A264D, Spike_D796Y, Spike_D614G, Spike_S375F, Spike_L216F, Spike_S50L)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "XBB.1.5.14",
+    "antigenic_score": 14.55,
+    "frequency": 0.0033,
+    "zscore": -0.055,
+    "significant": "no",
+    "substitutions": "(Spike_N211I, Spike_N440K, Spike_P681R, Spike_N450D, Spike_N969K, Spike_Q954H, Spike_V127F, Spike_K356T, Spike_G446S, Spike_R408S, Spike_S375F, Spike_N481K, Spike_T478K, Spike_T19I, Spike_D796Y, Spike_S939F, Spike_N764K, Spike_R158G, Spike_N460K, Spike_G142D, Spike_A50V, Spike_Y505H, Spike_F157S, Spike_L455S, Spike_K147E, Spike_R346T, Spike_F486P, Spike_D123G, Spike_H245N, Spike_S373P, Spike_G339H, Spike_K417N, Spike_P99S, Spike_E484K, Spike_N679K, Spike_D614G, Spike_H655Y, Spike_K2L, Spike_S477N, Spike_I332V, Spike_E554K, Spike_A264D, Spike_S371F, Spike_T376A, Spike_F68K, Spike_R403K, Spike_V213G, Spike_Q498R, Spike_D405N, Spike_N697K, Spike_K444T, Spike_L216F, Spike_L452W, Spike_N501Y, Spike_L24S)",
+    "frequent": 0.0033
+  },
+  {
+    "lineage": "XBB.1.5.16",
+    "antigenic_score": 16.35,
+    "frequency": 0.0039,
+    "zscore": 2.0414,
+    "significant": "yes",
+    "substitutions": "(Spike_A264D, Spike_V445H, Spike_Q954H, Spike_E484K, Spike_Q498R, Spike_N440K, Spike_G446S, Spike_R158G, Spike_D614G, Spike_G142D, Spike_S939F, Spike_L24S, Spike_N764K, Spike_N501Y, Spike_N460K, Spike_K356T, Spike_N697K, Spike_K147E, Spike_A50V, Spike_E554K, Spike_F486P, Spike_N450D, Spike_V127F, Spike_S371F, Spike_R346T, Spike_D405N, Spike_S375F, Spike_L216F, Spike_P681R, Spike_D796Y, Spike_T478K, Spike_R403K, Spike_N481K, Spike_S373P, Spike_S477N, Spike_K417N, Spike_N211I, Spike_L455S, Spike_H655Y, Spike_L452W, Spike_N679K, Spike_S50L, Spike_G339H, Spike_T19I, Spike_I332V, Spike_R408S, Spike_H245N, Spike_V213G)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "XBB.1.5.18",
+    "antigenic_score": 14.28,
+    "frequency": 0.0047,
+    "zscore": -0.3716,
+    "significant": "no",
+    "substitutions": "(Spike_L452W, Spike_H655Y, Spike_D796Y, Spike_N481K, Spike_N450D, Spike_A50V, Spike_S939F, Spike_A264D, Spike_T376A, Spike_N211I, Spike_S373P, Spike_F68K, Spike_E554K, Spike_S375F, Spike_D123G, Spike_K444T, Spike_N460K, Spike_N697K, Spike_D405N, Spike_F157S, Spike_V213G, Spike_G142D)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "XBB.1.5.19",
+    "antigenic_score": 13.77,
+    "frequency": 0.0043,
+    "zscore": -0.9716,
+    "significant": "no",
+    "substitutions": "(Spike_T19I, Spike_F68K, Spike_D796Y, Spike_N501Y, Spike_H245N, Spike_A264D, Spike_V213G, Spike_S477N, Spike_R158G, Spike_Y505H, Spike_L24S)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "XBB.1.5.24",
+    "antigenic_score": 16.35,
+    "frequency": 0.0042,
+    "zscore": 2.0425,
+    "significant": "yes",
+    "substitutions": "(Spike_K356T, Spike_P99S, Spike_R408S, Spike_N969K, Spike_Y505H, Spike_R346T, Spike_D796Y, Spike_T19I, Spike_T478K, Spike_S50L, Spike_G446S, Spike_N679K, Spike_V213G, Spike_Q498R, Spike_K2L, Spike_N501Y, Spike_L455S, Spike_Q954H, Spike_S375F, Spike_D614G, Spike_N460K, Spike_G142D, Spike_F157S, Spike_K444T, Spike_N764K, Spike_L24S, Spike_F68K, Spike_V445H, Spike_A50V, Spike_F486P, Spike_N440K, Spike_D405N, Spike_T376A, Spike_D123G, Spike_L452W, Spike_K417N, Spike_G339H, Spike_S939F, Spike_R158G, Spike_V127F, Spike_L216F, Spike_H245N, Spike_N211I, Spike_S373P, Spike_P681R, Spike_E484K, Spike_A264D, Spike_K147E, Spike_N481K, Spike_S477N, Spike_H655Y, Spike_I332V, Spike_S371F)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "XBB.1.5.33",
+    "antigenic_score": 15,
+    "frequency": 0.0034,
+    "zscore": 0.468,
+    "significant": "no",
+    "substitutions": "(Spike_L452W, Spike_P99S, Spike_I332V, Spike_K147E, Spike_P681R, Spike_Q954H, Spike_S939F, Spike_E554K, Spike_H245N, Spike_G446S, Spike_K444T, Spike_T376A, Spike_E484K, Spike_D614G, Spike_T478K, Spike_N481K, Spike_K2L, Spike_R158G, Spike_L455S, Spike_T19I, Spike_Y505H, Spike_D796Y, Spike_N450D, Spike_S375F)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "XBB.1.5.36",
+    "antigenic_score": 14.94,
+    "frequency": 0.0039,
+    "zscore": 0.4032,
+    "significant": "no",
+    "substitutions": "(Spike_S50L, Spike_N481K, Spike_P99S, Spike_N679K, Spike_N969K, Spike_D614G, Spike_S939F, Spike_R408S, Spike_D123G, Spike_L455S, Spike_E554K, Spike_N697K, Spike_K2L, Spike_K444T, Spike_G142D, Spike_F486P, Spike_G446S, Spike_V127F, Spike_V213G, Spike_N450D, Spike_R403K, Spike_Y505H, Spike_Q954H, Spike_N211I, Spike_N460K, Spike_A50V, Spike_E484K, Spike_L216F, Spike_I332V, Spike_G339H, Spike_N501Y, Spike_S373P, Spike_L24S, Spike_T19I, Spike_K417N, Spike_R346T, Spike_K356T, Spike_P681R, Spike_A264D, Spike_N764K, Spike_H245N, Spike_D405N, Spike_H655Y, Spike_T478K, Spike_D796Y, Spike_R158G, Spike_K147E, Spike_F68K, Spike_Q498R, Spike_S371F, Spike_S477N)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "XBB.1.5.37",
+    "antigenic_score": 14.67,
+    "frequency": 0.0044,
+    "zscore": 0.0794,
+    "significant": "no",
+    "substitutions": "(Spike_E554K, Spike_T19I, Spike_N440K, Spike_N460K, Spike_N679K, Spike_K417N, Spike_N481K, Spike_P99S, Spike_D614G, Spike_G339H, Spike_A50V, Spike_K147E, Spike_S375F, Spike_G142D, Spike_R408S, Spike_T376A, Spike_V213G, Spike_N764K, Spike_N501Y, Spike_K2L, Spike_V445H, Spike_D796Y, Spike_N450D, Spike_N211I, Spike_F157S, Spike_Q498R, Spike_A264D)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "XBB.1.5.38",
+    "antigenic_score": 13.24,
+    "frequency": 0.0055,
+    "zscore": -1.583,
+    "significant": "no",
+    "substitutions": "(Spike_A264D, Spike_S373P, Spike_K147E, Spike_N679K, Spike_T19I, Spike_H655Y, Spike_N481K, Spike_A50V, Spike_S939F, Spike_F486P, Spike_D796Y, Spike_N211I, Spike_R346T, Spike_I332V, Spike_L216F, Spike_G142D, Spike_F68K, Spike_K444T, Spike_T478K, Spike_E554K, Spike_N450D, Spike_K2L, Spike_S50L, Spike_F157S, Spike_E484K, Spike_R158G, Spike_S477N, Spike_N697K, Spike_D405N, Spike_K417N, Spike_Y505H, Spike_N969K, Spike_K356T, Spike_G446S, Spike_V213G, Spike_G339H, Spike_D123G, Spike_N440K, Spike_N501Y, Spike_P99S, Spike_T376A, Spike_N460K, Spike_L452W, Spike_H245N, Spike_Q498R, Spike_S375F, Spike_R408S, Spike_V445H, Spike_Q954H, Spike_P681R, Spike_L24S, Spike_S371F)",
+    "frequent": 0.0055
+  },
+  {
+    "lineage": "XBB.1.5.48",
+    "antigenic_score": 14.05,
+    "frequency": 0.0034,
+    "zscore": -0.6386,
+    "significant": "no",
+    "substitutions": "(Spike_D405N, Spike_R408S, Spike_N501Y)",
+    "frequent": 0.0034
+  },
+  {
+    "lineage": "XBB.1.5.52",
+    "antigenic_score": 15.3,
+    "frequency": 0.0041,
+    "zscore": 0.8212,
+    "significant": "no",
+    "substitutions": "(Spike_N211I, Spike_D796Y, Spike_N450D, Spike_R158G, Spike_R403K, Spike_K356T, Spike_K147E, Spike_P99S, Spike_N969K, Spike_S939F, Spike_V127F, Spike_G142D, Spike_L24S, Spike_L452W, Spike_S371F, Spike_N679K, Spike_S373P, Spike_F486P, Spike_K2L, Spike_F157S, Spike_Y505H, Spike_S375F, Spike_R408S, Spike_D123G, Spike_L216F, Spike_N501Y, Spike_N697K, Spike_L455S, Spike_V445H, Spike_A264D, Spike_G339H, Spike_K417N, Spike_E484K, Spike_H245N, Spike_S50L, Spike_I332V, Spike_K444T, Spike_E554K, Spike_V213G, Spike_P681R, Spike_T376A, Spike_N764K, Spike_H655Y, Spike_D405N, Spike_G446S, Spike_F68K, Spike_Q498R, Spike_D614G, Spike_T478K, Spike_A50V, Spike_Q954H, Spike_T19I)",
+    "frequent": 0.0041
+  },
+  {
+    "lineage": "XBB.1.5.54",
+    "antigenic_score": 13.66,
+    "frequency": 0.0043,
+    "zscore": -1.0911,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_K417N, Spike_L216F, Spike_V213G, Spike_K2L, Spike_S477N, Spike_T376A, Spike_T19I, Spike_I332V, Spike_T478K, Spike_V445H, Spike_S371F, Spike_R346T, Spike_N697K, Spike_G142D, Spike_N450D, Spike_D614G, Spike_R408S, Spike_L452W, Spike_G339H, Spike_N501Y, Spike_F157S, Spike_L455S, Spike_H655Y, Spike_N440K, Spike_Y505H, Spike_H245N, Spike_S50L, Spike_P681R, Spike_N679K, Spike_N764K, Spike_F68K, Spike_A50V, Spike_N211I, Spike_A264D, Spike_S373P, Spike_E484K, Spike_K147E, Spike_E554K, Spike_D405N, Spike_V127F, Spike_S375F, Spike_K356T, Spike_G446S, Spike_N969K, Spike_K444T)",
+    "frequent": 0.0043
+  },
+  {
+    "lineage": "XBB.1.5.57",
+    "antigenic_score": 13.96,
+    "frequency": 0.0042,
+    "zscore": -0.7405,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_N211I, Spike_N440K, Spike_G142D, Spike_A50V, Spike_F157S, Spike_Q498R, Spike_N679K, Spike_S371F, Spike_D405N, Spike_N481K, Spike_D614G, Spike_K417N, Spike_I332V, Spike_R346T, Spike_S477N, Spike_S939F, Spike_N969K, Spike_F68K, Spike_K444T, Spike_K147E, Spike_K2L, Spike_L452W, Spike_F486P, Spike_N460K, Spike_D796Y, Spike_P681R, Spike_V445H, Spike_L455S, Spike_E554K)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "XBB.1.5.59",
+    "antigenic_score": 13.64,
+    "frequency": 0.004,
+    "zscore": -1.1155,
+    "significant": "no",
+    "substitutions": "(Spike_N679K, Spike_S371F, Spike_R408S, Spike_A50V, Spike_S375F, Spike_D796Y, Spike_F68K, Spike_P681R, Spike_N450D, Spike_K2L, Spike_Y505H, Spike_D614G, Spike_N440K, Spike_N501Y, Spike_V213G, Spike_Q498R, Spike_I332V, Spike_N481K, Spike_K444T, Spike_G446S, Spike_T478K, Spike_S939F, Spike_N460K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "XBB.1.5.7",
+    "antigenic_score": 15.14,
+    "frequency": 0.0045,
+    "zscore": 0.6379,
+    "significant": "no",
+    "substitutions": "(Spike_K147E, Spike_L452W, Spike_D614G, Spike_V127F, Spike_K2L, Spike_A264D, Spike_L216F, Spike_D796Y, Spike_T478K, Spike_N440K, Spike_S375F, Spike_T376A, Spike_N697K, Spike_K417N, Spike_E554K, Spike_N460K, Spike_K444T, Spike_N450D, Spike_N764K, Spike_G446S, Spike_N969K, Spike_R403K, Spike_D123G, Spike_V213G, Spike_S477N)",
+    "frequent": 0.0045
+  },
+  {
+    "lineage": "XBB.1.9.1",
+    "antigenic_score": 14.54,
+    "frequency": 0.004,
+    "zscore": -0.0724,
+    "significant": "no",
+    "substitutions": "(Spike_H655Y, Spike_L24S, Spike_Q498R, Spike_R408S, Spike_K444T, Spike_F486P, Spike_P681R, Spike_I332V, Spike_S371F, Spike_V127F, Spike_N764K, Spike_E484K, Spike_D796Y, Spike_S375F, Spike_L452W, Spike_K356T, Spike_L216F, Spike_F68K, Spike_S477N, Spike_S373P, Spike_R346T, Spike_T376A, Spike_G446S, Spike_N697K, Spike_Y505H, Spike_G142D, Spike_T478K, Spike_N969K, Spike_S50L, Spike_N440K, Spike_G339H, Spike_R158G, Spike_F157S, Spike_N679K, Spike_D123G, Spike_N211I, Spike_E554K)",
+    "frequent": 0.004
+  },
+  {
+    "lineage": "XBB.2",
+    "antigenic_score": 14.24,
+    "frequency": 0.0047,
+    "zscore": -0.4154,
+    "significant": "no",
+    "substitutions": "(Spike_N450D, Spike_D405N, Spike_Q498R, Spike_K417N, Spike_R403K, Spike_K444T, Spike_A264D, Spike_V213G, Spike_N211I, Spike_L455S, Spike_K147E, Spike_N501Y, Spike_G142D)",
+    "frequent": 0.0047
+  },
+  {
+    "lineage": "XBB.2.3.11",
+    "antigenic_score": 14.69,
+    "frequency": 0.0044,
+    "zscore": 0.1083,
+    "significant": "no",
+    "substitutions": "(Spike_I332V, Spike_F157S, Spike_Y505H, Spike_K147E, Spike_F486P, Spike_N481K, Spike_N501Y, Spike_K356T, Spike_S939F, Spike_R158G, Spike_P99S, Spike_L452W, Spike_V445H, Spike_R403K, Spike_A264D, Spike_N440K, Spike_V127F, Spike_F68K, Spike_K417N, Spike_V213G, Spike_G446S, Spike_N460K, Spike_L216F)",
+    "frequent": 0.0044
+  },
+  {
+    "lineage": "XBB.2.6",
+    "antigenic_score": 14.04,
+    "frequency": 0.0051,
+    "zscore": -0.6465,
+    "significant": "no",
+    "substitutions": "(Spike_T19I, Spike_R408S, Spike_P681R, Spike_P99S, Spike_G446S, Spike_N211I, Spike_N764K, Spike_A264D, Spike_N481K, Spike_L452W, Spike_H245N, Spike_S477N, Spike_N969K, Spike_N450D, Spike_Q498R, Spike_K147E, Spike_N679K, Spike_G142D, Spike_S939F, Spike_R346T, Spike_Y505H, Spike_N501Y, Spike_V213G, Spike_R403K, Spike_T478K, Spike_S50L, Spike_L216F, Spike_K417N, Spike_L455S, Spike_D405N, Spike_A50V, Spike_D796Y, Spike_S371F, Spike_F486P, Spike_L24S, Spike_Q954H, Spike_N460K)",
+    "frequent": 0.0051
+  },
+  {
+    "lineage": "XBE",
+    "antigenic_score": 13.5,
+    "frequency": 0.0037,
+    "zscore": -1.2805,
+    "significant": "no",
+    "substitutions": "(Spike_V127F, Spike_N440K, Spike_E554K, Spike_L455S, Spike_L216F, Spike_K147E, Spike_R403K, Spike_S50L, Spike_V213G, Spike_A50V, Spike_G339H, Spike_L452W, Spike_N969K, Spike_G142D, Spike_D614G, Spike_T19I, Spike_A264D, Spike_I332V, Spike_D796Y, Spike_S373P, Spike_Q498R, Spike_T478K, Spike_D123G, Spike_S375F, Spike_H245N, Spike_N764K, Spike_F157S, Spike_S477N, Spike_N679K, Spike_D405N, Spike_N697K, Spike_F68K, Spike_F486P, Spike_G446S, Spike_N481K, Spike_K417N, Spike_S939F, Spike_P99S, Spike_T376A, Spike_P681R, Spike_R346T, Spike_L24S, Spike_S371F, Spike_R408S, Spike_Q954H, Spike_K2L, Spike_H655Y, Spike_K444T, Spike_N450D, Spike_Y505H, Spike_E484K, Spike_V445H, Spike_N211I, Spike_N501Y)",
+    "frequent": 0.0037
+  },
+  {
+    "lineage": "XBF",
+    "antigenic_score": 14.35,
+    "frequency": 0.0049,
+    "zscore": -0.2921,
+    "significant": "no",
+    "substitutions": "(Spike_R346T, Spike_R158G, Spike_P99S, Spike_A264D, Spike_Q954H, Spike_V127F, Spike_D614G, Spike_N764K, Spike_H245N, Spike_G446S, Spike_K444T, Spike_E554K, Spike_S477N, Spike_S375F, Spike_N501Y, Spike_N969K, Spike_I332V, Spike_D123G, Spike_G142D, Spike_K2L, Spike_L24S, Spike_K147E, Spike_F486P, Spike_G339H, Spike_L455S, Spike_T478K, Spike_F157S, Spike_L452W, Spike_N481K, Spike_K417N, Spike_S939F, Spike_Q498R, Spike_N440K, Spike_D405N, Spike_E484K, Spike_S50L, Spike_T19I, Spike_N450D, Spike_N679K, Spike_F68K)",
+    "frequent": 0.0049
+  },
+  {
+    "lineage": "XBQ",
+    "antigenic_score": 16.3,
+    "frequency": 0.0042,
+    "zscore": 1.9835,
+    "significant": "yes",
+    "substitutions": "(Spike_L24S, Spike_S477N, Spike_V213G, Spike_T19I, Spike_K417N, Spike_H655Y, Spike_A264D, Spike_D405N, Spike_A50V, Spike_L216F, Spike_P99S, Spike_T478K, Spike_Q498R, Spike_D614G, Spike_F157S, Spike_K444T, Spike_N697K, Spike_S375F, Spike_L452W, Spike_S939F, Spike_G142D, Spike_K2L, Spike_D123G, Spike_H245N, Spike_N679K, Spike_F68K, Spike_R346T, Spike_Q954H, Spike_F486P, Spike_N440K, Spike_R403K, Spike_N450D, Spike_N211I, Spike_R158G, Spike_N764K, Spike_N501Y, Spike_V127F, Spike_S50L, Spike_G446S, Spike_S373P, Spike_I332V, Spike_Y505H, Spike_D796Y, Spike_K147E, Spike_V445H, Spike_E484K, Spike_G339H, Spike_N460K, Spike_T376A, Spike_L455S, Spike_N969K, Spike_E554K, Spike_R408S, Spike_K356T, Spike_P681R, Spike_S371F, Spike_N481K)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "XCH.1",
+    "antigenic_score": 13.52,
+    "frequency": 0.0039,
+    "zscore": -1.2583,
+    "significant": "no",
+    "substitutions": "(Spike_N764K, Spike_G446S, Spike_H245N, Spike_Y505H, Spike_Q498R, Spike_N697K, Spike_S375F, Spike_L24S, Spike_N501Y, Spike_L216F, Spike_L452W, Spike_K417N, Spike_S477N, Spike_N481K, Spike_D796Y, Spike_T376A, Spike_S50L, Spike_D123G, Spike_N679K, Spike_K356T, Spike_G339H, Spike_N211I, Spike_G142D, Spike_A264D, Spike_R158G, Spike_D405N, Spike_R408S, Spike_Q954H, Spike_R403K)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "XDV.1",
+    "antigenic_score": 15.33,
+    "frequency": 0.0035,
+    "zscore": 0.8538,
+    "significant": "no",
+    "substitutions": "(Spike_D614G, Spike_E554K, Spike_R408S, Spike_I332V, Spike_G339H, Spike_N679K, Spike_S939F, Spike_P681R, Spike_A50V, Spike_N481K, Spike_A264D, Spike_N969K, Spike_R158G)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "XE",
+    "antigenic_score": 14.68,
+    "frequency": 0.0035,
+    "zscore": 0.0933,
+    "significant": "no",
+    "substitutions": "(Spike_T19I, Spike_A50V, Spike_K147E, Spike_V213G, Spike_G446S, Spike_K2L, Spike_H655Y, Spike_F157S, Spike_Y505H, Spike_R403K, Spike_E484K, Spike_I332V, Spike_N697K, Spike_L455S, Spike_S477N, Spike_L216F, Spike_N440K, Spike_E554K, Spike_K356T, Spike_N679K, Spike_S373P, Spike_N501Y, Spike_N481K, Spike_D123G, Spike_R408S)",
+    "frequent": 0.0035
+  },
+  {
+    "lineage": "XEC",
+    "antigenic_score": 14.29,
+    "frequency": 0.0042,
+    "zscore": -0.3602,
+    "significant": "no",
+    "substitutions": "(Spike_S939F, Spike_V445H, Spike_V127F, Spike_Q954H, Spike_K2L, Spike_P99S, Spike_D614G, Spike_H245N, Spike_K147E, Spike_Q498R, Spike_R158G, Spike_S375F, Spike_D796Y, Spike_N764K, Spike_Y505H)",
+    "frequent": 0.0042
+  },
+  {
+    "lineage": "XN",
+    "antigenic_score": 14.73,
+    "frequency": 0.0039,
+    "zscore": 0.1569,
+    "significant": "no",
+    "substitutions": "(Spike_N969K, Spike_K356T, Spike_R408S, Spike_V127F, Spike_Y505H, Spike_N697K, Spike_K2L, Spike_L455S, Spike_L452W, Spike_A264D, Spike_I332V)",
+    "frequent": 0.0039
+  },
+  {
+    "lineage": "Z.1",
+    "antigenic_score": 14.32,
+    "frequency": 0.004,
+    "zscore": -0.3187,
+    "significant": "no",
+    "substitutions": "(Spike_L24S, Spike_L455S, Spike_I332V, Spike_S375F, Spike_L216F, Spike_Q498R, Spike_S50L, Spike_R403K, Spike_N481K, Spike_N460K, Spike_F68K, Spike_R158G, Spike_S371F, Spike_T478K, Spike_N764K, Spike_G339H, Spike_K417N, Spike_T376A, Spike_S939F, Spike_K356T, Spike_N679K, Spike_N450D, Spike_D796Y, Spike_R408S, Spike_K147E, Spike_P681R, Spike_G446S, Spike_G142D, Spike_H655Y, Spike_N697K, Spike_V127F, Spike_V445H, Spike_T19I, Spike_D405N, Spike_N501Y, Spike_F486P, Spike_S373P, Spike_R346T, Spike_P99S, Spike_E484K, Spike_N969K, Spike_D614G, Spike_Q954H, Spike_K2L, Spike_N211I, Spike_E554K, Spike_V213G, Spike_K444T, Spike_L452W)",
+    "frequent": 0.004
+  }
+]
