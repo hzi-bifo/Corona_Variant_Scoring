@@ -1,0 +1,534 @@
+Pango lineage	antigenic_score	rank	WHO_label
+BA.1	29.0	1.0	Omicron
+B.12	17.0	2.5	Non Variant of Concern
+B.18	17.0	2.5	Non Variant of Concern
+AE.1	16.0	4.5	Non Variant of Concern
+P.1.3	16.0	4.5	Gamma
+AY.4.2.1	15.0	6.0	Delta
+C.37.1	14.941176470588236	7.0	Non Variant of Concern
+B.1.620	14.743772241992882	8.0	Non Variant of Concern
+AT.1	14.028571428571428	9.0	Non Variant of Concern
+AY.4.2.3	13.5	10.0	Delta
+AY.33	13.375	11.0	Delta
+C.37	13.338479809976247	12.0	Non Variant of Concern
+P.1.4	13.137931034482758	13.0	Gamma
+P.1.6	13.0	16.5	Gamma
+AY.4.2	13.0	16.5	Delta
+P.1.5	13.0	16.5	Gamma
+P.1.17.1	13.0	16.5	Gamma
+B.1.640.1	13.0	16.5	Non Variant of Concern
+AY.4.2.2	13.0	16.5	Delta
+P.1.7	12.901408450704226	20.0	Gamma
+P.1.7.1	12.76	21.0	Gamma
+P.1.10.1	12.666666666666666	22.0	Gamma
+P.1.11	12.5	23.0	Gamma
+P.1.1	12.355108877721943	24.0	Gamma
+P.1.9	12.333333333333334	25.5	Gamma
+AY.4.4	12.333333333333334	25.5	Delta
+P.1.14	12.173790223532302	27.0	Gamma
+P.1.2	12.158415841584159	28.0	Gamma
+AY.4.5	12.083333333333334	29.0	Delta
+AY.33.2	12.0	32.5	Delta
+AY.133	12.0	32.5	Delta
+AY.4.3	12.0	32.5	Delta
+AY.36.1	12.0	32.5	Delta
+B.1.632	12.0	32.5	Non Variant of Concern
+Q.5	12.0	32.5	Alpha
+P.1	11.932243826792318	36.0	Gamma
+P.1.17	11.891109579600275	37.0	Gamma
+AY.34.1	11.833333333333334	38.0	Delta
+AY.121.1	11.8	39.0	Delta
+P.1.16	11.783225806451613	40.0	Gamma
+P.1.10	11.683866279069768	41.0	Gamma
+P.1.15	11.634146341463415	42.0	Gamma
+P.3	11.619047619047619	43.0	Non Variant of Concern
+P.1.12	11.571428571428571	44.0	Gamma
+P.1.13	11.507075471698114	45.0	Gamma
+AY.37	11.5	46.5	Delta
+BA.2	11.5	46.5	Omicron
+AY.65	11.222222222222221	48.0	Delta
+AY.49	11.166666666666666	49.0	Delta
+AY.9.2	11.095238095238095	50.0	Delta
+AY.42	11.0625	51.0	Delta
+AY.126	11.03225806451613	52.0	Delta
+B.1.351.3	11.015075376884422	53.0	Beta
+XA	11.0	58.5	Non Variant of Concern
+AY.58	11.0	58.5	Delta
+AY.120.1	11.0	58.5	Delta
+AY.75.2	11.0	58.5	Delta
+AY.4.9	11.0	58.5	Delta
+AY.129	11.0	58.5	Delta
+AY.5.4	11.0	58.5	Delta
+AY.29	11.0	58.5	Delta
+AY.26	11.0	58.5	Delta
+BB.1	11.0	58.5	Non Variant of Concern
+AY.71	10.875	64.0	Delta
+AY.107	10.857142857142858	65.0	Delta
+B.1.351.2	10.850819672131147	66.0	Beta
+AY.70	10.846153846153847	67.0	Delta
+AY.98.1	10.833333333333334	68.5	Delta
+AY.24	10.833333333333334	68.5	Delta
+AY.11	10.777777777777779	70.0	Delta
+AY.4	10.756457564575646	71.0	Delta
+AY.4.7	10.75	72.0	Delta
+Q.3	10.699931647300069	73.0	Alpha
+AY.86	10.692307692307692	74.0	Delta
+B.1.635	10.6	75.0	Non Variant of Concern
+P.5	10.588235294117647	76.0	Non Variant of Concern
+AY.9	10.542857142857143	77.0	Delta
+B.1.631	10.53061224489796	78.0	Non Variant of Concern
+AY.23	10.521739130434783	79.0	Delta
+AY.46.6	10.5	81.0	Delta
+AY.47	10.5	81.0	Delta
+AY.100	10.5	81.0	Delta
+AY.121	10.444444444444445	83.0	Delta
+Q.7	10.426778242677825	84.0	Alpha
+B.1.633	10.4	85.5	Non Variant of Concern
+AY.111	10.4	85.5	Delta
+AY.1	10.3125	87.0	Delta
+B.1.1.7	10.286199996176226	88.0	Alpha
+AY.25.1	10.285714285714286	89.0	Delta
+B.1.351	10.273750327139492	90.0	Beta
+AY.75	10.272727272727273	91.0	Delta
+Q.1	10.262488646684831	92.0	Alpha
+B.1.616	10.25	93.0	Non Variant of Concern
+C.38	10.235294117647058	94.0	Non Variant of Concern
+Q.6	10.227272727272727	95.0	Alpha
+Q.2	10.224662162162161	96.0	Alpha
+C.36.3.1	10.2	97.0	Non Variant of Concern
+AY.34	10.125	98.0	Delta
+Q.4	10.115961800818553	99.0	Alpha
+AY.27	10.043478260869565	100.0	Delta
+AY.119	10.0	108.5	Delta
+AY.117	10.0	108.5	Delta
+AY.79	10.0	108.5	Delta
+AY.54	10.0	108.5	Delta
+AY.112.2	10.0	108.5	Delta
+AY.43.8	10.0	108.5	Delta
+AY.88	10.0	108.5	Delta
+AY.81	10.0	108.5	Delta
+AY.113	10.0	108.5	Delta
+AY.116.1	10.0	108.5	Delta
+AY.66	10.0	108.5	Delta
+B.1.626	10.0	108.5	Non Variant of Concern
+AY.125	10.0	108.5	Delta
+AY.62	10.0	108.5	Delta
+AY.93	10.0	108.5	Delta
+AY.32	10.0	108.5	Delta
+AV.1	9.95	117.0	Non Variant of Concern
+AY.5	9.882352941176471	118.0	Delta
+AY.43	9.879518072289157	119.0	Delta
+AY.25	9.85	120.0	Delta
+AY.36	9.8	121.0	Delta
+AY.10	9.774193548387096	122.0	Delta
+AY.103	9.7	123.0	Delta
+AY.6	9.694444444444445	124.0	Delta
+AY.6	9.694444444444445	124.0	Delta
+AY.106	9.666666666666666	125.0	Delta
+AY.8	9.659090909090908	126.0	Non Variant of Concern
+AY.55	9.647058823529411	127.0	Delta
+B.1.634	9.615384615384615	128.0	Non Variant of Concern
+B.1.630	9.5	130.0	Non Variant of Concern
+AY.92	9.5	130.0	Delta
+AY.45	9.5	130.0	Delta
+B.1.621	9.429454170957776	132.0	Non Variant of Concern
+AY.44	9.424528301886792	133.0	Delta
+AY.57	9.333333333333334	134.0	Delta
+Q.8	9.317073170731707	135.0	Alpha
+AY.116	9.307692307692308	136.0	Delta
+B.1.525	9.25492957746479	137.0	Non Variant of Concern
+B.1.1.273	9.25	138.0	Non Variant of Concern
+B.1.625	9.208333333333334	139.0	Non Variant of Concern
+A.29	9.15625	140.0	Non Variant of Concern
+AY.3	9.090909090909092	141.0	Delta
+AY.91	9.0	144.0	Delta
+N.10	9.0	144.0	Non Variant of Concern
+AY.84	9.0	144.0	Delta
+AY.17	9.0	144.0	Delta
+AY.61	9.0	144.0	Delta
+AY.74	8.9375	147.0	Delta
+AY.127	8.931034482758621	148.0	Delta
+B.1.604	8.875	149.0	Non Variant of Concern
+XB	8.874587458745875	150.0	Non Variant of Concern
+B.1.639	8.857142857142858	151.0	Non Variant of Concern
+B.1.621.1	8.837837837837839	152.0	Non Variant of Concern
+C.36.3	8.789029535864978	153.0	Non Variant of Concern
+AY.38	8.777777777777779	154.0	Delta
+AY.15	8.714285714285714	155.0	Delta
+AY.122	8.69218989280245	156.0	Delta
+AY.102	8.333333333333334	157.0	Delta
+AY.98	8.125	158.0	Delta
+AY.14	8.11111111111111	159.0	Delta
+P.4	8.097222222222221	160.0	Non Variant of Concern
+AY.46	8.090909090909092	161.0	Delta
+AY.120	8.085714285714285	162.0	Delta
+B.1.1.523	8.015151515151516	163.5	Non Variant of Concern
+B.1.1.529	8.015151515151516	163.5	Omicron
+B.1.177.52	8.0	168.5	Non Variant of Concern
+AY.110	8.0	168.5	Delta
+AY.30	8.0	168.5	Delta
+AY.82	8.0	168.5	Delta
+AY.48	8.0	168.5	Delta
+AY.99.1	8.0	168.5	Delta
+AY.118	8.0	168.5	Delta
+B.1.177.88	8.0	168.5	Non Variant of Concern
+B.1.627	7.927536231884058	173.0	Non Variant of Concern
+B.1.629	7.8	174.0	Non Variant of Concern
+B.1.617.2	7.798891021539774	175.0	Delta
+AY.99	7.666666666666667	176.0	Delta
+AY.16	7.647058823529412	177.0	Delta
+A.27	7.5	178.5	Non Variant of Concern
+AY.39	7.5	178.5	Delta
+B.1.617.3	7.4222222222222225	180.0	Non Variant of Concern
+B.1.1.232	7.4	181.0	Non Variant of Concern
+AY.13	7.363636363636363	182.0	Delta
+B.1.637	7.234237470810131	183.0	Non Variant of Concern
+AZ.6	7.230769230769231	184.0	Non Variant of Concern
+AY.112	7.225352112676056	185.0	Delta
+B.1.617.1	7.1790203727785	186.0	Non Variant of Concern
+B.1.619	7.155913978494624	187.0	Non Variant of Concern
+B.1.617	7.095520421607378	188.0	Non Variant of Concern
+A.2.5.1	7.095238095238095	189.0	Non Variant of Concern
+B.1.619.1	7.048611111111111	190.0	Non Variant of Concern
+AY.53	7.0	193.5	Delta
+B.1.258.4	7.0	193.5	Non Variant of Concern
+B.1.351.5	7.0	193.5	Beta
+AY.95	7.0	193.5	Delta
+B.33	7.0	193.5	Non Variant of Concern
+AY.52	7.0	193.5	Delta
+Unassigned	6.918413758794684	197.0	Non Variant of Concern
+AZ.5	6.764705882352941	198.0	Non Variant of Concern
+A.2.5.3	6.666666666666667	199.0	Non Variant of Concern
+B.1.1.1	6.413793103448276	200.0	Non Variant of Concern
+AY.59	6.333333333333333	201.0	Delta
+B.1.1.318	6.262652705061082	202.0	Non Variant of Concern
+B.1.526	6.231390526086008	203.0	Non Variant of Concern
+B.1.258.17	6.209756097560976	204.0	Non Variant of Concern
+A.2.5.2	6.1671826625387	205.0	Non Variant of Concern
+AZ.2.1	6.148148148148148	206.0	Non Variant of Concern
+A.2.5	6.116455696202531	207.0	Non Variant of Concern
+AZ.2	6.069970845481049	208.0	Non Variant of Concern
+B.1.36.20	6.0	212.0	Non Variant of Concern
+B.1.636	6.0	212.0	Non Variant of Concern
+B.58	6.0	212.0	Non Variant of Concern
+B.1.1.117	6.0	212.0	Non Variant of Concern
+B.1.1.297	6.0	212.0	Non Variant of Concern
+B.1.1.254	6.0	212.0	Non Variant of Concern
+AY.124	6.0	212.0	Delta
+AZ.3	5.988888888888889	216.0	Non Variant of Concern
+AZ.4	5.986301369863014	217.0	Non Variant of Concern
+B.1.1.28	5.977611940298507	218.0	Non Variant of Concern
+B.1.1.524	5.967741935483871	219.0	Non Variant of Concern
+B.1.177.83	5.8	220.0	Non Variant of Concern
+AZ.1	5.782923299565846	221.0	Non Variant of Concern
+B.1.623	5.766816143497758	222.0	Non Variant of Concern
+B.1.1.317	5.522184300341297	223.0	Non Variant of Concern
+L.3	5.5	224.0	Non Variant of Concern
+C.40	5.25	225.5	Non Variant of Concern
+B.1.1.33	5.25	225.5	Non Variant of Concern
+B.1.214.2	5.2	227.5	Non Variant of Concern
+B.1.177.62	5.2	227.5	Non Variant of Concern
+B.1.618	5.166666666666667	229.5	Non Variant of Concern
+B.1.160.30	5.166666666666667	229.5	Non Variant of Concern
+B.1.1.384	5.0	233.0	Non Variant of Concern
+B.1.1.486	5.0	233.0	Non Variant of Concern
+R.2	5.0	233.0	Non Variant of Concern
+B.1.1.43	5.0	233.0	Non Variant of Concern
+C.39	5.0	233.0	Non Variant of Concern
+B.1.1.189	4.916666666666667	236.0	Non Variant of Concern
+B.1.258	4.791907514450867	237.0	Non Variant of Concern
+A.23.1	4.7913669064748206	238.0	Non Variant of Concern
+B.1.1.89	4.666666666666667	239.5	Non Variant of Concern
+B.1.177.46	4.666666666666667	239.5	Non Variant of Concern
+C.17	4.631868131868132	241.0	Non Variant of Concern
+A.2	4.631578947368421	242.0	Non Variant of Concern
+B.1.177.87	4.625	243.0	Non Variant of Concern
+B.1.427	4.550197912918316	244.0	Epsilon
+P.6	4.5125	245.0	Non Variant of Concern
+B.1.1	4.505747126436781	246.0	Non Variant of Concern
+B.1.214.3	4.5	247.0	Non Variant of Concern
+A.28	4.457142857142857	248.0	Non Variant of Concern
+B.1.1.519	4.400430725053841	249.0	Non Variant of Concern
+B.1.177.82	4.3375	250.0	Non Variant of Concern
+R.1	4.330556236216614	251.0	Non Variant of Concern
+B.1.575.1	4.322033898305085	252.0	Non Variant of Concern
+B.1.429	4.308104395604396	253.0	Epsilon
+B.1.575	4.273469387755102	254.0	Non Variant of Concern
+AU.2	4.264367816091954	255.0	Non Variant of Concern
+C.16	4.2631578947368425	256.0	Non Variant of Concern
+B.1.1.46	4.21875	257.0	Non Variant of Concern
+B.1.1.306	4.151515151515151	258.0	Non Variant of Concern
+B.1.177.73	4.129032258064516	259.0	Non Variant of Concern
+B.1.533	4.111111111111111	260.0	Non Variant of Concern
+B.1.1.525	4.076190476190476	261.0	Non Variant of Concern
+B.1	4.016161043379642	262.0	Non Variant of Concern
+B.1.1.269	4.0	272.0	Non Variant of Concern
+B.1.264.1	4.0	272.0	Non Variant of Concern
+B.1.1.380	4.0	272.0	Non Variant of Concern
+B.1.1.315	4.0	272.0	Non Variant of Concern
+B.1.177.67	4.0	272.0	Non Variant of Concern
+C.4	4.0	272.0	Non Variant of Concern
+AY.39.1	4.0	272.0	Delta
+B.1.239	4.0	272.0	Non Variant of Concern
+B.1.1.329	4.0	272.0	Non Variant of Concern
+B.1.1.282	4.0	272.0	Non Variant of Concern
+B.1.1.526	4.0	272.0	Non Variant of Concern
+B.1.3	4.0	272.0	Non Variant of Concern
+B.1.177.5	4.0	272.0	Non Variant of Concern
+B.1.367	4.0	272.0	Non Variant of Concern
+B.1.179	4.0	272.0	Non Variant of Concern
+B.1.258.20	4.0	272.0	Non Variant of Concern
+B.1.1.389	4.0	272.0	Non Variant of Concern
+A.25	4.0	272.0	Non Variant of Concern
+B.1.222	4.0	272.0	Non Variant of Concern
+N.5	3.8986486486486487	282.0	Non Variant of Concern
+B.1.1.294	3.857142857142857	283.0	Non Variant of Concern
+B.1.1.50	3.8333333333333335	284.0	Non Variant of Concern
+B.1.177.75	3.8181818181818183	285.0	Non Variant of Concern
+B.1.1.420	3.8043478260869565	286.0	Non Variant of Concern
+B.1.1.316	3.727272727272727	287.0	Non Variant of Concern
+B.1.375	3.6666666666666665	288.0	Non Variant of Concern
+B.1.177.86	3.6557377049180326	289.0	Non Variant of Concern
+B.1.177.60	3.6443768996960486	290.0	Non Variant of Concern
+B.1.1.222	3.624145785876993	291.0	Non Variant of Concern
+B.1.1.374	3.6179775280898876	292.0	Non Variant of Concern
+P.2	3.5901162790697674	293.0	Non Variant of Concern
+B.1.1.192	3.5	294.5	Non Variant of Concern
+C.2.1	3.5	294.5	Non Variant of Concern
+A	3.452830188679245	296.0	Non Variant of Concern
+B.1.1.528	3.45	297.0	Non Variant of Concern
+B.1.1.176	3.4375	298.0	Non Variant of Concern
+B.1.1.487	3.4210526315789473	299.0	Non Variant of Concern
+B.1.324	3.4	300.0	Non Variant of Concern
+B.1.177	3.324900133155792	301.0	Non Variant of Concern
+B.1.480	3.3214285714285716	302.0	Non Variant of Concern
+B.1.466.2	3.3163636363636364	303.0	Non Variant of Concern
+B.1.36.31	3.289473684210526	304.0	Non Variant of Concern
+B.1.177.44	3.25	305.0	Non Variant of Concern
+B.1.311	3.208955223880597	306.0	Non Variant of Concern
+B.1.1.333	3.2	307.5	Non Variant of Concern
+B.1.1.274	3.2	307.5	Non Variant of Concern
+B.1.1.207	3.1785714285714284	309.0	Non Variant of Concern
+C.36.1	3.1666666666666665	310.0	Non Variant of Concern
+B.1.234	3.1007194244604315	311.0	Non Variant of Concern
+U.3	3.0789473684210527	312.0	Non Variant of Concern
+B.1.362	3.0714285714285716	313.0	Non Variant of Concern
+B.1.441	3.0	332.5	Non Variant of Concern
+B.1.182	3.0	332.5	Non Variant of Concern
+B.1.218	3.0	332.5	Non Variant of Concern
+B.1.1.280	3.0	332.5	Non Variant of Concern
+B.1.94	3.0	332.5	Non Variant of Concern
+B.1.177.53	3.0	332.5	Non Variant of Concern
+B.1.177.85	3.0	332.5	Non Variant of Concern
+N.4	3.0	332.5	Non Variant of Concern
+B.1.1.38	3.0	332.5	Non Variant of Concern
+B.1.1.429	3.0	332.5	Non Variant of Concern
+B.1.1.231	3.0	332.5	Non Variant of Concern
+B.1.548	3.0	332.5	Non Variant of Concern
+B.1.36.19	3.0	332.5	Non Variant of Concern
+B.1.1.351	3.0	332.5	Non Variant of Concern
+B.1.1.413	3.0	332.5	Non Variant of Concern
+B.1.177.41	3.0	332.5	Non Variant of Concern
+B.1.609	3.0	332.5	Non Variant of Concern
+B.1.1.157	3.0	332.5	Non Variant of Concern
+B.1.1.343	3.0	332.5	Non Variant of Concern
+B.1.466.1	3.0	332.5	Non Variant of Concern
+B.1.177.20	3.0	332.5	Non Variant of Concern
+N.9	3.0	332.5	Non Variant of Concern
+B.1.1.522	3.0	332.5	Non Variant of Concern
+B.1.177.59	3.0	332.5	Non Variant of Concern
+B.6	3.0	332.5	Non Variant of Concern
+B.1.258.11	3.0	332.5	Non Variant of Concern
+B.1.1.448	3.0	332.5	Non Variant of Concern
+B.1.177.33	3.0	332.5	Non Variant of Concern
+B.1.177.21	3.0	332.5	Non Variant of Concern
+B.1.177.69	3.0	332.5	Non Variant of Concern
+B.1.1.480	3.0	332.5	Non Variant of Concern
+B.1.189	3.0	332.5	Non Variant of Concern
+B.1.1.349	3.0	332.5	Non Variant of Concern
+B.1.600	3.0	332.5	Non Variant of Concern
+B.1.1.263	3.0	332.5	Non Variant of Concern
+B.1.1.464	3.0	332.5	Non Variant of Concern
+B.1.1.304	3.0	332.5	Non Variant of Concern
+B.1.243.1	3.0	332.5	Non Variant of Concern
+B.1.1.348	2.969178082191781	352.0	Non Variant of Concern
+B.1.243	2.9598214285714284	353.0	Non Variant of Concern
+AU.3	2.9467455621301775	354.0	Non Variant of Concern
+B.1.177.12	2.9444444444444446	355.5	Non Variant of Concern
+B.1.36.29	2.9444444444444446	355.5	Non Variant of Concern
+B.1.1.354	2.925925925925926	357.0	Non Variant of Concern
+B.1.469	2.9166666666666665	358.0	Non Variant of Concern
+AD.2	2.909090909090909	359.0	Non Variant of Concern
+B.1.160	2.898989898989899	360.0	Non Variant of Concern
+B.1.1.141	2.895348837209302	361.0	Non Variant of Concern
+B.1.605	2.875	362.0	Non Variant of Concern
+B.1.470	2.857142857142857	363.5	Non Variant of Concern
+B.1.396	2.857142857142857	363.5	Non Variant of Concern
+B.1.177.81	2.8297872340425534	365.0	Non Variant of Concern
+B.1.1.132	2.8	366.5	Non Variant of Concern
+B.1.603	2.8	366.5	Non Variant of Concern
+B.1.411	2.7777777777777777	368.0	Non Variant of Concern
+B.1.1.397	2.7666666666666666	369.0	Non Variant of Concern
+C.35	2.75	370.5	Non Variant of Concern
+B.1.160.26	2.75	370.5	Non Variant of Concern
+B.1.517	2.7333333333333334	372.0	Non Variant of Concern
+B.1.241	2.717948717948718	373.0	Non Variant of Concern
+B.1.170	2.7083333333333335	374.0	Non Variant of Concern
+B.1.221	2.7032967032967035	375.0	Non Variant of Concern
+B.1.36.18	2.683673469387755	376.0	Non Variant of Concern
+B.1.561	2.675	377.0	Non Variant of Concern
+B.1.1.63	2.6666666666666665	379.5	Non Variant of Concern
+B.1.221.4	2.6666666666666665	379.5	Non Variant of Concern
+B.1.459	2.6666666666666665	379.5	Non Variant of Concern
+B.1.558	2.6666666666666665	379.5	Non Variant of Concern
+A.21	2.6363636363636362	382.0	Non Variant of Concern
+B.1.1.37	2.625	383.0	Non Variant of Concern
+B.1.36.1	2.6153846153846154	384.0	Non Variant of Concern
+B.1.258.14	2.6	386.0	Non Variant of Concern
+B.1.1.434	2.6	386.0	Non Variant of Concern
+B.1.564.1	2.6	386.0	Non Variant of Concern
+B.1.438.1	2.5850131463628396	388.0	Non Variant of Concern
+B.1.177.54	2.5833333333333335	389.0	Non Variant of Concern
+B.1.111	2.5714285714285716	390.5	Non Variant of Concern
+B.1.36.8	2.5714285714285716	390.5	Non Variant of Concern
+B.1.126	2.5	394.5	Non Variant of Concern
+B.1.1.326	2.5	394.5	Non Variant of Concern
+B.1.580	2.5	394.5	Non Variant of Concern
+B.1.1.216	2.5	394.5	Non Variant of Concern
+N.6	2.5	394.5	Non Variant of Concern
+B.1.1.25	2.5	394.5	Non Variant of Concern
+B.1.36.35	2.4705882352941178	398.0	Non Variant of Concern
+B.1.596	2.450980392156863	399.0	Non Variant of Concern
+B.1.551	2.3513513513513513	400.0	Non Variant of Concern
+B.1.1.372	2.3333333333333335	402.5	Non Variant of Concern
+B.1.289	2.3333333333333335	402.5	Non Variant of Concern
+B.1.468	2.3333333333333335	402.5	Non Variant of Concern
+B.1.320	2.3333333333333335	402.5	Non Variant of Concern
+B.1.369	2.272727272727273	405.0	Non Variant of Concern
+B.1.524	2.2531645569620253	406.0	Non Variant of Concern
+B.1.36.36	2.25	407.5	Non Variant of Concern
+B.1.1.398	2.25	407.5	Non Variant of Concern
+B.1.560	2.244186046511628	409.0	Non Variant of Concern
+B.1.499	2.24	410.0	Non Variant of Concern
+B.1.595	2.2	411.0	Non Variant of Concern
+B.1.2	2.1574750830564784	412.0	Non Variant of Concern
+B.1.36.16	2.15	413.0	Non Variant of Concern
+B.1.1.336	2.125	414.0	Non Variant of Concern
+B.1.466	2.111111111111111	415.0	Non Variant of Concern
+B.1.36.27	2.1	416.5	Non Variant of Concern
+C.11	2.1	416.5	Non Variant of Concern
+B.1.1.416	2.0714285714285716	418.0	Non Variant of Concern
+B.1.1.214	2.0626702997275204	419.0	Non Variant of Concern
+B.1.232	2.05	420.0	Non Variant of Concern
+B.1.428.2	2.0	445.5	Non Variant of Concern
+B.1.177.57	2.0	445.5	Non Variant of Concern
+W.1	2.0	445.5	Non Variant of Concern
+B.1.177.16	2.0	445.5	Non Variant of Concern
+B.1.236	2.0	445.5	Non Variant of Concern
+B.1.78	2.0	445.5	Non Variant of Concern
+B.1.1.277	2.0	445.5	Non Variant of Concern
+B.1.1.373	2.0	445.5	Non Variant of Concern
+B.1.448	2.0	445.5	Non Variant of Concern
+B.1.545	2.0	445.5	Non Variant of Concern
+B.1.389	2.0	445.5	Non Variant of Concern
+B.1.177.4	2.0	445.5	Non Variant of Concern
+B.1.177.72	2.0	445.5	Non Variant of Concern
+B.1.177.40	2.0	445.5	Non Variant of Concern
+B.1.177.35	2.0	445.5	Non Variant of Concern
+B.1.400.1	2.0	445.5	Non Variant of Concern
+C.23	2.0	445.5	Non Variant of Concern
+B.1.280	2.0	445.5	Non Variant of Concern
+B.1.177.50	2.0	445.5	Non Variant of Concern
+B.1.1.58	2.0	445.5	Non Variant of Concern
+B.1.1.243	2.0	445.5	Non Variant of Concern
+B.1.408	2.0	445.5	Non Variant of Concern
+B.1.493	2.0	445.5	Non Variant of Concern
+B.1.1.521	2.0	445.5	Non Variant of Concern
+B.1.36.24	2.0	445.5	Non Variant of Concern
+W.4	2.0	445.5	Non Variant of Concern
+B.1.177.28	2.0	445.5	Non Variant of Concern
+B.1.319	2.0	445.5	Non Variant of Concern
+B.1.397	2.0	445.5	Non Variant of Concern
+B.1.177.32	2.0	445.5	Non Variant of Concern
+B.1.1.432	2.0	445.5	Non Variant of Concern
+B.1.1.376	2.0	445.5	Non Variant of Concern
+B.1.1.322	2.0	445.5	Non Variant of Concern
+B.1.349	2.0	445.5	Non Variant of Concern
+B.1.1.284	2.0	445.5	Non Variant of Concern
+B.1.1.385	2.0	445.5	Non Variant of Concern
+B.1.1.10	2.0	445.5	Non Variant of Concern
+B.1.1.217	2.0	445.5	Non Variant of Concern
+B.1.177.51	2.0	445.5	Non Variant of Concern
+B.1.159	2.0	445.5	Non Variant of Concern
+B.1.378	2.0	445.5	Non Variant of Concern
+Z.1	2.0	445.5	Non Variant of Concern
+B.1.588	2.0	445.5	Non Variant of Concern
+B.1.567	2.0	445.5	Non Variant of Concern
+C.36	2.0	445.5	Non Variant of Concern
+B.1.213	2.0	445.5	Non Variant of Concern
+B.1.1.368	2.0	445.5	Non Variant of Concern
+B.1.1.404	2.0	445.5	Non Variant of Concern
+B.1.177.76	2.0	445.5	Non Variant of Concern
+B.1.426	2.0	445.5	Non Variant of Concern
+B.1.1.517	1.9230769230769231	471.0	Non Variant of Concern
+P.7	1.9166666666666667	472.0	Non Variant of Concern
+B.6.8	1.9	473.0	Non Variant of Concern
+B.1.582	1.8571428571428572	474.0	Non Variant of Concern
+AU.1	1.8507462686567164	475.0	Non Variant of Concern
+B.1.240	1.84375	476.0	Non Variant of Concern
+B.1.1.328	1.8181818181818181	477.0	Non Variant of Concern
+B.1.404	1.8	478.5	Non Variant of Concern
+B.1.400	1.8	478.5	Non Variant of Concern
+B.1.577	1.7246376811594204	480.0	Non Variant of Concern
+B.1.1.228	1.6666666666666667	481.0	Non Variant of Concern
+AE.8	1.588235294117647	482.0	Non Variant of Concern
+B.1.265	1.5714285714285714	483.0	Non Variant of Concern
+B.1.36	1.512	484.0	Non Variant of Concern
+B.1.1.163	1.5	488.5	Non Variant of Concern
+B.1.473	1.5	488.5	Non Variant of Concern
+B.1.1.435	1.5	488.5	Non Variant of Concern
+B.1.361	1.5	488.5	Non Variant of Concern
+B.1.1.57	1.5	488.5	Non Variant of Concern
+B.1.1.442	1.5	488.5	Non Variant of Concern
+B.1.1.241	1.5	488.5	Non Variant of Concern
+B.1.1.70	1.5	488.5	Non Variant of Concern
+B.1.497	1.3870246085011186	493.0	Non Variant of Concern
+B.1.301	1.3571428571428572	494.0	Non Variant of Concern
+AM.4	1.3333333333333333	497.5	Non Variant of Concern
+B.1.1.311	1.3333333333333333	497.5	Non Variant of Concern
+B.1.1.39	1.3333333333333333	497.5	Non Variant of Concern
+B.1.565	1.3333333333333333	497.5	Non Variant of Concern
+B.1.409	1.3333333333333333	497.5	Non Variant of Concern
+B.1.1.153	1.3333333333333333	497.5	Non Variant of Concern
+B.1.346	1.2307692307692308	501.0	Non Variant of Concern
+B.1.36.37	1.1794871794871795	502.0	Non Variant of Concern
+B.1.568	1.1326530612244898	503.0	Non Variant of Concern
+B.1.110.3	1.1	504.0	Non Variant of Concern
+B.1.9.4	1.0	515.5	Non Variant of Concern
+B.1.139	1.0	515.5	Non Variant of Concern
+B.1.399	1.0	515.5	Non Variant of Concern
+N.3	1.0	515.5	Non Variant of Concern
+B.1.1.161	1.0	515.5	Non Variant of Concern
+B.1.622	1.0	515.5	Non Variant of Concern
+B.1.471	1.0	515.5	Non Variant of Concern
+B.1.1.428	1.0	515.5	Non Variant of Concern
+B.1.1.121	1.0	515.5	Non Variant of Concern
+B.1.1.388	1.0	515.5	Non Variant of Concern
+B.1.36.22	1.0	515.5	Non Variant of Concern
+B.1.36.38	1.0	515.5	Non Variant of Concern
+B.1.371	1.0	515.5	Non Variant of Concern
+B.1.443	1.0	515.5	Non Variant of Concern
+B.1.1.286	1.0	515.5	Non Variant of Concern
+B.1.436	1.0	515.5	Non Variant of Concern
+B.1.425	1.0	515.5	Non Variant of Concern
+B.1.595.4	1.0	515.5	Non Variant of Concern
+B.1.591	1.0	515.5	Non Variant of Concern
+AL.1	1.0	515.5	Non Variant of Concern
+B.1.462	1.0	515.5	Non Variant of Concern
+C.26	1.0	515.5	Non Variant of Concern
+B	0.864406779661017	527.0	Non Variant of Concern
+B.1.516	0.5	528.0	Non Variant of Concern
+A.1	0.14285714285714285	529.0	Non Variant of Concern
+B.6.6	0.0	531.0	Non Variant of Concern
+B.4	0.0	531.0	Non Variant of Concern
+B.3	0.0	531.0	Non Variant of Concern
