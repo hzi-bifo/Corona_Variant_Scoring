@@ -1,0 +1,46 @@
+pango_lineage,designation,date_of_designation,earliest_samples,reference
+BA.2.86,VOI,21-11-2023,24-07-2023,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+JN.1,VOI,09-02-2024,25-08-2023,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+JN.1.7,VUM,03-05-2024,25-09-2023,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+KP.2,VUM,03-05-2024,02-01-2024,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+KP.3,VUM,03-05-2024,11-02-2024,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+JN.1.18,VUM,03-05-2024,02-11-2023,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+LB.1,VUM,28-06-2024,26-04-2024,https://data.who.int/dashboards/covid19/variants; last updated 28-06-2024
+B.1.1.7,VOC,18-12-2020,09-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.351,VOC,18-12-2020,05-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+P.1,VOC,11-01-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.617.2,VOC,11-05-2021,10-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.617.2,VOI,04-04-2021,10-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.1.529,VUM,24-11-2021,11-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.1.529,VOC,26-11-2021,11-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+BF.7,subvariant_VUM,14-03-2023,24-01-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+BQ.1,subvariant_VUM,14-03-2023,07-02-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+BA.2.75,subvariant_VUM,14-03-2023,31-12-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+CH.1.1,subvariant_VUM,14-03-2023,27-07-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+XBB,subvariant_VUM,14-03-2023,13-08-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+XBB.1.5,subvariant_VUM,14-03-2023,05-01-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+XBF,subvariant_VUM,14-03-2023,27-07-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024; no exact designation just when WHO updated the list
+B.1.427,VOI,05-03-2021,03-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.429,VOI,05-03-2021,03-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+P.2,VOI,17-03-2021,04-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.525,VOI,17-03-2021,12-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+P.3,VOI,24-03-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.526,VOI,24-03-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.617.1,VOI,04-04-2021,10-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+C.37,VOI,14-06-2021,12-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.621,VOI,30-08-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+AV.1,VUM,26-05-2021,03-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+AT.1,VUM,09-06-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+R.1,VUM,07-04-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.466.2,VUM,28-04-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.1.519,VUM,02-06-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+C.36.3,VUM,16-06-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.214.2,VUM,30-06-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.1.523,VUM,14-07-2021,05-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.619,VUM,14-07-2021,05-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.620,VUM,14-07-2021,11-2020,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.630,VUM,12-10-2021,03-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.1.318,VUM,02-06-2021,01-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+C.1.2,VUM,01-09-2021,05-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+B.1.640,VUM,22-11-2021,09-2021,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
+XD,VUM,09-03-2021,01-2022,https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants; access date 06-2024
