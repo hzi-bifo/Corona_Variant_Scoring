@@ -1,32 +1,49 @@
 #!/usr/bin/env Rscript
 
+#### Methods Validation Script
+#Author: Katrina Norwood
+#Last Updated: 29/10/24
+
 # Script to validate the different proposed methodologies for scoring SARS-CoV-2 
 # circulating lineages based on their potential antigenicity. Compares these scores
 # to both antigenic cartography distances as well as averaged mFRN values from
 # previous literature.
 
+# To run:
+# 1. start in the /Corona_Variant_Scoring/ home directory
+# 2. in command line run: ```Rscript validation/validation_comparison.R```
+
 library(dplyr)
 library(ggplot2)
 library(psych)
 
-## Importing Data Inputs
+## Importing Data Inputs - to run with args comment out the below lines:
 
-args = commandArgs(trailingOnly=TRUE)
-output <- args[1]
-mfrn <- read.csv(args[2], sep = "\t")
-antigenic_cartography_distances <- args[3]
+#args = commandArgs(trailingOnly=TRUE)
+#output <- args[1]
+output <- "validation/output/"
+#mfrn <- read.csv(args[2], sep = "\t")
+mfrn <- read.csv("validation/mfrn_mabs_vocs.csv", sep = "\t")
+#antigenic_cartography_distances <- read.csv(args[3], sep = "\t")
+antigenic_cartography_distances <- read.csv("validation/antigenic_cartography_distances.csv", sep = ",")
 ## Without weights at antigenic sites (method1) 
-method1_antigenicScores_dir <- args[4]
+#method1_antigenicScores_dir <- args[4]
+method1_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_without_weights_at_antigenic_sites"
 ## With weights at all sites (method2)
-method2_antigenicScores_dir <- args[5]
+#method2_antigenicScores_dir <- args[5]
+method2_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_weights_at_all_sites"
 ## Weights at antigenic sites (method3)
-method3_antigenicScores_dir <- args[6]
+#method3_antigenicScores_dir <- args[6]
+method3_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_weights_at_antigenic_sites"
 ## Without weights at all sites - Baseline (method4)
-method4_antigenicScores_dir <- args[7]
+#method4_antigenicScores_dir <- args[7]
+method4_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_noweights_all_sites"
 ## Weights without directionality at all sites
-method5_antigenicScores_dir <- args[8]
+#method5_antigenicScores_dir <- args[8]
+method5_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_all_sites_reversible_weights"
 ## With new weights at all sites (using amino acid changes that occurred at least 3 times throughout the tree)
-method6_antigenicScores_dir <- args[9]
+#method6_antigenicScores_dir <- args[9]
+method6_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_all_sites_new_weights"
 
 ## Data Cleaning and Normalization for the mAb neutralization scores
 
@@ -49,6 +66,7 @@ mfrn_df <- data.frame(variant, mfrn_means)
 mfrn_df
 
 # mFRN values method 2 - taking the median value without normalization
+
 #rownames(mfrn) <- mfrn$mAb
 #mfrn$mAb <- NULL
 #print(mfrn)
@@ -82,7 +100,8 @@ mfrn_df
 #mfrn_df_norm <- data.frame(variant, mfrn_norm_means)
 #mfrn_df_norm
 
-# Raw mFRN values
+# mFRN values method 4 - using the raw mFRN values
+
 #variant_mFRN_values_conversion <- function(mfrn_df, column_name) {
 #  variant_mfrn_values <- mfrn[c(column_name)]
 #  variant_mfrn_values$variant <- column_name
@@ -128,7 +147,10 @@ create_dataframe <- function(indir){
   # Function for data import and cleaning for the antigenic scoring results
   
   antigenicScores_df <- data.frame(matrix(ncol = 4, nrow = 0))
-  variants_pangoLineage <- c("B.1.1.7", "B.1.351", "P.1", "B.1.429", "B.1.617.2", "C.37", "B.1.621", "BA.1", "BA.2", "BA.1.1", "BA.2.12.1", "BA.4", "BA.5", "XBB", "XBB.1.16", "XBB.1.5", "XBB.2.3", "EG.5", "EG.5.1", "JN.1")
+  variants_pangoLineage <- c("B.1.1.7", "B.1.351", "P.1", "B.1.429", "B.1.617.2", 
+                             "C.37", "B.1.621", "BA.1", "BA.2", "BA.1.1", "BA.2.12.1", 
+                             "BA.4", "BA.5", "XBB", "XBB.1.16", "XBB.1.5", "XBB.2.3", 
+                             "EG.5", "EG.5.1", "JN.1")
   for (file in list.files(path = indir, pattern = ".csv", all.files = TRUE, full.names = TRUE)) {
     print(file)
     df <- read.csv(file, sep = "\t")
@@ -486,3 +508,5 @@ print("Method 2 versus Method 5 R.Test for Cartography: ")
 method_rtest
 print("Method 2 versus Method 5 R.Test for Neutralization Values: ")
 method_rtest_mfrn
+
+knitr::knit_exit()
