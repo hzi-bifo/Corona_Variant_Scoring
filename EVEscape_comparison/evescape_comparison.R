@@ -1,9 +1,13 @@
 #### EVEscape Methods Comparison
 #Author: Katrina Norwood
-#Last Updated: 20/08/24
+#Last Updated: 28/10/24
 
-#Script to compare the evescape immune escpae prediction algorithm to our methods 
-#weighing amino acid changes across the spike protein. 
+# Script to compare the EVEscape immune escape prediction algorithm to our methods 
+# weighing amino acid changes across the spike protein. 
+
+# To run:
+# 1. start in the /Corona_Variant_Scoring/ home directory
+# 2. in command line run: ```Rscript EVEscape_comparison/evescape_comparison.R```
 
 library(dplyr)
 library(ggplot2)
@@ -11,14 +15,20 @@ library(psych)
 
 # Data Importation
 
-args = commandArgs(trailingOnly=TRUE)
-output <- args[1]
-mfrn <- read.csv(args[2], sep = "\t")
-antigenic_cartography_distances <- args[3]
+#args = commandArgs(trailingOnly=TRUE)
+#output <- args[1]
+#mfrn <- read.csv(args[2], sep = "\t")
+#antigenic_cartography_distances <- args[3]
 ## With weights at all spike protein sites
-method_antigenicScores_dir <- args[4]
+#method_antigenicScores_dir <- args[4]
 ## EVEscape scores 
-method_evescores <- args[5]
+#method_evescores <- args[5]
+
+output <- "EVEscape_comparison/"
+mfrn <- read.csv("validation/mfrn_mabs_vocs.csv", sep = "\t")
+antigenic_cartography_distances <- read.csv("validation/antigenic_cartography_distances.csv", sep = ",")
+method_antigenicScores_dir <- "validation/methods_validation_data/WHO_ranked_weights_at_all_sites"
+method_evescores <- read.csv("EVEscape_comparison/EVEscape-01-2020_12-2023.csv", sep = ",")
 
 ## Data Cleaning and Normalization for the mAb neutralization scores
 
@@ -63,12 +73,17 @@ variants_pangoLineage <- c("B.1.1.7", "B.1.351", "P.1", "B.1.429", "B.1.617.2",
                            "EG.5", "EG.5.1", "JN.1")
 method_evescores %>% mutate_at(c("EVEscape.score_sigmoid.avg", "EVEscape.score_sigmoid.max",
                                  "EVEscape.score_pos.avg", "EVEscape.score_pos.max"), as.numeric)
+
+# Using the EVEscape score positive average column for scores
 #method_evescores <- subset(method_evescores, select = c(pango_lineages, EVEscape.score_pos.avg))
 #method_evescores <- method_evescores %>% rename(variant = pango_lineages, antigenic_score = EVEscape.score_pos.avg)
+# Using the EVEscape sigmoid average column for scores
 method_evescores <- subset(method_evescores, select = c(pango_lineages, EVEscape.score_sigmoid.avg))
 method_evescores <- method_evescores %>% rename(variant = pango_lineages, antigenic_score = EVEscape.score_sigmoid.avg)
+# Using the EVEscape sigmoid maximum column for scores
 #method_evescores <- subset(method_evescores, select = c(pango_lineages, EVEscape.score_sigmoid.max)) 
 #method_evescores <- method_evescores %>% rename(variant = pango_lineages, antigenic_score = EVEscape.score_sigmoid.max)
+
 method_evescores <- method_evescores[method_evescores$variant %in% variants_pangoLineage, ]
 
 # Taking the mean of lineages BA.4 and BA.5 to compare with mfrn values
@@ -80,7 +95,6 @@ print(ba45_mean_evescape) # should be 98.31754 for averaged column,
 ba4_ba5_evescape <- c(ba4_ba5_evescape, ba45_mean_evescape)
 method_evescores <- rbind(method_evescores, ba4_ba5_evescape)
 print(method_evescores)
-print(colnames(method_evescores))
 
 # Renaming lineages
 method_evescores$variant[method_evescores$variant == 'B.1.1.7'] <- "Alpha"
@@ -113,13 +127,20 @@ create_dataframe <- function(indir){
   antigenicScores_df_mean <- aggregate(.~Pango.lineage, antigenicScores_df, median) # Takes the median score of the lineages as there may have been high variance in each lineage based on the boxplot comparison
   
   # Taking the mean of lineages BA.4 and BA.5 to compare with mfrn values
-  ba4_ba5 <- c("BA.4_BA.5")
-  ba45_mean <- mean(c(antigenicScores_df_mean$antigenic_score[8], antigenicScores_df_mean$antigenic_score[9]))
-  ba4_ba5 <- c(ba4_ba5, ba45_mean)
-  antigenicScores_df_mean <- rbind(antigenicScores_df_mean, ba4_ba5)
+  ba4_5_mean_antigenic_scores <- c("BA.4_BA.5")
+  value1_df_antigenic_scores <- antigenicScores_df_mean[antigenicScores_df_mean$Pango.lineage == 'BA.4', ]
+  value2_df_antigenic_scores <- antigenicScores_df_mean[antigenicScores_df_mean$Pango.lineage == 'BA.5', ]
+  ba45_mean_antigenic_scores <- mean(c(value1_df_antigenic_scores$antigenic_score[1], 
+                                       value2_df_antigenic_scores$antigenic_score[1]))
+  print(ba45_mean_antigenic_scores)
+  #ba45_mean_antigenic_scores <- mean(c(antigenicScores_df_mean$antigenic_score[10], antigenicScores_df_mean$antigenic_score[11]))
+  #ba4_ba5 <- c(ba4_ba5, ba45_mean)
+  ba4_5_mean_antigenic_scores <- c(ba4_5_mean_antigenic_scores, ba45_mean_antigenic_scores)
+  antigenicScores_df_mean <- rbind(antigenicScores_df_mean, ba4_5_mean_antigenic_scores)
   #antigenicScores_df_mean <- antigenicScores_df_mean[-c(8,9), ]
+  print("antigenicScores_df_mean: ")
   print(antigenicScores_df_mean)
-  print(colnames(antigenicScores_df_mean))
+  #print(colnames(antigenicScores_df_mean))
   
   # Renaming Pango lineages
   antigenicScores_df_mean$Pango.lineage[antigenicScores_df_mean$Pango.lineage == 'B.1.1.7'] <- "Alpha"
@@ -131,7 +152,7 @@ create_dataframe <- function(indir){
   antigenicScores_df_mean$Pango.lineage[antigenicScores_df_mean$Pango.lineage == 'B.1.429'] <- "Epsilon"
   antigenicScores_df_renamed <- antigenicScores_df_mean
   antigenicScores_df_renamed <- antigenicScores_df_renamed %>% rename_at('Pango.lineage', ~'variant')
-  antigenicScores_df_renamed <- antigenicScores_df_renamed[-c(10,11), ]
+  #antigenicScores_df_renamed <- antigenicScores_df_renamed[-c(10,11), ]
   print(antigenicScores_df_renamed)
   
   return(antigenicScores_df_renamed)
@@ -184,18 +205,22 @@ scatterplot <- function (method_df_vis, ylim, file_name, ylabel) {
     scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999", "#332288", "#b66dff", "#999933", "slategray1", "violetred1", "springgreen", "slateblue", "tomato", "tan3", "lightpink4")) +   
     facet_wrap(~comparison, scales = "free_x") + #, strip.position = "bottom"
     labs(x = NULL, y = ylabel) +
-    theme(text = element_text(family = "Helvetica"), strip.placement = "outside", strip.text.x = element_text(size = 10), axis.text = element_text(size=10), axis.title.x = element_text(size = 10), axis.title.y = element_text(size = 10), legend.title = element_text(size=10), legend.text = element_text(size=8)) #strip.background = element_blank(),
+    theme(text = element_text(family = "Helvetica"), strip.placement = "outside", 
+          strip.text.x = element_text(size = 10), axis.text = element_text(size=10), 
+          axis.title.x = element_text(size = 10), axis.title.y = element_text(size = 10), 
+          legend.title = element_text(size=8), legend.text = element_text(size=6)) +
+    guides(col = guide_legend(ncol = 3))
   method_plt
   # Saving plot
   ggsave(method_plt, 
          filename = paste(output, file_name, sep = ""),
          device = "pdf",
-         height = 90, width = 180, units = "mm")
+         height = 45, width = 180, units = "mm")
   return(method_plt)
 }
 
-method_plt <- scatterplot(method_df_vis, 25, "antigenicScores_wit_weights_at_all_sites_comparison_mFRNA_antigenicCartography_2020-01-2023-12_90x180_test.pdf", "Antigenic Alterations Score")
-evescape_plt <- scatterplot(evescape_df_vis, 11, "evescape_scores_sigmoid_avg_comparison_mFRNA_antigenicCartography_90x180.pdf", "EVEscape Score Averaged")
+method_plt <- scatterplot(method_df_vis, 25, "antigenicScores_with_weights_at_all_sites_comparison_mFRNA_antigenicCartography_2020-01-2023-12_45x180.pdf", "Antigenic Alterations Score")
+evescape_plt <- scatterplot(evescape_df_vis, 11, "evescape_scores_sigmoid_avg_comparison_mFRNA_antigenicCartography_45x180.pdf", "EVEscape Score Averaged")
 method_plt
 evescape_plt
 
@@ -254,3 +279,4 @@ method1_spearmans_mfrn
 print("Evescape Spearman's Results on mFRN values: ")
 evescape_spearmans_mfrn
 
+knitr::knit_exit()
