@@ -98,6 +98,8 @@ get_heatmap <- function(folder, countries, current_month, output_name, rename, c
   finalDF <- merge(x = tempDF, y = variantFreq, by = "Pango.lineage", all.x = TRUE)
   finalDF$antigenic_score <- round(finalDF$antigenic_score, 2)
   finalDF <- unique(finalDF)
+  # Adding value for missing z-scores
+  finalDF$zscore[is.na(finalDF$zscore)] <- "NA"
   # Formatting dataframe for JSON file
   colnames(finalDF)[which(names(finalDF) == "Pango.lineage")] <- "lineage"
   colnames(finalDF)[which(names(finalDF) == "AA.Substitutions")] <- "substitutions"
