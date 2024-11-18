@@ -100,11 +100,22 @@ conda activate sarscoverage
 echo "Running Variant Scoring Analysis and Visualization"
 # Antigenic Scoring Analysis
 python "$SOFTWAREPATH""variant_scoring_all_sites.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
+
 # Frequency Heatmap
+echo "Creating Frequency Heatmap"
 if [ -f "$OUTDIR"'output/month_remove.txt' ]; then grep -Fvxf "$OUTDIR"'output/month_remove.txt' "$MONTHS" > "$OUTDIR"'output/month_corrected.txt'; MONTHS="$OUTDIR"'output/month_corrected.txt'; fi
 Rscript "$SOFTWAREPATH""frequency_heatmap.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/" "$OUTDIR""output/antigenic_scores_all.csv"
+#Rscript "$SOFTWAREPATH""frequency_heatmap_coverage.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/" "$OUTDIR""output/antigenic_scores_all.csv"
+
 # Global Map of Antigenic Scores
+echo "Creating Global Map"
 python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt" "$AntigenicScoring""reference/" 
+
+# Country-wise Plot
+#echo "Creating Country-Wise Plot"
+#python "$SOFTWAREPATH""country_frequency_threshold_compiler.py" "$OUTDIR""output/" "$AntigenicScoring""reference/" "$OUTDIR""output/month_vis.txt"
+#Rscript "$SOFTWAREPATH""country_score_over_time_coverage.R" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_scores_map_visualization_cumulative.csv" "$AntigenicScoring""reference/country_list_with_threshold.tsv"
+
 # Selected pVOI table
 #python "$SOFTWAREPATH""pVOI_interactive_table.py" "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
 echo "COMPLETE"
