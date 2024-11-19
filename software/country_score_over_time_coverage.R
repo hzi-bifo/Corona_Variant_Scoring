@@ -2,7 +2,7 @@
 
 #### Country Score Comparison Over Time
 #Author: Katrina Norwood
-#Last Updated: 18/11/24
+#Last Updated: 19/11/24
 
 # Script to plot the change in country antigenic scores from 01-2020 to the most 
 # recent month. Built to run in the CoVerage server pipeline. 
@@ -61,6 +61,14 @@ print(head(cumulative_scores_zscores))
 print(paste("Length of cumulative_scores_zscores: ", nrow(cumulative_scores_zscores)))
 print(paste("Length of cumulative_scores: ", nrow(cumulative_scores)))
 
+# Combining with the lineage information
+print("Combining with lineage information: ")
+cumulative_scores_zscores <- merge(cumulative_scores_zscores, filtered_countries,
+                                                       by.x = c("Country", "date"),
+                                                       by.y = c("Country", "date"))
+print(head(cumulative_scores_zscores))
+print(paste("Length of cumulative_scores_zscores: ", nrow(cumulative_scores_zscores)))
+
 # Creating a subplot with just a select number of countries
 selected_countries <- c("USA", "Germany", "India", "South Africa", "Brazil", "United Kingdom")
 cumulative_scores_countries_df <- cumulative_scores_zscores[cumulative_scores_zscores$Country %in% 
@@ -98,21 +106,29 @@ combined_df$zscore_above <- NA
 combined_df <- combined_df %>% mutate(zscore_above = if_else(zscore < 1, zscore_above, zscore))
 print(head(combined_df))
 
+# Formatting lineage information column, for easier reading
+combined_df$lineages_information <- gsub("},", "},\n", combined_df$lineages_information)
+combined_df$lineages_information <- gsub("'Pango lineage'", "Pango lineage", combined_df$lineages_information)
+combined_df$lineages_information <- gsub("'lineage_frequency'", "Frequency (countrywise)", combined_df$lineages_information)
+combined_df$lineages_information <- gsub("'antigenic_score'", "Antigenic Score", combined_df$lineages_information)
+combined_df$lineages_information <- gsub("'zscore'", "Z-Score", combined_df$lineages_information)
+print(head(combined_df))
+
 ## Plotting the results
 
 # Country Score plot
 plt1 <- ggplot() + 
   geom_line(data = cumulative_scores_others_df_subset, aes(x = date, y = country_score, 
                                                            group = Country, color = "Other",
-                                                           text = paste("Date:", date, 
-                                                                        "<br>Country:", Country, 
-                                                                        "<br>Country Score:", round(country_score, 2)))) +
+                                                           text = paste("<span style='font-size:10px;'><b>Date:</b>", date, 
+                                                                        "<br><b>Country:</b>", Country, 
+                                                                        "<br><b>Country Score:</b>", round(country_score, 2), "</span>"))) +
   #aes(text = paste("Date:", date, "<br>Country:", Country, "<br>Country Score:", round(country_score, 2), "<br>Z-Score:", round(zscore, 2))) +
   geom_line(data = cumulative_scores_countries_df, aes(x = date, y = country_score, 
                                                        group = Country, color = Country,
-                                                       text = paste("Date:", date, 
-                                                                    "<br>Country:", Country, 
-                                                                    "<br>Country Score:", round(country_score, 2)))) + 
+                                                       text = paste("<span style='font-size:10px;'><b>Date:</b>", date, 
+                                                                    "<br><b>Country:</b>", Country, 
+                                                                    "<br><b>Country Score:</b>", round(country_score, 2), "</span>"))) + 
   scale_x_date(date_breaks = "2 months", date_labels = "%m-%Y", expand = c(0, 0)) + 
   scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9", "grey", "#F0E442",
                                 "#0072B2", "#009E73")) +
@@ -124,17 +140,23 @@ plt1 <- ggplot() +
         axis.title.y = element_text(size = 12), 
         legend.title = element_text(size = 12),
         legend.text = element_text(size = 12))
+plt1
 
 # Z-Scores plot (with given countries colored)
 plt2 <- ggplot() + 
   geom_line(data = combined_df, 
             aes(x = date, y = zscore, group = Country,
-                text = paste("Date:", date, "<br>Country:", Country, 
-                             "<br>Z-Score:", round(zscore, 2))), color = "grey") +
+                text = paste("<span style='font-size:10px;'><b>Date</b>:", date, 
+                             "<br><b>Country:</b>", Country,  
+                             "<br><b>Country Z-Score:</b>", round(zscore, 2), 
+                             "<br><b>Lineage Information:</b>", lineages_information, "</span>")), 
+            color = "grey") +
   geom_line(data = combined_df, 
             aes(x = date, y = zscore_above, group = Country, color = Country,
-                text = paste("Date:", date, "<br>Country:", Country, 
-                             "<br>Z-Score:", round(zscore, 2)))) +
+                text = paste("<span style='font-size:10px;'><b>Date:</b>", date, 
+                             "<br><b>Country:</b>", Country, 
+                             "<br><b>Country Z-Score:</b>", round(zscore, 2), 
+                             "<br><b>Lineage Information:</b>", lineages_information, "</span>"))) +
   scale_x_date(date_breaks = "2 months", date_labels = "%m-%Y", expand = c(0, 0)) +
   labs(x = "Month", y = "Country Standardized Z-Score", color = NULL) +
   theme_bw() +
@@ -143,10 +165,12 @@ plt2 <- ggplot() +
         axis.text.x = element_blank(),
         axis.title.y = element_text(size = 12),
         legend.position = "none")
+plt2
 
 # Convert both ggplot objects to plotly .html objects
 final_plt1 <- ggplotly(plt1, tooltip = "text")
 final_plt2 <- ggplotly(plt2, tooltip = "text")
+final_plt2
 
 final_subplot <- subplot(final_plt2, final_plt1, nrows = 2, shareX = TRUE, shareY = TRUE)
 final_subplot <- final_subplot %>% layout(showlegend = FALSE)
