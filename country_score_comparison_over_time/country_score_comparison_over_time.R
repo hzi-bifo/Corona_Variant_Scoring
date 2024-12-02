@@ -2,7 +2,7 @@
 
 #### Country Score Comparison Over Time
 #Author: Katrina Norwood
-#Last Updated: 01/11/24
+#Last Updated: 02/12/24
 
 # Script to plot the change in country antigenic scores over the three year period 
 # of 01-2020 to 12-2023. The cumulative scores file contains countries and their 
@@ -75,8 +75,23 @@ print(paste("cumulative_scores_others_df_subset nrows: ", nrow(cumulative_scores
 sapply(cumulative_scores_countries_df, class)
 sapply(cumulative_scores_others_df_subset, class)
 
+# Recombining the plots so that we have the desired countries (even if they don't
+# meet the desired threshold) as well as the countries meeting the 30 month sequencing 
+# threshold.
+combined_df <- rbind(cumulative_scores_others_df_subset, cumulative_scores_countries_df) # check here, its changing the column type
+print("Combined Df: ")
+print(nrow(combined_df))
+print(head(combined_df))
+
+# Adding two columns for plotting countries with zscore above and below 1
+print("Adding columns with thresholds: ")
+combined_df$zscore_above <- NA_real_
+combined_df <- combined_df %>% mutate(zscore_above = if_else(zscore < 1, zscore_above, zscore))
+print(head(combined_df))
+
 ## Plotting the results
 
+# Country scores plot
 plt1 <- ggplot() + 
   geom_line(data = cumulative_scores_others_df_subset, aes(x = date, y = country_score, 
                                                            group = Country, color = "Other")) +
@@ -91,14 +106,14 @@ plt1 <- ggplot() +
         axis.text.x = element_text(angle = 45), 
         axis.title.x = element_text(size = 8),
         axis.title.y = element_text(size = 8), 
-        legend.title = element_text(size=10),
-        legend.text = element_text(size=8))
-plt1
+        legend.position = "none")
+
 ggsave(plt1, 
        filename = paste(output, "country_dynamics_ant_alt_scores_2020-01-2023-12_80x180.pdf", sep = ""),
        device = "pdf",
-       height = 60, width = 180, units = "mm")
+       height = 50, width = 140, units = "mm")
 
+# Z-scores plot with selected countries highlighted
 plt2 <- ggplot() + 
   geom_line(data = cumulative_scores_others_df_subset, aes(x = date, y = zscore, 
                                                            group = Country, color = "Other")) +
@@ -115,10 +130,32 @@ plt2 <- ggplot() +
         axis.title.y = element_text(size = 8), 
         legend.title = element_text(size=10),
         legend.text = element_text(size=8))
-plt2
+
 ggsave(plt2, 
        filename = paste(output, "country_dynamics_ant_alt_zscores_2020-01-2023-12_80x180.pdf", sep = ""),
        device = "pdf",
-       height = 50, width = 180, units = "mm")
+       height = 50, width = 140, units = "mm")
+
+# Z-scores plot with zscores above 1 highlighted
+plt3 <- ggplot() + 
+  geom_line(data = combined_df, 
+            aes(x = date, y = zscore, group = Country), 
+            color = "grey") +
+  geom_line(data = combined_df, 
+            aes(x = date, y = zscore_above, group = Country, color = Country)) +
+  scale_x_date(date_breaks = "2 months", date_labels = "%m-%Y", expand = c(0, 0)) +
+  labs(x = "Month", y = "Country Standardized Z-Score", color = NULL) +
+  theme_bw() +
+  theme(axis.text = element_text(size = 7, vjust = 0.5, hjust = 1),
+        axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y = element_text(size = 8),
+        legend.title = element_text(size=10),
+        legend.position = "none")
+
+ggsave(plt3, 
+       filename = paste(output, "country_dynamics_ant_alt_zscores_threshold_2020-01-2023-12_80x180.pdf", sep = ""),
+       device = "pdf",
+       height = 50, width = 140, units = "mm")
 
 knitr::knit_exit()

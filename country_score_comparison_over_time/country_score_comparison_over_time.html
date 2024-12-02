@@ -72,13 +72,13 @@
   <p>This report is automatically generated with the R
     package <a href="https://yihui.name/knitr/"><strong>knitr</strong></a>
     (version <code class="knitr inline">1.31</code>)
-    .</p>
+    by by by by by by by by by by .</p>
 
 <div class="chunk" id="auto-report"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">#!/usr/bin/env Rscript</span>
 
 <span class="hl com">#### Country Score Comparison Over Time</span>
 <span class="hl com">#Author: Katrina Norwood</span>
-<span class="hl com">#Last Updated: 01/11/24</span>
+<span class="hl com">#Last Updated: 02/12/24</span>
 
 <span class="hl com"># Script to plot the change in country antigenic scores over the three year period </span>
 <span class="hl com"># of 01-2020 to 12-2023. The cumulative scores file contains countries and their </span>
@@ -93,19 +93,7 @@
 <span class="hl com"># 2. in command line run: ```Rscript country_score_comparison_over_time/country_score_comparison_over_time.R```</span>
 
 <span class="hl kwd">library</span><span class="hl std">(dplyr)</span>
-</pre></div>
-<div class="message"><pre class="knitr r">## 
-## Attaching package: 'dplyr'
-</pre></div>
-<div class="message"><pre class="knitr r">## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-</pre></div>
-<div class="message"><pre class="knitr r">## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-</pre></div>
-<div class="source"><pre class="knitr r"><span class="hl kwd">library</span><span class="hl std">(ggplot2)</span>
+<span class="hl kwd">library</span><span class="hl std">(ggplot2)</span>
 
 <span class="hl std">args</span> <span class="hl kwb">=</span> <span class="hl kwd">commandArgs</span><span class="hl std">(</span><span class="hl kwc">trailingOnly</span><span class="hl std">=</span><span class="hl num">TRUE</span><span class="hl std">)</span>
 <span class="hl com">#output &lt;- args[1]</span>
@@ -725,8 +713,54 @@
 <div class="output"><pre class="knitr r">##       Country  num_isolates seq_frequency country_score          date        zscore 
 ##   &quot;character&quot;     &quot;integer&quot;     &quot;numeric&quot;     &quot;numeric&quot;        &quot;Date&quot;     &quot;numeric&quot;
 </pre></div>
+<div class="source"><pre class="knitr r"><span class="hl com"># Recombining the plots so that we have the desired countries (even if they don't</span>
+<span class="hl com"># meet the desired threshold) as well as the countries meeting the 30 month sequencing </span>
+<span class="hl com"># threshold.</span>
+<span class="hl std">combined_df</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">rbind</span><span class="hl std">(cumulative_scores_others_df_subset, cumulative_scores_countries_df)</span> <span class="hl com"># check here, its changing the column type</span>
+<span class="hl kwd">print</span><span class="hl std">(</span><span class="hl str">&quot;Combined Df: &quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## [1] &quot;Combined Df: &quot;
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">print</span><span class="hl std">(</span><span class="hl kwd">nrow</span><span class="hl std">(combined_df))</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## [1] 1065
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">print</span><span class="hl std">(</span><span class="hl kwd">head</span><span class="hl std">(combined_df))</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## # A tibble: 6 x 6
+## # Groups:   Country [5]
+##   Country   num_isolates seq_frequency country_score date        zscore
+##   &lt;chr&gt;            &lt;int&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;date&gt;       &lt;dbl&gt;
+## 1 France              94        0.108         0.572  2020-01-01  2.00  
+## 2 Australia           16        0.0185        0.108  2020-01-01 -0.352 
+## 3 Singapore           12        0.0138        0.0875 2020-01-01 -0.457 
+## 4 Japan               12        0.0138        0.0396 2020-01-01 -0.700 
+## 5 Italy              203        0.101         0.192  2020-02-01  0.0469
+## 6 Japan              159        0.0788        0.0562 2020-02-01 -0.675
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl com"># Adding two columns for plotting countries with zscore above and below 1</span>
+<span class="hl kwd">print</span><span class="hl std">(</span><span class="hl str">&quot;Adding columns with thresholds: &quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## [1] &quot;Adding columns with thresholds: &quot;
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl std">combined_df</span><span class="hl opt">$</span><span class="hl std">zscore_above</span> <span class="hl kwb">&lt;-</span> <span class="hl num">NA_real_</span>
+<span class="hl std">combined_df</span> <span class="hl kwb">&lt;-</span> <span class="hl std">combined_df</span> <span class="hl opt">%&gt;%</span> <span class="hl kwd">mutate</span><span class="hl std">(</span><span class="hl kwc">zscore_above</span> <span class="hl std">=</span> <span class="hl kwd">if_else</span><span class="hl std">(zscore</span> <span class="hl opt">&lt;</span> <span class="hl num">1</span><span class="hl std">, zscore_above, zscore))</span>
+<span class="hl kwd">print</span><span class="hl std">(</span><span class="hl kwd">head</span><span class="hl std">(combined_df))</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## # A tibble: 6 x 7
+## # Groups:   Country [5]
+##   Country   num_isolates seq_frequency country_score date        zscore zscore_above
+##   &lt;chr&gt;            &lt;int&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;date&gt;       &lt;dbl&gt;        &lt;dbl&gt;
+## 1 France              94        0.108         0.572  2020-01-01  2.00           2.00
+## 2 Australia           16        0.0185        0.108  2020-01-01 -0.352         NA   
+## 3 Singapore           12        0.0138        0.0875 2020-01-01 -0.457         NA   
+## 4 Japan               12        0.0138        0.0396 2020-01-01 -0.700         NA   
+## 5 Italy              203        0.101         0.192  2020-02-01  0.0469        NA   
+## 6 Japan              159        0.0788        0.0562 2020-02-01 -0.675         NA
+</pre></div>
 <div class="source"><pre class="knitr r"><span class="hl com">## Plotting the results</span>
 
+<span class="hl com"># Country scores plot</span>
 <span class="hl std">plt1</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">ggplot</span><span class="hl std">()</span> <span class="hl opt">+</span>
   <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwc">data</span> <span class="hl std">= cumulative_scores_others_df_subset,</span> <span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">= date,</span> <span class="hl kwc">y</span> <span class="hl std">= country_score,</span>
                                                            <span class="hl kwc">group</span> <span class="hl std">= Country,</span> <span class="hl kwc">color</span> <span class="hl std">=</span> <span class="hl str">&quot;Other&quot;</span><span class="hl std">))</span> <span class="hl opt">+</span>
@@ -741,16 +775,14 @@
         <span class="hl kwc">axis.text.x</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">angle</span> <span class="hl std">=</span> <span class="hl num">45</span><span class="hl std">),</span>
         <span class="hl kwc">axis.title.x</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span> <span class="hl std">=</span> <span class="hl num">8</span><span class="hl std">),</span>
         <span class="hl kwc">axis.title.y</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span> <span class="hl std">=</span> <span class="hl num">8</span><span class="hl std">),</span>
-        <span class="hl kwc">legend.title</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">10</span><span class="hl std">),</span>
-        <span class="hl kwc">legend.text</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">8</span><span class="hl std">))</span>
-<span class="hl std">plt1</span>
-</pre></div>
-</div><div class="rimage center"><img src="figure/country-score-comparison-over-time-Rhtmlauto-report-1.png" title="plot of chunk auto-report" alt="plot of chunk auto-report" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">ggsave</span><span class="hl std">(plt1,</span>
+        <span class="hl kwc">legend.position</span> <span class="hl std">=</span> <span class="hl str">&quot;none&quot;</span><span class="hl std">)</span>
+
+<span class="hl kwd">ggsave</span><span class="hl std">(plt1,</span>
        <span class="hl kwc">filename</span> <span class="hl std">=</span> <span class="hl kwd">paste</span><span class="hl std">(output,</span> <span class="hl str">&quot;country_dynamics_ant_alt_scores_2020-01-2023-12_80x180.pdf&quot;</span><span class="hl std">,</span> <span class="hl kwc">sep</span> <span class="hl std">=</span> <span class="hl str">&quot;&quot;</span><span class="hl std">),</span>
        <span class="hl kwc">device</span> <span class="hl std">=</span> <span class="hl str">&quot;pdf&quot;</span><span class="hl std">,</span>
-       <span class="hl kwc">height</span> <span class="hl std">=</span> <span class="hl num">60</span><span class="hl std">,</span> <span class="hl kwc">width</span> <span class="hl std">=</span> <span class="hl num">180</span><span class="hl std">,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;mm&quot;</span><span class="hl std">)</span>
+       <span class="hl kwc">height</span> <span class="hl std">=</span> <span class="hl num">50</span><span class="hl std">,</span> <span class="hl kwc">width</span> <span class="hl std">=</span> <span class="hl num">140</span><span class="hl std">,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;mm&quot;</span><span class="hl std">)</span>
 
+<span class="hl com"># Z-scores plot with selected countries highlighted</span>
 <span class="hl std">plt2</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">ggplot</span><span class="hl std">()</span> <span class="hl opt">+</span>
   <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwc">data</span> <span class="hl std">= cumulative_scores_others_df_subset,</span> <span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">= date,</span> <span class="hl kwc">y</span> <span class="hl std">= zscore,</span>
                                                            <span class="hl kwc">group</span> <span class="hl std">= Country,</span> <span class="hl kwc">color</span> <span class="hl std">=</span> <span class="hl str">&quot;Other&quot;</span><span class="hl std">))</span> <span class="hl opt">+</span>
@@ -767,15 +799,37 @@
         <span class="hl kwc">axis.title.y</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span> <span class="hl std">=</span> <span class="hl num">8</span><span class="hl std">),</span>
         <span class="hl kwc">legend.title</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">10</span><span class="hl std">),</span>
         <span class="hl kwc">legend.text</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">8</span><span class="hl std">))</span>
-<span class="hl std">plt2</span>
-</pre></div>
-</div><div class="rimage center"><img src="figure/country-score-comparison-over-time-Rhtmlauto-report-2.png" title="plot of chunk auto-report" alt="plot of chunk auto-report" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">ggsave</span><span class="hl std">(plt2,</span>
+
+<span class="hl kwd">ggsave</span><span class="hl std">(plt2,</span>
        <span class="hl kwc">filename</span> <span class="hl std">=</span> <span class="hl kwd">paste</span><span class="hl std">(output,</span> <span class="hl str">&quot;country_dynamics_ant_alt_zscores_2020-01-2023-12_80x180.pdf&quot;</span><span class="hl std">,</span> <span class="hl kwc">sep</span> <span class="hl std">=</span> <span class="hl str">&quot;&quot;</span><span class="hl std">),</span>
        <span class="hl kwc">device</span> <span class="hl std">=</span> <span class="hl str">&quot;pdf&quot;</span><span class="hl std">,</span>
-       <span class="hl kwc">height</span> <span class="hl std">=</span> <span class="hl num">50</span><span class="hl std">,</span> <span class="hl kwc">width</span> <span class="hl std">=</span> <span class="hl num">180</span><span class="hl std">,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;mm&quot;</span><span class="hl std">)</span>
+       <span class="hl kwc">height</span> <span class="hl std">=</span> <span class="hl num">50</span><span class="hl std">,</span> <span class="hl kwc">width</span> <span class="hl std">=</span> <span class="hl num">140</span><span class="hl std">,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;mm&quot;</span><span class="hl std">)</span>
 
-<span class="hl std">knitr</span><span class="hl opt">::</span><span class="hl kwd">knit_exit</span><span class="hl std">()</span>
+<span class="hl com"># Z-scores plot with zscores above 1 highlighted</span>
+<span class="hl std">plt3</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">ggplot</span><span class="hl std">()</span> <span class="hl opt">+</span>
+  <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwc">data</span> <span class="hl std">= combined_df,</span>
+            <span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">= date,</span> <span class="hl kwc">y</span> <span class="hl std">= zscore,</span> <span class="hl kwc">group</span> <span class="hl std">= Country),</span>
+            <span class="hl kwc">color</span> <span class="hl std">=</span> <span class="hl str">&quot;grey&quot;</span><span class="hl std">)</span> <span class="hl opt">+</span>
+  <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwc">data</span> <span class="hl std">= combined_df,</span>
+            <span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">= date,</span> <span class="hl kwc">y</span> <span class="hl std">= zscore_above,</span> <span class="hl kwc">group</span> <span class="hl std">= Country,</span> <span class="hl kwc">color</span> <span class="hl std">= Country))</span> <span class="hl opt">+</span>
+  <span class="hl kwd">scale_x_date</span><span class="hl std">(</span><span class="hl kwc">date_breaks</span> <span class="hl std">=</span> <span class="hl str">&quot;2 months&quot;</span><span class="hl std">,</span> <span class="hl kwc">date_labels</span> <span class="hl std">=</span> <span class="hl str">&quot;%m-%Y&quot;</span><span class="hl std">,</span> <span class="hl kwc">expand</span> <span class="hl std">=</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0</span><span class="hl std">,</span> <span class="hl num">0</span><span class="hl std">))</span> <span class="hl opt">+</span>
+  <span class="hl kwd">labs</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">=</span> <span class="hl str">&quot;Month&quot;</span><span class="hl std">,</span> <span class="hl kwc">y</span> <span class="hl std">=</span> <span class="hl str">&quot;Country Standardized Z-Score&quot;</span><span class="hl std">,</span> <span class="hl kwc">color</span> <span class="hl std">=</span> <span class="hl kwa">NULL</span><span class="hl std">)</span> <span class="hl opt">+</span>
+  <span class="hl kwd">theme_bw</span><span class="hl std">()</span> <span class="hl opt">+</span>
+  <span class="hl kwd">theme</span><span class="hl std">(</span><span class="hl kwc">axis.text</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span> <span class="hl std">=</span> <span class="hl num">7</span><span class="hl std">,</span> <span class="hl kwc">vjust</span> <span class="hl std">=</span> <span class="hl num">0.5</span><span class="hl std">,</span> <span class="hl kwc">hjust</span> <span class="hl std">=</span> <span class="hl num">1</span><span class="hl std">),</span>
+        <span class="hl kwc">axis.title.x</span> <span class="hl std">=</span> <span class="hl kwd">element_blank</span><span class="hl std">(),</span>
+        <span class="hl kwc">axis.text.x</span> <span class="hl std">=</span> <span class="hl kwd">element_blank</span><span class="hl std">(),</span>
+        <span class="hl kwc">axis.title.y</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span> <span class="hl std">=</span> <span class="hl num">8</span><span class="hl std">),</span>
+        <span class="hl kwc">legend.title</span> <span class="hl std">=</span> <span class="hl kwd">element_text</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">10</span><span class="hl std">),</span>
+        <span class="hl kwc">legend.position</span> <span class="hl std">=</span> <span class="hl str">&quot;none&quot;</span><span class="hl std">)</span>
+
+<span class="hl kwd">ggsave</span><span class="hl std">(plt3,</span>
+       <span class="hl kwc">filename</span> <span class="hl std">=</span> <span class="hl kwd">paste</span><span class="hl std">(output,</span> <span class="hl str">&quot;country_dynamics_ant_alt_zscores_threshold_2020-01-2023-12_80x180.pdf&quot;</span><span class="hl std">,</span> <span class="hl kwc">sep</span> <span class="hl std">=</span> <span class="hl str">&quot;&quot;</span><span class="hl std">),</span>
+       <span class="hl kwc">device</span> <span class="hl std">=</span> <span class="hl str">&quot;pdf&quot;</span><span class="hl std">,</span>
+       <span class="hl kwc">height</span> <span class="hl std">=</span> <span class="hl num">50</span><span class="hl std">,</span> <span class="hl kwc">width</span> <span class="hl std">=</span> <span class="hl num">140</span><span class="hl std">,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;mm&quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="warning"><pre class="knitr r">## Warning: Removed 800 row(s) containing missing values (geom_path).
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl std">knitr</span><span class="hl opt">::</span><span class="hl kwd">knit_exit</span><span class="hl std">()</span>
 </pre></div>
 </div></div>
 </body>
