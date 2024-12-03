@@ -16,6 +16,10 @@ month_file.seek(0)
 month = month_file.readline()
 month_file.close()
 
+# Creating a month label
+month, year = month.split("-")
+month_label = f"{year}-{month}"
+
 # European only df for focused visualization:
 df_eu = df[df['Continent'] == "Europe"]
 
@@ -31,7 +35,7 @@ fig = px.choropleth(df, locations = "Country",
 #                           title = '<b>Country Antigenic Scores for %s</b>' %month)
 #fig['layout']['title']['font'] = dict(size = 20)
 fig.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 5, len = 0.75), font = dict(size = 14))
-fig.add_annotation(x = 0, y = 1.05, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
+fig.add_annotation(x = 0, y = 1.05, text = '<b>Country Antigenic Scores for %s</b>' %month_label, showarrow = False)
 fig.update_annotations(font = dict(size = 20))
 fig.write_html(output + 'antigenic_score_map.html')
 ## European Map (unscaled)
@@ -44,7 +48,7 @@ fig_eu = px.choropleth(df_eu, locations = "Country",
                            scope = 'europe')
 fig_eu.update_layout(geo = dict(showframe = False), coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 2, len = 0.75), 
         font = dict(size = 14))
-fig_eu.add_annotation(x = 0, y = 1.05, text = '<b>Country Antigenic Scores for %s</b>' %month, showarrow = False)
+fig_eu.add_annotation(x = 0, y = 1.05, text = '<b>Country Antigenic Scores for %s</b>' %month_label, showarrow = False)
 fig_eu.update_annotations(font = dict(size = 20))
 fig_eu.write_html(output + 'antigenic_score_map_europe.html')
 
@@ -72,7 +76,7 @@ fig = px.choropleth(df_cumulative, locations = "Country",
                            color_continuous_scale = 'spectral_r',
                            labels = labels_dict,
 			               range_color = [0, 40],
-                           title = '<b>Country Antigenic Scores from 01-2020 to %s</b>' %month)
+                           title = '<b>Country Antigenic Scores from 2020-01 to %s</b>' %month_label)
 fig['layout']['title']['font'] = dict(size = 20)
 fig.update_layout(coloraxis_colorbar = dict(title = "Country<br>Antigenic Score", dtick = 5, len = 0.75),
                   font = dict(size = 12)) #orientation = "h"
