@@ -102,7 +102,7 @@ print(head(combined_df))
 
 # Adding two columns for plotting countries with zscore above and below 1
 print("Adding columns with thresholds: ")
-combined_df$zscore_above <- NA
+combined_df$zscore_above <-  NA_real_
 combined_df <- combined_df %>% mutate(zscore_above = if_else(zscore < 1, zscore_above, zscore))
 print(head(combined_df))
 
