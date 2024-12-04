@@ -127,4 +127,4 @@ else:
     print("Already added month, passing...")
     pass
 
-freq_countries_monthly_df.to_csv(reference_dir + "country_list_with_threshold_test.tsv", sep='\t', index=False, header=True)
+freq_countries_monthly_df.to_csv(reference_dir + "country_list_with_threshold.tsv", sep='\t', index=False, header=True)
