@@ -120,11 +120,9 @@ freq_countries_monthly_df['date'] = str(month)
 
 # Checking to see if the month has already been added to the cumulative file, and if not, adding it
 print("Adding new countries to the cumulative file: ")
-if not (df_cumulative['date'].eq(month)).any():
-    df_cumulative = pd.concat([df_cumulative, freq_countries_monthly_df])
-    df_cumulative.to_csv(reference_dir + "country_list_with_threshold.tsv", sep='\t', index=False, header=True)
-else:
-    print("Already added month, passing...")
-    pass
+if df_cumulative['date'].eq(month).any():
+    df_cumulative = df_cumulative[~df_cumulative['date'].eq(month)]
+
+df_cumulative = pd.concat([df_cumulative, freq_countries_monthly_df])
 
 freq_countries_monthly_df.to_csv(reference_dir + "country_list_with_threshold.tsv", sep='\t', index=False, header=True)
