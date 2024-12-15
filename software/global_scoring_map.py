@@ -17,8 +17,8 @@ month = month_file.readline()
 month_file.close()
 
 # Creating a month label
-month, year = month.split("-")
-month_label = f"{year}-{month}"
+current_month, year = month.split("-")
+month_label = f"{year}-{current_month}"
 
 # European only df for focused visualization:
 df_eu = df[df['Continent'] == "Europe"]
