@@ -140,7 +140,7 @@ plt1 <- ggplot() +
         axis.title.y = element_text(size = 12), 
         legend.title = element_text(size = 12),
         legend.text = element_text(size = 12))
-plt1
+#plt1
 
 # Z-Scores plot (with given countries colored)
 plt2 <- ggplot() + 
@@ -165,12 +165,12 @@ plt2 <- ggplot() +
         axis.text.x = element_blank(),
         axis.title.y = element_text(size = 12),
         legend.position = "none")
-plt2
+#plt2
 
 # Convert both ggplot objects to plotly .html objects
 final_plt1 <- ggplotly(plt1, tooltip = "text")
 final_plt2 <- ggplotly(plt2, tooltip = "text")
-final_plt2
+#final_plt2
 
 final_subplot <- subplot(final_plt2, final_plt1, nrows = 2, shareX = TRUE, shareY = TRUE)
 final_subplot <- final_subplot %>% layout(showlegend = FALSE)
