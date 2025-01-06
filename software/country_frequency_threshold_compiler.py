@@ -3,7 +3,7 @@
 
 # ## Country Frequency Threshold
 # #### Author: Katrina Norwood
-# #### Last Updated: 19/11/2024
+# #### Last Updated: 06/01/2025
 # 
 # Script to identify which countries have at least 1% of the monthly sequences (mostly for the earlier months ie. Jan 2020) or have 500 sequences. These countries will then be used for the country_score_comparison_over_time analysis. 
 
@@ -122,7 +122,13 @@ freq_countries_monthly_df['date'] = str(month)
 print("Adding new countries to the cumulative file: ")
 if df_cumulative['date'].eq(month).any():
     df_cumulative = df_cumulative[~df_cumulative['date'].eq(month)]
+print("DF Cumulative (with previous month removed): ")
+print(pd.DataFrame.head(df_cumulative))
+print(pd.DataFrame.tail(df_cumulative))
 
 df_cumulative = pd.concat([df_cumulative, freq_countries_monthly_df])
+print("FINAL")
+print(pd.DataFrame.head(df_cumulative))
+print(pd.DataFrame.tail(df_cumulative))
 
-freq_countries_monthly_df.to_csv(reference_dir + "country_list_with_threshold.tsv", sep='\t', index=False, header=True)
+df_cumulative.to_csv(reference_dir + "country_list_with_threshold.tsv", sep='\t', index=False, header=True)
