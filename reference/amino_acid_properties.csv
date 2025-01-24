@@ -1,21 +1,21 @@
-amino_acid	code	hydropathy	charge	pKa_NH2	pKa_COOH	pKR	solubility
-arginine	R	hydrophilic	+	9.09	2.18	13.2	71.8
-asparagine	N	hydrophilic	N	8.8	2.02		2.4
-aspartate	D	hydrophilic	-	9.6	1.88	3.65	0.42
-glutamate	E	hydrophilic	-	9.67	2.19	4.25	0.72
-glutamine	Q	hydrophilic	N	9.13	2.17		2.6
-lysine	K	hydrophilic	+	10.28	8.9	2.2	
-serine	S	hydrophilic	N	9.15	2.21		36.2
-threonine	T	hydrophilic	N	9.12	2.15		freely
-cysteine	C	moderate	N	10.78	1.71	8.33	freely
-histidine	H	moderate	+	8.97	1.78	6	4.19
-methionine	M	moderate	N	9.21	2.28		5.14
-alanine	A	hydrophobic	N	9.87	2.35		15.8
-valine	V	hydrophobic	N	9.72	2.29		5.6
-glycine	G	hydrophobic	N	9.6	2.34		22.5
-isoleucine	I	hydrophobic	N	9.76	2.32		3.36
-leucine	L	hydrophobic	N	9.6	2.36		2.37
-phenylalanine	F	hydrophobic	N	9.24	2.58		2.7
-proline	P	hydrophobic	N	10.6	1.99		1.54
-tryptophan	W	hydrophobic	N	9.39	2.38		1.06
-tyrosine	Y	hydrophobic	N	9.11	2.2	10.1	0.038
+amino_acid	code	hydropathy	charge	pKa_NH2	pKa_COOH	pKR	solubility	molecular_weight
+arginine	R	hydrophilic	+	9.09	2.18	13.2	71.8	174.2
+asparagine	N	hydrophilic	N	8.8	2.02		2.4	132.1
+aspartate	D	hydrophilic	-	9.6	1.88	3.65	0.42	133.1
+glutamate	E	hydrophilic	-	9.67	2.19	4.25	0.72	147.1
+glutamine	Q	hydrophilic	N	9.13	2.17		2.6	146.2
+lysine	K	hydrophilic	+	10.28	8.9	2.2		146.2
+serine	S	hydrophilic	N	9.15	2.21		36.2	105.1
+threonine	T	hydrophilic	N	9.12	2.15		freely	119.1
+cysteine	C	moderate	N	10.78	1.71	8.33	freely	121.2
+histidine	H	moderate	+	8.97	1.78	6	4.19	155.2
+methionine	M	moderate	N	9.21	2.28		5.14	149.2
+alanine	A	hydrophobic	N	9.87	2.35		15.8	89.1
+valine	V	hydrophobic	N	9.72	2.29		5.6	117.1
+glycine	G	hydrophobic	N	9.6	2.34		22.5	75.1
+isoleucine	I	hydrophobic	N	9.76	2.32		3.36	131.2
+leucine	L	hydrophobic	N	9.6	2.36		2.37	131.2
+phenylalanine	F	hydrophobic	N	9.24	2.58		2.7	165.2
+proline	P	hydrophobic	N	10.6	1.99		1.54	115.1
+tryptophan	W	hydrophobic	N	9.39	2.38		1.06	204.2
+tyrosine	Y	hydrophobic	N	9.11	2.2	10.1	0.038	181.2
