@@ -2,7 +2,7 @@
 
 #### Methods Validation Script
 #Author: Katrina Norwood
-#Last Updated: 29/10/24
+#Last Updated: 23/01/25
 
 # Script to validate the different proposed methodologies for scoring SARS-CoV-2 
 # circulating lineages based on their potential antigenicity. Compares these scores
@@ -11,17 +11,21 @@
 
 # To run:
 # 1. start in the /Corona_Variant_Scoring/ home directory
-# 2. in command line run: ```Rscript validation/validation_comparison.R```
+# 2. Confirm that the library writexl is installed otherwise, comment out line 245
+# 3. in command line run: ```Rscript validation/validation_comparison.R```
 
 library(dplyr)
 library(ggplot2)
-library(psych)
+library(scales)
+library(stats)
+#install.packages('writexl')     
+library(writexl)
 
 ## Importing Data Inputs - to run with args comment out the below lines:
 
 #args = commandArgs(trailingOnly=TRUE)
 #output <- args[1]
-output <- "validation/output/"
+output <- "/Users/katrina/Corona_Variant_Scoring/validation/output/"
 #mfrn <- read.csv(args[2], sep = "\t")
 mfrn <- read.csv("validation/mfrn_mabs_vocs.csv", sep = "\t")
 #antigenic_cartography_distances <- read.csv(args[3], sep = "\t")
@@ -65,66 +69,6 @@ variant <- colnames(mfrn)
 mfrn_df <- data.frame(variant, mfrn_means)
 mfrn_df
 
-# mFRN values method 2 - taking the median value without normalization
-
-#rownames(mfrn) <- mfrn$mAb
-#mfrn$mAb <- NULL
-#print(mfrn)
-## Getting means of mfrn values per variant
-#mfrn_medians <- c()
-#for (column in colnames(mfrn)){
-#  print(column)
-#  median_val <- median(mfrn[[column]], na.rm = TRUE)
-#  mfrn_medians <- append(mfrn_medians, median_val)
-#}
-# Making dataframe of mfrn mean values
-#variant <- colnames(mfrn)
-#mfrn_df_median <- data.frame(variant, mfrn_medians)
-#mfrn_df_median
-#mfrn_df
-
-# mFRN values method 3 - taking mean value of normalized data
-
-# Normalizing mFRN data prior to taking the mean
-#min_max_normalization <- function(x) {
-#  (x - min(x)) / (max(x) - min(x))}
-#mfrn_no_missing_values <- na.omit(mfrn)
-#mfrn_norm <- as.data.frame(lapply(mfrn_no_missing_values[1:9], min_max_normalization))
-#mfrn_norm_means <- c()
-#for (column in colnames(mfrn_norm)){
-#  print(column)
-#  mean_val <- mean(mfrn_norm[[column]], na.rm = TRUE)
-#  mfrn_norm_means <- append(mfrn_norm_means, mean_val)
-#}
-#variant <- colnames(mfrn_norm)
-#mfrn_df_norm <- data.frame(variant, mfrn_norm_means)
-#mfrn_df_norm
-
-# mFRN values method 4 - using the raw mFRN values
-
-#variant_mFRN_values_conversion <- function(mfrn_df, column_name) {
-#  variant_mfrn_values <- mfrn[c(column_name)]
-#  variant_mfrn_values$variant <- column_name
-#  variant_mfrn_values <- variant_mfrn_values %>% rename_at(column_name, ~'mfrn_value')
-#  return(variant_mfrn_values)
-#}
-
-#alpha_mfrn_df <- variant_mFRN_values_conversion(mfrn, "Alpha")
-#beta_mfrn_df <- variant_mFRN_values_conversion(mfrn, "Beta")
-#delta_mfrn_df <- variant_mFRN_values_conversion(mfrn, "Delta")
-#gamma_mfrn_df <- variant_mFRN_values_conversion(mfrn, "Gamma")
-#ba1_mfrn_df <- variant_mFRN_values_conversion(mfrn, "BA.1")
-#ba2_mfrn_df <- variant_mFRN_values_conversion(mfrn, "BA.2")
-#ba11_mfrn_df <- variant_mFRN_values_conversion(mfrn, "BA.1.1")
-#ba45_mfrn_df <- variant_mFRN_values_conversion(mfrn, "BA.4_BA.5")
-#ba2121_mfrn_df <- variant_mFRN_values_conversion(mfrn, "BA.2.12.1")
-
-#mfrn_raw_df <- rbind(alpha_mfrn_df, beta_mfrn_df, delta_mfrn_df, gamma_mfrn_df,
-#                     ba1_mfrn_df, ba2_mfrn_df, ba11_mfrn_df, ba45_mfrn_df, ba2121_mfrn_df)
-#na.omit(mfrn_raw_df)
-#rownames(mfrn_raw_df) <- NULL
-#mfrn_raw_df
-
 ## Data Cleaning for antigenic cartography distances
 
 # Calculating the euclidean distances from the D614G variant
@@ -154,34 +98,34 @@ create_dataframe <- function(indir){
   for (file in list.files(path = indir, pattern = ".csv", all.files = TRUE, full.names = TRUE)) {
     print(file)
     df <- read.csv(file, sep = "\t")
-    print(nrow(df))
+    #print(nrow(df))
     variants_df <- df[df$Pango.lineage %in% variants_pangoLineage, ]
-    print(nrow(variants_df))
+    #print(nrow(variants_df))
     antigenicScores_df <- rbind(antigenicScores_df, variants_df)}
   
-  print(antigenicScores_df)
+  #print(antigenicScores_df)
   
   # Taking median antigenic score per pango lineage
   antigenicScores_df <- select(antigenicScores_df, c("Pango.lineage", "antigenic_score"))
   #antigenicScores_df_mean <- aggregate(.~Pango.lineage, antigenicScores_df, mean) # Here we take the mean score of the lineages
   antigenicScores_df_mean <- aggregate(.~Pango.lineage, antigenicScores_df, median) # Takes the median score of the lineages as there may have been high variance in each lineage based on the boxplot comparison
   #antigenicScores_df_mean %>% mutate_at(c("antigenic_score"), as.numeric)
-  print("antigenicScores_df_mean")
-  print(antigenicScores_df_mean)
+  #print("antigenicScores_df_mean")
+  #print(antigenicScores_df_mean)
   
   # Taking the mean of lineages BA.4 and BA.5 to compare with mfrn values
   ba4_ba5 <- c("BA.4_BA.5")
   value1_df <- antigenicScores_df_mean[antigenicScores_df_mean$Pango.lineage == 'BA.4', ]
   value2_df <- antigenicScores_df_mean[antigenicScores_df_mean$Pango.lineage == 'BA.5', ]
   ba45_mean <- mean(c(value1_df$antigenic_score[1], value2_df$antigenic_score[1]))
-  print("BA4_5 mean:")
-  print(ba45_mean)
+  #print("BA4_5 mean:")
+  #print(ba45_mean)
   #ba45_mean <- mean(c(antigenicScores_df_mean$antigenic_score[8], antigenicScores_df_mean$antigenic_score[9]))
   ba4_ba5 <- c(ba4_ba5, ba45_mean)
   antigenicScores_df_mean <- rbind(antigenicScores_df_mean, ba4_ba5)
   #antigenicScores_df_mean <- antigenicScores_df_mean[-c(8,9), ]
-  print(antigenicScores_df_mean)
-  print(colnames(antigenicScores_df_mean))
+  #print(antigenicScores_df_mean)
+  #print(colnames(antigenicScores_df_mean))
   
   # Renaming Pango lineages
   antigenicScores_df_mean$Pango.lineage[antigenicScores_df_mean$Pango.lineage == 'B.1.1.7'] <- "Alpha"
@@ -194,7 +138,7 @@ create_dataframe <- function(indir){
   antigenicScores_df_renamed <- antigenicScores_df_mean
   antigenicScores_df_renamed <- antigenicScores_df_renamed %>% rename_at('Pango.lineage', ~'variant')
   antigenicScores_df_renamed <- antigenicScores_df_renamed[-c(10,11), ]
-  print(antigenicScores_df_renamed)
+  #print(antigenicScores_df_renamed)
   
   return(antigenicScores_df_renamed)
 }
@@ -205,6 +149,57 @@ method3_antigenicScores <- create_dataframe(method3_antigenicScores_dir)
 method4_antigenicScores <- create_dataframe(method4_antigenicScores_dir)
 method5_antigenicScores <- create_dataframe(method5_antigenicScores_dir)
 method6_antigenicScores <- create_dataframe(method6_antigenicScores_dir)
+
+# Compiling antigenic scores and antigenic distances into one dataframe and saving
+scoring_comparison <- antigenic_cartography_distances
+method1_copy <- method1_antigenicScores
+method2_copy <- method2_antigenicScores
+method3_copy <- method3_antigenicScores
+method4_copy <- method4_antigenicScores
+method5_copy <- method5_antigenicScores
+method6_copy <- method6_antigenicScores
+
+colnames(scoring_comparison)[colnames(scoring_comparison) == "distance_from_D614G"] <- "cartography_distances"
+colnames(method1_copy)[colnames(method1_copy) == "antigenic_score"] <- "method1_scores"
+colnames(method2_copy)[colnames(method2_copy) == "antigenic_score"] <- "method2_scores"
+colnames(method3_copy)[colnames(method3_copy) == "antigenic_score"] <- "method3_scores"
+colnames(method4_copy)[colnames(method4_copy) == "antigenic_score"] <- "baseline_scores"
+colnames(method5_copy)[colnames(method5_copy) == "antigenic_score"] <- "method5_scores"
+colnames(method6_copy)[colnames(method6_copy) == "antigenic_score"] <- "method6_scores"
+
+# Merging antigenic scores with antigenic cartography
+dfs_to_join <- list(method1_copy, method2_copy, method3_copy, method5_copy, method6_copy, method4_copy)
+
+for (df in dfs_to_join) {
+  scoring_comparison <- left_join(scoring_comparison, df, by = "variant")
+}
+
+scoring_comparison_numeric <- scoring_comparison %>%
+  mutate(across(-variant, ~as.numeric(as.character(.))))
+
+scoring_comparison_rounded <- scoring_comparison_numeric %>%
+  mutate(across(where(is.numeric), ~round(. , 2)))
+
+print("Scoring Comparison - Antigenic Distances")
+print(scoring_comparison_rounded)
+write.csv(scoring_comparison_rounded, paste(output, "validation_scores.csv", sep = ""), row.names=FALSE)
+
+# Merging antigenic scores with mFRN values
+scoring_comparison_mfrn <- mfrn_df
+
+for (df in dfs_to_join) {
+  scoring_comparison_mfrn <- left_join(scoring_comparison_mfrn, df, by = "variant")
+}
+
+scoring_comparison_mfrn_numeric <- scoring_comparison_mfrn %>%
+  mutate(across(-variant, ~as.numeric(as.character(.))))
+
+scoring_comparison_mfrn_rounded <- scoring_comparison_mfrn_numeric %>%
+  mutate(across(where(is.numeric), ~round(. , 2)))
+
+print("Scoring Comparison - mFRN Values")
+print(scoring_comparison_mfrn_rounded)
+write.csv(scoring_comparison_mfrn_rounded, paste(output, "validation_scores_mFRN.csv", sep = ""), row.names=FALSE)
 
 ## Data Visualization
 
@@ -224,16 +219,15 @@ data_visualization <- function(antigenic_scores_df, antigenic_distances_df, mfrn
     mfrn_df <- mfrn_df %>% rename_at('mfrn_medians', ~'value')}
   merged2 <- merge(x = mfrn_df, y = antigenicScores_df_filtered, by = c("variant")) 
   
-  print("merged1: ")
-  print(merged1)
-  print("merged2: ")
-  print(merged2)
+  #print("merged1: ")
+  #print(merged1)
+  #print("merged2: ")
+  #print(merged2)
   
   df4 <- rbind(merged1, merged2)
   df4$value <- round(df4$value, digits = 2)
   df4$antigenic_score <- round(df4$antigenic_score, digits = 2)
-  df4
-  
+
   return(df4)
 }
 
@@ -246,6 +240,11 @@ method5_df_vis <- data_visualization(method5_antigenicScores, antigenic_cartogra
 method6_df_vis <- data_visualization(method6_antigenicScores, antigenic_cartography_distances, mfrn_df)
 # Raw mFRN values used
 #method2_df_vis_mfrn_median <- data_visualization(method2_antigenicScores, antigenic_cartography_distances, mfrn_df_median)
+
+write_xlsx(list(method1_validation = method1_df_vis, method2_validation = method2_df_vis,
+                method3_validation = method3_df_vis, method4_validation = method4_df_vis,
+                method5_validation = method5_df_vis, method6_validation = method6_df_vis),
+           path = paste(output, "method_validation.xlsx", sep = ""), col_names = TRUE)
 
 ## Visualization
 
@@ -275,87 +274,9 @@ method4_plt <- scatterplot(method4_df_vis, 59, "antigenicScores_noweights_at_all
 method5_plt <- scatterplot(method5_df_vis, 27, "antigenicScores_weights_at_all_sites_nodirectionality_comparison_mFRNA_antigenicCartography_2020-01-2023-12_45x180.pdf")
 method6_plt <- scatterplot(method6_df_vis, 17, "antigenicScores_new_weights_at_all_sites_comparison_mFRNA_antigenicCartography_2020-01-2023-12_45x180.pdf")
 
-# Scatterplots using "raw" mFRN values
-#method2_plt_raw_mfrn <- scatterplot(method2_df_vis_mfrn_median, 25, "antigenicScores_without_weights_at_antigenic_sites_comparison_raw-mFRNA_antigenicCartography_2020-01-2023-12_45x180.pdf")
-#method2_plt_raw_mfrn
-#method1_plt
-
 ## Statistical Testing Between Antigenic Distances and Scores
 
-# Data Set Up
-
-split_df_cartography <- function(input_df) {
-  df_split_cartography <- input_df[input_df$comparison == 'Antigenic Distances', ]
-  df_split_cartography$antigenic_score <- as.numeric(df_split_cartography$antigenic_score)
-  return(df_split_cartography)
-}
-
-split_df_neutralization <- function(input_df) {
-  split_df_neutralization <- input_df[input_df$comparison == 'mFRN Values', ]
-  split_df_neutralization$antigenic_score <- as.numeric(split_df_neutralization$antigenic_score)
-  return(split_df_neutralization)
-}
-
-# Method 1
-method1_split_cartography <- split_df_cartography(method1_df_vis)
-method1_split_neutralization <- split_df_neutralization(method1_df_vis)
-cartography_distances <- as.matrix(method1_split_cartography['value']) # Only need to do this once as its the same across all methods
-neutralization_values <- as.matrix(method1_split_neutralization['value']) # Only need to do this once as its the same across all methods
-method1_antigenic_scores <- as.matrix(method1_split_cartography['antigenic_score']) #as.vector
-method1_antigenic_scores_mfrn <- as.matrix(method1_split_neutralization['antigenic_score']) #as.vector
-cartography_distances
-neutralization_values
-method1_antigenic_scores
-method1_antigenic_scores_mfrn
-# Method 2
-method2_split_cartography <- split_df_cartography(method2_df_vis)
-method2_split_neutralization <- split_df_neutralization(method2_df_vis)
-method2_antigenic_scores <- as.matrix(method2_split_cartography['antigenic_score']) #as.vector
-method2_antigenic_scores_mfrn <- as.matrix(method2_split_neutralization['antigenic_score']) #as.vector
-method2_antigenic_scores
-method2_antigenic_scores_mfrn
-# Method 3
-method3_split_cartography <- split_df_cartography(method3_df_vis)
-method3_split_neutralization <- split_df_neutralization(method3_df_vis)
-method3_antigenic_scores <- as.matrix(method3_split_cartography['antigenic_score']) #as.vector
-method3_antigenic_scores_mfrn <- as.matrix(method3_split_neutralization['antigenic_score']) #as.vector
-method3_antigenic_scores
-method3_antigenic_scores_mfrn
-# Method 4
-method4_split_cartography <- split_df_cartography(method4_df_vis)
-method4_split_neutralization <- split_df_neutralization(method4_df_vis)
-method4_antigenic_scores <- as.matrix(method4_split_cartography['antigenic_score']) #as.vector
-method4_antigenic_scores_mfrn <- as.matrix(method4_split_neutralization['antigenic_score']) #as.vector
-method4_antigenic_scores
-method4_antigenic_scores_mfrn
-# Method 5
-method5_split_cartography <- split_df_cartography(method5_df_vis)
-method5_split_neutralization <- split_df_neutralization(method5_df_vis)
-method5_antigenic_scores <- as.matrix(method5_split_cartography['antigenic_score']) #as.vector
-method5_antigenic_scores_mfrn <- as.matrix(method5_split_neutralization['antigenic_score']) #as.vector
-method5_antigenic_scores
-method5_antigenic_scores_mfrn
-# Method 6
-method6_split_cartography <- split_df_cartography(method6_df_vis)
-method6_split_neutralization <- split_df_neutralization(method6_df_vis)
-method6_antigenic_scores <- as.matrix(method6_split_cartography['antigenic_score']) #as.vector
-method6_antigenic_scores_mfrn <- as.matrix(method6_split_neutralization['antigenic_score']) #as.vector
-method6_antigenic_scores
-method6_antigenic_scores_mfrn
-
-# Test with median mFRN values
-#method2_split_neutralization_median <- split_df_neutralization(method2_df_vis_mfrn_median)
-#neutralization_values_median <- as.matrix(method2_split_neutralization_median['value'])
-#method2_antigenic_scores_mfrn_median <- as.matrix(method2_split_neutralization_median['antigenic_score']) #as.vector
-#method2_antigenic_scores_mfrn_median
-
 # Testing for outliers within the data
-boxplot_mfrn_values <- ggplot(method1_split_neutralization, aes(x = comparison, y = value)) + geom_boxplot()
-boxplot_mfrn_values
-
-boxplot_cartography_values <- ggplot(method1_split_cartography, aes(x = comparison, y = value)) + geom_boxplot()
-boxplot_cartography_values
-
 boxplot_method1_antigenic_scores <- ggplot(method1_df_vis, aes(x = comparison, y = antigenic_score)) + geom_boxplot()
 boxplot_method1_antigenic_scores
 
@@ -377,136 +298,90 @@ boxplot_method6_antigenic_scores
 # Perform Correlation Test
 # Ultimately the Spearman's Correlation was used due to potential outliers 
 
-# Perform the Pearson's Correlation
-# Against Antigenic Distances
-method1_pearsons <- cor.test(cartography_distances, method1_antigenic_scores)
-method2_pearsons <- cor.test(cartography_distances, method2_antigenic_scores)
-method3_pearsons <- cor.test(cartography_distances, method3_antigenic_scores)
-method4_pearsons <- cor.test(cartography_distances, method4_antigenic_scores)
-method5_pearsons <- cor.test(cartography_distances, method5_antigenic_scores)
-method6_pearsons <- cor.test(cartography_distances, method6_antigenic_scores)
-print("Method 1 Pearson's Results: ")
-method1_pearsons
-print("Method 2 Pearson's Results: ")
-method2_pearsons
-print("Method 3 Pearson's Results: ")
-method3_pearsons
-print("Method 4 Pearson's Results: ")
-method4_pearsons
-print("Method 5 Pearson's Results: ")
-method5_pearsons
-print("Method 6 Pearson's Results: ")
-method6_pearsons
-# Against mFRN Values
-method1_pearsons_mfrn <- cor.test(neutralization_values, method1_antigenic_scores_mfrn)
-method2_pearsons_mfrn <- cor.test(neutralization_values, method2_antigenic_scores_mfrn)
-method3_pearsons_mfrn <- cor.test(neutralization_values, method3_antigenic_scores_mfrn)
-method4_pearsons_mfrn <- cor.test(neutralization_values, method4_antigenic_scores_mfrn)
-method5_pearsons_mfrn <- cor.test(neutralization_values, method5_antigenic_scores_mfrn)
-method6_pearsons_mfrn <- cor.test(neutralization_values, method6_antigenic_scores_mfrn)
-print("Method 1 Pearson's Results on mFRN values: ")
-method1_pearsons_mfrn
-print("Method 2 Pearson's Results on mFRN values: ")
-method2_pearsons_mfrn
-print("Method 3 Pearson's Results on mFRN values: ")
-method3_pearsons_mfrn
-print("Method 4 Pearson's Results on mFRN values: ")
-method4_pearsons_mfrn
-print("Method 5 Pearson's Results on mFRN values: ")
-method5_pearsons_mfrn
-print("Method 6 Pearson's Results on mFRN values: ")
-method6_pearsons_mfrn
-
-# Perform Spearman's Correlation Test 
+# Perform Spearman's Correlation Test
 # Against Antigenic Distance
-method1_spearmans <- cor.test(cartography_distances, method1_antigenic_scores, method = 'spearman', exact = FALSE)
-method2_spearmans <- cor.test(cartography_distances, method2_antigenic_scores, method = 'spearman', exact = FALSE)
-method3_spearmans <- cor.test(cartography_distances, method3_antigenic_scores, method = 'spearman', exact = FALSE)
-method4_spearmans <- cor.test(cartography_distances, method4_antigenic_scores, method = 'spearman', exact = FALSE)
-method5_spearmans <- cor.test(cartography_distances, method5_antigenic_scores, method = 'spearman', exact = FALSE)
-method6_spearmans <- cor.test(cartography_distances, method6_antigenic_scores, method = 'spearman', exact = FALSE)
+method1_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$method1_scores, method = 'spearman', exact = FALSE)
+method2_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$method2_scores, method = 'spearman', exact = FALSE)
+method3_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$method3_scores, method = 'spearman', exact = FALSE)
+method4_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$baseline_scores, method = 'spearman', exact = FALSE)
+method5_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$method5_scores, method = 'spearman', exact = FALSE)
+method6_spearmans <- cor.test(scoring_comparison_rounded$cartography_distances, scoring_comparison_rounded$method6_scores, method = 'spearman', exact = FALSE)
 print("Method 1 Spearman's Results: ")
-method1_spearmans
+print(method1_spearmans)
 print("Method 2 Spearman's Results: ")
-method2_spearmans
+print(method2_spearmans)
 print("Method 3 Spearman's Results: ")
-method3_spearmans
+print(method3_spearmans)
 print("Method 4 Spearman's Results: ")
-method4_spearmans
+print(method4_spearmans)
 print("Method 5 Spearman's Results: ")
-method5_spearmans
+print(method5_spearmans)
 print("Method 6 Spearman's Results: ")
-method6_spearmans
+print(method6_spearmans)
+
+# p-value correction (Benjamini-Hochberg)
+methods <- c("method1", "method2", "method3", "method4", "method5", "method6")
+pvalues_cartography <- c(method1_spearmans$p.value, method2_spearmans$p.value, method3_spearmans$p.value,
+                         method4_spearmans$p.value, method5_spearmans$p.value, method6_spearmans$p.value)
+pvalues_cartography_adjusted <- data.frame(methods, pvalues_cartography)
+pvalues_cartography_adjusted$pvalues_cartography_adjusted <- p.adjust(pvalues_cartography_adjusted$pvalues_cartography, method = "BH")
+pvalues_cartography_adjusted
+
 # Against mFRN Values
-method1_spearmans_mfrn <- cor.test(neutralization_values, method1_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
-method2_spearmans_mfrn <- cor.test(neutralization_values, method2_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
-method3_spearmans_mfrn <- cor.test(neutralization_values, method3_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
-method4_spearmans_mfrn <- cor.test(neutralization_values, method4_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
-method5_spearmans_mfrn <- cor.test(neutralization_values, method5_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
-method6_spearmans_mfrn <- cor.test(neutralization_values, method6_antigenic_scores_mfrn, method = 'spearman', exact = FALSE)
+method1_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$method1_scores, method = 'spearman', exact = FALSE)
+method2_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$method2_scores, method = 'spearman', exact = FALSE)
+method3_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$method3_scores, method = 'spearman', exact = FALSE)
+method4_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$baseline_scores, method = 'spearman', exact = FALSE)
+method5_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$method5_scores, method = 'spearman', exact = FALSE)
+method6_spearmans_mfrn <- cor.test(scoring_comparison_mfrn_rounded$mfrn_means, scoring_comparison_mfrn_rounded$method6_scores, method = 'spearman', exact = FALSE)
 print("Method 1 Spearman's Results on mFRN values: ")
-method1_spearmans_mfrn
+print(method1_spearmans_mfrn)
 print("Method 2 Spearman's Results on mFRN values: ")
-method2_spearmans_mfrn
+print(method2_spearmans_mfrn)
 print("Method 3 Spearman's Results on mFRN values: ")
-method3_spearmans_mfrn
+print(method3_spearmans_mfrn)
 print("Method 4 Spearman's Results on mFRN values: ")
-method4_spearmans_mfrn
+print(method4_spearmans_mfrn)
 print("Method 5 Spearman's Results on mFRN values: ")
-method5_spearmans_mfrn
+print(method5_spearmans_mfrn)
 print("Method 6 Spearman's Results on mFRN values: ")
-method6_spearmans_mfrn
+print(method6_spearmans_mfrn)
 
-# r.test to compare correlation values (the difference between two independent correlations, baseline vs method)
-method1_corr_cartography <- method1_pearsons$estimate
-method1_corr_mfrn <- method1_pearsons_mfrn$estimate
-method2_corr_cartography <- method2_pearsons$estimate
-method2_corr_mfrn <- method2_pearsons_mfrn$estimate
-method3_corr_cartography <- method3_pearsons$estimate
-method3_corr_mfrn <- method3_pearsons_mfrn$estimate
-method4_corr_cartography <- method4_pearsons$estimate
-method4_corr_mfrn <- method4_pearsons_mfrn$estimate
+# p-value correction (Benjamini-Hochberg)
+pvalues_mfrn <- c(method1_spearmans_mfrn$p.value, method2_spearmans_mfrn$p.value, method3_spearmans_mfrn$p.value,
+                         method4_spearmans_mfrn$p.value, method5_spearmans_mfrn$p.value, method6_spearmans_mfrn$p.value)
+pvalues_mfrn_adjusted <- data.frame(methods, pvalues_mfrn)
+pvalues_mfrn_adjusted$pvalues_mfrn_adjusted <- p.adjust(pvalues_mfrn_adjusted$pvalues_mfrn, method = "BH")
+pvalues_mfrn_adjusted
 
-method1_rtest <- r.test(length(cartography_distances), method1_corr_cartography, 
-                        r34 = method4_corr_cartography, pooled=TRUE, twotailed = TRUE)
-method1_rtest_mfrn <- r.test(length(neutralization_values), method1_corr_mfrn, 
-                        r34 = method4_corr_mfrn, pooled=TRUE, twotailed = TRUE)
-method2_rtest <- r.test(length(cartography_distances), method2_corr_cartography, 
-                        r34 = method4_corr_cartography, pooled=TRUE, twotailed = TRUE)
-method2_rtest_mfrn <- r.test(length(neutralization_values), method2_corr_mfrn, 
-                             r34 = method4_corr_mfrn, pooled=TRUE, twotailed = TRUE)
-method3_rtest <- r.test(length(cartography_distances), method3_corr_cartography, 
-                        r34 = method4_corr_cartography, pooled=TRUE, twotailed = TRUE)
-method3_rtest_mfrn <- r.test(length(neutralization_values), method3_corr_mfrn, 
-                             r34 = method4_corr_mfrn, pooled=TRUE, twotailed = TRUE)
+# Wilcoxon test to compare correlation coefficients of selected method and baseline (method 4)
 
-print("Method 1 versus Method 4 (Baseline) R.Test for Cartography: ")
-method1_rtest
-print("Method 1 versus Method 4 (Baseline) R.Test for Neutralization Values: ")
-method1_rtest_mfrn
-print("Method 2 versus Method 4 (Baseline) R.Test for Cartography: ")
-method2_rtest
-print("Method 2 versus Method 4 (Baseline) R.Test for Neutralization Values: ")
-method2_rtest_mfrn
-print("Method 3 versus Method 4 (Baseline) R.Test for Cartography: ")
-method3_rtest
-print("Method 3 versus Method 4 (Baseline) R.Test for Neutralization Values: ")
-method3_rtest_mfrn
+# Apply Min-Max Scaling to all numeric columns (except 'variant')
+min_max_scale <- function(x) {
+  (x - min(x)) / (max(x) - min(x))}
 
-# r.test to compare correlation values (the difference between two independent correlations, two best methods)
-method2_corr_cartography <- method2_spearmans$estimate
-method2_corr_mfrn <- method2_spearmans_mfrn$estimate
-method5_corr_cartography <- method5_spearmans$estimate
-method5_corr_mfrn <- method5_spearmans_mfrn$estimate
+scaled_data <- scoring_comparison_rounded %>%
+  mutate(across(where(is.numeric) & !variant, min_max_scale))
 
-method_rtest <- r.test(length(cartography_distances), method2_corr_cartography, 
-                        r34 = method5_corr_cartography, pooled=TRUE, twotailed = TRUE)
-method_rtest_mfrn <- r.test(length(neutralization_values), method2_corr_mfrn, 
-                             r34 = method5_corr_mfrn, pooled=TRUE, twotailed = TRUE)
+cartography_distances_scaled <- scaled_data$cartography_distances
+method2_scores_scaled <- scaled_data$method2_scores
+baseline_scores_scaled <- scaled_data$baseline_scores
 
-print("Method 2 versus Method 5 R.Test for Cartography: ")
-method_rtest
-print("Method 2 versus Method 5 R.Test for Neutralization Values: ")
-method_rtest_mfrn
+# Calculate absolute deviations (how much the scores deviate from the cartography distances)
+deviation_method2_scaled <- abs(cartography_distances_scaled - method2_scores_scaled)
+deviation_baseline_scaled <- abs(cartography_distances_scaled - baseline_scores_scaled)
+
+# Wilcoxon signed-rank test
+wilcoxon_test <- wilcox.test(deviation_method2_scaled, deviation_baseline_scaled, alternative = "less", exact = FALSE, correct = TRUE, paired = FALSE) # Added paired = FALSE, though this should be default
+
+# Summarize results
+results <- list(
+  "Test Statistic (Wilcoxon rank sum statistic)" = wilcoxon_test$statistic, # Wilcoxon rank sum statistic
+  "P-Value" = wilcoxon_test$p.value,
+  "Conclusion" = ifelse(wilcoxon_test$p.value < 0.05, 
+                        "Method 2 is significantly better than the baseline (p < 0.05).", 
+                        "No significant difference between Method 2 and the baseline.")
+)
+print(results)
 
 knitr::knit_exit()
