@@ -1,0 +1,70 @@
+These are only mutations which promote immunity scape							
+amino_acid_change	residue_site		Antigenic Score	residue_site_count			
+	Influenza	Sars_Cov_2		Anfulenza	Sars_Cov_2	Immune Escape Properties	Reference
+A - T	A131T		1.25	1	0		
+A - V		A475V	0.42	0	1	resistance to neutralizing antibodies and could weaken the hydrogen bond and hydrophobic interaction; strengthened resistance to class 1 antibodies (Liu et al.)	Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012); Liu et al., 2024 (https://doi.org/10.1101/2024.12.27.630350)
+D - G		D614G (more infectious)	0.26	0	1	D614G improves infectivity but not necessarily antigenicity	Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012)
+D - H		D769H, D796H; D339H		0	2	D339H likely reduced neutralization of BA.2.86 (Qu et al.)	Qu et al., 2024 (10.1016/j.cell.2023.12.026)
+E - A		E484A		0	1	reduces antibody neutralization	Cui et al., 2022 (10.1016/j.cell.2022.01.019)
+E - D		E484D	0.26	0	1	conferred resistance to each of four convalescent sera tested	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0)
+E - G		E484G	0.08	0	1	conferred resistance to each of four convalescent sera tested	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0)
+E - K	E158K, E83K	E484K	1.09	2	1	reduces antibody neutralization titers - any of the changes at E484 (K, Q, or P) in SARS-CoV-2, negative to positive amino acid change, negative to positive change; E484K reduces NAbs binding in Omicron (Cui et al.); onsiderable loss of neutralizing activity of convalescent sera and mAb (Zabidi et. al., 2023)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Cui et al., 2022 (10.1016/j.cell.2022.01.019); Zabidi et al., 2023 (10.3390/v15040944)
+F - A		F157A		0	1	reduces neutralization by mAb 2489	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0)
+F - L		F490L; F456L	0.31	0	2	F490L resistant to some antibodies and may erode the hydrophobic interaction between molecules; F456L increases neutralization resistance in KP.2 lineage (Wang et al.)	Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012); Wang et al., 2024 (10.1080/22221751.2024.2402880)
+F - S		F490S; F486S; F59S	0.53			escaped 3 out of 4 sera - SARS-CoV-2 (Harvey et al.); F490S reduced susceptibility to neturalizing Abs and F486S increases neutralization resistance of Abs (Zabidi et al.); F59S reduced neutralization for the XEC variant (Li et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Zabidi et al., 2023 (); Li et al., 2024 (10.1101/2024.11.12.623078)
+G - D	G144D, G124D, G225D	G446D; G339D	0.82	3	1	escaped 3 out of 4 sera - SARS-CoV-2; G339D associated with escape from a subset of NAbs (Zabidi et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Zabidi et al., 2023 (10.3390/v15040944)
+G - E	G158E, G135E		0.80	2	0		
+G - S		G476S; G496S; G446S	0.20	0	1	G496S antibody evasion of Omicron; G446S reduced neutralization; G446S contributes to neutralization resistance of Abs generated from exisiting vaccines (Zabidi et al.)	Cui et al., 2022 (10.1016/j.cell.2022.01.019); Zabidi et al., 2023 (10.3390/v15040944)
+G - V		G446V	0.00	0	1	escaped 3 out of 4 sera - SARS-CoV-2; reduction in neutralization (Greaney et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Greaney et al., 2021 (10.1016/j.chom.2021.02.003)
+H - Q	H75Q		2.47	1	0		
+H - T	H155T		2.47	1	0		
+I - S	I278S		0.75	1	0		
+I - V	I217V		0.51	1	0		
+K - E	K62E	K444E	1.18	1	1	escaped 3 out of 4 of the tested sera - SARS-CoV-2; resistant to some antibodies (Liu et al., 2021)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+K - N		K417N, K444N	1.01	0	2	K417N resulted in a -27 fold reduction in neutralization by mAb COVOX-40; K417N alters the key interactions with class I NAbs leading to immune evasion (Zabidi et al.); K444N resistant to some mAbs (Liu et al.)	Chen et al., 2021 ( https://doi.org/10.1038/s41591-021-01294-w); Zabidi et al., 2023 (10.3390/v15040944); Liu et al. (10.1016/j.chom.2021.01.014)
+K - Q	K156Q	K444Q ?	1.28	1	1	neutral to positive charge change; unable to find something definitive on this change	
+K - R	K50R, K189R	K444R 	0.46	2	1	positive to neutral charge change; K444R resistant to neutralization by vaccinated sera (Wang et al.)	Wang et al., 2022 (https://doi.org/10.1002/jmv.28407)
+K - T		K417T; K444T; K356T	0.70	0	1	K444T reduces potency of class III antibodies; K356T enhances immune escape of pseudoviruses (Bdeir et al.)	Ao et al., 2024 (https://doi.org/10.1002/mco2.239); Bdeir et al., 2025 (10.1038/s41467-025-55871-5)
+K - V		K417V		0	1		
+L - F		L18F; L455F	0.55	0	1	escape of numerous NTD binding mAbs; L455F confers some immune escape (Focosi et al.)	Zabidi et al., 2023 (10.3390/v15040944); Focosi et al., 2023 (https://doi.org/10.3390/v16010003)
+L - I 	L25I		0.77	1	0		
+L - R		L452R; L441R		0	1	L452R escaped 3 out of 4 sera - SARS-CoV-2; resistance to some antibodies; L441R resistant to some polyclonal human immune sera (Liu et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012); Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+M - I	M260I		1.17	1	0		
+N - D		N440D, N450D	0.60	0	2	N450D resistant to some polyclonal human immune sera (Liu et al.)	Liu et al., 2021 (10.1016/j.chom.2021.01.014);
+N - K	N145K, N276K	N439K, N440K, N450K, N460K	0.76	2	3	large antigenic effect (influenza); responsible for cluster transitions in 12 pairs of strains with an average antigenic distance between the pairs of 4.0 units - WHO recommends vaccine strain updates with a distance of 2; neutral to positive charge change; N439K significantly alters neutralization by polyclonal antibodies in SARS-CoV-2; N440K reduces neutralization (Cui); N440K confers high resistance to certain mAbs (Zabidi et al.); N450K resistant to some mAbs (Liu et al.); N460K reduces neutralization (Ao et al.; Ma et al.)	Smith et al., 2004 (DOI: 10.1126/science.1097211); Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Cui et al., 2022 (10.1016/j.cell.2022.01.019); Zabidi et al., 2023 (10.3390/v15040944); Liu et al., 2021 (10.1016/j.chom.2021.01.014); Ao et al., 2023 (https://doi.org/10.1002/mco2.239); Ma et al., 2024 (https://doi.org/10.1093/nsr/nwae196)
+N - Q		N234Q		0	1	resistant to antibody neutralization	Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012)
+N - S	N262S		0.51	1	0		
+N - Y	N137Y	N450Y, N501Y	1.11	1	2	reduces neutralization of RBD antibodies; results in conformational changes; N501Y reduces NAb binding in Omicron variant; N450Y resistant to some polyclonal human immune sera (Liu et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Cui et al., 2022 (10.1016/j.cell.2022.01.019); Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+P - H		P681H	0.26	0	1	P681H enhances virus' ability to evade innate immune responses (Jose Lista et al.)	Jose Lista et al., 2022 (10.1128/jvi.01250-22)
+P - L		P499L		0	1	resistant to some mAbs (Liu et al.)	Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+P - S		P479S	0.52	0	1		
+Q - H	Q156H	Q677H	1.21	1	0	Q677H increases neutralization resistance	Zeng et al., 2021 (10.1128/mBio.02510-21)
+Q - K	Q189K	Q493K	1.07	1	1		
+R - K	R207K	R346K	0.85	1	0	R346K reduces binding of the antibodies with RBD (Zabidi et al.)	Zabidi et al., 2023 (10.3390/v15040944)
+S - G	S186G	S477G	0.69	1	1	conferred resistance to 2 out of 4 sera tested - SARS-CoV-2 (Harvey et al.); resistant to some mAbs (Liu et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+S - N	S145N	S477N; S446N	0.45	1	1	S477N change resistant to panel of RBD targeting mAbs; "persisted at a frequency of between 4% and 7% of sequences globally since mid-June 2020" (Harvey); reduces neutralization in Omicron; S446N enhances immune evasion (Liu et al.) 	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Greaney et al., 2021 (10.1016/j.chom.2021.02.003); Cui et al., 2022 (10.1016/j.cell.2022.01.019); Liu et al., 2024 (https://doi.org/10.1101/2024.12.27.630350)
+S - R		S477R?	0.79	0	1	I find mix reviews about this, nothing specific about the change but the site yes; some studies state that it may reduce neutralization but then others say this is due to binding affinity or its no greater than WT (Harvey)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Greaney et al., 2021 (10.1016/j.chom.2021.02.003)
+T - I		T478I; T572I	0.31	0	1	impact antigenicity (Harvey et al.); yielded resistance to a few mAbs (Liu et al.); T572I slight bolster to immune evasion	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Greaney et al., 2021 (10.1016/j.chom.2021.02.003); Liu et al., 2021 (10.1016/j.chom.2021.01.014); Wang et al., 2024 (10.1080/22221751.2024.2402880)
+T - K		T478K	0.51			mutation of the Delta variant, more likely to undergo secondary mutation (?) in low titer antibody  environment leading to decreased neutralization - SARS-CoV-2; substantially impairs NAb binding (Cui et al.); increases electrostatic potential and interferes with spike RBD interaction with convalescent sera contributing to immune evasion (Zabidi et al.)	Tian et al., 2021 (https://doi.org/10.3389/fimmu.2021.751778); Cui et al., 2022 (10.1016/j.cell.2022.01.019); Zabidi et al., 2023 (10.3390/v15040944)
+T - N	T122N		0.29	1	0		
+T - Y	T155Y		1.51	1	0	cluster difference substitution for the HK68-EN72 transition in influenza with an antigenic distance of 3.4	Smith et al., 2004 (DOI: 10.1126/science.1097211)
+V - A	V196A	V483A	1.29	1	1	resistant to neutralizing antibodies	Li et al., 2020 (https://doi.org/10.1016/j.cell.2020.07.012); Ashwaq et al., 2021 (10.2217/fvl-2020-0384)
+V - I	V144I, V202I		0.84	2	0		
+W - R	W222R	W152R	2.47	1	0	loss of reactivity to anti-NTD neutralizing antibodies (Kubik et al.)	Kubik et al., 2021 (https://doi.org/10.3390/v13112114)
+Y - F		Y453F	0.67	0	1	reduces neutralization by mAbs	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0)
+Y - H	Y155H	Y489H; Y505H; Y449H	1.08	1	1	Y505H reduces neutralization in Omicron variant; neutral to positive charge change; Y449H of the C.1.2 variant was resistant to neutralization (Tada et al.)	Cui et al., 2022 (10.1016/j.cell.2022.01.019); Tada et al., 2021 (10.1016/j.celrep.2021.110237)
+Q - R		Q493R; Q498R	0.72			Q439R key immune escape site in Omicron, resistance to Class I-III antibodies ; Q498R reduces neutralization in Omicron variant	Cui et al., 2022 (10.1016/j.cell.2022.01.019)
+S - L		S371L	0.28			greater resistance to neutralizing antibodies 	Cui et al., 2022 (10.1016/j.cell.2022.01.019)
+S - P		S373P; S494P	0.69			greater resistance to neutralizing antibodies; S494P reduces antibody neutralization of convalescent and post-immunization sera, particularly when combined with E484K and N501Y; S494P reduces neutralization (Chakraborty)	Cui et al., 2022 (10.1016/j.cell.2022.01.019); Alenquer et al., 2021 (https://doi.org/10.1101/2021.04.22.441007) - PREPRINT; Chakraborty, 2022 (https://doi.org/10.1016/j.intimp.2021.108424)
+S - F		S375F	0.19			greater resistance to neutralizing antibodies 	Cui et al., 2022 (10.1016/j.cell.2022.01.019)
+L - Q		L542Q; L452Q	0.72			immune escape; L452Q reduces neutralization of several mAbs	Zabidi et al., 2023 (10.3390/v15040944); Yi et al., 2022 (https://doi.org/10.1038/s41423-022-00884-z)
+R - T		R346T				R346T reduces neutralizing efficacy of vaccine generated Abs; though some source says it only has a minimal impact neutralization (Wang et al.)	Zabidi et al., 2023 (10.3390/v15040944); Wang et al., 2024 (10.1080/22221751.2024.2402880)
+G - R		G485R					
+T - S		T345S	0.94			resistant against one tested polyclonal human immune sera	Liu et al., 2021 (10.1016/j.chom.2021.01.014)
+A - S		A435S	0.23			A435S reduces neutralization potency of Class I and Class 1/4 in XEC lineage	Liu et al., 2024 (https://doi.org/10.1101/2024.12.27.630350)
+L - W		L452W	0.18			reduced antibody binding in Omicron sublineages (Stein et al.)	Stein et al., 2024 (10.1128/jvi.01223-24)
+F - P		F486P				increased immune escape of the XBB.1.5 variant	Ao et al., 2023 (https://doi.org/10.1002/mco2.239)
+V - P		V445P				increased evasion of antibodies in XBB lineage (Ao et al.)	Ao et al., 2023 (https://doi.org/10.1002/mco2.239)
+E - Q		E484Q				reduces antibody neutralization titers - any of the changes at E484 (K, Q, or P) in SARS-CoV-2; E484Q reduced sensitivity to vaccine-elicited neutralizing antibodies (Ferreira et al.)	Harvey et al., 2021 (https://doi.org/10.1038/s41579-021-00573-0); Ferreira et al., 2021 (10.1093/infdis/jiab368)
+R - S		R346S	0.50			R346S reduced neutralization of some NAbs (Yi et al.)	Yi et al., 2021 (https://doi.org/10.1186/s13073-021-00985-w)
+F - V		F490V; F486V	1.04			F490V reduced neutralization of some NAbs (Yi et al.); F486V reduced senstivity to neutralization (Pastorio et al.)	Yi et al., 2021 (https://doi.org/10.1186/s13073-021-00985-w); Pastorio et al., 2023 (10.1016/j.isci.2023.108299)
