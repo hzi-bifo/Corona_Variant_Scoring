@@ -1,0 +1,381 @@
+Original_aa	Changed_aa	Weight	Influenza	Hydropathy	Charge	Molecular Weight Change
+R	N			unchanged	Positive - Neutral	42.099999999999994
+R	D			unchanged	Positive - Negative	41.099999999999994
+R	E			unchanged	Positive - Negative	27.099999999999994
+R	Q	0.5041666666666667	True	unchanged	Positive - Neutral	28.0
+R	K	0.845208332875	True	unchanged	unchanged	28.0
+R	S	0.4975	True	unchanged	Positive - Neutral	69.1
+R	T			unchanged	Positive - Neutral	55.099999999999994
+R	C			hydrophilic - moderate	Positive - Neutral	52.999999999999986
+R	H	0.395	True	hydrophilic - moderate	unchanged	19.0
+R	M			hydrophilic - moderate	Positive - Neutral	25.0
+R	A			hydrophilic - hydrophobic	Positive - Neutral	85.1
+R	V			hydrophilic - hydrophobic	Positive - Neutral	57.099999999999994
+R	G	0.7425	True	hydrophilic - hydrophobic	Positive - Neutral	99.1
+R	I	0.8816666666666667	True	hydrophilic - hydrophobic	Positive - Neutral	43.0
+R	L	0.86	True	hydrophilic - hydrophobic	Positive - Neutral	43.0
+R	F			hydrophilic - hydrophobic	Positive - Neutral	9.0
+R	P			hydrophilic - hydrophobic	Positive - Neutral	59.099999999999994
+R	W			hydrophilic - hydrophobic	Positive - Neutral	-30.0
+R	Y			hydrophilic - hydrophobic	Positive - Neutral	-7.0
+N	R			unchanged	Neutral - Positive	-42.099999999999994
+N	D	0.6032407407777778	True	unchanged	Neutral - Negative	-1.0
+N	E			unchanged	Neutral - Negative	-15.0
+N	Q			unchanged	unchanged	-14.099999999999994
+N	K	0.7588595241	True	unchanged	Neutral - Positive	-14.099999999999994
+N	S	0.50958333375	True	unchanged	unchanged	27.0
+N	T	0.31125	True	unchanged	unchanged	13.0
+N	C			hydrophilic - moderate	unchanged	10.899999999999991
+N	H			hydrophilic - moderate	Neutral - Positive	-23.099999999999994
+N	M			hydrophilic - moderate	unchanged	-17.099999999999994
+N	A			hydrophilic - hydrophobic	unchanged	43.0
+N	V			hydrophilic - hydrophobic	unchanged	15.0
+N	G			hydrophilic - hydrophobic	unchanged	57.0
+N	I	1.39	True	hydrophilic - hydrophobic	unchanged	0.9000000000000057
+N	L			hydrophilic - hydrophobic	unchanged	0.9000000000000057
+N	F			hydrophilic - hydrophobic	unchanged	-33.099999999999994
+N	P			hydrophilic - hydrophobic	unchanged	17.0
+N	W			hydrophilic - hydrophobic	unchanged	-72.1
+N	Y	1.105	True	hydrophilic - hydrophobic	unchanged	-49.099999999999994
+D	R			unchanged	Negative - Positive	-41.099999999999994
+D	N	0.3553030303636363	True	unchanged	Negative - Neutral	1.0
+D	E	0.615	True	unchanged	unchanged	-14.0
+D	Q			unchanged	Negative - Neutral	-13.099999999999994
+D	K			unchanged	Negative - Positive	-13.099999999999994
+D	S			unchanged	Negative - Neutral	28.0
+D	T			unchanged	Negative - Neutral	14.0
+D	C			hydrophilic - moderate	Negative - Neutral	11.899999999999991
+D	H			hydrophilic - moderate	Negative - Positive	-22.099999999999994
+D	M			hydrophilic - moderate	Negative - Neutral	-16.099999999999994
+D	A	0.81	True	hydrophilic - hydrophobic	Negative - Neutral	44.0
+D	V	0.4833333333333333	True	hydrophilic - hydrophobic	Negative - Neutral	16.0
+D	G	0.2603333334	True	hydrophilic - hydrophobic	Negative - Neutral	58.0
+D	I			hydrophilic - hydrophobic	Negative - Neutral	1.9000000000000057
+D	L			hydrophilic - hydrophobic	Negative - Neutral	1.9000000000000057
+D	F			hydrophilic - hydrophobic	Negative - Neutral	-32.099999999999994
+D	P			hydrophilic - hydrophobic	Negative - Neutral	18.0
+D	W			hydrophilic - hydrophobic	Negative - Neutral	-71.1
+D	Y	0.18	True	hydrophilic - hydrophobic	Negative - Neutral	-48.099999999999994
+E	R			unchanged	Negative - Positive	-27.099999999999994
+E	N			unchanged	Negative - Neutral	15.0
+E	D	0.2581666666666666	True	unchanged	unchanged	14.0
+E	Q			unchanged	Negative - Neutral	0.9000000000000057
+E	K	1.0941428572	True	unchanged	Negative - Positive	0.9000000000000057
+E	S			unchanged	Negative - Neutral	42.0
+E	T			unchanged	Negative - Neutral	28.0
+E	C			hydrophilic - moderate	Negative - Neutral	25.89999999999999
+E	H			hydrophilic - moderate	Negative - Positive	-8.099999999999994
+E	M			hydrophilic - moderate	Negative - Neutral	-2.0999999999999943
+E	A			hydrophilic - hydrophobic	Negative - Neutral	58.0
+E	V			hydrophilic - hydrophobic	Negative - Neutral	30.0
+E	G	0.08	True	hydrophilic - hydrophobic	Negative - Neutral	72.0
+E	I			hydrophilic - hydrophobic	Negative - Neutral	15.900000000000006
+E	L			hydrophilic - hydrophobic	Negative - Neutral	15.900000000000006
+E	F			hydrophilic - hydrophobic	Negative - Neutral	-18.099999999999994
+E	P			hydrophilic - hydrophobic	Negative - Neutral	32.0
+E	W			hydrophilic - hydrophobic	Negative - Neutral	-57.099999999999994
+E	Y			hydrophilic - hydrophobic	Negative - Neutral	-34.099999999999994
+Q	R	0.72	True	unchanged	Neutral - Positive	-28.0
+Q	N			unchanged	unchanged	14.099999999999994
+Q	D			unchanged	Neutral - Negative	13.099999999999994
+Q	E	0.82	True	unchanged	Neutral - Negative	-0.9000000000000057
+Q	K	1.06625	True	unchanged	Neutral - Positive	unchanged
+Q	S			unchanged	unchanged	41.099999999999994
+Q	T			unchanged	unchanged	27.099999999999994
+Q	C			hydrophilic - moderate	unchanged	24.999999999999986
+Q	H	1.20625	True	hydrophilic - moderate	Neutral - Positive	-9.0
+Q	M			hydrophilic - moderate	unchanged	-3.0
+Q	A			hydrophilic - hydrophobic	unchanged	57.099999999999994
+Q	V			hydrophilic - hydrophobic	unchanged	29.099999999999994
+Q	G			hydrophilic - hydrophobic	unchanged	71.1
+Q	I			hydrophilic - hydrophobic	unchanged	15.0
+Q	L	0.47333333	True	hydrophilic - hydrophobic	unchanged	15.0
+Q	F			hydrophilic - hydrophobic	unchanged	-19.0
+Q	P			hydrophilic - hydrophobic	unchanged	31.099999999999994
+Q	W			hydrophilic - hydrophobic	unchanged	-58.0
+Q	Y			hydrophilic - hydrophobic	unchanged	-35.0
+K	R	0.4585	True	unchanged	unchanged	-28.0
+K	N	1.0075	True	unchanged	Positive - Neutral	14.099999999999994
+K	D			unchanged	Positive - Negative	13.099999999999994
+K	E	1.1800000000000002	True	unchanged	Positive - Negative	-0.9000000000000057
+K	Q	1.2825	True	unchanged	Positive - Neutral	unchanged
+K	S			unchanged	Positive - Neutral	41.099999999999994
+K	T	0.6975	True	unchanged	Positive - Neutral	27.099999999999994
+K	C			hydrophilic - moderate	Positive - Neutral	24.999999999999986
+K	H			hydrophilic - moderate	unchanged	-9.0
+K	M			hydrophilic - moderate	Positive - Neutral	-3.0
+K	A			hydrophilic - hydrophobic	Positive - Neutral	57.099999999999994
+K	V			hydrophilic - hydrophobic	Positive - Neutral	29.099999999999994
+K	G			hydrophilic - hydrophobic	Positive - Neutral	71.1
+K	I			hydrophilic - hydrophobic	Positive - Neutral	15.0
+K	L			hydrophilic - hydrophobic	Positive - Neutral	15.0
+K	F			hydrophilic - hydrophobic	Positive - Neutral	-19.0
+K	P			hydrophilic - hydrophobic	Positive - Neutral	31.099999999999994
+K	W			hydrophilic - hydrophobic	Positive - Neutral	-58.0
+K	Y			hydrophilic - hydrophobic	Positive - Neutral	-35.0
+S	R	0.7895833324999999	True	unchanged	Neutral - Positive	-69.1
+S	N	0.4523809524285714	True	unchanged	unchanged	-27.0
+S	D	0.185	True	unchanged	Neutral - Negative	-28.0
+S	E			unchanged	Neutral - Negative	-42.0
+S	Q			unchanged	unchanged	-41.099999999999994
+S	K			unchanged	Neutral - Positive	-41.099999999999994
+S	T	0.06	True	unchanged	unchanged	-14.0
+S	C	0.385	True	hydrophilic - moderate	unchanged	-16.10000000000001
+S	H			hydrophilic - moderate	Neutral - Positive	-50.099999999999994
+S	M			hydrophilic - moderate	unchanged	-44.099999999999994
+S	A	0.86	True	hydrophilic - hydrophobic	unchanged	16.0
+S	V			hydrophilic - hydrophobic	unchanged	-12.0
+S	G	0.6939285714285715	True	hydrophilic - hydrophobic	unchanged	30.0
+S	I	0.751875	True	hydrophilic - hydrophobic	unchanged	-26.099999999999994
+S	L	0.28	True	hydrophilic - hydrophobic	unchanged	-26.099999999999994
+S	F	0.19333333	True	hydrophilic - hydrophobic	unchanged	-60.099999999999994
+S	P	0.6890555555	True	hydrophilic - hydrophobic	unchanged	-10.0
+S	W			hydrophilic - hydrophobic	unchanged	-99.1
+S	Y	0.6655555556666667	True	hydrophilic - hydrophobic	unchanged	-76.1
+T	R			unchanged	Neutral - Positive	-55.099999999999994
+T	N	0.2912499999999999	True	unchanged	unchanged	-13.0
+T	D			unchanged	Neutral - Negative	-14.0
+T	E			unchanged	Neutral - Negative	-28.0
+T	Q			unchanged	unchanged	-27.099999999999994
+T	K	0.5133333333333333	True	unchanged	Neutral - Positive	-27.099999999999994
+T	S	0.94	True	unchanged	unchanged	14.0
+T	C			hydrophilic - moderate	unchanged	-2.1000000000000085
+T	H			hydrophilic - moderate	Neutral - Positive	-36.099999999999994
+T	M			hydrophilic - moderate	unchanged	-30.099999999999994
+T	A	0.425	True	hydrophilic - hydrophobic	unchanged	30.0
+T	V			hydrophilic - hydrophobic	unchanged	2.0
+T	G			hydrophilic - hydrophobic	unchanged	44.0
+T	I	0.3125	True	hydrophilic - hydrophobic	unchanged	-12.099999999999994
+T	L			hydrophilic - hydrophobic	unchanged	-12.099999999999994
+T	F			hydrophilic - hydrophobic	unchanged	-46.099999999999994
+T	P			hydrophilic - hydrophobic	unchanged	4.0
+T	W			hydrophilic - hydrophobic	unchanged	-85.1
+T	Y	1.505	True	hydrophilic - hydrophobic	unchanged	-62.099999999999994
+C	R			moderate - hydrophilic	Neutral - Positive	-52.999999999999986
+C	N			moderate - hydrophilic	unchanged	-10.899999999999991
+C	D			moderate - hydrophilic	Neutral - Negative	-11.899999999999991
+C	E			moderate - hydrophilic	Neutral - Negative	-25.89999999999999
+C	Q			moderate - hydrophilic	unchanged	-24.999999999999986
+C	K			moderate - hydrophilic	Neutral - Positive	-24.999999999999986
+C	S			moderate - hydrophilic	unchanged	16.10000000000001
+C	T			moderate - hydrophilic	unchanged	2.1000000000000085
+C	H			unchanged	Neutral - Positive	-33.999999999999986
+C	M			unchanged	unchanged	-27.999999999999986
+C	A			moderate - hydrophobic	unchanged	32.10000000000001
+C	V			moderate - hydrophobic	unchanged	4.1000000000000085
+C	G			moderate - hydrophobic	unchanged	46.10000000000001
+C	I			moderate - hydrophobic	unchanged	-9.999999999999986
+C	L			moderate - hydrophobic	unchanged	-9.999999999999986
+C	F	0.235	True	moderate - hydrophobic	unchanged	-43.999999999999986
+C	P			moderate - hydrophobic	unchanged	6.1000000000000085
+C	W			moderate - hydrophobic	unchanged	-82.99999999999999
+C	Y			moderate - hydrophobic	unchanged	-59.999999999999986
+H	R			moderate - hydrophilic	unchanged	-19.0
+H	N	0.3175	True	moderate - hydrophilic	Positive - Neutral	23.099999999999994
+H	D			moderate - hydrophilic	Positive - Negative	22.099999999999994
+H	E			moderate - hydrophilic	Positive - Negative	8.099999999999994
+H	Q	2.465	True	moderate - hydrophilic	Positive - Neutral	9.0
+H	K			moderate - hydrophilic	unchanged	9.0
+H	S			moderate - hydrophilic	Positive - Neutral	50.099999999999994
+H	T	2.465	True	moderate - hydrophilic	Positive - Neutral	36.099999999999994
+H	C			unchanged	Positive - Neutral	33.999999999999986
+H	M			unchanged	Positive - Neutral	6.0
+H	A			moderate - hydrophobic	Positive - Neutral	66.1
+H	V			moderate - hydrophobic	Positive - Neutral	38.099999999999994
+H	G			moderate - hydrophobic	Positive - Neutral	80.1
+H	I			moderate - hydrophobic	Positive - Neutral	24.0
+H	L	0.5	True	moderate - hydrophobic	Positive - Neutral	24.0
+H	F			moderate - hydrophobic	Positive - Neutral	-10.0
+H	P			moderate - hydrophobic	Positive - Neutral	40.099999999999994
+H	W			moderate - hydrophobic	Positive - Neutral	-49.0
+H	Y			moderate - hydrophobic	Positive - Neutral	-26.0
+M	R			moderate - hydrophilic	Neutral - Positive	-25.0
+M	N			moderate - hydrophilic	unchanged	17.099999999999994
+M	D			moderate - hydrophilic	Neutral - Negative	16.099999999999994
+M	E			moderate - hydrophilic	Neutral - Negative	2.0999999999999943
+M	Q			moderate - hydrophilic	unchanged	3.0
+M	K			moderate - hydrophilic	Neutral - Positive	3.0
+M	S			moderate - hydrophilic	unchanged	44.099999999999994
+M	T			moderate - hydrophilic	unchanged	30.099999999999994
+M	C			unchanged	unchanged	27.999999999999986
+M	H			unchanged	Neutral - Positive	-6.0
+M	A			moderate - hydrophobic	unchanged	60.099999999999994
+M	V			moderate - hydrophobic	unchanged	32.099999999999994
+M	G			moderate - hydrophobic	unchanged	74.1
+M	I	1.17	True	moderate - hydrophobic	unchanged	18.0
+M	L			moderate - hydrophobic	unchanged	18.0
+M	F			moderate - hydrophobic	unchanged	-16.0
+M	P			moderate - hydrophobic	unchanged	34.099999999999994
+M	W			moderate - hydrophobic	unchanged	-55.0
+M	Y			moderate - hydrophobic	unchanged	-32.0
+A	R			hydrophobic - hydrophilic	Neutral - Positive	-85.1
+A	N			hydrophobic - hydrophilic	unchanged	-43.0
+A	D	0.635	True	hydrophobic - hydrophilic	Neutral - Negative	-44.0
+A	E	0.55	True	hydrophobic - hydrophilic	Neutral - Negative	-58.0
+A	Q			hydrophobic - hydrophilic	unchanged	-57.099999999999994
+A	K			hydrophobic - hydrophilic	Neutral - Positive	-57.099999999999994
+A	S	0.2324999999999999	True	hydrophobic - hydrophilic	unchanged	-16.0
+A	T	1.2473333333333334	True	hydrophobic - hydrophilic	unchanged	-30.0
+A	C			hydrophobic - moderate	unchanged	-32.10000000000001
+A	H			hydrophobic - moderate	Neutral - Positive	-66.1
+A	M			hydrophobic - moderate	unchanged	-60.099999999999994
+A	V	0.42	True	unchanged	unchanged	-28.0
+A	G			unchanged	unchanged	14.0
+A	I			unchanged	unchanged	-42.099999999999994
+A	L			unchanged	unchanged	-42.099999999999994
+A	F			unchanged	unchanged	-76.1
+A	P	0.34	True	unchanged	unchanged	-26.0
+A	W			unchanged	unchanged	-115.1
+A	Y			unchanged	unchanged	-92.1
+V	R	0.54	True	hydrophobic - hydrophilic	Neutral - Positive	-57.099999999999994
+V	N			hydrophobic - hydrophilic	unchanged	-15.0
+V	D			hydrophobic - hydrophilic	Neutral - Negative	-16.0
+V	E			hydrophobic - hydrophilic	Neutral - Negative	-30.0
+V	Q			hydrophobic - hydrophilic	unchanged	-29.099999999999994
+V	K			hydrophobic - hydrophilic	Neutral - Positive	-29.099999999999994
+V	S			hydrophobic - hydrophilic	unchanged	12.0
+V	T			hydrophobic - hydrophilic	unchanged	-2.0
+V	C			hydrophobic - moderate	unchanged	-4.1000000000000085
+V	H			hydrophobic - moderate	Neutral - Positive	-38.099999999999994
+V	M			hydrophobic - moderate	unchanged	-32.099999999999994
+V	A	1.2875	True	unchanged	unchanged	28.0
+V	G	0.27	True	unchanged	unchanged	42.0
+V	I	0.836897435923077	True	unchanged	unchanged	-14.099999999999994
+V	L	0.28	True	unchanged	unchanged	-14.099999999999994
+V	F			unchanged	unchanged	-48.099999999999994
+V	P			unchanged	unchanged	2.0
+V	W			unchanged	unchanged	-87.1
+V	Y			unchanged	unchanged	-64.1
+G	R	0.2545833325	True	hydrophobic - hydrophilic	Neutral - Positive	-99.1
+G	N			hydrophobic - hydrophilic	unchanged	-57.0
+G	D	0.8248611106666667	True	hydrophobic - hydrophilic	Neutral - Negative	-58.0
+G	E	0.7965	True	hydrophobic - hydrophilic	Neutral - Negative	-72.0
+G	Q			hydrophobic - hydrophilic	unchanged	-71.1
+G	K	0.69	True	hydrophobic - hydrophilic	Neutral - Positive	-71.1
+G	S	0.200625	True	hydrophobic - hydrophilic	unchanged	-30.0
+G	T			hydrophobic - hydrophilic	unchanged	-44.0
+G	C			hydrophobic - moderate	unchanged	-46.10000000000001
+G	H			hydrophobic - moderate	Neutral - Positive	-80.1
+G	M			hydrophobic - moderate	unchanged	-74.1
+G	A			unchanged	unchanged	-14.0
+G	V	0.0	True	unchanged	unchanged	-42.0
+G	I			unchanged	unchanged	-56.099999999999994
+G	L			unchanged	unchanged	-56.099999999999994
+G	F			unchanged	unchanged	-90.1
+G	P			unchanged	unchanged	-40.0
+G	W			unchanged	unchanged	-129.1
+G	Y			unchanged	unchanged	-106.1
+I	R			hydrophobic - hydrophilic	Neutral - Positive	-43.0
+I	N	0.195	True	hydrophobic - hydrophilic	unchanged	-0.9000000000000057
+I	D			hydrophobic - hydrophilic	Neutral - Negative	-1.9000000000000057
+I	E			hydrophobic - hydrophilic	Neutral - Negative	-15.900000000000006
+I	Q			hydrophobic - hydrophilic	unchanged	-15.0
+I	K	0.322	True	hydrophobic - hydrophilic	Neutral - Positive	-15.0
+I	S	0.7475	True	hydrophobic - hydrophilic	unchanged	26.099999999999994
+I	T	0.42625	True	hydrophobic - hydrophilic	unchanged	12.099999999999994
+I	C			hydrophobic - moderate	unchanged	9.999999999999986
+I	H			hydrophobic - moderate	Neutral - Positive	-24.0
+I	M	0.4066666666666667	True	hydrophobic - moderate	unchanged	-18.0
+I	A			unchanged	unchanged	42.099999999999994
+I	V	0.5054166666666666	True	unchanged	unchanged	14.099999999999994
+I	G			unchanged	unchanged	56.099999999999994
+I	L	1.12	True	unchanged	unchanged	unchanged
+I	F			unchanged	unchanged	-34.0
+I	P			unchanged	unchanged	16.099999999999994
+I	W			unchanged	unchanged	-73.0
+I	Y			unchanged	unchanged	-50.0
+L	R			hydrophobic - hydrophilic	Neutral - Positive	-43.0
+L	N			hydrophobic - hydrophilic	unchanged	-0.9000000000000057
+L	D			hydrophobic - hydrophilic	Neutral - Negative	-1.9000000000000057
+L	E			hydrophobic - hydrophilic	Neutral - Negative	-15.900000000000006
+L	Q	0.7240434615	True	hydrophobic - hydrophilic	unchanged	-15.0
+L	K			hydrophobic - hydrophilic	Neutral - Positive	-15.0
+L	S			hydrophobic - hydrophilic	unchanged	26.099999999999994
+L	T			hydrophobic - hydrophilic	unchanged	12.099999999999994
+L	C			hydrophobic - moderate	unchanged	9.999999999999986
+L	H			hydrophobic - moderate	Neutral - Positive	-24.0
+L	M	0.915	True	hydrophobic - moderate	unchanged	-18.0
+L	A			unchanged	unchanged	42.099999999999994
+L	V			unchanged	unchanged	14.099999999999994
+L	G			unchanged	unchanged	56.099999999999994
+L	I	0.7685	True	unchanged	unchanged	unchanged
+L	F	0.545	True	unchanged	unchanged	-34.0
+L	P	0.0	True	unchanged	unchanged	16.099999999999994
+L	W	0.18	True	unchanged	unchanged	-73.0
+L	Y			unchanged	unchanged	-50.0
+F	R			hydrophobic - hydrophilic	Neutral - Positive	-9.0
+F	N			hydrophobic - hydrophilic	unchanged	33.099999999999994
+F	D			hydrophobic - hydrophilic	Neutral - Negative	32.099999999999994
+F	E			hydrophobic - hydrophilic	Neutral - Negative	18.099999999999994
+F	Q			hydrophobic - hydrophilic	unchanged	19.0
+F	K			hydrophobic - hydrophilic	Neutral - Positive	19.0
+F	S	0.525	True	hydrophobic - hydrophilic	unchanged	60.099999999999994
+F	T			hydrophobic - hydrophilic	unchanged	46.099999999999994
+F	C			hydrophobic - moderate	unchanged	43.999999999999986
+F	H			hydrophobic - moderate	Neutral - Positive	10.0
+F	M			hydrophobic - moderate	unchanged	16.0
+F	A			unchanged	unchanged	76.1
+F	V	1.04	True	unchanged	unchanged	48.099999999999994
+F	G			unchanged	unchanged	90.1
+F	I			unchanged	unchanged	34.0
+F	L	0.3116666666666666	True	unchanged	unchanged	34.0
+F	P			unchanged	unchanged	50.099999999999994
+F	W			unchanged	unchanged	-39.0
+F	Y	0.3125	True	unchanged	unchanged	-16.0
+P	R			hydrophobic - hydrophilic	Neutral - Positive	-59.099999999999994
+P	N			hydrophobic - hydrophilic	unchanged	-17.0
+P	D			hydrophobic - hydrophilic	Neutral - Negative	-18.0
+P	E			hydrophobic - hydrophilic	Neutral - Negative	-32.0
+P	Q	0.0	True	hydrophobic - hydrophilic	unchanged	-31.099999999999994
+P	K			hydrophobic - hydrophilic	Neutral - Positive	-31.099999999999994
+P	S	0.5244444444999999	True	hydrophobic - hydrophilic	unchanged	10.0
+P	T	0.3	True	hydrophobic - hydrophilic	unchanged	-4.0
+P	C			hydrophobic - moderate	unchanged	-6.1000000000000085
+P	H	0.26	True	hydrophobic - moderate	Neutral - Positive	-40.099999999999994
+P	M			hydrophobic - moderate	unchanged	-34.099999999999994
+P	A			unchanged	unchanged	26.0
+P	V			unchanged	unchanged	-2.0
+P	G			unchanged	unchanged	40.0
+P	I			unchanged	unchanged	-16.099999999999994
+P	L			unchanged	unchanged	-16.099999999999994
+P	F			unchanged	unchanged	-50.099999999999994
+P	W			unchanged	unchanged	-89.1
+P	Y			unchanged	unchanged	-66.1
+W	R	2.465	True	hydrophobic - hydrophilic	Neutral - Positive	30.0
+W	N			hydrophobic - hydrophilic	unchanged	72.1
+W	D			hydrophobic - hydrophilic	Neutral - Negative	71.1
+W	E			hydrophobic - hydrophilic	Neutral - Negative	57.099999999999994
+W	Q			hydrophobic - hydrophilic	unchanged	58.0
+W	K			hydrophobic - hydrophilic	Neutral - Positive	58.0
+W	S			hydrophobic - hydrophilic	unchanged	99.1
+W	T			hydrophobic - hydrophilic	unchanged	85.1
+W	C			hydrophobic - moderate	unchanged	82.99999999999999
+W	H			hydrophobic - moderate	Neutral - Positive	49.0
+W	M			hydrophobic - moderate	unchanged	55.0
+W	A			unchanged	unchanged	115.1
+W	V			unchanged	unchanged	87.1
+W	G			unchanged	unchanged	129.1
+W	I			unchanged	unchanged	73.0
+W	L			unchanged	unchanged	73.0
+W	F			unchanged	unchanged	39.0
+W	P			unchanged	unchanged	89.1
+W	Y			unchanged	unchanged	23.0
+Y	R			hydrophobic - hydrophilic	Neutral - Positive	7.0
+Y	N			hydrophobic - hydrophilic	unchanged	49.099999999999994
+Y	D			hydrophobic - hydrophilic	Neutral - Negative	48.099999999999994
+Y	E			hydrophobic - hydrophilic	Neutral - Negative	34.099999999999994
+Y	Q			hydrophobic - hydrophilic	unchanged	35.0
+Y	K			hydrophobic - hydrophilic	Neutral - Positive	35.0
+Y	S	0.1	True	hydrophobic - hydrophilic	unchanged	76.1
+Y	T			hydrophobic - hydrophilic	unchanged	62.099999999999994
+Y	C			hydrophobic - moderate	unchanged	59.999999999999986
+Y	H	1.081111111	True	hydrophobic - moderate	Neutral - Positive	26.0
+Y	M			hydrophobic - moderate	unchanged	32.0
+Y	A			unchanged	unchanged	92.1
+Y	V			unchanged	unchanged	64.1
+Y	G			unchanged	unchanged	106.1
+Y	I			unchanged	unchanged	50.0
+Y	L			unchanged	unchanged	50.0
+Y	F	0.67	True	unchanged	unchanged	16.0
+Y	P			unchanged	unchanged	66.1
+Y	W			unchanged	unchanged	-23.0
