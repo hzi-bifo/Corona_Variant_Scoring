@@ -95,15 +95,18 @@ conda activate sarscoverage
 ```console
 cd /Corona_Variant_Scoring/
 ```
+3. Comment out line 102 (which is set to check for the date automatically as per the CoVerage pipeline) and uncomment line 103 (which allows the user to set the specific month to be analysed) in the variant_scoring.sh script in this directory. 
 
-3. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
+4. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
 
 ```console
-bash variant_scoring.sh -o /test_run/ -i /test_run/ -v . -f /test_run/SDplots_frequencies/ -m /test_run/09-2024_month.txt/ -u /test_run/metadata_under_review.tsv/
+bash variant_scoring.sh -o /Corona_Variant_Scoring/test_run/ -i /Corona_Variant_Scoring/test_run/ -v /Corona_Variant_Scoring/ -f /Corona_Variant_Scoring/test_run/SDplots_frequencies/ -m /Corona_Variant_Scoring/test_run/09-2024_month.txt -u /test_run/metadata_under_review.tsv 09 2024
 ```
 **Please note that here the -v argument is the current directory, if your current working directory in not in the Corona_Variant_Scoring please change this -v argument**
 
-4. Check results - they should contain the same as what is currently in the test_run/output/ directory with all of the files outlined above in the analysis output section
+5. Check results - they should contain the same as what is currently in the test_run/output/ directory with all of the files outlined above in the analysis output section
+
+Running this test pipeline took approximately 1 minute 10 seconds on a Macbook Air M2 16gb of ram. Times may vary depending on computer. 
 
 ### Table of Contents:
 
