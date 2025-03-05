@@ -100,6 +100,8 @@ conda activate sarscoverage
 echo "Running Variant Scoring Analysis and Visualization"
 # Antigenic Scoring Analysis
 python "$SOFTWAREPATH""variant_scoring_all_sites.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
+#python "$SOFTWAREPATH""variant_scoring_all_sites.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" "$MONTH" "$YEAR"> "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
+
 
 # Frequency Heatmap
 echo "Creating Frequency Heatmap"
