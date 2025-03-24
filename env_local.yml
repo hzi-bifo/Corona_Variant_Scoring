@@ -1,0 +1,50 @@
+name: aa_scoring
+channels:
+  #  - anaconda
+  - plotly
+  - conda-forge
+  - bioconda
+dependencies:
+  - matplotlib-base
+  - numpy
+  - pandas
+  - pandoc
+  - pillow
+  - pip
+  - plotly
+  - pycountry
+  - python #=3.9.2
+  - r=4.0
+    #  - r-base
+  - r-binom
+  - r-countrycode
+  - r-cpp11
+  - r-d3heatmap
+  - r-data.table
+  - r-dplyr
+  - r-ggplot2
+  - r-hms
+  - r-htmltools
+  - r-htmlwidgets
+  - r-httr
+  - r-jsonlite
+  - r-optparse
+  - r-pillar
+  - r-plotly
+  - r-plyr
+  - r-png
+  - r-purrr
+  - r-reshape2
+  - r-stringi
+  - r-stringr
+  - r-tibble
+  - r-tidyr
+  - r-tidyselect
+  - r-tidyverse
+  - scipy
+  - seaborn
+
+  - pip:
+    - countrycode
+    - distance
+    - pyfaidx
