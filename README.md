@@ -6,7 +6,15 @@ Pipeline to assign an antigenic score to pangolin lineages based on the amino ac
 
 The analysis pipeline is designed to run on BIFO servers, but can be run individually as well using the provided environment, sarscoverage.yml. The sarscoverage.yml can be used on linux and the sarscoverage_without_builds.yml file can be used on MacOS or Windows as it doesn't include package builds. 
 
+Download the pipeline
+
+```shell
+git clone https://github.com/hzi-bifo/Corona_Variant_Scoring.git
+cd Corona_Variant_Scoring
+```
+
 To install the environment run the following comand:
+
 ```console
 conda env create -f env_local.yml
 ```
@@ -37,13 +45,15 @@ To run the pipeline you will need to specify the output and input directory, pat
 Run the following command to start the pipeline:
 
 ```console
-$bash variant_scoring_local.sh \
+bash variant_scoring_local.sh \
   -o /path to output directory file/ \
   -i /path to input directory/ 
   -v /path to Corona_Variant_Scoring repo/ \
   -f /path to frequencies data/ \
   -m /path to months text file/ 
   -u /path to sequences under review file/
+  -q <month: MM>
+  -w <year: YY>
 ```
 
 The user also has the option of using -q and -w to add a specified month and year respectively for analysis rather than running it on the previous month as it is set to do for the CoVerage website. Each input file is outlined below:
@@ -105,12 +115,15 @@ mkdir -p ../aa_scoring_out
 3. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
 
 ```console
-bash variant_scoring.sh -o ../aa_scoring_out \
+bash variant_scoring.sh \
+  -o ../aa_scoring_out \
   -i ./test_run/ \
   -v ./ \
   -f ./test_run/SDplots_frequencies/ \
   -m ./test_run/09-2024_month.txt \
-  -u ./test_run/metadata_under_review.tsv 09 2024
+  -u ./test_run/metadata_under_review.tsv \
+  -q "09" \
+  -w "2024"
 ```
 **Please note that here the -v argument is the current directory, if your current working directory in not in the Corona_Variant_Scoring please change this -v argument**
 
