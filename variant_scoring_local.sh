@@ -26,7 +26,7 @@ if [ "$#" == 0 ]; then
 	echo
 	exit
 else
-	while getopts 'o:i:v:f:m:u:hqw' OPTION; do
+	while getopts 'o:i:v:f:m:u:h:q:w:' OPTION; do
 		case "${OPTION}" in
 			h) usage; exit ;;
 			o)
@@ -84,7 +84,6 @@ else
 	#shift
 	done
 fi
-#cd "$OUTDIR"
 
 #----------
 # Analysis
@@ -93,15 +92,10 @@ fi
 # Creating an ouput directory if one has not been created already
 if [ ! -d "$OUTDIR"'output/' ]; then mkdir "$OUTDIR"'output/'; fi
 
-#eval "$(conda shell.bash hook)"
-#conda activate sarscoverage
-
 # Running Variant Scoring Analysis and Visualization
 echo "Running Variant Scoring Analysis and Visualization"
 # Antigenic Scoring Analysis
-# python "$SOFTWAREPATH""variant_scoring_all_sites.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" > "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
 python "$SOFTWAREPATH""variant_scoring_all_sites.py" "$INDIR""metadata.tsv" "$AntigenicScoring""reference/tp_sites.csv" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_weights.csv" "$AntigenicScoring""reference/known_variants_of_concern.csv" "$SEQUI" "$MONTH" "$YEAR"> "$OUTDIR""STDOUT.txt" # month (including 0 before value if < 10 (ex. 07 for july) # year
-
 
 # Frequency Heatmap
 echo "Creating Frequency Heatmap"
@@ -113,11 +107,4 @@ Rscript "$SOFTWAREPATH""frequency_heatmap_coverage.R" "$FREQUENCY" "$OUTDIR""out
 echo "Creating Global Map"
 python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_map_visualization.csv" "$OUTDIR""output/" "$OUTDIR""output/month_vis.txt" "$AntigenicScoring""reference/" >> "$OUTDIR""STDOUT.txt"
 
-# Country-wise Plot
-#echo "Creating Country-Wise Plot"
-python "$SOFTWAREPATH""country_frequency_threshold_compiler.py" "$OUTDIR""output/" "$OUTDIR""output/" "$AntigenicScoring""reference/" "$OUTDIR""output/month_vis.txt" >> "$OUTDIR""STDOUT.txt"
-Rscript "$SOFTWAREPATH""country_score_over_time_coverage.R" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_scores_map_visualization_cumulative.csv" "$AntigenicScoring""reference/country_list_with_threshold.tsv" >> "$OUTDIR""STDOUT.txt"
-
-# Selected pVOI table
-#python "$SOFTWAREPATH""pVOI_interactive_table.py" "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
 echo "COMPLETE"
