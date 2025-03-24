@@ -6,7 +6,15 @@ Pipeline to assign an antigenic score to pangolin lineages based on the amino ac
 
 The analysis pipeline is designed to run on BIFO servers, but can be run individually as well using the provided environment, sarscoverage.yml. The sarscoverage.yml can be used on linux and the sarscoverage_without_builds.yml file can be used on MacOS or Windows as it doesn't include package builds. 
 
+Download the pipeline
+
+```shell
+git clone https://github.com/hzi-bifo/Corona_Variant_Scoring.git
+cd Corona_Variant_Scoring
+```
+
 To install the environment run the following comand:
+
 ```console
 conda env create -f env_local.yml
 ```
