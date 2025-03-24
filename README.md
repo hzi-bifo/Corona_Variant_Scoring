@@ -1,8 +1,8 @@
-## Corona Variant Prediction
+# Corona Variant Prediction
 
 Pipeline to assign an antigenic score to pangolin lineages based on the amino acid changes across the SARS-CoV-2 spike glycoprotein. The score is based on the summation of antigenic weights from the influenza dataset (available here: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3330098/) that are then averaged across the different positions that they occured. The repo includes data and results from the current preprint (https://www.biorxiv.org/content/10.1101/2024.03.07.583829v2) under the validation, country_score_comparison_over_time, SpikePro_comparison, and EVEscape_comparison directories. 
 
-### Required Environment
+## Installation
 
 The analysis pipeline is designed to run on BIFO servers, but can be run individually as well using the provided environment, sarscoverage.yml. The sarscoverage.yml can be used on linux and the sarscoverage_without_builds.yml file can be used on MacOS or Windows as it doesn't include package builds. 
 
@@ -15,7 +15,7 @@ Then the environment can be activated with:
 conda activate aa_scoring
 ```
 
-### Required Pipeline Inputs
+## Required Pipeline Inputs
 
 The Corona_Variant_Scoring pipeline requires the following inputs:
 
@@ -30,16 +30,20 @@ The pipeline will require the path to the frequencies directory and months file,
 # Rscript "$SOFTWAREPATH""frequency_heatmap_coverage.R" "$FREQUENCY" "$OUTDIR""output/antigenic_scores_ranked_with_WHO.csv" "$MONTHS" "0.1" "$OUTDIR""output/" "$OUTDIR""output/antigenic_scores_all.csv" >> "$OUTDIR""STDOUT.txt"
 ```
 
-### Running the pipeline:
+## Running the pipeline
 
 To run the pipeline you will need to specify the output and input directory, path to the Corona_Variant_Scoring repo, path to frequencies data, and the paths to a months file. 
 
 Run the following command to start the pipeline:
 
 ```console
-$bash variant_scoring.sh -o /path to output directory file/ -i /path to input directory/ 
--v /path to Corona_Variant_Scoring repo/ -f /path to frequencies data/ -m /path to months text file/ 
--u /path to sequences under review file/
+$bash variant_scoring_local.sh \
+  -o /path to output directory file/ \
+  -i /path to input directory/ 
+  -v /path to Corona_Variant_Scoring repo/ \
+  -f /path to frequencies data/ \
+  -m /path to months text file/ 
+  -u /path to sequences under review file/
 ```
 
 The user also has the option of using -q and -w to add a specified month and year respectively for analysis rather than running it on the previous month as it is set to do for the CoVerage website. Each input file is outlined below:
@@ -55,9 +59,9 @@ as well as the current month
 - **(u) sequences under review file:** a .csv file containing a list of the isolate IDs that are under review by GISAID for
 that current month, these will need to be removed in the analysis
 
-**Use bash variant_scoring.sh --help for more details.**
+**Use bash variant_scoring_local.sh --help for more details.**
 
-### Analysis Output:
+## Analysis Outputs
 
 The pipeline will output two .csv files:
 
@@ -78,13 +82,14 @@ Visualization outputs:
 - antigenic_scoring_summary_heatmap.html : Heatmap with the top lineages, their frequencies and calculated z-scores
 - antigenic_scoring_summary_states_heatmap.html : d3heatmap of the german states and their circulating lineages and respective antigenic scores
 
-### Test Running the Pipeline:
+
+## Run pipeline on test data
 
 There is provided test data under the test_run directory to test the pipeline. It contains all the necessary input for dummy data. Should you wish to recreate the results from the manuscript please download the GISAID metadata for the given sequence IDs (in the data/ dir of this repo) and then run the pipeline with the commands shown above. 
 
 Otherwise to run the test please follow the following:
 
-1. Set up the working environment
+1. Activate the working environment
 
 ```console
 conda activate aa_scoring
@@ -96,9 +101,8 @@ conda activate aa_scoring
 cd /Corona_Variant_Scoring/
 mkdir -p ../aa_scoring_out
 ```
-3. Comment out line 102 (which is set to check for the date automatically as per the CoVerage pipeline) and uncomment line 103 (which allows the user to set the specific month to be analysed) in the variant_scoring.sh script in this directory. 
 
-4. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
+3. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
 
 ```console
 bash variant_scoring.sh -o ../aa_scoring_out \
@@ -110,7 +114,7 @@ bash variant_scoring.sh -o ../aa_scoring_out \
 ```
 **Please note that here the -v argument is the current directory, if your current working directory in not in the Corona_Variant_Scoring please change this -v argument**
 
-5. Check results - they should contain the same as what is currently in the test_run/output/ directory with all of the files outlined above in the analysis output section
+4. Check results - they should contain the same as what is currently in the test_run/output/ directory with all of the files outlined above in the analysis output section
 
 Running this test pipeline took approximately 1 minute 10 seconds on a Macbook Air M2 16gb of ram. Times may vary depending on computer. 
 
