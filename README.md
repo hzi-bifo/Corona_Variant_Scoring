@@ -45,7 +45,7 @@ To run the pipeline you will need to specify the output and input directory, pat
 Run the following command to start the pipeline:
 
 ```console
-$bash variant_scoring_local.sh \
+bash variant_scoring_local.sh \
   -o /path to output directory file/ \
   -i /path to input directory/ 
   -v /path to Corona_Variant_Scoring repo/ \
