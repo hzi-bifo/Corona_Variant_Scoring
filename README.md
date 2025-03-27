@@ -23,6 +23,9 @@ Then the environment can be activated with:
 conda activate aa_scoring
 ```
 
+> [!IMPORTANT]
+> Before installation please remove the `defaults` channel from the `~/.condarc` file
+
 ## Required Pipeline Inputs
 
 The Corona_Variant_Scoring pipeline requires the following inputs:
