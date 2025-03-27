@@ -17,7 +17,7 @@ cd Corona_Variant_Scoring
 For installation of the environment, it is recommended that the user use micromamba, as conda takes a long time to resolve channels. Micromamba can be downloaded using the instructions provided here: https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
 
 > [!IMPORTANT]
-> Before installation please remove the `defaults` channel from the `~/.mambarc` file (or `~/.condarc` file if the user is using conda)
+> Before installation please remove the `defaults` and `anaconda` channel from the `~/.mambarc`, `~/.condarc` files
 
 To install the environment run the following comand within the /Corona_Variant_Scoring/ directory:
 
