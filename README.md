@@ -12,19 +12,20 @@ Download the pipeline
 git clone https://github.com/hzi-bifo/Corona_Variant_Scoring.git
 cd Corona_Variant_Scoring
 ```
+For installation of the environment, it is recommended that the user use micromamba, as conda takes a long time to resolve channels. Micromamba can be downloaded using the instructions provided here: https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
 
-To install the environment run the following comand:
+To install the environment run the following comand within the /Corona_Variant_Scoring/ directory:
 
 ```console
-conda env create -f env_local.yml
+micromamba create -f env_local.yml
 ```
 Then the environment can be activated with:
 ```console
-conda activate aa_scoring
+micromamba activate aa_scoring
 ```
 
 > [!IMPORTANT]
-> Before installation please remove the `defaults` channel from the `~/.condarc` file
+> Before installation please remove the `defaults` channel from the `~/.mambarc` file (or `~/.condarc` file if the user is using conda)
 
 ## Required Pipeline Inputs
 
@@ -56,7 +57,7 @@ bash variant_scoring_local.sh \
   -m /path to months text file/ 
   -u /path to sequences under review file/
   -q <month: MM>
-  -w <year: YY>
+  -w <year: YYYY>
 ```
 
 The user also has the option of using -q and -w to add a specified month and year respectively for analysis rather than running it on the previous month as it is set to do for the CoVerage website. Each input file is outlined below:
@@ -71,6 +72,8 @@ used in the heatmap visualization
 as well as the current month
 - **(u) sequences under review file:** a .csv file containing a list of the isolate IDs that are under review by GISAID for
 that current month, these will need to be removed in the analysis
+- **(q) desired month for the analysis:** desired month of the analysis given in the MM format (for example july = 07)
+- **(w) desired year for the analysis:** desired year of the analysis given in the YYYY format (for example 2024 = 2024)
 
 **Use bash variant_scoring_local.sh --help for more details.**
 
