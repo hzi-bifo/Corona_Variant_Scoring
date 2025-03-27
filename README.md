@@ -80,7 +80,7 @@ that current month, these will need to be removed in the analysis
 - **(w) desired year for the analysis:** desired year of the analysis given in the YYYY format (for example 2024 = 2024)
 
 > [!IMPORTANT]
-> Use bash variant_scoring_local.sh --help for more details.**
+> Use bash variant_scoring_local.sh --help for more details.
 
 ## Analysis Outputs
 
