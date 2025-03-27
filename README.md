@@ -2,30 +2,34 @@
 
 Pipeline to assign an antigenic score to pangolin lineages based on the amino acid changes across the SARS-CoV-2 spike glycoprotein. The score is based on the summation of antigenic weights from the influenza dataset (available here: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3330098/) that are then averaged across the different positions that they occured. The repo includes data and results from the current preprint (https://www.biorxiv.org/content/10.1101/2024.03.07.583829v2) under the validation, country_score_comparison_over_time, SpikePro_comparison, and EVEscape_comparison directories. 
 
-## Installation
+## Pipeline Installation 
 
 The analysis pipeline is designed to run on BIFO servers, but can be run individually as well using the provided environment, sarscoverage.yml. The sarscoverage.yml can be used on linux and the sarscoverage_without_builds.yml file can be used on MacOS or Windows as it doesn't include package builds. 
 
-Download the pipeline
+#### 1. Download the pipeline
 
 ```shell
 git clone https://github.com/hzi-bifo/Corona_Variant_Scoring.git
 cd Corona_Variant_Scoring
 ```
+#### 2. Environment installation using Micromamba
+
 For installation of the environment, it is recommended that the user use micromamba, as conda takes a long time to resolve channels. Micromamba can be downloaded using the instructions provided here: https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
+
+> [!IMPORTANT]
+> Before installation please remove the `defaults` channel from the `~/.mambarc` file (or `~/.condarc` file if the user is using conda)
 
 To install the environment run the following comand within the /Corona_Variant_Scoring/ directory:
 
 ```console
 micromamba create -f env_local.yml
 ```
+#### 3. Environment activation
+   
 Then the environment can be activated with:
 ```console
 micromamba activate aa_scoring
 ```
-
-> [!IMPORTANT]
-> Before installation please remove the `defaults` channel from the `~/.mambarc` file (or `~/.condarc` file if the user is using conda)
 
 ## Required Pipeline Inputs
 
@@ -75,11 +79,12 @@ that current month, these will need to be removed in the analysis
 - **(q) desired month for the analysis:** desired month of the analysis given in the MM format (for example july = 07)
 - **(w) desired year for the analysis:** desired year of the analysis given in the YYYY format (for example 2024 = 2024)
 
-**Use bash variant_scoring_local.sh --help for more details.**
+> [!IMPORTANT]
+> Use bash variant_scoring_local.sh --help for more details.**
 
 ## Analysis Outputs
 
-The pipeline will output two .csv files:
+The pipeline will output multiple files all listed below:
 
 - antigenic_scores_all.csv : file containing all sequences per country and their associated antigenic scores, raw file in which scores have not been averaged per pango lineage\
 - antigenic_scores_ranked_with_WHO.csv : file containing the averaged antigenic scores across all sequences per Pango lineage, these scores are than ranked to show the lineages with the highest antigenic scores
