@@ -113,20 +113,20 @@ Otherwise to run the test please follow the following:
 1. Activate the working environment
 
 ```console
-conda activate aa_scoring
+micromamba activate aa_scoring
 ```
 
 2. Navigate to the Corona_Variant_Scoring head directory (/Corona_Variant_Scoring/) - wherever this was installed on your machine
    
 ```console
-cd /Corona_Variant_Scoring/
+cd Corona_Variant_Scoring
 mkdir -p ../aa_scoring_out
 ```
 
 3. Run the Corona_Variant_Pipeline with the following command. Keep in mind that if the output directory is same as the test_run directory it will overwrite the current output directory which contains the expected results. The pipeline is set to create an output/ directory with the results wherever the user points to as the output dir.
 
 ```console
-bash variant_scoring.sh \
+bash variant_scoring_local.sh \
   -o ../aa_scoring_out \
   -i ./test_run/ \
   -v ./ \
