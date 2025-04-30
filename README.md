@@ -178,5 +178,10 @@ Running this test pipeline took approximately 1 minute 10 seconds on a Macbook A
 | Corona_Variant_Scoring/SpikePro_comparison/ |                             |                                        |
 |                                    | antigenicScores_with_weights_at_all_sites_comparison_mFRNA_antigenicCartography_2020-01-2023-12_45x180.pdf | resultant scatterplot for the antigenic scores vs the mFRN values and antigenic distances |
 |                                    | spikepro_comparison.R  | analysis script for comparing antigenic scores and the SpikePro scores to mFRN values and antigenic distancess |
-
-
+| Corona_Variant_Scoring/country_score_comparison_over_time |                             |                                        |
+| Corona_Variant_Scoring/data |                             |                                        |
+|                              | case_study_1c/            | contains a zipped file with all the accession IDs used for the case_study_1c in the manuscript (https://doi.org/10.1101/2024.03.07.583829) |
+|                              | case_study_2/            | contains a zipped file with all the accession IDs used for the case_study_2 in the manuscript (https://doi.org/10.1101/2024.03.07.583829) |
+|                              | precision_recall           | contains a zipped file with all the accession IDs used for the precision and recall analysis comparing WHO VOCs/VOIs/VUMs to selected antigenically altered pVOIs in the manuscript (https://doi.org/10.1101/2024.03.07.583829) |
+|                              | validation/            | contains a zipped file with all the accession IDs used for the validation studies comparing antigenically altered lineages to mFRN and antigenic distances in the manuscript (https://doi.org/10.1101/2024.03.07.583829) |
+|                              | accession_ids.py           | script used to get accession IDs and zip the resultant file |
