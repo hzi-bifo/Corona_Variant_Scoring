@@ -8,7 +8,7 @@
 import sys
 import csv
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # Input files
 compiled_tsv = sys.argv[1]
@@ -22,6 +22,15 @@ def parse_date(d):
     except:
         return None
 
+# Helper to compute previous month in YYYY-MM format
+def previous_month(date_str):
+    d = parse_date(date_str)
+    if not d:
+        return "NA"
+    first_of_month = d.replace(day=1)
+    prev_month = first_of_month - timedelta(days=1)
+    return prev_month.strftime("%Y-%m")
+
 # Today's date for new JSON entries
 run_date = datetime.today().strftime("%Y-%m-%d")
 
@@ -31,6 +40,7 @@ with open(compiled_tsv, "r") as f:
     reader = csv.DictReader(f, delimiter="\t")
     for row in reader:
         lineage = row["lineage"]
+        row["data_collection_month"] = row.get("data_collection_month") or previous_month(row["run_date"])
         lineage_records[lineage] = row
 
 # Load new JSON
@@ -51,7 +61,8 @@ for entry in data:
                 "antigenic_score": entry.get("antigenic_score", "NA"),
                 "normalized_antigenic_score": entry.get("zscore", "NA"),
                 "significantly_antigenically_altered": entry.get("significant", "NA"),
-                "run_date": run_date
+                "run_date": run_date,
+                "data_collection_month": previous_month(run_date)
             }
 
 # Sort by run_date ascending
@@ -59,7 +70,7 @@ compiled_data = sorted(lineage_records.values(), key=lambda x: parse_date(x["run
 
 # Write back to TSV
 with open(output_tsv, "w") as out_f:
-    fieldnames = ["lineage", "antigenic_score", "normalized_antigenic_score", "significantly_antigenically_altered", "run_date"]
+    fieldnames = ["lineage", "antigenic_score", "normalized_antigenic_score", "significantly_antigenically_altered", "run_date", "data_collection_month"]
     writer = csv.DictWriter(out_f, delimiter="\t", fieldnames=fieldnames)
     writer.writeheader()
     for row in compiled_data:
