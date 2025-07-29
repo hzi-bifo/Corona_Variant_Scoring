@@ -118,6 +118,9 @@ python "$SOFTWAREPATH""global_scoring_map.py" "$OUTDIR""output/antigenic_scores_
 python "$SOFTWAREPATH""country_frequency_threshold_compiler.py" "$OUTDIR""output/" "$OUTDIR""output/" "$AntigenicScoring""reference/" "$OUTDIR""output/month_vis.txt" >> "$OUTDIR""STDOUT.txt"
 Rscript "$SOFTWAREPATH""country_score_over_time_coverage.R" "$OUTDIR""output/" "$AntigenicScoring""reference/antigenic_scores_map_visualization_cumulative.csv" "$AntigenicScoring""reference/country_list_with_threshold.tsv" >> "$OUTDIR""STDOUT.txt"
 
+# Updating cumulative antigenic list
+python "$AntigenicScoring""reference/coverage_antigenic_lineages_run_compile.py" "$AntigenicScoring""reference/compiled_antigenic_results.tsv" "$OUTDIR""output/antigenic_scoring_summary_lineages_table.json" "$AntigenicScoring""reference/compiled_antigenic_results.tsv"
+
 # Selected pVOI table
 #python "$SOFTWAREPATH""pVOI_interactive_table.py" "$OUTDIR""output/antigenic_scoring_summary_pVOI_table.csv" "$OUTDIR""output/"
 echo "COMPLETE"
